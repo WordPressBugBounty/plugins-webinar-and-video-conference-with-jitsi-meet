@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 5.4
-Stable tag: 2.6.12
+Stable tag: 2.6.13
 License: GPL-2.0+
 Lisecse URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -208,6 +208,10 @@ Yes, You can do live streaming on YouTube from the Meeting.
 11. Self Hosted
 
 == Changelog ==
+
+= 2.6.13 - 14 Oct 2024 =
+- Fix: Meeting login for vendors did not work 
+- Fix: If one user logged into a meeting, he also logged into other meetings
 
 = 2.6.12 - 08 Sept 2024 =
 - Improvement: Enhanced the login process for a more seamless experience
