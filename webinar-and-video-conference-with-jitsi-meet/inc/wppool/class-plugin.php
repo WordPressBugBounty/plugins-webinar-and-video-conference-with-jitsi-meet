@@ -1257,18 +1257,15 @@ if ( ! class_exists( 'WPPOOL_Plugin' ) ) {
 		 * @param string $from Start from. Default is now.
 		 * @return mixed
 		 */
-		public function set_campaign( $image_url = null, $to = null, $from = null ) {
+		public function set_campaign( $image_url = null, $to = null, $from = null, $button_text = 'Get Premium' ) {
 			// Bailout if image url is not valid.
 			if ( ! $image_url ) {
 				return $this;
 			}
 
-			// Set from now if it's not set.
-			$from_time = $from ? strtotime( $from . ' 00:00:01' ) : strtotime( 'now' );
-
-			// Set to 2 weeks from now if it's not set.
-			$to_time = $to ? strtotime( $to . ' 23:59:59' ) : strtotime( '+2 weeks' );
-
+			// Set default times if not provided.
+			$from_time = $from ? strtotime( $from ) : strtotime( 'now' );
+			$to_time = $to ? strtotime( $to ) : strtotime( '+2 weeks' );
 			$current_time = strtotime( 'now' );
 
 			// If current time is not between from and to date, return.
@@ -1276,12 +1273,12 @@ if ( ! class_exists( 'WPPOOL_Plugin' ) ) {
 				return $this;
 			}
 
-			// Modify the plugin data.
-			add_filter( 'wppool_plugins', function ( $plugins ) use ( $image_url, $to, $from ) {
-
+			// Modify the plugin data to include the campaign image, date range, and button text.
+			add_filter( 'wppool_plugins', function ( $plugins ) use ( $image_url, $to, $from, $button_text ) {
 				$plugins[ $this->plugin_id ]['background_image'] = $image_url;
 				$plugins[ $this->plugin_id ]['from'] = $from;
 				$plugins[ $this->plugin_id ]['to'] = $to;
+				$plugins[ $this->plugin_id ]['button_text'] = $button_text;
 
 				return $plugins;
 			} );
