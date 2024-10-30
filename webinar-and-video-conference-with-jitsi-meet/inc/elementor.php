@@ -198,24 +198,34 @@ class Jitsi_Elementor extends Widget_Base {
 	}
 
 	/**
-	 * Render widgets
+	 * Render the widget output on the frontend.
 	 *
-	 * @return  void
+	 * @return void
 	 */
 	protected function render() {
-
 		$settings = $this->get_settings();
+
+		// Safely retrieve settings with fallbacks.
+		$name           = isset( $settings['name'] ) ? sanitize_text_field( $settings['name'] ) : 'DefaultRoom';
+		$width          = isset( $settings['width'] ) ? intval( $settings['width'] ) : 1080;
+		$height         = isset( $settings['height'] ) ? intval( $settings['height'] ) : 720;
+		$audio_muted    = ! empty( $settings['audio_muted'] ) ? 'true' : 'false';
+		$video_muted    = ! empty( $settings['video_muted'] ) ? 'true' : 'false';
+		$screen_sharing = ! empty( $settings['screen_sharing'] ) ? 'true' : 'false';
+		$invite         = ! empty( $settings['invite'] ) ? 'true' : 'false';
 		?>
+
 		<div 
 			class="jitsi-wrapper-elementor" 
-			data-name="<?php echo esc_attr( $settings['name'] ); ?>"
-			data-width="<?php echo esc_attr( $settings['width'] ); ?>"
-			data-height="<?php echo esc_attr( $settings['height'] ); ?>"
-			data-mute="<?php echo $settings['audio_muted'] ? esc_attr( $settings['audio_muted'] ) : 'false'; ?>"
-			data-videomute="<?php echo $settings['video_muted'] ? esc_attr( $settings['video_muted'] ) : 'false'; ?>"
-			data-screen="<?php echo $settings['screen_sharing'] ? esc_attr( $settings['screen_sharing'] ) : 'false'; ?>"
-			data-invite="<?php echo $settings['invite'] ? esc_attr( $settings['invite'] ) : 'false'; ?>"
+			data-name="<?php echo esc_attr( $name ); ?>"
+			data-width="<?php echo esc_attr( $width ); ?>"
+			data-height="<?php echo esc_attr( $height ); ?>"
+			data-mute="<?php echo esc_attr( $audio_muted ); ?>"
+			data-videomute="<?php echo esc_attr( $video_muted ); ?>"
+			data-screen="<?php echo esc_attr( $screen_sharing ); ?>"
+			data-invite="<?php echo esc_attr( $invite ); ?>"
 		></div>
+
 		<?php
 	}
 }
