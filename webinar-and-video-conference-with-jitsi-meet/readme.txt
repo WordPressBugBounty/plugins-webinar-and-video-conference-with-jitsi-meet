@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.4
-Stable tag: 2.6.16
+Stable tag: 2.6.17
 License: GPL-2.0+
 Lisecse URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -208,6 +208,9 @@ Yes, You can do live streaming on YouTube from the Meeting.
 11. Self Hosted
 
 == Changelog ==
+
+= 2.6.17 - 18 Nov 2024 =
+- New: Added support for meeting booking with WooCommerce Bookings in WCFM Multivendor
 
 = 2.6.16 - 14 Nov 2024 =
 - Improvement: Enhanced compatibility to support WordPress 6.7
