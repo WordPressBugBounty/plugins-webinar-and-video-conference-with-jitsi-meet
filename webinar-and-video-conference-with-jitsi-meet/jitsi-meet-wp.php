@@ -3,7 +3,7 @@
  * Plugin Name:       Webinar and Video Conference with Jitsi Meet
  * Plugin URI:        https://jitsi-meet-wp.wppool.dev/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.6.17
+ * Version:           2.6.18
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.6.17' );
+define( 'JITSI_MEET_WP_VERSION', '2.6.18' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
@@ -112,11 +112,11 @@ function jitsi_meet_wppool_sdk_init() {
 		$jitsi_meet_plugin = wppool_plugin_init( 'webinar_and_video_conference_with_jitsi_meet', plugin_dir_url( JITSI_MEET_WP__FILE__ ) . '/inc/wppool/background-image.png' );
 
 		if ( $jitsi_meet_plugin && is_object( $jitsi_meet_plugin ) && method_exists( $jitsi_meet_plugin, 'set_campaign' ) ) {
-			$to       = '2024-11-05 16:00:00';
-			$from     = '2024-10-21 16:00:00';
-			$cta_text = esc_html__( 'Grab Your Treat!', 'jitsi-meet-wp' );
+			$to       = '2024-12-04 16:00:00';
+			$from     = '2024-11-21 16:00:00';
+			$cta_text = esc_html__( 'Grab Your Deals', 'jitsi-meet-wp' );
 
-			$campain_image = plugin_dir_url( JITSI_MEET_WP__FILE__ ) . '/inc/wppool/halloween.png';
+			$campain_image = plugin_dir_url( JITSI_MEET_WP__FILE__ ) . '/inc/wppool/black-friday.png';
 			$jitsi_meet_plugin->set_campaign( $campain_image, $to, $from, $cta_text );
 		}
 	}
