@@ -427,16 +427,18 @@ if ( ! class_exists( '\Appsero\Insights' ) ) {
 			$optout_url = wp_nonce_url( add_query_arg( $this->client->slug . '_tracker_optout', 'true' ), '_wpnonce' );
 
 			if ( empty( $this->notice ) ) {
-				$notice = sprintf( $this->client->__trans( 'Want to help make <strong>%1$s</strong> even more awesome? Allow %1$s to collect diagnostic data and usage information.' ), $this->client->name );
+				$notice = sprintf(
+					$this->client->__trans( 'Make <strong>%1$s</strong> even better! By opting in, you agree to share your name, email, basic site details, and other diagnostic data. This helps us to improve compatibility, enhance features, and provide you with helpful tips, and occasional offers.' ),
+					$this->client->name
+				);
 			} else {
 				$notice = $this->notice;
 			}
 
 			$policy_url = 'https://appsero.com/privacy-policy/';
 
-			$notice .= ' (<a class="' . $this->client->slug . '-insights-data-we-collect" href="#">' . $this->client->__trans( 'what we collect' ) . '</a>)';
-			$notice .= '<p class="description hidden" style="display:none;">' . implode( ', ', $this->data_we_collect() ) . '. ';
-			$notice .= 'We are using Appsero to collect your data. <a href="' . $policy_url . '" target="_blank">Learn more</a> about how Appsero collects and handle your data.</p>';
+			$notice .= ' <a style="color: #2271b1;" class="' . $this->client->slug . '-insights-data-we-collect" href="#">' . $this->client->__trans( 'Learn more about what we collect' ) . '</a>';
+			$notice .= '<p class="description hidden" style="display:none;">We collect your server environment details (PHP, MySQL, server, WordPress versions), the number of users on your site, site language, number of active and inactive plugins, site name and URL, as well as your name and email address. This data is securely collected and managed by Appsero. <a style="color: #2271b1;" href="' . $policy_url . '">Learn more</a> about how Appsero collects and handles your data.</p>';
 
 			echo '<div class="updated wp-dark-mode-appsero-notice"><p>';
 			echo wp_kses_post( $notice );
