@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.4
-Stable tag: 2.6.20
+Stable tag: 2.6.21
 License: GPL-2.0+
 Lisecse URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -12,19 +12,21 @@ The best WordPress webinar plugin with branded meetings. Add Jitsi meetings, hos
 
 == Description ==
 
-= EMBED MEETINGS, HOST WEBINARS, AND VIDEO CONFERENCE - EVERYTHING FROM THE WORDPRESS DASHBOARD =
+= Embed Meetings, Host Webinars, and Video Conferences – Everything From the WordPress Dashboard =
 
 Looking for a branded WordPress meeting experience that’s a simple, inexpensive, and no-technical choice? Introducing Jitsi Meet - the easiest webinar plugin for WordPress to host virtual branded live webinars, meetings, conferences, online classes, and video calls directly on your WordPress website. Experiencing live video chat with a WordPress meeting plugin has never been so easy!
 
+👁️ [View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get Premium](https://go.wppool.dev/ruO4) | 🤝 [Join Our Facebook Community](https://cutt.ly/ceCQgvoT)
 [youtube https://youtu.be/eANgixqxe84]
 
-👁️ [View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get The Ultimate Version](https://go.wppool.dev/ruO4)
+**Let’s grow, connect, and thrive together!**
 
-<blockquote>
+* **🤝 Join Our [Facebook Community](https://cutt.ly/ceCQgvoT)**
+* **🌐 Follow Us on [X (Twitter)](https://x.com/wppool_)**
+* **🎥 Subscribe on [YouTube](https://www.youtube.com/@WPPOOL)**
+* **👍 Like Our [Facebook Page](https://www.facebook.com/wppool.dev)**
 
 Easily create, manage, and promote your webinars with our webinar plugin, without ever having to leave your WordPress site. Customize and brand your webinars to match your website's look and feel.
-
-</blockquote>
 
 Built-in meeting post type, shortcodes, Elementor widgets, and Gutenberg blocks let you create WordPress webinars without any technical or coding knowledge. Fully integrated with WooCommerce, LMS, Multivendors, email marketing, and booking plugins. This is the most powerful and convenient WordPress video conference plugin that requires zero coding.
 
@@ -61,7 +63,7 @@ Maintain productivity with HD video, screen sharing, and tons of collaboration f
 
 * **Multisite Support** - Access Jitsi Meet webinar features by every website on the multisite network with WordPress Multisite compatibility.
 
-👁️[View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get The Ultimate Version](https://go.wppool.dev/ruO4)
+👁️[View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get Premium](https://go.wppool.dev/ruO4) | 🤝 [Join Our Facebook Community](https://cutt.ly/ceCQgvoT)
 
 == 🔥 PRO Features ==
 
@@ -85,6 +87,8 @@ Maintain productivity with HD video, screen sharing, and tons of collaboration f
 
 * **Advanced meeting customizations** - Get an option to start calls by keeping the audio/video muted. You can also customize the number of participants that will be required to join before their video/audio gets muted.
 
+👁️[View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get Premium](https://go.wppool.dev/ruO4) | 🤝 [Join Our Facebook Community](https://cutt.ly/ceCQgvoT)
+
 == 💪 Ultimate Features ==
 
 * **All Pro Features**
@@ -101,7 +105,6 @@ Maintain productivity with HD video, screen sharing, and tons of collaboration f
 
 * **Integration with email marketing tools (upcoming)** - Integration with email marketing tools will automatically add the registrants as new subscribers directly to your Zapier, MailChimp, etc. accounts.
 
-👁️[View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get The Ultimate Version](https://go.wppool.dev/ruO4)
 
 Some of our premium features (recording, transcription, live streaming) require a JaaS premium subscription. We are not associated or an official integration of JaaS. Our plugin works as a bridge between WordPress and JItsi Meet to provide you with a flawless meeting experience from your dashboard.
 
@@ -115,7 +118,7 @@ The multivendor addon currently supports Dokan Multivendor, WCFM Marketplace, an
 * [How to create meetings in WCFM Marketplace](https://wppool.dev/docs/how-to-add-jitsi-meeting-in-wcfm-marketplace/)
 * [How to create meetings in MultiVendorX](https://wppool.dev/docs/how-to-add-jitsi-meeting-in-multivendorx/)
 
-👁️ [View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get The Ultimate Version](https://go.wppool.dev/ruO4)
+👁️ [View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get Premium](https://go.wppool.dev/ruO4) | 🤝 [Join Our Facebook Community](https://cutt.ly/ceCQgvoT)
 
 == Installation ==
 
@@ -134,17 +137,20 @@ The multivendor addon currently supports Dokan Multivendor, WCFM Marketplace, an
 
 Write down the shortcode '[jitsi-meet-wp/]' and set width, height and name of conference with attribute. Ex. `[jitsi-meet-wp name="YourWebinerName" width="700" height="640"/]`
 
-== 🔥 More Awesome Plugins ==
-If you like Webinar and Video Conference with Jitsi Meet, then consider checking out our other awesome projects:
+=== 🔥 More Awesome Plugins ===
+If you like Jitsi Meet, then consider checking out our other awesome projects:
 
-🌓 **[WP Dark Mode](https://wordpress.org/plugins/wp-dark-mode/)**  - Use WP Dark Mode plugin to create a stunning dark version for your WordPress website. WP Dark Mode works automatically without going into any complicated settings.
+* 🌓 **[WP Dark Mode](https://wordpress.org/plugins/wp-dark-mode/)**: Use WP Dark Mode plugin to create a stunning dark version for your WordPress website. WP Dark Mode works automatically without going into any complicated settings.
 
-📄 **[Sheets To WP Table Live Sync](https://wordpress.org/plugins/sheets-to-wp-table-live-sync/)**  - Quick. Easy. Simple. Keep your Google Spreadsheet data always synced LIVE with the WordPress table. Responsive data tables with as many data you want to display - Sheets to WP Table Live Sync plugin got it all!
+* 🟢 **[FlexTable - Sheets To WP Table Live Sync](https://wordpress.org/plugins/sheets-to-wp-table-live-sync/)**: Google Sheets allows you to input data on your Google sheet and show the same data on WordPress as a table effortlessly. Try Flex Table now!
 
-🎥 **[Easy Video Reviews](https://wordpress.org/plugins/easy-video-reviews/)**  - Easy Video Reviews is the best and easiest video review plugin for WordPress. Your customers can record and send video testimonials right from their browser, and you can manage and showcase anywhere on your WordPress website.
+* 💬 **[FormyChat](https://wordpress.org/plugins/social-contact-form/)**: Connect Form to Chat Apps with Contact Form 7, WPForms, Gravity Form | Welcome Popup & Multi-agent Live Chat
 
-🔄 **[Stock Sync with Google Sheet for WooCommerce](https://wordpress.org/plugins/stock-sync-with-google-sheet-for-woocommerce/)** – Auto-sync WooCommerce products from Google Sheets. An easy, powerful and simple inventory management system to handle your WooCommerce products.
+* 🔄 **[FlexStock - Stock Sync with Google Sheet for WooCommerce](https://wordpress.org/plugins/stock-sync-with-google-sheet-for-woocommerce/)**: Auto-sync WooCommerce products from Google Sheets. Flex Stock is an easy, powerful, and simple inventory management system to handle your WooCommerce products.
 
+* 🛒 **[FlexOrder - Order Sync with Google Sheet for WooCommerce](https://wordpress.org/plugins/order-sync-with-google-sheets-for-woocommerce/)**: Manage WooCommerce orders from Google Sheets. WooCommerce order sync, e-commerce order management, and sales order management with Google Sheets. Try Flex Order now!
+
+* 🎁 **[EchoRewards](https://wordpress.org/plugins/echo-rewards/)**: With Echo Reward, you can refer a friend for WooCommerce to launch your customer referral program. Echo Rewards Referral Plugin is a WooCommerce referral plugin to boost your sales. Generate coupons, reward customers, and launch the ideal refer-a-friend program for your store.
 
 
 == Frequently Asked Questions ==
@@ -208,6 +214,9 @@ Yes, You can do live streaming on YouTube from the Meeting.
 11. Self Hosted
 
 == Changelog ==
+
+= 2.6.21 – 02 Jan 2025 =
+* **Improvement:** Updated SDK
 
 = 2.6.20 – 30 Nov 2024 =
 * **Improvement:** Updated Appsero notice that clarifies what data we collect to help users understand what they are sharing
