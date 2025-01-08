@@ -117,7 +117,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 					'startwithvideomuted' => get_option( 'jitsi_opt_startWithVideoMuted', 0 ) ? 1 : 0,
 					'startscreensharing'  => get_option( 'jitsi_opt_startScreenSharing', 0 ) ? 1 : 0,
 					'invite'              => get_option( 'jitsi_opt_invite', 1 ) ? 1 : 0,
-					'domain'              => $this->get_random_domain(),
+					'domain'              => get_option( 'jitsi_opt_free_domain', 'jitsi-01.csn.tu-chemnitz.de' ),
 				)
 			);
 			wp_enqueue_script( 'jitsi-meet-wp-block' );
@@ -150,28 +150,6 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 				wp_enqueue_script( 'jitsi-8x8-api', 'https://8x8.vc/external_api.js', null, '2.1.2', false );
 				wp_enqueue_script( 'jitsi-script', plugins_url( '/blocks/dist/jitsi.js', __FILE__ ), array( 'jquery', 'wp-blocks' ), filemtime( plugin_dir_path( __FILE__ ) . '/blocks/dist/jitsi.js' ), '2.1.2' );
 			}
-		}
-
-		/**
-		 * Get_random_domain.
-		 *
-		 * This function returns a randomly selected domain from a predefined list of video conferencing domains.
-		 *
-		 * @return string The randomly selected domain.
-		 */
-		public function get_random_domain() {
-			$domains = array(
-				'jitsi.member.fsf.org',
-				'meet.evolix.org',
-				'webconf.viviers-fibre.net',
-				'video.devloprog.org',
-			);
-
-			// Shuffle the array..
-			shuffle( $domains );
-
-			// Return a random domain.
-			return $domains[ array_rand( $domains ) ];
 		}
 	}
 }

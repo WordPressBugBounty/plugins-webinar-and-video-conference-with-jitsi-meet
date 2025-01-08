@@ -79,6 +79,11 @@ if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 			];
 
 			$args[] = [
+				'option_group' => 'jitsi-pro-api',
+				'option_name'  => $this->prefix . 'free_domain',
+			];
+
+			$args[] = [
 				'option_group' => 'jitsi-pro-admin',
 				'option_name'  => $this->prefix . 'user_email',
 			];
@@ -265,19 +270,19 @@ if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 			];
 
 			$args[] = [
-				'id'       => $this->prefix . 'custom_domain',
-				'title'    => __( 'Hosted Domain', 'jitsi-pro' ) . '<span class="description">' . __( 'Domain where jitsi hosted', 'jitsi-pro' ) . '</span>',
-				'callback' => [ $this->callbacks, 'jitsi_general_disable' ],
+				'id'       => $this->prefix . 'free_domain',
+				'title'    => __( 'Default Public Domain', 'jitsti-pro' ) . '<span class="description">' . __( 'Select a public domain to run your meeting. If you face issues or the meeting fails to load, switch the server from the dropdown, and it will be fixed.', 'jitsi-pro' ) . '</span>',
+				'callback' => [ $this->callbacks, 'jitsi_select' ],
 				'page'     => 'jitsi-pro-api',
 				'section'  => $this->prefix . 'api_section',
 				'args'     => [
-					'label_for' => $this->prefix . 'custom_domain',
-					'default'   => 'public server',
-					'depend'    => [
-						[
-							'field' => $this->prefix . 'select_api_free',
-							'value' => 'self',
-						],
+					'label_for' => $this->prefix . 'free_domain',
+					'default'   => 'jitsi-01.csn.tu-chemnitz.de',
+					'options'   => [
+						'jitsi-01.csn.tu-chemnitz.de' => 'Domain One',
+						'meet.naveksoft.com'          => 'Domain Two',
+						'jitsi.unp.edu.ar'            => 'Domain Three',
+						'meet.evolix.org'             => 'Domain Four',
 					],
 				],
 			];

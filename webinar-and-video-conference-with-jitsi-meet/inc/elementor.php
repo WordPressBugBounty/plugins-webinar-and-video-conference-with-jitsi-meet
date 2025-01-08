@@ -224,6 +224,7 @@ class Jitsi_Elementor extends Widget_Base {
 			data-videomute="<?php echo esc_attr( $video_muted ); ?>"
 			data-screen="<?php echo esc_attr( $screen_sharing ); ?>"
 			data-invite="<?php echo esc_attr( $invite ); ?>"
+			data-domain="<?php echo esc_attr( get_option( 'jitsi_opt_free_domain', 'jitsi-01.csn.tu-chemnitz.de' ) ); ?>"
 		></div>
 
 		<?php

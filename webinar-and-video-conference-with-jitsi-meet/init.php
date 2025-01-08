@@ -283,14 +283,15 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 
 			// phpcs:ignore
 			$output = sprintf(
-				'<div class="jitsi-wrapper" data-name="%1$s" data-width="%2$d" data-height="%3$d" style="width:%2$dpx" data-mute="%4$s" data-videomute="%5$s" data-screen="%6$s" data-invite="%7$s"></div>',
+				'<div class="jitsi-wrapper" data-name="%1$s" data-width="%2$d" data-height="%3$d" style="width:%2$dpx" data-mute="%4$s" data-videomute="%5$s" data-screen="%6$s" data-invite="%7$s" data-domain="%8$s"></div>',
 				esc_attr( $name ),
 				esc_attr( $width ),
 				esc_attr( $height ),
 				esc_attr( $startwithaudiomuted ),
 				esc_attr( $startwithvideomuted ),
 				esc_attr( $startscreensharing ),
-				esc_attr( $invite )
+				esc_attr( $invite ),
+				esc_attr( get_option( 'jitsi_opt_free_domain', 'jitsi-01.csn.tu-chemnitz.de' ) )
 			);
 
 			return $output;
