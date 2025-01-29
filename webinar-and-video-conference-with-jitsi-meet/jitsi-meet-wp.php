@@ -3,7 +3,7 @@
  * Plugin Name:       Webinar and Video Conference with Jitsi Meet
  * Plugin URI:        https://jitsi-meet-wp.wppool.dev/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.6.22
+ * Version:           2.6.23
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.6.22' );
+define( 'JITSI_MEET_WP_VERSION', '2.6.23' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
@@ -60,9 +60,9 @@ function jitsi_meet_wp_begin() {
  * @return  void
  */
 function jitsi_meet_plugin_activate() {
-	update_option( 'jitsi_meet_wp_version', JITSI_MEET_WP_VERSION );
-	set_transient( 'jitsi_meet_wp_review_notice_interval', 'off', 7 * DAY_IN_SECONDS );
-	set_transient( 'jitsi_meet_wp_affiliate_notice_interval', 'off', 14 * DAY_IN_SECONDS );
+	// update_option( 'jitsi_meet_wp_version', JITSI_MEET_WP_VERSION );
+	// set_transient( 'jitsi_meet_wp_review_notice_interval', 'off', 7 * DAY_IN_SECONDS );
+	// set_transient( 'jitsi_meet_wp_affiliate_notice_interval', 'off', 14 * DAY_IN_SECONDS );.
 
 	$install_date = get_option( 'jitsi_meet_wp_install_time' );
 

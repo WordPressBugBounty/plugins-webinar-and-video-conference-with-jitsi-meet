@@ -24,9 +24,9 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 		 */
 		public function __construct() {
 			add_action( 'admin_menu', [ $this, 'jitsi_meet_wp_admin_menu_page' ] );
-			add_action( 'admin_init', [ $this, 'display_notices' ] );
-			add_action( 'wp_ajax_jitsi_meet_wp_review_notice', [ $this, 'handle_review_notice' ] );
-			add_action( 'wp_ajax_jitsi_meet_wp_affiliate_notice', [ $this, 'handle_affiliate_notice' ] );
+			//add_action( 'admin_init', [ $this, 'display_notices' ] );
+			//add_action( 'wp_ajax_jitsi_meet_wp_review_notice', [ $this, 'handle_review_notice' ] );
+			//add_action( 'wp_ajax_jitsi_meet_wp_affiliate_notice', [ $this, 'handle_affiliate_notice' ] );
 			$this->jitsi_meet_wp_settings_files();
 		}
 
