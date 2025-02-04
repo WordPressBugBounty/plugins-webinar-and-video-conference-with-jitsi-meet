@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.4
-Stable tag: 2.6.23
+Stable tag: 2.6.24
 License: GPL-2.0+
 Lisecse URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -214,6 +214,11 @@ Yes, You can do live streaming on YouTube from the Meeting.
 11. Self Hosted
 
 == Changelog ==
+
+= 2.6.24 – 04 Feb 2025 =
+* **Fix:** Resolved issue where meeting login did not work when using a shortcode
+* **Fix:** Fixed saved meetings not being selected in WooCommerce
+* **Fix:** Addressed issue where the meeting interface failed to load when using a shortcode
 
 = 2.6.23 – 29 Jan 2025 =
 * **Improvement:** Enhanced notice functionality and removed unnecessary notices
