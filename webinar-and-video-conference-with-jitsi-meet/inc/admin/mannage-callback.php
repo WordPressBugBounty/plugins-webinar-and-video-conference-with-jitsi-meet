@@ -77,10 +77,12 @@ class Mannage_Callback {
 	 * @return  void
 	 */
 	public function jitsi_textrea( $args ) {
-		$name     = $args['label_for'];
-		$value    = get_option( $name, '' );
-		$disabled = isset( $args['disabled'] ) ? 'disabled' : '';
-		printf( '<div class="%3$s"><textarea class="jitsi-admin-field" name="%1$s" id="%1$s" rows="4">%2$s</textarea></div>', esc_attr( $name ), $disabled ? '' : esc_attr( $value ), esc_attr( $disabled ) );
+		$name        = $args['label_for'];
+		$value       = get_option( $name, '' );
+		$data_depend = isset( $args['depend'] ) ? " data-depend='" . json_encode( $args['depend'] ) . "'" : '';
+
+		//phpcs:ignore
+		printf( '<textarea class="jitsi-admin-field" name="%1$s" id="%1$s" rows="4"%3$s>%2$s</textarea>', esc_attr( $name ), esc_attr( $value ), $data_depend );
 	}
 
 	/**
@@ -107,20 +109,37 @@ class Mannage_Callback {
 	 */
 	public function jitsi_select( $args ) {
 		$name       = $args['label_for'];
-		$default    = $args['default'];
-		$optionsarr = $args['options'];
+		$default    = isset( $args['default'] ) ? $args['default'] : '';
+		$optionsarr = isset( $args['options'] ) ? $args['options'] : array();
 		$value      = get_option( $name, $default );
-		$options    = '';
-		$disabled   = isset( $args['disabled'] ) ? 'disabled' : '';
 
-		echo '<div class="' . esc_attr( $disabled ) . '"><select class="jitsi-admin-field ui" name="' . esc_attr( $name ) . '" id="' . esc_attr( $name ) . '" value="' . esc_attr( $value ) . '">';
-
+		// Build options securely.
+		$options_html = '';
 		foreach ( $optionsarr as $key => $val ) {
-			$selected = $key === $value ? 'selected' : '';
-			echo '<option value="' . esc_attr( $key ) . '" ' . esc_attr( $selected ) . '>' . esc_attr( $val ) . '</option>';
+			$selected      = selected( $key, $value, false );
+			$options_html .= sprintf(
+				'<option value="%1$s" %3$s>%2$s</option>',
+				esc_attr( $key ),
+				esc_html( $val ),
+				$selected
+			);
 		}
 
-		echo '</select></div>';
+		// Prepare data-depend attribute if it exists.
+		$data_depend_attr = '';
+		if ( isset( $args['depend'] ) ) {
+			$data_depend_attr = ' data-depend="' . esc_attr( wp_json_encode( $args['depend'] ) ) . '"';
+		}
+
+		// Now output everything with explicit escaping.
+		printf(
+			'<select class="jitsi-admin-field" name="%1$s" id="%1$s"%2$s>%3$s</select>',
+			esc_attr( $name ),
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Already escaped above
+			$data_depend_attr,
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Content already escaped in the loop
+			$options_html
+		);
 	}
 
 	/**
@@ -144,8 +163,16 @@ class Mannage_Callback {
 		}
 
 		$class = $value ? ( $disabled ? 'jitsi-field-switch' : 'jitsi-field-switch active' ) : 'jitsi-field-switch';
-		// phpcs:ignore
-		printf( '<div class="%3$s %4$s"><label class="%2$s"><input class="jitsi-admin-field" type="checkbox" name="%1$s" id="%1$s" value="1" ' . checked( 1, $value, false ) . '/><span></span></label>%5$s</div>', esc_attr( $name ), esc_attr( $class ), esc_attr( $disabled ), $feature_type, $new_tag );
+
+		printf(
+			'<div class="%1$s %2$s"><label class="%3$s"><input class="jitsi-admin-field" type="checkbox" name="%4$s" id="%4$s" value="1" %5$s/><span></span></label>%6$s</div>',
+			esc_attr( $disabled ),
+			esc_attr( $feature_type ),
+			esc_attr( $class ),
+			esc_attr( $name ),
+			checked( 1, $value, false ),
+			wp_kses_post( $new_tag )
+		);
 	}
 
 	/**

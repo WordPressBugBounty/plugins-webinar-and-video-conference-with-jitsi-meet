@@ -238,7 +238,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 					<?php // phpcs:ignore ?>
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M34.4757 22.0614V17.2941L43.0323 23.4061C43.5361 23.7659 44.1987 23.814 44.7491 23.5307C45.2996 23.2474 45.6455 22.6803 45.6455 22.0612V5.53492C45.6455 4.91587 45.2996 4.34873 44.7491 4.06545C44.1987 3.78219 43.5361 3.8303 43.0323 4.19012L34.4757 10.3021V5.53504C34.4757 2.61741 31.8784 0.577148 29.0998 0.577148H8.62239C5.84387 0.577148 3.24658 2.61741 3.24658 5.53504V22.0614C3.24658 24.979 5.84387 27.0193 8.62239 27.0193H29.0998C31.8784 27.0193 34.4757 24.979 34.4757 22.0614ZM20.3316 18.1759C17.8232 16.8906 15.7668 14.8431 14.4904 12.3347L16.4404 10.3847C16.6886 10.1365 16.7596 9.79081 16.6621 9.48059C16.3341 8.48784 16.1568 7.42421 16.1568 6.31627C16.1568 5.82876 15.758 5.4299 15.2704 5.4299H12.1681C11.6807 5.4299 11.2818 5.82876 11.2818 6.31627C11.2818 14.6393 18.027 21.3845 26.35 21.3845C26.8375 21.3845 27.2364 20.9856 27.2364 20.4981V17.4047C27.2364 16.9172 26.8375 16.5183 26.35 16.5183C25.2509 16.5183 24.1784 16.341 23.1857 16.0131C22.8755 15.9068 22.5209 15.9865 22.2816 16.2258L20.3316 18.1759ZM25.8625 5.42103L26.4918 6.04149L20.8989 11.6345H24.5773V12.5209H19.2591V7.20264H20.1455V11.0051L25.8625 5.42103Z" fill="#407BFF"/>
 					</svg>
-					<span><?php __( 'Webinar and Video Conference with Jitsi Meet', 'jitsi-meet-wp' ); ?></span>
+					<span><?php esc_html_e( 'Webinar and Video Conference with Jitsi Meet', 'jitsi-meet-wp' ); ?></span>
 				</h3>
 				<div class="option-form-field-wrap">
 					<?php $this->jitsi_pro_menu_page_tab_link( 'jitsi-meet' ); ?>
@@ -425,6 +425,57 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 					?>
 				</div>
 			</div>
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					var pageurl = new URL(window.location.href);
+					var pageParam = pageurl.searchParams.get("page");
+
+					if (!(jQuery('#jitsi-meet-welcome').length > 0)) {
+						jQuery('.jitsi-admin-tooltip').each(function() {
+							var offsetParent = jQuery('.jitsi-setting-tabs');
+							var thisBottom = jQuery(this).offset().top + jQuery(this).height();
+							var parentBottom = offsetParent.offset().top + offsetParent.height();
+							if (thisBottom > parentBottom) {
+								jQuery(this).css('top', 0 - (thisBottom - parentBottom));
+								jQuery(this).find('.tooltip-arrow').css('top', 10 + (thisBottom - parentBottom))
+							}
+						});
+					}
+
+					function regenJitsiPreview() {
+						if (document.querySelector('input[name="jitsi_opt_select_api"]') !== null && document.querySelector('input[name="jitsi_opt_select_api"]:checked').value == 'free') {
+							document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-success';
+						} else if (document.querySelector('input[name="jitsi_opt_select_api"]') !== null && document.querySelector('input[name="jitsi_opt_select_api"]:checked').value == 'self') {
+							if (document.getElementById("jitsi_opt_custom_domain") && document.getElementById("jitsi_opt_custom_domain").value) {
+								document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-success';
+							} else {
+								document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-error';
+								document.querySelector('.jitsi-preview-message').innerHTML = 'Self hosted domain missing';
+							}
+						} else if (document.getElementById("jitsi_opt_app_id") && !document.getElementById("jitsi_opt_app_id").value) {
+							document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-error';
+							document.querySelector('.jitsi-preview-message').innerHTML = 'App id missing';
+						} else if (document.getElementById("jitsi_opt_api_key") && !document.getElementById("jitsi_opt_api_key").value) {
+							document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-error';
+							document.querySelector('.jitsi-preview-message').innerHTML = 'Api key is missing';
+						} else if (document.getElementById("jitsi_opt_private_key") && !document.getElementById("jitsi_opt_private_key").value) {
+							document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-error';
+							document.querySelector('.jitsi-preview-message').innerHTML = 'Private key is missing';
+						} else {
+							document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-success';
+						}
+					}
+
+					document.querySelectorAll('.jitsi-admin-field').forEach(function(e) {
+						e.addEventListener('change', function() {
+							if (document.getElementById("meeting-ui-preview") && document.getElementById("jitsi_opt_app_id")) {
+								regenJitsiPreview();
+							}
+						});
+					});
+				});
+			</script>
 			<?php
 		}
 
@@ -505,7 +556,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 					<?php // phpcs:ignore ?>
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M34.4757 22.0614V17.2941L43.0323 23.4061C43.5361 23.7659 44.1987 23.814 44.7491 23.5307C45.2996 23.2474 45.6455 22.6803 45.6455 22.0612V5.53492C45.6455 4.91587 45.2996 4.34873 44.7491 4.06545C44.1987 3.78219 43.5361 3.8303 43.0323 4.19012L34.4757 10.3021V5.53504C34.4757 2.61741 31.8784 0.577148 29.0998 0.577148H8.62239C5.84387 0.577148 3.24658 2.61741 3.24658 5.53504V22.0614C3.24658 24.979 5.84387 27.0193 8.62239 27.0193H29.0998C31.8784 27.0193 34.4757 24.979 34.4757 22.0614ZM20.3316 18.1759C17.8232 16.8906 15.7668 14.8431 14.4904 12.3347L16.4404 10.3847C16.6886 10.1365 16.7596 9.79081 16.6621 9.48059C16.3341 8.48784 16.1568 7.42421 16.1568 6.31627C16.1568 5.82876 15.758 5.4299 15.2704 5.4299H12.1681C11.6807 5.4299 11.2818 5.82876 11.2818 6.31627C11.2818 14.6393 18.027 21.3845 26.35 21.3845C26.8375 21.3845 27.2364 20.9856 27.2364 20.4981V17.4047C27.2364 16.9172 26.8375 16.5183 26.35 16.5183C25.2509 16.5183 24.1784 16.341 23.1857 16.0131C22.8755 15.9068 22.5209 15.9865 22.2816 16.2258L20.3316 18.1759ZM25.8625 5.42103L26.4918 6.04149L20.8989 11.6345H24.5773V12.5209H19.2591V7.20264H20.1455V11.0051L25.8625 5.42103Z" fill="#407BFF"/>
 					</svg>
-					<span><?php __( 'Webinar and Video Conference with Jitsi Meet', 'jitsi-meet-wp' ); ?></span>
+					<span><?php esc_html_e( 'Webinar and Video Conference with Jitsi Meet', 'jitsi-meet-wp' ); ?></span>
 				</h3>
 				<div class="option-form-field-wrap">
 					<?php $this->jitsi_pro_menu_page_tab_link(); ?>
@@ -588,36 +639,77 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 		public function jitsi_manu_page_add_ons() {
 			?>
 			<style>
-				#wpcontent{
+				/* #wpcontent{
 					background: #dddddd8a;
-				}
+				} */
 			</style>
 			<div class=" jitsi-wrap-add-ons">
 				<div class="jitsi-add-ons-wrapper">
 					<div class="top">
 						<h3><?php esc_html_e( 'Add-ons', 'jitsi-pro' ); ?></h3>
 						<p><?php esc_html_e( 'Add your favourite add-ons and supercharge your workflow', 'jitsi-pro' ); ?></p>
-
 					</div>
-					<div class="bottom">
-						<div class="bottom-top">
-							<div class="icon">
-								<?php //phpcs:ignore ?>
-								<img src="<?php echo JITSI_MEET_WP_URL . '/assets/img/vendor-icon.svg'; ?>" alt="" width="100px" height="66px" >
+					<div class="addons-grid">
+						<!-- Addon Card 1 -->
+						<div class="addon-card">
+							<div class="addon-content">
+								<div class="bottom-top">
+									<div class="icon">
+										<?php //phpcs:ignore ?>
+										<img src="<?php echo JITSI_MEET_WP_URL . '/assets/img/vendor-icon.svg'; ?>" alt="" width="100px" height="66px" >
+									</div>
+									<a href="https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/#addon" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25" fill="#5e6d7ae3"><path d="M180-120q-24 0-42-18t-18-42v-600q0-24 18-42t42-18h279v60H180v600h600v-279h60v279q0 24-18 42t-42 18H180Zm202-219-42-43 398-398H519v-60h321v321h-60v-218L382-339Z"/></svg></a>
+								</div>
+								<div class="jitsi-bottom-footer">
+									<h3><?php esc_html_e( 'Multivendor Addon for Jitsi Meet', 'jitsi-pro' ); ?></h3>
+									<p><?php esc_html_e( 'Power up your multi-vendor experience & create meetings right from your vendor dashboard. Elevate your store with monetizable video meetings.', 'jitsi-pro' ); ?></p>
+
+								</div>
 							</div>
-							<a href="https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/#addon" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25" fill="#5e6d7ae3"><path d="M180-120q-24 0-42-18t-18-42v-600q0-24 18-42t42-18h279v60H180v600h600v-279h60v279q0 24-18 42t-42 18H180Zm202-219-42-43 398-398H519v-60h321v321h-60v-218L382-339Z"/></svg></a>
+											
+							<div class="switcher-card" data-card="1">
+								<div class="switcher-wrapper">
+									<span class="status"><?php esc_html_e( 'Not activate', 'jitsi-pro' ); ?></span>
+									<div class="btn-wrapper">
+										<button class="install"><?php esc_html_e( 'Activate', 'jitsi-pro' ); ?></button>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="bottom-footer">
-							<h3><?php esc_html_e( 'Multivendor Addon for Jitsi Meet', 'jitsi-pro' ); ?></h3>
-							<p><?php esc_html_e( 'Power up your multi-vendor experience & create meetings right from your vendor dashboard. Elevate your store with monetizable video meetings.', 'jitsi-pro' ); ?></p>
+						<!-- Addon Card 2 -->
+						<div class="addon-card">
+							<div class="addon-content">
+								<div class="bottom-top">
+									<div class="icon">
+										<img src="<?php echo esc_url( JITSI_MEET_WP_URL . '/assets/img/frontend-addon.svg' ); ?>" alt="" width="100px" height="66px">
+									</div>
+									<!-- <a href="https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/#addon" target="_blank">
+										<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25" fill="#5e6d7ae3">
+											<path d="M180-120q-24 0-42-18t-18-42v-600q0-24 18-42t42-18h279v60H180v600h600v-279h60v279q0 24-18 42t-42 18H180Zm202-219-42-43 398-398H519v-60h321v321h-60v-218L382-339Z"/>
+										</svg>
+									</a> -->
+								</div>
+								<div class="jitsi-bottom-footer">
+									<h3><?php esc_html_e('Jitsi Meet Frontend Addon', 'jitsi-pro'); ?></h3>
+									
+									<p>
+										<?php esc_html_e('Easily create Jitsi meetings from the frontend without accessing the admin dashboard.', 'jitsi-pro'); ?>
+									</p>
 
-						</div>
-					</div>
-					<div class="switcher-card">
-						<div class="switcher-wrapper">
-							<span class="status"><?php esc_html_e( 'Not installed', 'jitsi-pro' ); ?></span>
-							<div class="btn-wrapper">
-								<button class="install"><?php esc_html_e( 'Install', 'jitsi-pro' ); ?></button>
+									<!-- <a href="https://wppool.dev/docs/how-to-add-jitsi-meeting-in-dokan-multivendor/" target="_blank">
+										<?php //esc_html_e('Learn more', 'jitsi-pro'); ?>
+										<span class="dashicons dashicons-arrow-right-alt"></span>
+									</a> -->
+								</div>
+							</div>
+
+							<div class="free-switcher-card" data-card="2">
+								<div class="switcher-wrapper">
+									<span class="status"><?php esc_html_e( 'Not activate', 'jitsi-pro' ); ?></span>
+									<div class="btn-wrapper">
+										<button class="install"><?php esc_html_e( 'Activate', 'jitsi-pro' ); ?></button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

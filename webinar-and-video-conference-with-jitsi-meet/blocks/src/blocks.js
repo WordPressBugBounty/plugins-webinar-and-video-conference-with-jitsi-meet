@@ -153,7 +153,10 @@ class EditBlock extends Component {
           data-videomute={videoMuted}
           data-screen={screenSharing}
           data-invite={invite}
-        >{`https://${domain}/${name}`}</div>
+        >
+         <span> Room name: {name}</span> <br></br>
+         <span> Domain : {domain}</span>
+          </div>
       </Fragment>
     );
   }

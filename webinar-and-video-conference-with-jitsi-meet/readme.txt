@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.4
-Stable tag: 2.6.25
+Stable tag: 2.7.0
 License: GPL-2.0+
 Lisecse URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -214,6 +214,12 @@ Yes, You can do live streaming on YouTube from the Meeting.
 11. Self Hosted
 
 == Changelog ==
+
+= 2.7.0 – 27 Feb 2025 =
+* **New:** Added a frontend add-on allowing users to create meetings directly from the frontend 
+* **New:** Added support for Jass 8x8 
+* **Improvement:** Integrated the multivendor add-on into the main plugin — no extra installation required
+* **Improvement:** Enhanced the add-on page design to be fully responsive
 
 = 2.6.25 – 06 Feb 2025 =
 * **Improvement:** Improved meeting login and registration process

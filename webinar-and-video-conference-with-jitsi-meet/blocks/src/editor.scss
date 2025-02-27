@@ -177,6 +177,7 @@ $darkBlack: rgb(28, 32, 37);
       font-weight: 600;
       font-family: 'Nunito', sans-serif;
       color: $darkBlack;
+      position: relative;
 
       svg {
         width: 14px;
@@ -1542,148 +1543,299 @@ $darkBlack: rgb(28, 32, 37);
   }
 }
 
+
 // Addon scss
 .jitsi-wrap-add-ons {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin: 20px;
 
   .jitsi-add-ons-wrapper {
-    max-width: 36.333333%;
+      width: 100%;
 
-    .top {
-      h3 {
-        font-weight: 600;
-        font-size: 30px;
-      }
+      .top {
+          margin-bottom: 30px;
 
-      p {
-        line-height: 10px;
-        font-size: 16px;
-        font-weight: 600;
-        color: #645f5fdd;
-
-      }
-    }
-
-    .bottom {
-      margin-top: 40px;
-      padding: 20px 25px;
-      background: #ffff;
-      border-radius: 5px;
-
-      .bottom-top {
-        display: flex;
-        justify-content: space-between;
-
-        .icon {
-          img {
-            width: 100px;
-            height: 60px;
-          }
-        }
-
-        a {
-          display: contents;
-          text-decoration: none;
-          font-weight: 600;
-          color: #696363ab;
-
-          &:focus {
-            box-shadow: none;
-            outline: none;
-          }
-        }
-      }
-
-      .bottom-footer {
-        margin-top: 30px;
-
-        h3 {
-          font-size: 20px;
-          font-weight: 700;
-          margin-bottom: 0;
-        }
-
-        p {
-          color: #747474;
-          font-weight: 600;
-          font-size: 13px;
-        }
-      }
-    }
-
-    .switcher-card {
-      padding: 10px 20px;
-      background: #ffff;
-      margin-top: 3px;
-      border-radius: 5px;
-      cursor: pointer;
-      min-height: 40px;
-
-      // &.opacity {
-      //   opacity: 0.6;
-      // }
-
-      .switcher-wrapper {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 3px;
-
-        .status {
-          padding: 5px 0px;
-          font-weight: 700;
-          color: rgb(116 116 116 / 64%);
-          font-size: 16px;
-          // opacity: 0.7;
-        }
-
-        .btn-wrapper {
-          button {
-            font-size: 16px;
-            border-radius: 30px;
-            cursor: pointer;
-            line-height: 0;
-            //transition: 0.3ms;
-
-            &:focus {
-              outline: 0;
-            }
-
-            &.install {
-              padding: 13px 15px 14px 15px;
-              background: #fff;
-              color: #0376da;
-              border: 2px solid #0376da90;
-              font-weight: 700;
-            }
-
-            &.upgrade {
-              padding: 3px 10px 4px 10px;
-              background: #0376da;
-              border: 2px solid #0376da;
-              color: #ffff;
-              margin-left: 5px;
-              display: flex;
-              align-items: center;
+          h3 {
               font-weight: 600;
-
-
-
-              .dashicons {
-                font-size: 16px;
-                margin-top: 5px;
-              }
-            }
+              font-size: 30px;
+              margin: 0;
           }
 
-
-        }
-
+          p {
+              font-size: 16px;
+              font-weight: 600;
+              color: #645f5fdd;
+              line-height: 1.4;
+              margin-top: 10px;
+          }
       }
-    }
 
+      .addons-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+          
+          @media (max-width: 1024px) {
+              grid-template-columns: repeat(2, 1fr);
+          }
+          
+          @media (max-width: 768px) {
+              grid-template-columns: 1fr;
+          }
+      }
+
+      .addon-card {
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+          transition: transform 0.2s, box-shadow 0.2s;
+          display: flex;
+          flex-direction: column;
+          
+          .addon-content {
+              padding: 20px;
+              flex-grow: 1;
+
+              .bottom-top {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 20px;
+
+                  .icon img {
+                      width: 100px;
+                      height: 60px;
+                      object-fit: contain;
+                  }
+
+                  a {
+                      color: #5e6d7ae3;
+                      transition: color 0.2s;
+                      display: flex;
+                      align-items: center;
+
+                      &:hover {
+                          color: #0376da;
+                      }
+
+                      &:focus {
+                          outline: none;
+                          box-shadow: none;
+                      }
+                  }
+              }
+
+              .jitsi-bottom-footer {
+                  h3 {
+                      font-size: 20px;
+                      font-weight: 700;
+                      margin-bottom: 12px;
+                      color: #333;
+                  }
+              
+                  p {
+                      color: #555;
+                      font-weight: 500;
+                      font-size: 14px;
+                      line-height: 1.5;
+                      margin-bottom: 12px;
+                  }
+            
+              
+                  a {
+                      display: inline-flex;
+                      align-items: center;
+                      text-decoration: none;
+                      font-size: 14px;
+                      font-weight: 600;
+                      color: #0376da;
+              
+                      .dashicons {
+                          margin-left: 5px;
+                          transition: transform 0.2s;
+                      }
+              
+                      &:hover {
+                          color: #007cba;
+                          .dashicons {
+                              transform: translateX(3px);
+                          }
+                      }
+                  }
+              }
+              
+              
+          }
+
+          .switcher-card, .free-switcher-card {
+              padding: 15px 20px;
+              background: #fff;
+              border-top: 1px solid #eee;
+              margin-top: auto;
+              border-radius: 0px 0px 8px 8px;
+              cursor: pointer;
+              
+
+              .switcher-wrapper {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding-top: 3px;
+                  min-height: 40px;
+
+                  .sc-wrapper{
+                      display: flex;
+                      align-items: center;
+                      .jitsi-addon-config{
+                          margin-right: 10px;
+                          font-size: 16px;
+                          color: #0376da;
+                          cursor: pointer;
+                          font-weight: 600;
+                      }
+                  }
+
+                  .status {
+                      padding: 5px 0;
+                      font-weight: 700;
+                      color: #747474d1;
+                      font-size: 16px;
+
+                      &.update-color {
+                          color: #07C175;
+                      }
+
+                      &.fail-color {
+                          color: red;
+                      }
+                  }
+
+                  .button-switcher-wrapper {
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+
+                      .jitsi-addon-update-available {
+                          margin: 0;
+                          height: 30px;
+                          padding: 0 12px;
+                          border-radius: 30px;
+                          font-size: 14px;
+                          font-weight: 600;
+                          color: #04B86E;
+                          border: 2px solid #60c79de8;
+                          background: #fff;
+                          cursor: pointer;
+                          transition: all 0.2s;
+
+                          &.updating {
+                              cursor: not-allowed;
+                          }
+
+                          &.hover:hover {
+                              background: #04B86E;
+                              color: #fff;
+                              border-color: #04B86E;
+                          }
+                      }
+
+                      .jitsi-field-switcher, .jitsi-vendor-field-switcher{
+                          position: relative;
+                          display: inline-block;
+                          width: 60px;
+                          height: 30px;
+                          border-radius: 15px;
+                          background-color: #5e6d7ae3;
+                          cursor: pointer;
+                          transition: background-color 0.2s;
+
+                          &.active {
+                              background-color: #0376da;
+                          }
+
+                          &.disabled-switcher {
+                              cursor: not-allowed;
+                              opacity: 0.7;
+                          }
+
+                          input {
+                              opacity: 0;
+                              width: 0;
+                              height: 0;
+                          }
+
+                          .switcher-round, .switchertwo-round {
+                              position: absolute;
+                              top: 2px;
+                              left: 2px;
+                              width: 26px;
+                              height: 26px;
+                              background-color: #fff;
+                              border-radius: 50%;
+                              transition: transform 0.2s;
+
+                              &.checked {
+                                  transform: translateX(30px);
+                              }
+                          }
+                      }
+                  }
+
+                  .btn-wrapper {
+                    button {
+                        font-size: 16px;
+                        border-radius: 30px;
+                        cursor: pointer;
+                        line-height: 0;
+                        //transition: 0.3ms;
+
+                        &:focus {
+                            outline: 0;
+                        }
+
+                        &.install {
+                            padding: 13px 15px 14px 15px;
+                            background: #fff;
+                            color: #0376da;
+                            border: 2px solid #0376da90;
+                            font-weight: 700;
+                        }
+                        
+                        &.upgrade {
+                            padding: 3px 10px 4px 10px;
+                            background: #0376da;
+                            border: 2px solid #0376da;
+                            color: #ffff;
+                            margin-left: 5px;
+                            display: flex;
+                            align-items: center;
+                            font-weight: 600;
+
+
+
+                            .dashicons {
+                                font-size: 16px;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+
+
+                }
+              }
+          }
+      }
   }
 }
+
+@keyframes lds-dual-ring {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
 
 .jitsi-meet-add-ons-admin-menu {
   display: flex;

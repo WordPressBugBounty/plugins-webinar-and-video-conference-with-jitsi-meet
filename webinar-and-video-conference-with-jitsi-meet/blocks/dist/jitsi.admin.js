@@ -195,28 +195,74 @@ function headway_init(){
 
         });
 
-    //Addons js
-    $(".jitsi-add-ons-wrapper .switcher-card").mouseenter(function(){
-       var icon = '<span class="dashicons dashicons-lock"></span>';
-        $(".install").text("Get Ultimate");
-        $(".install").addClass("upgrade");
-        $(".install").prepend(icon);
-
-        //show pro offer popup for addon upgrade button
-        $('.upgrade').on('click', function (e) {
-            e.preventDefault();
-            WPPOOL.Popup("webinar_and_video_conference_with_jitsi_meet").show();
-        })
-      });
-
-    $(".jitsi-add-ons-wrapper .switcher-card").mouseleave(function(){
-        $(".install").removeClass("upgrade");
-        $(".install").text("Install");
-      });
-
     //   $(".jitsi-admin-field-radio").parents('tr').css({"background-color": "yellow", "padding-top": "300px"});
-
-    
 
     });
 })(jQuery);
+
+
+(function ($) {
+    $(document).ready(function(){
+       
+        function jitsi_manage_depend(el){
+            let sourcedata = el.data('depend');
+            let hide = false;
+            $.each(sourcedata, function(index, data){
+                if($(`[name=${data.field}]:checked`).val() != data.value){
+                    hide = true;
+                }
+            });
+            if(hide){
+                el.closest('tr').css('display', 'none');
+            } else {
+                el.closest('tr').css('display', 'table-row');
+            }
+        }
+
+        $('.jitsi-admin-field[data-depend]').each(function(){
+            jitsi_manage_depend($(this));
+        });
+
+        $('body').on('change', '.jitsi-admin-field', function(){
+            $('.jitsi-admin-field[data-depend]').each(function(){
+                jitsi_manage_depend($(this));
+            });
+        });
+       
+    });
+}(jQuery));
+
+
+jQuery(document).ready(function($) {
+    // Target all cards with data-card attribute
+    $("[data-card]").each(function(index) {
+        var card = $(this);
+        // Mouse Enter: Add hover effects to the specific card
+        card.on("mouseenter", function() {
+            var icon = '<span class="dashicons dashicons-lock"></span>';
+            var button = card.find(".install");
+
+            button.text("Get Ultimate");
+            button.addClass("upgrade");
+            button.prepend(icon);
+
+            // Bind click event for upgrade within this card only
+            button.off('click').on('click', function (e) {
+                e.preventDefault();
+                WPPOOL.Popup("webinar_and_video_conference_with_jitsi_meet").show();
+            });
+        });
+
+        // Mouse Leave: Reset button text and style for the specific card
+        card.on("mouseleave", function() {
+            var button = card.find(".install");
+
+            button.removeClass("upgrade");
+            if (index === 1) { // Check if it's the second card (index starts from 0)
+                button.html("Activate"); 
+            } else {
+                button.html("Activate"); // Reset text and remove icon
+            }
+        });
+    });
+});

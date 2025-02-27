@@ -206,13 +206,15 @@ class Jitsi_Elementor extends Widget_Base {
 		$settings = $this->get_settings();
 
 		// Safely retrieve settings with fallbacks.
-		$name           = isset( $settings['name'] ) ? sanitize_text_field( $settings['name'] ) : 'DefaultRoom';
-		$width          = isset( $settings['width'] ) ? intval( $settings['width'] ) : 1080;
-		$height         = isset( $settings['height'] ) ? intval( $settings['height'] ) : 720;
-		$audio_muted    = ! empty( $settings['audio_muted'] ) ? 'true' : 'false';
-		$video_muted    = ! empty( $settings['video_muted'] ) ? 'true' : 'false';
-		$screen_sharing = ! empty( $settings['screen_sharing'] ) ? 'true' : 'false';
-		$invite         = ! empty( $settings['invite'] ) ? 'true' : 'false';
+		$name            = isset( $settings['name'] ) ? sanitize_text_field( $settings['name'] ) : 'DefaultRoom';
+		$width           = isset( $settings['width'] ) ? intval( $settings['width'] ) : 1080;
+		$height          = isset( $settings['height'] ) ? intval( $settings['height'] ) : 720;
+		$audio_muted     = ! empty( $settings['audio_muted'] ) ? 'true' : 'false';
+		$video_muted     = ! empty( $settings['video_muted'] ) ? 'true' : 'false';
+		$screen_sharing  = ! empty( $settings['screen_sharing'] ) ? 'true' : 'false';
+		$invite          = ! empty( $settings['invite'] ) ? 'true' : 'false';
+		$selected_domain = get_option( 'jitsi_opt_select_api', true );
+		$free_domain     = get_option( 'jitsi_opt_free_domain', 'jitsi-01.csn.tu-chemnitz.de' );
 		?>
 
 		<div 
@@ -224,7 +226,7 @@ class Jitsi_Elementor extends Widget_Base {
 			data-videomute="<?php echo esc_attr( $video_muted ); ?>"
 			data-screen="<?php echo esc_attr( $screen_sharing ); ?>"
 			data-invite="<?php echo esc_attr( $invite ); ?>"
-			data-domain="<?php echo esc_attr( get_option( 'jitsi_opt_free_domain', 'jitsi-01.csn.tu-chemnitz.de' ) ); ?>"
+			data-domain="<?php echo esc_attr( 'jaas' === $selected_domain ? '8x8.vc' : $free_domain ); ?>"
 		></div>
 
 		<?php
