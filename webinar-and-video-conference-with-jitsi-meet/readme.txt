@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.4
-Stable tag: 2.7.1
+Stable tag: 2.7.2
 License: GPL-2.0+
 Lisecse URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -215,7 +215,10 @@ Yes, You can do live streaming on YouTube from the Meeting.
 
 == Changelog ==
 
-= 1.7.1 – 06 Mar 2025 =
+= 2.7.2 – 12 Mar 2025 =
+* **New:** Added support for Whiteboard
+
+= 2.7.1 – 06 Mar 2025 =
 * **Fix:** Fixed a typo
 
 = 2.7.0 – 27 Feb 2025 =

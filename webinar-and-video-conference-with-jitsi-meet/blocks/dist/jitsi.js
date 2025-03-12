@@ -19,6 +19,7 @@ jQuery(window).on('elementor/frontend/init', function () {
 
 
 function initJitsi(elem) {
+
   if (window.location.protocol == 'http:') {
     jQuery(elem).each(function (index, element) {
       jQuery(element).html(
@@ -105,6 +106,7 @@ function initJitsi(elem) {
     }
 
     api[index] = new JitsiMeetExternalAPI(domain, options);
+    api[index].executeCommand('toggleWhiteboard');
   });
 }
 

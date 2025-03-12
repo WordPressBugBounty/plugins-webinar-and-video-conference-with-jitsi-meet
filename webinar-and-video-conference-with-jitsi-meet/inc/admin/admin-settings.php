@@ -696,8 +696,22 @@ if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 			];
 
 			$args[] = array(
+				'id'       => $this->prefix . 'enable_whiteboard',
+				'title'    => __( 'Enable Whiteboard', 'jitsti-pro' ) . '<span class="description desc-pro">' . __( 'Turn on to use the whiteboard in Jitsi meetings', 'jitsi-meet-wp' ) . '</span>',
+				'callback' => array( $this->callbacks, 'jitsi_switch' ),
+				'page'     => 'jitsi-pro-config',
+				'section'  => $this->prefix . 'config_section',
+				'args'     => array(
+					'label_for'    => $this->prefix . 'enable_whiteboard',
+					'default'      => 0,
+					'feature_type' => 'new',
+					'disabled'  => true,
+				),
+			);
+
+			$args[] = array(
 				'id'       => $this->prefix . 'update_post_type_slug',
-				'title'    => __( 'Enable to Change Post-type Slug', 'jitsti-pro' ) . '<span class="description desc-pro">' . __( 'You can enable/disable custom slug', 'jitsi-pro' ) . '</span>',
+				'title'    => __( 'Enable to Change Post-type Slug', 'jitsti-pro' ) . '<span class="description desc-pro">' . __( 'You can enable/disable custom slug', 'jitsi-meet-wp' ) . '</span>',
 				'callback' => array( $this->callbacks, 'jitsi_switch' ),
 				'page'     => 'jitsi-pro-config',
 				'section'  => $this->prefix . 'config_section',
