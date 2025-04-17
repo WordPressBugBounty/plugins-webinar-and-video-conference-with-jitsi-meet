@@ -2,9 +2,9 @@
 Contributors: wppool, azizultex, shahreyar46, foysalremon
 Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.4
-Stable tag: 2.7.2
+Stable tag: 2.7.3
 License: GPL-2.0+
 Lisecse URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -214,6 +214,9 @@ Yes, You can do live streaming on YouTube from the Meeting.
 11. Self Hosted
 
 == Changelog ==
+
+= 2.7.3 – 17 Apr 2025 =
+* **Improvement:** Enhanced compatibility to support WordPress 6.8
 
 = 2.7.2 – 12 Mar 2025 =
 * **New:** Added support for Whiteboard

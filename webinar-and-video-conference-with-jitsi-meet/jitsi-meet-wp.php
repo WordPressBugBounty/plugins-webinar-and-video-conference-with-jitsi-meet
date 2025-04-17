@@ -3,14 +3,14 @@
  * Plugin Name:       Webinar and Video Conference with Jitsi Meet
  * Plugin URI:        https://jitsi-meet-wp.wppool.dev/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.7.2
+ * Version:           2.7.3
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       jitsi-meet-wp
  * Requires at least: 5.2
- * Tested up to:      6.7
+ * Tested up to:      6.8
  *
  *  @package JITSI_MEET_WP
  */
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.7.2' );
+define( 'JITSI_MEET_WP_VERSION', '2.7.3' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
@@ -77,7 +77,7 @@ function jitsi_meet_plugin_activate() {
 
 register_activation_hook( __FILE__, 'jitsi_meet_plugin_activate' );
 
-add_action( 'plugins_loaded', 'jitsi_meet_wp_begin', 20 );
+add_action( 'init', 'jitsi_meet_wp_begin', 20 );
 
 
 /**
@@ -123,4 +123,4 @@ function jitsi_meet_wppool_sdk_init() {
 }
 
 add_action( 'init', 'jitsi_meet_wp_appsero_init_tracker' );
-jitsi_meet_wppool_sdk_init();
+add_action( 'init', 'jitsi_meet_wppool_sdk_init' );
