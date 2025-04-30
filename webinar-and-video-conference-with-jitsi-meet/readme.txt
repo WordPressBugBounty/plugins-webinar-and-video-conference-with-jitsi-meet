@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 5.4
-Stable tag: 2.7.3
+Stable tag: 2.7.4
 License: GPL-2.0+
 Lisecse URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -16,9 +16,6 @@ The best WordPress webinar plugin with branded meetings. Add Jitsi meetings, hos
 
 Looking for a branded WordPress meeting experience that’s a simple, inexpensive, and no-technical choice? Introducing Jitsi Meet - the easiest webinar plugin for WordPress to host virtual branded live webinars, meetings, conferences, online classes, and video calls directly on your WordPress website. Experiencing live video chat with a WordPress meeting plugin has never been so easy!
 
-👁️ [View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get Premium](https://go.wppool.dev/ruO4) | 🤝 [Join Our Facebook Community](https://cutt.ly/ceCQgvoT)
-[youtube https://youtu.be/eANgixqxe84]
-
 **Let’s grow, connect, and thrive together!**
 
 * **🤝 Join Our [Facebook Community](https://cutt.ly/ceCQgvoT)**
@@ -26,20 +23,25 @@ Looking for a branded WordPress meeting experience that’s a simple, inexpensiv
 * **🎥 Subscribe on [YouTube](https://www.youtube.com/@WPPOOL)**
 * **👍 Like Our [Facebook Page](https://www.facebook.com/wppool.dev)**
 
+[youtube https://youtu.be/eANgixqxe84]
+
+👁️ [View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get Premium](https://go.wppool.dev/ruO4) | 🤝 [Join Our Facebook Community](https://cutt.ly/ceCQgvoT)
+
 Easily create, manage, and promote your webinars with our webinar plugin, without ever having to leave your WordPress site. Customize and brand your webinars to match your website's look and feel.
 
-Built-in meeting post type, shortcodes, Elementor widgets, and Gutenberg blocks let you create WordPress webinars without any technical or coding knowledge. Fully integrated with WooCommerce, LMS, Multivendors, email marketing, and booking plugins. This is the most powerful and convenient WordPress video conference plugin that requires zero coding.
+Built-in meeting post type, shortcodes, Elementor widgets, and Gutenberg blocks let you create WordPress webinars without any technical or coding knowledge.With frontend meeting creation, users can set up and manage meetings directly from the front end - no backend access needed, just a few clicks and you're live! Jitsi Meet is fully integrated with WooCommerce, LMS, Multivendors, email marketing, and booking plugins. This is the most powerful and convenient WordPress video conference plugin that requires zero coding.
 
-You can turn your video meeting into a webinar landing page on your website. Not only that, you can also embed webinars on your website. You deserve the best in the best live video chat plugin for WordPress.
+You can turn your video meeting into a webinar landing page on your website. And for those moments when words aren’t enough, White board integration lets you draw, brainstorm, and collaborate visually within Jitsi Meet–making sessions more interactive and engaging. Not only that, you can also embed webinars on your website. You deserve the best in the best live video chat plugin for WordPress.
 
-Jitsi Meet Pro provides the JaaS integration for branded WordPress meeting plugin experience with a custom domain. Create a unique branded name on the URL which identifies your website and business.
+Jitsi Meet Pro provides the JaaS integration for a branded WordPress meeting plugin experience with a custom domain. Create a unique branded name on the URL that identifies your website and business.
 
 Seamless integration with WooCommerce, LearnPress, LeanDash, and Tutor LMS allows you to create and embed meetings on these platforms with up to 500 participants, live stream, transcript, and recording options (requires a JaaS 8*8 subscription). Jitsi Meet also has Google, Outlook, and Apple calendar integration.
 
-You can install the webinar plugin on your WordPress site and start meeting right from your website without any email, password, or verification hassles. Configure your video frame height and width that suits your needs and you’re good to go, making it easy for even novice users to set up and manage webinars with ease.
+You can install the webinar plugin on your WordPress site and start meeting right from your website without any email, password, or verification hassles. Configure your video frame height and width that suit your needs and you’re good to go, making it easy for even novice users to set up and manage webinars with ease.
 
-Maintain productivity with HD video, screen sharing, and tons of collaboration features from any device for businesses of all sizes with the best WordPress video conference plugin - Jitsi Meet.
+Maintain productivity with HD video, screen sharing, white board sketch and tons of collaboration features from any device for businesses of all sizes with the best WordPress video conference plugin - Jitsi Meet.
 
+👁️ [View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get Premium](https://go.wppool.dev/ruO4) | 🤝 [Join Our Facebook Community](https://cutt.ly/ceCQgvoT)
 
 == 🎁Free Features ==
 
@@ -75,6 +77,8 @@ Maintain productivity with HD video, screen sharing, and tons of collaboration f
 
 * **Livestream, recording, and transcription** - Get a premium meeting experience with rich customization options such as recording, live streaming, and automatic transcription. Also requires a JaaS 8*8 premium subscription.
 
+* **WhiteBoard Integration** - No more explaining things with just words - just grab a pen (well, your mouse or touchpad 😉) and start drawing right in Jitsi Meet. Perfect for brainstorming, teaching, or even playing a quick game of tic-tac-toe! Try it out and see how fun and easy it is!
+
 * **Calendar integration** - Schedule meetings on Google, Outlook, and Apple Calendar and send invitations to participants as well.
 
 * **Meeting registration** - Allow only registered participants to join and keep your meeting secured.
@@ -97,6 +101,8 @@ Maintain productivity with HD video, screen sharing, and tons of collaboration f
 
 * **BuddyPress Integration** - BuddyPress group members can now join meeting rooms anytime they want. Activate Jitsi Meet Ultimate to find a new meeting room within the BuddyPress groups. A super easy solution to organize BuddyPress video conferences.
 
+* **Front-End Meeting Creation -** This powerful new feature let users create and manage meetings directly from the frontend. With the Frontend Meeting Creation Add-on, you can create and manage meetings directly from the frontend - no technical steps, no backend access, just a few clicks and you’re ready to go.
+
 * **Integration with LearnPress and Tutor LMS** - The learning management system (LMS) integration of Jitsi Meet Ultimate takes your virtual classroom to the next level as you can add a video meeting facility for your learners. Both LearnPress and Tutor LMS users can take this feature to power up their eLearning solutions and add new ways to enhance the online course marketplace.
 
 * **🔥Integration with Multi Vendor Marketplace** - A must-have feature for marketplace owners. You can now create and sell branded video meetings from the frontend of your vendor dashboard. Currently supports Dokan Multivendor plugin and MultiVendorX.
@@ -105,6 +111,7 @@ Maintain productivity with HD video, screen sharing, and tons of collaboration f
 
 * **Integration with email marketing tools (upcoming)** - Integration with email marketing tools will automatically add the registrants as new subscribers directly to your Zapier, MailChimp, etc. accounts.
 
+👁️ [View Demo](https://go.wppool.dev/O0Z) | 🚀 [Get Premium](https://go.wppool.dev/ruO4) | 🤝 [Join Our Facebook Community](https://cutt.ly/ceCQgvoT)
 
 Some of our premium features (recording, transcription, live streaming) require a JaaS premium subscription. We are not associated or an official integration of JaaS. Our plugin works as a bridge between WordPress and JItsi Meet to provide you with a flawless meeting experience from your dashboard.
 
@@ -173,6 +180,13 @@ Yes, it's absolutely secure. We're committed to protecting your privacy and your
 = I want a refund for my purchase of the plugin. What is the procedure? = 
 We have a 14 days refund policy. Please email us at support@wppool.dev explaining why you would like to get a refund.
 
+= What is Frontend Meeting Creation? =
+It lets your user create and manage meetings directly from your site’s front end–no admin access or tech skills needed.
+
+= What does the Whiteboard Integration do? =
+
+You can visually express ideas, draw diagrams, and collaborate in real-time right within your Jitsi Meet session. It's ideal for teaching, brainstorming, and interactive presentations
+
 = Can I use self-hosted Jitsi Meet with this plugin? = 
 Yes, You can use Jitsi Meet free - [https://meet.jit.si](https://meet.jit.si), JaaS - [https://jaas.8x8.vc](https://jaas.8x8.vc) or self-hosted Jitsi Meet with our plugin as you need as per your usage requirements.
 
@@ -214,6 +228,14 @@ Yes, You can do live streaming on YouTube from the Meeting.
 11. Self Hosted
 
 == Changelog ==
+
+= 2.7.4 – 30 Apr 2025 =
+* **Fix:** WCFM users were unable to create bookable meetings through booking integratio 
+* **Fix:** Jitsi Meet integration failed when logging into meetings for WooCommerce products linked to Tutor LMS courses
+* **Fix:**  Meetings embedded using Elementor displayed a broken interface along with error notices
+* **Improvement:** Enhanced UI/UX for the frontend meeting interface
+* **New:** Added support for editing meetings from the frontend
+* **New:** Frontend meeting creation now includes all configuration settings available in the admin area
 
 = 2.7.3 – 17 Apr 2025 =
 * **Improvement:** Enhanced compatibility to support WordPress 6.8

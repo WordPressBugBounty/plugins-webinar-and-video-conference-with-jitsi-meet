@@ -697,7 +697,7 @@ if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 
 			$args[] = array(
 				'id'       => $this->prefix . 'enable_whiteboard',
-				'title'    => __( 'Enable Whiteboard', 'jitsti-pro' ) . '<span class="description desc-pro">' . __( 'Turn on to use the whiteboard in Jitsi meetings', 'jitsi-meet-wp' ) . '</span>',
+				'title'    => __( 'Enable Whiteboard', 'jitsti-pro' ) . '<span class="description desc-pro">' . __( 'Enable to use the whiteboard on Jass 8x8', 'jitsi-meet-wp' ) . '</span>',
 				'callback' => array( $this->callbacks, 'jitsi_switch' ),
 				'page'     => 'jitsi-pro-config',
 				'section'  => $this->prefix . 'config_section',
