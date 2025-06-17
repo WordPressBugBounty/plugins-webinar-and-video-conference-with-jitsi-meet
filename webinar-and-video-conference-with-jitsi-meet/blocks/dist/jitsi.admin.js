@@ -57,7 +57,25 @@ jQuery(document).ready(function(){
     jQuery('.jitsi-setting-tabs-wrapper .disabled').on('click', function (e) {
         e.preventDefault();
         WPPOOL.Popup("webinar_and_video_conference_with_jitsi_meet").show();
-    })
+    });
+
+    // NEW: Add handler for Premium badges and descriptions
+    jQuery('.jitsi-setting-tabs-wrapper').on('click', '.desc-pro, .description.desc-pro', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        WPPOOL.Popup("webinar_and_video_conference_with_jitsi_meet").show();
+    });
+
+    // Also handle clicks on Premium badges/text that might be outside the main wrapper
+    jQuery(document).on('click', '.desc-pro', function (e) {
+        // Check if this is within a settings context
+        if ($(this).closest('.jitsi-setting-tabs-wrapper, .form-table, .wrap').length > 0) {
+            e.preventDefault();
+            e.stopPropagation();
+            WPPOOL.Popup("webinar_and_video_conference_with_jitsi_meet").show();
+        }
+    });
+
 
     function venillaSnackbar(msg) {
         if(!jQuery('#floating-snackbar').length){
@@ -266,3 +284,4 @@ jQuery(document).ready(function($) {
         });
     });
 });
+

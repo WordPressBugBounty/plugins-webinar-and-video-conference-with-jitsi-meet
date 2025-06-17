@@ -3,7 +3,7 @@
  * Plugin Name:       Webinar and Video Conference with Jitsi Meet
  * Plugin URI:        https://jitsi-meet-wp.wppool.dev/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.7.4
+ * Version:           2.7.5
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.7.4' );
+define( 'JITSI_MEET_WP_VERSION', '2.7.5' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
@@ -122,5 +122,5 @@ function jitsi_meet_wppool_sdk_init() {
 	}
 }
 
+jitsi_meet_wppool_sdk_init();
 add_action( 'init', 'jitsi_meet_wp_appsero_init_tracker' );
-add_action( 'init', 'jitsi_meet_wppool_sdk_init' );

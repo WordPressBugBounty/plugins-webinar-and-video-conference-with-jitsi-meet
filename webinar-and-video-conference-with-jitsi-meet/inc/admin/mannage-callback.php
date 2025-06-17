@@ -111,7 +111,10 @@ class Mannage_Callback {
 		$name       = $args['label_for'];
 		$default    = isset( $args['default'] ) ? $args['default'] : '';
 		$optionsarr = isset( $args['options'] ) ? $args['options'] : array();
-		$value      = get_option( $name, $default );
+		$disabled   = isset( $args['disabled'] ) && $args['disabled'];
+
+		// Use default value for disabled fields, otherwise get saved value.
+		$value = $disabled ? $default : get_option( $name, $default );
 
 		// Build options securely.
 		$options_html = '';
@@ -131,15 +134,27 @@ class Mannage_Callback {
 			$data_depend_attr = ' data-depend="' . esc_attr( wp_json_encode( $args['depend'] ) ) . '"';
 		}
 
-		// Now output everything with explicit escaping.
-		printf(
-			'<select class="jitsi-admin-field" name="%1$s" id="%1$s"%2$s>%3$s</select>',
-			esc_attr( $name ),
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Already escaped above
-			$data_depend_attr,
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Content already escaped in the loop
-			$options_html
-		);
+		if ( $disabled ) {
+			// For disabled/premium fields: wrap entire field in disabled div (like jitsi_number, jitsi_general).
+			printf(
+				'<div class="disabled"><select class="jitsi-admin-field" name="%1$s" id="%1$s" disabled%2$s>%3$s</select></div>',
+				esc_attr( $name ),
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Already escaped above
+				$data_depend_attr,
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Content already escaped in the loop
+				$options_html
+			);
+		} else {
+			// For enabled fields: no wrapper div.
+			printf(
+				'<select class="jitsi-admin-field" name="%1$s" id="%1$s"%2$s>%3$s</select>',
+				esc_attr( $name ),
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Already escaped above
+				$data_depend_attr,
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Content already escaped in the loop
+				$options_html
+			);
+		}
 	}
 
 	/**

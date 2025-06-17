@@ -421,7 +421,7 @@ if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 
 			$args[] = [
 				'id'       => $this->prefix . 'user_is_moderator',
-				'title'    => __( 'User is Moderator', 'jitsi-pro' ) . '<span class="description desc-pro">' . __( 'Set default user as moderator', 'jitsi-pro' ) . '</span>',
+				'title'    => __( 'Enable Moderator Access', 'jitsi-pro' ) . '<span class="description desc-pro">' . __( 'Allow this user to join as a moderator in Jass 8x8 meetings (only users with edit access)', 'jitsi-pro' ) . '</span>',
 				'callback' => [ $this->callbacks, 'jitsi_switch' ],
 				'page'     => 'jitsi-pro-admin',
 				'section'  => $this->prefix . 'admin_section',
