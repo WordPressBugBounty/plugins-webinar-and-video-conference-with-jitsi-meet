@@ -625,6 +625,58 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 							</form>
 							<?php $this->jitsi_pro_preview_gen(); ?>
 						</div>
+
+						<div class="jitsi-hosted-section" style="display:none;">
+							<div class="jitsi-hosted-header">
+								<span class="jitsi-hosted-icon" style="font-size:20px;">👇</span>
+								<h3 class="jitsi-hosted-title">
+									<?php esc_html_e( 'Or, Go Fully Branded - Zero Server Setup!', 'jitsi-pro' ); ?>
+								</h3>
+							</div>
+							
+							<div class="jitsi-hosted-content">
+								<div class="jitsi-hosted-info">
+									<p class="jitsi-hosted-subtitle">
+										<?php esc_html_e( 'With Your Branding, Your Rules!', 'jitsi-pro' ); ?>
+									</p>
+									<h2 class="jitsi-hosted-main-title">
+										<?php esc_html_e( 'Host Secure Video Meetings Under Your Own Domain.', 'jitsi-pro' ); ?>
+									</h2>
+									
+									<ul class="jitsi-hosted-features">
+										<li class="jitsi-hosted-feature">
+											<span class="jitsi-hosted-check" aria-hidden="true">✓</span>
+											<span><?php esc_html_e( 'Fully branded under your domain', 'jitsi-pro' ); ?></span>
+										</li>
+										<li class="jitsi-hosted-feature">
+											<span class="jitsi-hosted-check" aria-hidden="true">✓</span>
+											<span><?php esc_html_e( 'Zero server setup required', 'jitsi-pro' ); ?></span>
+										</li>
+										<li class="jitsi-hosted-feature">
+											<span class="jitsi-hosted-check" aria-hidden="true">✓</span>
+											<span><?php esc_html_e( 'Unlimited high-quality meetings', 'jitsi-pro' ); ?></span>
+										</li>
+										<li class="jitsi-hosted-feature">
+											<span class="jitsi-hosted-check" aria-hidden="true">✓</span>
+											<span><?php esc_html_e( 'No technical hassle', 'jitsi-pro' ); ?></span>
+										</li>
+									</ul>
+									
+									<a href="https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/" target="__blank" class="jitsi-hosted-button" role="button">
+										<?php esc_html_e( 'Explore Hosted Jitsi', 'jitsi-pro' ); ?>
+										<span class="dashicons dashicons-arrow-right-alt"></span>
+									</a>
+								</div>
+								
+								<div class="jitsi-hosted-visual">
+									<img 
+										src="<?php echo esc_url( JITSI_MEET_WP_URL . '/assets/img/self-hosted.svg' ); ?>" 
+										alt="<?php esc_attr_e( 'Jitsi Meeting Interface', 'jitsi-pro' ); ?>" 
+										class="jitsi-hosted-image"
+									>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

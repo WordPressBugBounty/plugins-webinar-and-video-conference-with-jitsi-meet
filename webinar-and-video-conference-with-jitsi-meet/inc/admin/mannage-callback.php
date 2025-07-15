@@ -43,15 +43,20 @@ class Mannage_Callback {
 	 * @return void
 	 */
 	public function jitsi_general( $args ) {
-		$name     = $args['label_for'];
-		$value    = get_option( $name, '' );
-		$disabled = isset( $args['disabled'] ) ? 'disabled' : '';
+		$name        = $args['label_for'];
+		$default     = isset( $args['default'] ) ? $args['default'] : '';
+		$value       = get_option( $name, $default ) ? get_option( $name, $default ) : $default;
+		$disabled    = isset( $args['disabled'] ) ? 'disabled' : '';
+		$data_depend = isset( $args['depend'] ) ? " data-depend='" . wp_json_encode( $args['depend'] ) . "'" : '';
 
 		if ( $disabled ) {
-			$value = isset( $args['default'] ) ? $args['default'] : '';
+			$value = $default;
+			//phpcs:ignore
+			printf( '<div class="%3$s"><input class="jitsi-admin-field" type="text" name="%1$s" id="%1$s" value="%2$s"%4$s/></div>', esc_attr( $name ), esc_attr( $value ), esc_attr( $disabled ), $data_depend );
+		} else {
+			//phpcs:ignore
+			printf( '<input class="jitsi-admin-field" type="text" name="%1$s" id="%1$s" value="%2$s"%3$s/>', esc_attr( $name ), esc_attr( $value ), $data_depend );
 		}
-
-		printf( '<div class="%3$s"><input class="jitsi-admin-field" type="text" name="%1$s" id="%1$s" value="%2$s"/></div>', esc_attr( $name ), esc_attr( $value ), esc_attr( $disabled ) );
 	}
 
 	/**

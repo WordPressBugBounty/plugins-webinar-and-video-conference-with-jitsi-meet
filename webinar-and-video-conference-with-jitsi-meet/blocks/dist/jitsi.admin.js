@@ -285,3 +285,44 @@ jQuery(document).ready(function($) {
     });
 });
 
+//Display or hide selfhosted section and save button
+(function ($) {
+    $(document).ready(function(){ 
+        var radioButtons = $('input[name="jitsi_opt_select_api"]');
+        var hostedSection = $('.jitsi-hosted-section');
+        var saveButton = $('#jaasOptionFormApi .button-primary, #jaasOptionFormApi input[type="submit"]');
+        
+        hostedSection.hide();
+        
+        function toggleHostedSection() {
+            // Check if we're on APIs tab AND self-hosted is selected
+            var isApisTab = $('#jitsi-setting-tab-apis').hasClass('active');
+            var selectedApi = $('input[name="jitsi_opt_select_api"]:checked').val();
+            
+            if (isApisTab && selectedApi === 'self') {
+                hostedSection.slideDown(300);
+                saveButton.hide();
+            } else {
+                hostedSection.slideUp(300);
+                saveButton.show();
+            }
+        }
+        
+        // Initial check
+        if (radioButtons.length > 0) {
+            setTimeout(toggleHostedSection, 100);
+        }
+        
+        // When API selection changes
+        $(document).on('change', 'input[name="jitsi_opt_select_api"]', function() {
+            toggleHostedSection();
+        });
+        
+        // When tab changes - hook into existing tab click handler
+        $('.jitsi-tab-link').on('click', function(e) {
+            if($(this).is('a[href^="#"]')){
+                setTimeout(toggleHostedSection, 100);
+            }
+        });
+    });
+}(jQuery));

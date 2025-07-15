@@ -3,7 +3,7 @@
  * Plugin Name:       Webinar and Video Conference with Jitsi Meet
  * Plugin URI:        https://jitsi-meet-wp.wppool.dev/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.7.5
+ * Version:           2.7.6
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.7.5' );
+define( 'JITSI_MEET_WP_VERSION', '2.7.6' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
@@ -36,9 +36,10 @@ define( 'JITSI_MEET_WP_ASSETS', JITSI_MEET_WP_URL . '/assets' );
  */
 function jitsi_meet_wp_begin() {
 	$plugin_list    = get_option( 'active_plugins' );
-	$jitsi_pro      = 'webinar-and-video-conference-with-jitsi-meet-pro/jitsi-meet-wp.php';
+	$jitsi_pro      = 'webinar-and-video-conference-jitsi-meet-pro/jitsi-meet-wp.php';
 	$jitsi_ultimate = 'webinar-and-video-conference-with-jitsi-meet-ultimate/jitsi-meet-wp.php';
 	$jitsi_premium  = 'webinar-and-video-conference-with-jitsi-meet-premium/jitsi-meet-wp.php';
+
 	if ( ! in_array( $jitsi_pro, $plugin_list, true ) && ! in_array( $jitsi_ultimate, $plugin_list, true ) && ! in_array( $jitsi_premium, $plugin_list, true ) ) {
 		/**
 		 * Check for Gutenberg existence
@@ -52,7 +53,32 @@ function jitsi_meet_wp_begin() {
 			Jitsi_Meet_WP_Gutenberg::instance();
 		}
 	}
+
+	if ( ! get_user_meta( get_current_user_id(), 'jitsi_hosted_topbar_dismissed', true ) ) {
+		include_once JITSI_MEET_WP_FILE_PATH . 'inc/jitsi-topbar.php';
+	}
 }
+
+
+function jitsi_meet_wp_is_any_premium_active() {
+	$active_plugins  = (array) get_option( 'active_plugins', [] );
+	$network_plugins = (array) get_site_option( 'active_sitewide_plugins', [] );
+
+	$pro_plugins = [
+		'webinar-and-video-conference-with-jitsi-meet-pro/jitsi-meet-wp.php',
+		'webinar-and-video-conference-with-jitsi-meet-ultimate/jitsi-meet-wp.php',
+		'webinar-and-video-conference-with-jitsi-meet-premium/jitsi-meet-wp.php',
+	];
+
+	foreach ( $pro_plugins as $plugin ) {
+		if ( in_array( $plugin, $active_plugins, true ) || isset( $network_plugins[ $plugin ] ) ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
 
 /**
  * Jitsi meet plugin activate.

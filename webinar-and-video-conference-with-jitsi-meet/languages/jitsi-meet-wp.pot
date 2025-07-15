@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-06-25 17:24+0600\n"
+"POT-Creation-Date: 2025-07-15 14:03+0600\n"
 "PO-Revision-Date: 2024-06-25 13:08+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,6 +17,8 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: .wordpress-org\n"
 "X-Poedit-SearchPathExcluded-1: .github\n"
 "X-Poedit-SearchPathExcluded-2: .git\n"
+"X-Poedit-SearchPathExcluded-3: node_modules\n"
+"X-Poedit-SearchPathExcluded-4: vendor\n"
 
 #: blocks/dist/blocks.build.js:204 blocks/src/blocks.js:67
 #: inc/admin/class-admin.php:188
@@ -59,250 +61,307 @@ msgid "Start with screen sharing"
 msgstr ""
 
 #: blocks/dist/blocks.build.js:289 blocks/src/blocks.js:138
-#: inc/admin/admin-settings.php:375 inc/elementor.php:188
+#: inc/admin/admin-settings.php:493 inc/elementor.php:188
 msgid "Enable Inviting"
 msgstr ""
 
-#: blocks/dist/blocks.build.js:314 inc/admin/class-admin.php:158
-#: inc/elementor.php:67
+#: blocks/dist/blocks.build.js:314 blocks/src/blocks.js:166
+#: inc/admin/class-admin.php:158 inc/elementor.php:67
 msgid "Jitsi Meet"
 msgstr ""
 
-#: blocks/dist/blocks.build.js:317
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:170
 msgid "jitsi"
 msgstr ""
 
-#: blocks/dist/blocks.build.js:317
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:171
 msgid "meeting"
 msgstr ""
 
-#: blocks/dist/blocks.build.js:317
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:172
 msgid "video"
 msgstr ""
 
-#: blocks/dist/blocks.build.js:317
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:173
 msgid "conference"
 msgstr ""
 
-#: blocks/dist/blocks.build.js:317
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:174
 msgid "zoom"
 msgstr ""
 
-#: inc/admin/admin-settings.php:236
+#: inc/admin/admin-settings.php:256
 msgid "Select API"
 msgstr ""
 
-#: inc/admin/admin-settings.php:236
+#: inc/admin/admin-settings.php:256
 msgid "Select your api"
 msgstr ""
 
-#: inc/admin/admin-settings.php:269
+#: inc/admin/admin-settings.php:289
+msgid "Default Public Domain"
+msgstr ""
+
+#: inc/admin/admin-settings.php:289
+msgid ""
+"Select a public domain to run your meeting. If you face issues or the "
+"meeting fails to load, switch the server from the dropdown, and it will be "
+"fixed."
+msgstr ""
+
+#: inc/admin/admin-settings.php:313
 msgid "Hosted Domain"
 msgstr ""
 
-#: inc/admin/admin-settings.php:269
-msgid "Domain where jitsi hosted"
+#: inc/admin/admin-settings.php:313
+msgid "Without http or https"
 msgstr ""
 
-#: inc/admin/admin-settings.php:287
+#: inc/admin/admin-settings.php:334
+msgid "APP ID"
+msgstr ""
+
+#: inc/admin/admin-settings.php:335 inc/admin/admin-settings.php:360
+msgid "Get it from "
+msgstr ""
+
+#: inc/admin/admin-settings.php:337 inc/admin/admin-settings.php:362
+msgid "JAAS Admin"
+msgstr ""
+
+#: inc/admin/admin-settings.php:339
+msgid "Copy the APP ID from JaaS admin"
+msgstr ""
+
+#: inc/admin/admin-settings.php:359
+msgid "API Key"
+msgstr ""
+
+#: inc/admin/admin-settings.php:364
+msgid "Copy the API Key from JaaS admin"
+msgstr ""
+
+#: inc/admin/admin-settings.php:384
+msgid "Private Key"
+msgstr ""
+
+#: inc/admin/admin-settings.php:385
+msgid "Paste private key content here "
+msgstr ""
+
+#: inc/admin/admin-settings.php:387
+msgid "Generate private key and download"
+msgstr ""
+
+#: inc/admin/admin-settings.php:405
 msgid "User Email"
 msgstr ""
 
-#: inc/admin/admin-settings.php:287
+#: inc/admin/admin-settings.php:405
 msgid "Email address of admin"
 msgstr ""
 
-#: inc/admin/admin-settings.php:299
+#: inc/admin/admin-settings.php:417
 msgid "User Username"
 msgstr ""
 
-#: inc/admin/admin-settings.php:299
+#: inc/admin/admin-settings.php:417
 msgid "Username of the admin"
 msgstr ""
 
-#: inc/admin/admin-settings.php:311
+#: inc/admin/admin-settings.php:429
 msgid "User Avatar"
 msgstr ""
 
-#: inc/admin/admin-settings.php:311
+#: inc/admin/admin-settings.php:429
 msgid "The avatar url of the admin user"
 msgstr ""
 
-#: inc/admin/admin-settings.php:318
+#: inc/admin/admin-settings.php:436
 msgid "280x70px png, up to 4MB"
 msgstr ""
 
-#: inc/admin/admin-settings.php:325
-msgid "User is Moderator"
+#: inc/admin/admin-settings.php:443
+msgid "Enable Moderator Access"
 msgstr ""
 
-#: inc/admin/admin-settings.php:325
-msgid "Set default user as moderator"
+#: inc/admin/admin-settings.php:443
+msgid ""
+"Allow this user to join as a moderator in Jass 8x8 meetings (only users with "
+"edit access)"
 msgstr ""
 
-#: inc/admin/admin-settings.php:338
+#: inc/admin/admin-settings.php:456
 msgid "Other Admin Config"
 msgstr ""
 
-#: inc/admin/admin-settings.php:338
+#: inc/admin/admin-settings.php:456
 msgid "Those are on https://jaas.8x8.vc/#/branding"
 msgstr ""
 
-#: inc/admin/admin-settings.php:351
+#: inc/admin/admin-settings.php:469
 msgid "Meeting Width"
 msgstr ""
 
-#: inc/admin/admin-settings.php:351
+#: inc/admin/admin-settings.php:469
 msgid "Width in pixel when not on fullscreen"
 msgstr ""
 
-#: inc/admin/admin-settings.php:363
+#: inc/admin/admin-settings.php:481
 msgid "Meeting Height"
 msgstr ""
 
-#: inc/admin/admin-settings.php:363
+#: inc/admin/admin-settings.php:481
 msgid "Height in pixel when not on fullscreen"
 msgstr ""
 
-#: inc/admin/admin-settings.php:375
+#: inc/admin/admin-settings.php:493
 msgid "Attendee can invite people"
 msgstr ""
 
-#: inc/admin/admin-settings.php:387
+#: inc/admin/admin-settings.php:505
 msgid "Welcome Page"
 msgstr ""
 
-#: inc/admin/admin-settings.php:387
+#: inc/admin/admin-settings.php:505
 msgid "Enable/Disable welcome page"
 msgstr ""
 
-#: inc/admin/admin-settings.php:400
+#: inc/admin/admin-settings.php:518
 msgid "Yourself muted"
 msgstr ""
 
-#: inc/admin/admin-settings.php:400
+#: inc/admin/admin-settings.php:518
 msgid "Start with yourself muted"
 msgstr ""
 
-#: inc/admin/admin-settings.php:412
+#: inc/admin/admin-settings.php:530
 msgid "Audio Only"
 msgstr ""
 
-#: inc/admin/admin-settings.php:412
+#: inc/admin/admin-settings.php:530
 msgid "Start conference on audio only"
 msgstr ""
 
-#: inc/admin/admin-settings.php:425
+#: inc/admin/admin-settings.php:543
 msgid "Audio Muted"
 msgstr ""
 
-#: inc/admin/admin-settings.php:425
+#: inc/admin/admin-settings.php:543
 msgid "Participant after nth will be muted"
 msgstr ""
 
-#: inc/admin/admin-settings.php:438
+#: inc/admin/admin-settings.php:556
 msgid "Start Silent"
 msgstr ""
 
-#: inc/admin/admin-settings.php:438
+#: inc/admin/admin-settings.php:556
 msgid "Disable local audio output"
 msgstr ""
 
-#: inc/admin/admin-settings.php:451
+#: inc/admin/admin-settings.php:569
 msgid "Start Video Muted"
 msgstr ""
 
-#: inc/admin/admin-settings.php:451
+#: inc/admin/admin-settings.php:569
 msgid "Start call with video muted"
 msgstr ""
 
-#: inc/admin/admin-settings.php:463 inc/elementor.php:176
+#: inc/admin/admin-settings.php:581 inc/elementor.php:176
 msgid "Screen Sharing"
 msgstr ""
 
-#: inc/admin/admin-settings.php:463
+#: inc/admin/admin-settings.php:581
 msgid ""
 "Enabling this feature allow you to share your screen while attending a "
 "meeting"
 msgstr ""
 
-#: inc/admin/admin-settings.php:475
+#: inc/admin/admin-settings.php:593
 msgid "Video Resolution"
 msgstr ""
 
-#: inc/admin/admin-settings.php:475
+#: inc/admin/admin-settings.php:593
 msgid "Start with preferred resolution"
 msgstr ""
 
-#: inc/admin/admin-settings.php:496
+#: inc/admin/admin-settings.php:614
 msgid "Max Full Resolution"
 msgstr ""
 
-#: inc/admin/admin-settings.php:496
+#: inc/admin/admin-settings.php:614
 msgid "Number of participant with default resolution"
 msgstr ""
 
-#: inc/admin/admin-settings.php:509
+#: inc/admin/admin-settings.php:627
 msgid "Video Muted After"
 msgstr ""
 
-#: inc/admin/admin-settings.php:509
+#: inc/admin/admin-settings.php:627
 msgid "Every participant after nth will start video muted"
 msgstr ""
 
-#: inc/admin/admin-settings.php:522
+#: inc/admin/admin-settings.php:640
 msgid "Enable Livestream"
 msgstr ""
 
-#: inc/admin/admin-settings.php:522
+#: inc/admin/admin-settings.php:640
 msgid "Turn on livestreaming"
 msgstr ""
 
-#: inc/admin/admin-settings.php:535
+#: inc/admin/admin-settings.php:653
 msgid "Enable Recording"
 msgstr ""
 
-#: inc/admin/admin-settings.php:535
+#: inc/admin/admin-settings.php:653
 msgid "Turn on to record the meeting"
 msgstr ""
 
-#: inc/admin/admin-settings.php:548
+#: inc/admin/admin-settings.php:666
 msgid "Enable Outbound"
 msgstr ""
 
-#: inc/admin/admin-settings.php:548
+#: inc/admin/admin-settings.php:666
 msgid "Allow outbound on the meeting"
 msgstr ""
 
-#: inc/admin/admin-settings.php:561
+#: inc/admin/admin-settings.php:679
 msgid "Enable Transcription"
 msgstr ""
 
-#: inc/admin/admin-settings.php:561
+#: inc/admin/admin-settings.php:679
 msgid "Transcript the meeting"
 msgstr ""
 
-#: inc/admin/admin-settings.php:574
+#: inc/admin/admin-settings.php:692
 msgid "Hide Jitsi Sidebar"
 msgstr ""
 
-#: inc/admin/admin-settings.php:574
+#: inc/admin/admin-settings.php:692
 msgid "Enable to hide Jitsi sidebar from Jitsi Meeting room"
 msgstr ""
 
-#: inc/admin/admin-settings.php:588
+#: inc/admin/admin-settings.php:706
 msgid "Simulcast"
 msgstr ""
 
-#: inc/admin/admin-settings.php:588
+#: inc/admin/admin-settings.php:706
 msgid "Enable/Disable simulcast"
 msgstr ""
 
-#: inc/admin/admin-settings.php:601
+#: inc/admin/admin-settings.php:719
+msgid "Enable Whiteboard"
+msgstr ""
+
+#: inc/admin/admin-settings.php:719
+msgid "Enable to use the whiteboard on Jass 8x8"
+msgstr ""
+
+#: inc/admin/admin-settings.php:733
 msgid "Enable to Change Post-type Slug"
 msgstr ""
 
-#: inc/admin/admin-settings.php:601
+#: inc/admin/admin-settings.php:733
 msgid "You can enable/disable custom slug"
 msgstr ""
 
@@ -316,7 +375,7 @@ msgid "You do not have permission to do this action"
 msgstr ""
 
 #: inc/admin/class-admin.php:169 inc/admin/class-admin.php:241
-#: inc/admin/class-admin.php:508
+#: inc/admin/class-admin.php:559
 msgid "Webinar and Video Conference with Jitsi Meet"
 msgstr ""
 
@@ -333,7 +392,7 @@ msgid "APP Settings"
 msgstr ""
 
 #: inc/admin/class-admin.php:196 inc/admin/class-admin.php:201
-#: inc/admin/class-admin.php:598
+#: inc/admin/class-admin.php:701
 msgid "Add-ons"
 msgstr ""
 
@@ -341,7 +400,7 @@ msgstr ""
 msgid "New"
 msgstr ""
 
-#: inc/admin/class-admin.php:212 inc/wppool/class-plugin.php:352
+#: inc/admin/class-admin.php:212
 msgid "Upgrade to Pro"
 msgstr ""
 
@@ -499,61 +558,104 @@ msgstr ""
 msgid "Initial video configurations..."
 msgstr ""
 
-#: inc/admin/class-admin.php:458
+#: inc/admin/class-admin.php:509
 msgid "Welcome to Jitsi Meet WP"
 msgstr ""
 
-#: inc/admin/class-admin.php:459
+#: inc/admin/class-admin.php:510
 msgid ""
 "Select for which kind of api you want to use with our plugin and give "
 "credential accordingly."
 msgstr ""
 
-#: inc/admin/class-admin.php:474
+#: inc/admin/class-admin.php:525
 msgid "How to select Jitsi Meet server?"
 msgstr ""
 
-#: inc/admin/class-admin.php:599
+#: inc/admin/class-admin.php:633
+msgid "Or, Go Fully Branded - Zero Server Setup!"
+msgstr ""
+
+#: inc/admin/class-admin.php:640
+msgid "With Your Branding, Your Rules!"
+msgstr ""
+
+#: inc/admin/class-admin.php:643
+msgid "Host Secure Video Meetings Under Your Own Domain."
+msgstr ""
+
+#: inc/admin/class-admin.php:649
+msgid "Fully branded under your domain"
+msgstr ""
+
+#: inc/admin/class-admin.php:653
+msgid "Zero server setup required"
+msgstr ""
+
+#: inc/admin/class-admin.php:657
+msgid "Unlimited high-quality meetings"
+msgstr ""
+
+#: inc/admin/class-admin.php:661
+msgid "No technical hassle"
+msgstr ""
+
+#: inc/admin/class-admin.php:666
+msgid "Explore Hosted Jitsi"
+msgstr ""
+
+#: inc/admin/class-admin.php:674
+msgid "Jitsi Meeting Interface"
+msgstr ""
+
+#: inc/admin/class-admin.php:702
 msgid "Add your favourite add-ons and supercharge your workflow"
 msgstr ""
 
-#: inc/admin/class-admin.php:611
+#: inc/admin/class-admin.php:716
 msgid "Multivendor Addon for Jitsi Meet"
 msgstr ""
 
-#: inc/admin/class-admin.php:612
+#: inc/admin/class-admin.php:717
 msgid ""
 "Power up your multi-vendor experience & create meetings right from your "
 "vendor dashboard. Elevate your store with monetizable video meetings."
 msgstr ""
 
-#: inc/admin/class-admin.php:618
-msgid "Not installed"
+#: inc/admin/class-admin.php:724 inc/admin/class-admin.php:760
+msgid "Not activate"
 msgstr ""
 
-#: inc/admin/class-admin.php:620
-msgid "Install"
+#: inc/admin/class-admin.php:726 inc/admin/class-admin.php:762
+#: inc/admin/licence-cta.php:13
+msgid "Activate"
+msgstr ""
+
+#: inc/admin/class-admin.php:745
+msgid "Jitsi Meet Frontend Addon"
+msgstr ""
+
+#: inc/admin/class-admin.php:748
+msgid ""
+"Easily create Jitsi meetings from the frontend without accessing the admin "
+"dashboard."
 msgstr ""
 
 #: inc/admin/licence-cta.php:11
 msgid "Please activate your license"
 msgstr ""
 
-#: inc/admin/licence-cta.php:13
-msgid "Activate"
-msgstr ""
-
-#: inc/admin/mannage-callback.php:251
+#: inc/admin/mannage-callback.php:298
 msgid "Upload an image"
 msgstr ""
 
-#: inc/admin/mannage-callback.php:276
+#: inc/admin/mannage-callback.php:323
 msgid ""
 "Some settings like Comany Logo, Background etc are currently not available "
 "via api. You can set your company logo, background ect from the"
 msgstr ""
 
-#: inc/admin/mannage-callback.php:276
+#: inc/admin/mannage-callback.php:323
 msgid "jaas console"
 msgstr ""
 
@@ -573,29 +675,16 @@ msgstr ""
 msgid "Start video muted"
 msgstr ""
 
-#: inc/wppool/class-plugin.php:308
-msgid "Deal Ends In"
+#: inc/jitsi-topbar.php:193
+msgid "New: Host Branded Jitsi Meetings - No Server Needed!"
 msgstr ""
 
-#: inc/wppool/class-plugin.php:313 inc/wppool/class-plugin.php:322
-#: inc/wppool/class-plugin.php:331 inc/wppool/class-plugin.php:340
-msgid "00"
+#: inc/jitsi-topbar.php:198
+msgid "Explore now"
 msgstr ""
 
-#: inc/wppool/class-plugin.php:316
-msgid "Days"
-msgstr ""
-
-#: inc/wppool/class-plugin.php:325
-msgid "Hours"
-msgstr ""
-
-#: inc/wppool/class-plugin.php:334
-msgid "Minutes"
-msgstr ""
-
-#: inc/wppool/class-plugin.php:343
-msgid "Seconds"
+#: inc/jitsi-topbar.php:205
+msgid "Close notification"
 msgstr ""
 
 #: templates/admin/affiliate-notice.php:20

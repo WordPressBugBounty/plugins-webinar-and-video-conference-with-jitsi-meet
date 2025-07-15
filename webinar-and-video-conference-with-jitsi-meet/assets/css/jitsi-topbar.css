@@ -1,0 +1,314 @@
+/**
+ * Jitsi Topbar CSS - Fixed and Optimized
+ * Removed excessive rules and fixed width overflow issues
+ */
+
+/* Reset and base positioning */
+.jitsi-topbar-notification {
+  position: relative;
+  z-index: 999999;
+  background: #407bff;
+  color: white;
+  padding: 12px 20px;
+  margin: 0 0 20px 0;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(64, 123, 255, 0.3);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* WordPress admin integration - simple left margin extension */
+.wp-admin .jitsi-topbar-notification {
+  margin-left: -20px;
+  padding-left: 20px;
+}
+
+/* Ensure it doesn't break on meeting pages */
+.jitsi-topbar-notification.jitsi-topbar-meeting-page {
+  margin-left: -20px;
+  padding-left: 20px;
+}
+
+/* Handle different WordPress admin contexts */
+#wpwrap .jitsi-topbar-notification,
+#wpcontent .jitsi-topbar-notification {
+  margin-left: -20px;
+  padding-left: 20px;
+}
+
+/* Collapsed sidebar adjustment */
+.folded .jitsi-topbar-notification {
+  margin-left: -20px;
+  padding-left: 20px;
+}
+
+/* Force positioning above screen meta */
+.jitsi-topbar-notification {
+  z-index: 999999 !important;
+}
+
+/* For edit.php pages - extend beyond the container */
+body.post-type-meeting .jitsi-topbar-notification,
+body.edit-php .jitsi-topbar-notification {
+  z-index: 999999;
+}
+
+/* Make wpbody-content a flex container for proper ordering */
+#wpbody-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure topbar appears first */
+#wpbody-content .jitsi-topbar-notification {
+  order: -1;
+}
+
+/* All other content follows normal flow */
+#wpbody-content > *:not(.jitsi-topbar-notification) {
+  order: 1;
+}
+
+/* Preserve original layout for screen options area */
+#wpbody-content .wrap {
+  display: block;
+}
+
+/* Ensure screen options stays on the right */
+#screen-meta-links {
+  position: absolute !important;
+  top: 0 !important;
+  right: 20px !important;
+  z-index: 999998 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+/* Force screen meta elements below topbar */
+#screen-meta-links,
+#screen-meta,
+.screen-meta-wrap {
+  position: relative !important;
+  z-index: 999998 !important;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
+
+/* Shimmer effect */
+.jitsi-topbar-notification::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+}
+
+/* Container layout */
+.jitsi-topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+
+/* Content styling */
+.jitsi-topbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  max-width: 600px;
+  flex: 1;
+}
+
+/* Icon styling */
+.jitsi-topbar-icon {
+  font-size: 18px;
+  animation: bounce 2s infinite;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* Message styling */
+.jitsi-topbar-message {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: white;
+}
+
+/* CTA link styling */
+.jitsi-topbar-cta {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 8px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.jitsi-topbar-cta:hover {
+  color: white;
+  text-decoration: underline;
+  transform: translateX(3px);
+  opacity: 0.9;
+}
+
+.jitsi-topbar-cta:focus {
+  color: white;
+  text-decoration: underline;
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* Close button */
+.jitsi-topbar-close {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #9ab9ff;
+  flex-shrink: 0;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.jitsi-topbar-close:hover {
+  background: rgba(154, 185, 255, 0.2);
+  color: #9ab9ff;
+}
+
+.jitsi-topbar-close:focus {
+  outline: 2px solid #9ab9ff;
+  outline-offset: 2px;
+  background: rgba(154, 185, 255, 0.2);
+}
+
+.jitsi-topbar-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .jitsi-topbar-notification {
+    margin-left: -20px;
+    padding: 10px 15px;
+    padding-left: 20px;
+  }
+
+  .jitsi-topbar-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .jitsi-topbar-content {
+    flex-direction: column;
+    gap: 8px;
+    max-width: calc(100% - 60px); /* Account for close button */
+  }
+
+  .jitsi-topbar-message {
+    font-size: 13px;
+  }
+
+  .jitsi-topbar-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: none;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .jitsi-topbar-icon {
+    animation: none;
+  }
+  
+  .jitsi-topbar-notification::before {
+    animation: none;
+  }
+  
+  .jitsi-topbar-cta,
+  .jitsi-topbar-close {
+    transition: none;
+  }
+  
+  .jitsi-topbar-cta:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .jitsi-topbar-notification {
+    border: 2px solid white;
+  }
+  
+  .jitsi-topbar-close {
+    border: 1px solid #9ab9ff;
+  }
+}
+
+/* Print styles */
+@media print {
+  .jitsi-topbar-notification {
+    display: none;
+  }
+}
+
+/* RTL support */
+.rtl .jitsi-topbar-cta {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+.rtl .jitsi-topbar-cta:hover {
+  transform: translateX(-3px);
+}
+
+.rtl .jitsi-topbar-close {
+  left: 20px;
+  right: auto;
+}
+
+/* State classes */
+.jitsi-topbar-notification.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.jitsi-topbar-notification.success {
+  background: #10b981;
+}
+
+.jitsi-topbar-notification.error {
+  background: #ef4444;
+}
