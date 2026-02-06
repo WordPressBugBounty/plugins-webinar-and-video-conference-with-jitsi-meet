@@ -401,7 +401,7 @@ msgid "New"
 msgstr ""
 
 #: inc/admin/class-admin.php:212
-msgid "Upgrade to Pro"
+msgid "Upgrade to Ultimate"
 msgstr ""
 
 #: inc/admin/class-admin.php:251

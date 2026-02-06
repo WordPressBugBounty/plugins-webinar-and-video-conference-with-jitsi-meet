@@ -311,7 +311,7 @@ var EditBlock = /*#__PURE__*/function (_Component) {
 }(Component);
 
 registerBlockType('jitsi-meet-wp/jitsi-meet', {
-  title: __('Jitsi Meet', 'jitsi-meet-wp'),
+  title: __('FlexMeeting', 'jitsi-meet-wp'),
   icon: blockIcon,
   category: 'embed',
   keywords: [__('jitsi', 'jitsi-meet-wp'), __('meeting', 'jitsi-meet-wp'), __('video', 'jitsi-meet-wp'), __('conference', 'jitsi-meet-wp'), __('zoom', 'jitsi-meet-wp')],

@@ -186,7 +186,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 		public function jitsi_meet_add_action_links( $actions ) {
 			$mylinks = array(
 				'<a href="' . esc_url( admin_url( 'admin.php?page=jitsi-meet' ) ) . '">' . esc_html( 'Settings' ) . '</a>',
-				'<a class="special-action-link" target="_blank" href="' . esc_url( 'https://go.wppool.dev/Gv5' ) . '">' . esc_html( 'Upgrade to Pro' ) . '</a>',
+				'<a class="special-action-link" target="_blank" href="' . esc_url( 'https://go.wppool.dev/Gv5' ) . '">' . esc_html( 'Upgrade to Ultimate' ) . '</a>',
 			);
 			$actions = array_merge( $actions, $mylinks );
 			return $actions;

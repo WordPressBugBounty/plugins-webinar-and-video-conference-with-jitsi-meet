@@ -344,7 +344,7 @@ msgid "New"
 msgstr ""
 
 #: inc/admin/class-admin.php:212 inc/wppool/class-plugin.php:352
-msgid "Upgrade to Pro"
+msgid "Upgrade to Ultimate"
 msgstr ""
 
 #: inc/admin/class-admin.php:251

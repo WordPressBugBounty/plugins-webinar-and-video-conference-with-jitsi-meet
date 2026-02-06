@@ -1,9 +1,9 @@
 <?php //phpcs:ignore
 /**
- * Plugin Name:       Webinar and Video Conference with Jitsi Meet
+ * Plugin Name:       FlexMeeting
  * Plugin URI:        https://jitsi-meet-wp.wppool.dev/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.7.6
+ * Version:           2.7.9
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.7.6' );
+define( 'JITSI_MEET_WP_VERSION', '2.7.9' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
@@ -116,7 +116,7 @@ function jitsi_meet_wp_appsero_init_tracker() {
 		require_once __DIR__ . '/inc/appsero/src/Client.php';
 	}
 
-	$client = new Appsero\Client( '00788961-f5f7-4117-8a26-a99508aa506b', 'Webinar and Video Conference with Jitsi Meet', JITSI_MEET_WP__FILE__ );
+	$client = new Appsero\Client( '00788961-f5f7-4117-8a26-a99508aa506b', 'FlexMeeting', JITSI_MEET_WP__FILE__ );
 
 	// Active insights.
 	$client->insights()->init();
@@ -135,18 +135,33 @@ function jitsi_meet_wppool_sdk_init() {
 	}
 
 	if ( function_exists( 'wppool_plugin_init' ) ) {
+		wppool_plugin_init( 'webinar_and_video_conference_with_jitsi_meet', plugin_dir_url( JITSI_MEET_WP__FILE__ ) . '/inc/wppool/background-image.png' );
+	}
+}
+
+/**
+ * Set up wppool sdk campaign
+ *
+ * @return void
+ */
+function jitsi_meet_wppool_sdk_campaign() {
+	if ( function_exists( 'wppool_plugin_init' ) ) {
 		$jitsi_meet_plugin = wppool_plugin_init( 'webinar_and_video_conference_with_jitsi_meet', plugin_dir_url( JITSI_MEET_WP__FILE__ ) . '/inc/wppool/background-image.png' );
 
 		if ( $jitsi_meet_plugin && is_object( $jitsi_meet_plugin ) && method_exists( $jitsi_meet_plugin, 'set_campaign' ) ) {
-			$to       = '2024-12-04 16:00:00';
-			$from     = '2024-11-21 16:00:00';
+			$to       = '2025-12-04 16:00:00';
+			$from     = '2025-11-17 16:00:00';
 			$cta_text = esc_html__( 'Grab Your Deals', 'jitsi-meet-wp' );
 
-			$campain_image = plugin_dir_url( JITSI_MEET_WP__FILE__ ) . '/inc/wppool/black-friday.png';
+			$campain_image = plugin_dir_url( JITSI_MEET_WP__FILE__ ) . '/inc/wppool/bfcm.png';
 			$jitsi_meet_plugin->set_campaign( $campain_image, $to, $from, $cta_text );
+
+			$button_link = 'https://lnk.wppool.dev/kHhV59A';
+			$jitsi_meet_plugin->set_campaign( $campain_image, $to, $from, $cta_text, $button_link );
 		}
 	}
 }
 
 jitsi_meet_wppool_sdk_init();
+add_action( 'init', 'jitsi_meet_wppool_sdk_campaign' );
 add_action( 'init', 'jitsi_meet_wp_appsero_init_tracker' );

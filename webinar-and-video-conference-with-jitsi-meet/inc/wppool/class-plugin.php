@@ -877,13 +877,13 @@ if ( ! class_exists( 'WPPOOL_Plugin' ) ) {
 
 			._wppool-popup-modal-footer {
 				width: 100%;
-				height: 225px;
-				max-height: 225px !important;
+				min-height: 225px;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: flex-end;
 				padding: 15px 0;
+				gap: 15px;
 			}
 
 			._wppool-popup-countdown {
@@ -892,6 +892,7 @@ if ( ! class_exists( 'WPPOOL_Plugin' ) ) {
 				align-items: center;
 				justify-content: space-evenly;
 				gap: 10px;
+				margin-bottom: 10px;
 			}
 
 			._wppool-popup-countdown-text {
@@ -962,7 +963,7 @@ if ( ! class_exists( 'WPPOOL_Plugin' ) ) {
 				transition: .3s;
 				color: white;
 				padding: 0 30px;
-				margin: 35px 0 20px 0;
+				margin: 0;
 				transition: .2s;
 				position: relative;
 			}
@@ -1290,25 +1291,23 @@ if ( ! class_exists( 'WPPOOL_Plugin' ) ) {
 		}
 
 		/**
-		 * Set image until
+		 * Set campaign details.
 		 *
-		 * @param string $image_url The image url.
-		 * @param string $to End date. Default is 2 weeks from now.
-		 * @param string $from Start from. Default is now.
+		 * @param string $image_url The image URL for the campaign.
+		 * @param string $to End date for the campaign.
+		 * @param string $from Start date for the campaign.
+		 * @param string $button_text The custom CTA text for the button.
 		 * @return mixed
 		 */
-		public function set_campaign( $image_url = null, $to = null, $from = null ) {
+		public function set_campaign( $image_url = null, $to = null, $from = null, $button_text = 'Get Premium', $button_link = 'https://go.wppool.dev/Rimc' ) {
 			// Bailout if image url is not valid.
 			if ( ! $image_url ) {
 				return $this;
 			}
 
-			// Set from now if it's not set.
-			$from_time = $from ? strtotime( $from . ' 00:00:01' ) : strtotime( 'now' );
-
-			// Set to 2 weeks from now if it's not set.
-			$to_time = $to ? strtotime( $to . ' 23:59:59' ) : strtotime( '+2 weeks' );
-
+			// Set default times if not provided.
+			$from_time = $from ? strtotime( $from ) : strtotime( 'now' );
+			$to_time = $to ? strtotime( $to ) : strtotime( '+2 weeks' );
 			$current_time = strtotime( 'now' );
 
 			// If current time is not between from and to date, return.
@@ -1316,12 +1315,13 @@ if ( ! class_exists( 'WPPOOL_Plugin' ) ) {
 				return $this;
 			}
 
-			// Modify the plugin data.
-			add_filter( 'wppool_plugins', function ( $plugins ) use ( $image_url, $to, $from ) {
-
+			// Modify the plugin data to include the campaign image, date range, and button text.
+			add_filter( 'wppool_plugins', function ( $plugins ) use ( $image_url, $to, $from, $button_text, $button_link ) {
 				$plugins[ $this->plugin_id ]['background_image'] = $image_url;
 				$plugins[ $this->plugin_id ]['from'] = $from;
 				$plugins[ $this->plugin_id ]['to'] = $to;
+				$plugins[ $this->plugin_id ]['button_text'] = $button_text;
+				$plugins[ $this->plugin_id ]['button_link'] = $button_link;
 
 				return $plugins;
 			} );
