@@ -1,0 +1,1102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FlexMeeting 2.7.9\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/webinar-and-video-conference-with-jitsi-meet\n"
+"POT-Creation-Date: 2026-02-24T10:47:22+00:00\n"
+"PO-Revision-Date: 2026-03-04 12:28+0600\n"
+"Last-Translator: Antigravity AI\n"
+"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+"X-Domain: webinar-and-video-conference-with-jitsi-meet\n"
+
+#. Plugin Name of the plugin
+#: jitsi-meet-wp.php inc/admin/class-admin.php:158
+#: inc/admin/class-admin.php:169 inc/admin/class-admin.php:241
+#: inc/admin/class-admin.php:559 blocks/dist/blocks.build.js:314
+msgid "FlexMeeting"
+msgstr "FlexMeeting"
+
+#. Plugin URI of the plugin
+#: jitsi-meet-wp.php
+msgid "https://jitsi-meet-wp.wppool.dev/"
+msgstr "https://jitsi-meet-wp.wppool.dev/"
+
+#. Description of the plugin
+#: jitsi-meet-wp.php
+msgid "Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block"
+msgstr "使用 Gutenberg 区块直接在您的 WordPress 网站上主持现场网络研讨会、会议、在线课程和视频通话"
+
+#. Author of the plugin
+#: jitsi-meet-wp.php
+msgid "WPPOOL"
+msgstr "WPPOOL"
+
+#. Author URI of the plugin
+#: jitsi-meet-wp.php
+msgid "https://wppool.dev"
+msgstr "https://wppool.dev"
+
+#: gutenberg-init.php:73 gutenberg-init.php:88 init.php:68 init.php:83
+msgid "Cheatin&#8217; huh?"
+msgstr "想作弊，嗯？"
+
+#: inc/admin/admin-settings.php:256
+msgid "Select API"
+msgstr "选择 API"
+
+#: inc/admin/admin-settings.php:256
+msgid "Select your api"
+msgstr "选择您的 API"
+
+#: inc/admin/admin-settings.php:273
+msgid "FlexMeeting Free"
+msgstr "FlexMeeting 免费版"
+
+#: inc/admin/admin-settings.php:273
+msgid "Get access to all the free features of the video conference application Jitsi Meet."
+msgstr "获取视频会议应用 Jitsi Meet 的所有免费功能。"
+
+#: inc/admin/admin-settings.php:277
+msgid "JaaS 8x8"
+msgstr "JaaS 8x8"
+
+#: inc/admin/admin-settings.php:277
+msgid "Access to enterprise standard video meeting features and modify everything as you like."
+msgstr "获得企业级标准的视频会议功能，并可根据需要进行修改。"
+
+#: inc/admin/admin-settings.php:282
+msgid "Self Hosted"
+msgstr "自托管"
+
+#: inc/admin/admin-settings.php:282
+msgid "Opportunity to host Jitsi Meet on self-hosting with a branded domain and high security."
+msgstr "有机会通过带有品牌域名和高度安全的自托管方式主持 Jitsi Meet。"
+
+#: inc/admin/admin-settings.php:289
+msgid "Default Public Domain"
+msgstr "默认公共域名"
+
+#: inc/admin/admin-settings.php:289
+msgid "Select a public domain to run your meeting. If you face issues or the meeting fails to load, switch the server from the dropdown, and it will be fixed."
+msgstr "选择一个公共域名来运行您的会议。如果遇到问题或会议加载失败，请从下拉菜单中切换服务器，问题将得到修复。"
+
+#: inc/admin/admin-settings.php:297
+msgid "Domain One"
+msgstr "域名一"
+
+#: inc/admin/admin-settings.php:298
+msgid "Domain Two"
+msgstr "域名二"
+
+#: inc/admin/admin-settings.php:299
+msgid "Domain Three"
+msgstr "域名三"
+
+#: inc/admin/admin-settings.php:300
+msgid "Domain Four"
+msgstr "域名四"
+
+#: inc/admin/admin-settings.php:313
+msgid "Hosted Domain"
+msgstr "托管域名"
+
+#: inc/admin/admin-settings.php:313
+msgid "Without http or https"
+msgstr "不含 http 或 https"
+
+#: inc/admin/admin-settings.php:334
+msgid "APP ID"
+msgstr "APP ID"
+
+#: inc/admin/admin-settings.php:335 inc/admin/admin-settings.php:360
+msgid "Get it from "
+msgstr "获取地址： "
+
+#: inc/admin/admin-settings.php:337 inc/admin/admin-settings.php:362
+msgid "JAAS Admin"
+msgstr "JAAS 管理员"
+
+#: inc/admin/admin-settings.php:339
+msgid "Copy the APP ID from JaaS admin"
+msgstr "从 JaaS 管理后台复制 APP ID"
+
+#: inc/admin/admin-settings.php:359
+msgid "API Key"
+msgstr "API 密钥"
+
+#: inc/admin/admin-settings.php:364
+msgid "Copy the API Key from JaaS admin"
+msgstr "从 JaaS 管理后台复制 API 密钥"
+
+#: inc/admin/admin-settings.php:384
+msgid "Private Key"
+msgstr "私钥"
+
+#: inc/admin/admin-settings.php:385
+msgid "Paste private key content here "
+msgstr "在此处粘贴私钥内容 "
+
+#: inc/admin/admin-settings.php:387
+msgid "Generate private key and download"
+msgstr "生成私钥并下载"
+
+#: inc/admin/admin-settings.php:405
+msgid "User Email"
+msgstr "用户邮箱"
+
+#: inc/admin/admin-settings.php:405
+msgid "Email address of admin"
+msgstr "管理员的电子邮箱地址"
+
+#: inc/admin/admin-settings.php:417
+msgid "User Username"
+msgstr "用户用户名"
+
+#: inc/admin/admin-settings.php:417
+msgid "Username of the admin"
+msgstr "管理员的用户名"
+
+#: inc/admin/admin-settings.php:429
+msgid "User Avatar"
+msgstr "用户头像"
+
+#: inc/admin/admin-settings.php:429
+msgid "The avatar url of the admin user"
+msgstr "管理员用户的头像 URL"
+
+#: inc/admin/admin-settings.php:436
+msgid "280x70px png, up to 4MB"
+msgstr "280x70px png，最大 4MB"
+
+#: inc/admin/admin-settings.php:443
+msgid "Enable Moderator Access"
+msgstr "启用主持人权限"
+
+#: inc/admin/admin-settings.php:443
+msgid "Allow this user to join as a moderator in Jass 8x8 meetings (only users with edit access)"
+msgstr "允许此用户在 Jass 8x8 会议中作为主持人加入（仅限具有编辑权限的用户）"
+
+#: inc/admin/admin-settings.php:456
+msgid "Other Admin Config"
+msgstr "其他管理配置"
+
+#: inc/admin/admin-settings.php:456
+msgid "Those are on https://jaas.8x8.vc/#/branding"
+msgstr "这些配置位于 https://jaas.8x8.vc/#/branding"
+
+#: inc/admin/admin-settings.php:469
+msgid "Meeting Width"
+msgstr "会议宽度"
+
+#: inc/admin/admin-settings.php:469
+msgid "Width in pixel when not on fullscreen"
+msgstr "非全屏时的宽度（像素）"
+
+#: inc/admin/admin-settings.php:481
+msgid "Meeting Height"
+msgstr "会议高度"
+
+#: inc/admin/admin-settings.php:481
+msgid "Height in pixel when not on fullscreen"
+msgstr "非全屏时的高度（像素）"
+
+#: inc/admin/admin-settings.php:493 inc/elementor.php:188
+#: blocks/src/blocks.js:138
+msgid "Enable Inviting"
+msgstr "启用邀请"
+
+#: inc/admin/admin-settings.php:493
+msgid "Attendee can invite people"
+msgstr "与会者可以邀请他人"
+
+#: inc/admin/admin-settings.php:505
+msgid "Welcome Page"
+msgstr "欢迎页面"
+
+#: inc/admin/admin-settings.php:505
+msgid "Enable/Disable welcome page"
+msgstr "启用/禁用欢迎页面"
+
+#: inc/admin/admin-settings.php:518
+msgid "Yourself muted"
+msgstr "自身静音"
+
+#: inc/admin/admin-settings.php:518
+msgid "Start with yourself muted"
+msgstr "加入时自身设为静音"
+
+#: inc/admin/admin-settings.php:530
+msgid "Audio Only"
+msgstr "仅音频"
+
+#: inc/admin/admin-settings.php:530
+msgid "Start conference on audio only"
+msgstr "以仅音频模式开启会议"
+
+#: inc/admin/admin-settings.php:543
+msgid "Audio Muted"
+msgstr "音频静音"
+
+#: inc/admin/admin-settings.php:543
+msgid "Participant after nth will be muted"
+msgstr "第 n 个之后的参与者将被静音"
+
+#: inc/admin/admin-settings.php:556
+msgid "Start Silent"
+msgstr "静默启动"
+
+#: inc/admin/admin-settings.php:556
+msgid "Disable local audio output"
+msgstr "禁用本地音频输出"
+
+#: inc/admin/admin-settings.php:569
+msgid "Start Video Muted"
+msgstr "开启时禁用视频"
+
+#: inc/admin/admin-settings.php:569
+msgid "Start call with video muted"
+msgstr "开始通话时视频设为静音"
+
+#: inc/admin/admin-settings.php:581 inc/elementor.php:176
+msgid "Screen Sharing"
+msgstr "屏幕共享"
+
+#: inc/admin/admin-settings.php:581
+msgid "Enabling this feature allow you to share your screen while attending a meeting"
+msgstr "启用此功能允许您在参加会议时共享屏幕"
+
+#: inc/admin/admin-settings.php:593
+msgid "Video Resolution"
+msgstr "视频分辨率"
+
+#: inc/admin/admin-settings.php:593
+msgid "Start with preferred resolution"
+msgstr "以首选分辨率开启"
+
+#: inc/admin/admin-settings.php:614
+msgid "Max Full Resolution"
+msgstr "最高全分辨率"
+
+#: inc/admin/admin-settings.php:614
+msgid "Number of participant with default resolution"
+msgstr "使用默认分辨率的参与者数量"
+
+#: inc/admin/admin-settings.php:627
+msgid "Video Muted After"
+msgstr "在此之后视频静音"
+
+#: inc/admin/admin-settings.php:627
+msgid "Every participant after nth will start video muted"
+msgstr "第 n 个之后的每位参与者加入时视频将设为静音"
+
+#: inc/admin/admin-settings.php:640
+msgid "Enable Livestream"
+msgstr "启用直播"
+
+#: inc/admin/admin-settings.php:640
+msgid "Turn on livestreaming"
+msgstr "开启直播功能"
+
+#: inc/admin/admin-settings.php:653
+msgid "Enable Recording"
+msgstr "启用录制"
+
+#: inc/admin/admin-settings.php:653
+msgid "Turn on to record the meeting"
+msgstr "开启以录制会议"
+
+#: inc/admin/admin-settings.php:666
+msgid "Enable Outbound"
+msgstr "启用外呼"
+
+#: inc/admin/admin-settings.php:666
+msgid "Allow outbound on the meeting"
+msgstr "允许在会议中进行外呼"
+
+#: inc/admin/admin-settings.php:679
+msgid "Enable Transcription"
+msgstr "启用转录"
+
+#: inc/admin/admin-settings.php:679
+msgid "Transcript the meeting"
+msgstr "转录会议内容"
+
+#: inc/admin/admin-settings.php:692
+msgid "Hide Jitsi Sidebar"
+msgstr "隐藏 Jitsi 侧边栏"
+
+#: inc/admin/admin-settings.php:692
+msgid "Enable to hide Jitsi sidebar from Jitsi Meeting room"
+msgstr "启用以在 Jitsi 会议室中隐藏 Jitsi 侧边栏"
+
+#: inc/admin/admin-settings.php:706
+msgid "Simulcast"
+msgstr "联播 (Simulcast)"
+
+#: inc/admin/admin-settings.php:706
+msgid "Enable/Disable simulcast"
+msgstr "启用/禁用联播"
+
+#: inc/admin/admin-settings.php:719
+msgid "Enable Whiteboard"
+msgstr "启用白板"
+
+#: inc/admin/admin-settings.php:719
+msgid "Enable to use the whiteboard on Jass 8x8"
+msgstr "启用以在 Jass 8x8 上使用白板"
+
+#: inc/admin/admin-settings.php:733
+msgid "Enable to Change Post-type Slug"
+msgstr "启用更改文章类型别名"
+
+#: inc/admin/admin-settings.php:733
+msgid "You can enable/disable custom slug"
+msgstr "您可以启用/禁用自定义别名"
+
+#: inc/admin/class-admin.php:74 inc/admin/class-admin.php:104
+msgid "Invalid request"
+msgstr "请求无效"
+
+#: inc/admin/class-admin.php:80 inc/admin/class-admin.php:110
+#: inc/admin/class-admin.php:135
+msgid "You do not have permission to do this action"
+msgstr "您没有权限执行此操作"
+
+#: inc/admin/class-admin.php:170 inc/admin/class-admin.php:353
+msgid "Documentation"
+msgstr "文档"
+
+#: inc/admin/class-admin.php:178
+msgid "Jitsi Meet Welcome"
+msgstr "Jitsi Meet 欢迎页面"
+
+#: inc/admin/class-admin.php:187
+msgid "APP Settings"
+msgstr "APP 设置"
+
+#: inc/admin/class-admin.php:196 inc/admin/class-admin.php:201
+#: inc/admin/class-admin.php:701
+msgid "Add-ons"
+msgstr "外挂/扩展"
+
+#: inc/admin/class-admin.php:202
+msgid "New"
+msgstr "新增"
+
+#: inc/admin/class-admin.php:212 init.php:189
+msgid "Upgrade to Ultimate"
+msgstr "升级到终极版"
+
+#: inc/admin/class-admin.php:251
+msgid "Gutenberg"
+msgstr "Gutenberg"
+
+#: inc/admin/class-admin.php:256
+msgid "Elementor"
+msgstr "Elementor"
+
+#: inc/admin/class-admin.php:261
+msgid "Shortcode"
+msgstr "短代码"
+
+#: inc/admin/class-admin.php:272
+msgid "How to set a conference room"
+msgstr "如何设置会议室"
+
+#: inc/admin/class-admin.php:273
+msgid "Very simple and easy steps"
+msgstr "简单易行的步骤"
+
+#: inc/admin/class-admin.php:277
+msgid "While you are on the post/page edit screen click on gutenberg plus icon to add a new gutenberg block"
+msgstr "在文章/页面编辑界面，点击 Gutenberg 加号图标以添加新的 Gutenberg 区块"
+
+#: inc/admin/class-admin.php:279
+msgid "Add new gutenberg block on page"
+msgstr "在页面上添加新的 Gutenberg 区块"
+
+#: inc/admin/class-admin.php:283
+msgid "Add \"Jitsi Meet\" from \"Embeds\" category"
+msgstr "从“嵌入”类别中添加“Jitsi Meet”"
+
+#: inc/admin/class-admin.php:285
+msgid "Add Jitsi Meet from Embeds category"
+msgstr "从嵌入类别添加 Jitsi Meet"
+
+#: inc/admin/class-admin.php:289
+msgid "Set width and height and you are done"
+msgstr "设置宽度和高度即可完成"
+
+#: inc/admin/class-admin.php:291 inc/admin/class-admin.php:311
+#: inc/admin/class-admin.php:332
+msgid "Jitsi Meet Settings"
+msgstr "Jitsi Meet 设置"
+
+#: inc/admin/class-admin.php:298
+msgid "How to set with elementor"
+msgstr "如何使用 Elementor 设置"
+
+#: inc/admin/class-admin.php:299
+msgid "Setup a video conference room with elementor"
+msgstr "使用 Elementor 设置视频会议室"
+
+#: inc/admin/class-admin.php:303
+msgid "While you are on elementor edit screen drag and drop <strong>Jitsi Meet</strong> element to your page"
+msgstr "在 Elementor 编辑界面，将 <strong>Jitsi Meet</strong> 元素拖放到您的页面上"
+
+#: inc/admin/class-admin.php:305
+msgid "Add new jitsi meet element on page"
+msgstr "在页面上添加新的 Jitsi Meet 元素"
+
+#: inc/admin/class-admin.php:309
+msgid "Set name, width, height etc and you are done"
+msgstr "设置名称、宽度、高度等即可完成"
+
+#: inc/admin/class-admin.php:318
+msgid "How to set with shortcode"
+msgstr "如何使用短代码设置"
+
+#: inc/admin/class-admin.php:319
+msgid "Setup a video conference room with shortcode"
+msgstr "使用短代码设置视频会议室"
+
+#: inc/admin/class-admin.php:321
+msgid "Write down the shortcode below and set width, height and name of conference"
+msgstr "记下下方的短代码，并设置会议的宽度、高度和名称"
+
+#: inc/admin/class-admin.php:323
+msgid "Click on shortcode to copy"
+msgstr "点击短代码即可复制"
+
+#: inc/admin/class-admin.php:327
+msgid "name:"
+msgstr "名称："
+
+#: inc/admin/class-admin.php:327
+msgid "A unique name to generate the url of the room"
+msgstr "用于生成房间 URL 的唯一名称"
+
+#: inc/admin/class-admin.php:328
+msgid "width:"
+msgstr "宽度："
+
+#: inc/admin/class-admin.php:328
+msgid "Width of the jitsi meet embedded"
+msgstr "嵌入的 Jitsi Meet 宽度"
+
+#: inc/admin/class-admin.php:329
+msgid "height:"
+msgstr "高度："
+
+#: inc/admin/class-admin.php:329
+msgid "Height of the jitsi meet embedded"
+msgstr "嵌入的 Jitsi Meet 高度"
+
+#: inc/admin/class-admin.php:353
+msgid "How to embed"
+msgstr "如何嵌入"
+
+#: inc/admin/class-admin.php:355
+msgid "API Settings"
+msgstr "API 设置"
+
+#: inc/admin/class-admin.php:355
+msgid "Authenticate with JAAS"
+msgstr "通过 JAAS 进行身份验证"
+
+#: inc/admin/class-admin.php:357
+msgid "Admin Settings"
+msgstr "管理员设置"
+
+#: inc/admin/class-admin.php:357
+msgid "Username, email, avatar etc."
+msgstr "用户名、邮箱、头像等。"
+
+#: inc/admin/class-admin.php:359
+msgid "Configurations"
+msgstr "配置"
+
+#: inc/admin/class-admin.php:359
+msgid "Width, height, recording etc..."
+msgstr "宽度、高度、录制等……"
+
+#: inc/admin/class-admin.php:361
+msgid "Audio Settings"
+msgstr "音频设置"
+
+#: inc/admin/class-admin.php:361
+msgid "Initial audio configurations..."
+msgstr "初始音频配置……"
+
+#: inc/admin/class-admin.php:363
+msgid "Video Settings"
+msgstr "视频设置"
+
+#: inc/admin/class-admin.php:363
+msgid "Initial video configurations..."
+msgstr "初始视频配置……"
+
+#: inc/admin/class-admin.php:509
+msgid "Welcome to FlexMeeting"
+msgstr "欢迎使用 FlexMeeting"
+
+#: inc/admin/class-admin.php:510
+msgid "Select for which kind of api you want to use with our plugin and give credential accordingly."
+msgstr "选择您希望与我们的插件配合使用的 API 类型，并相应地提供凭据。"
+
+#: inc/admin/class-admin.php:525
+msgid "How to select Jitsi Meet server?"
+msgstr "如何选择 Jitsi Meet 服务器？"
+
+#: inc/admin/class-admin.php:633
+msgid "Or, Go Fully Branded - Zero Server Setup!"
+msgstr "或者，打造全品牌——无需设置服务器！"
+
+#: inc/admin/class-admin.php:640
+msgid "With Your Branding, Your Rules!"
+msgstr "您的品牌，您的规则！"
+
+#: inc/admin/class-admin.php:643
+msgid "Host Secure Video Meetings Under Your Own Domain."
+msgstr "在您自己的域名下举行安全的视频会议。"
+
+#: inc/admin/class-admin.php:649
+msgid "Fully branded under your domain"
+msgstr "完全以您的品牌域名运行"
+
+#: inc/admin/class-admin.php:653
+msgid "Zero server setup required"
+msgstr "无需设置服务器"
+
+#: inc/admin/class-admin.php:657
+msgid "Unlimited high-quality meetings"
+msgstr "无限次高质量会议"
+
+#: inc/admin/class-admin.php:661
+msgid "No technical hassle"
+msgstr "无技术烦恼"
+
+#: inc/admin/class-admin.php:666
+msgid "Explore Hosted Jitsi"
+msgstr "了解托管版 Jitsi"
+
+#: inc/admin/class-admin.php:674
+msgid "Jitsi Meeting Interface"
+msgstr "Jitsi 会议界面"
+
+#: inc/admin/class-admin.php:702
+msgid "Add your favourite add-ons and supercharge your workflow"
+msgstr "添加您喜爱的扩展组件，增强您的工作流"
+
+#: inc/admin/class-admin.php:716
+msgid "Multivendor Addon for FlexMeeting"
+msgstr "FlexMeeting 多商户扩展"
+
+#: inc/admin/class-admin.php:717
+msgid "Power up your multi-vendor experience & create meetings right from your vendor dashboard. Elevate your store with monetizable video meetings."
+msgstr "提神多商户体验，直接从商户仪表板创建会议。通过可获利的视频会议提升您的店铺价值。"
+
+#: inc/admin/class-admin.php:724 inc/admin/class-admin.php:760
+msgid "Not activate"
+msgstr "未激活"
+
+#: inc/admin/class-admin.php:726 inc/admin/class-admin.php:762
+#: inc/admin/licence-cta.php:13
+msgid "Activate"
+msgstr "激活"
+
+#: inc/admin/class-admin.php:745
+msgid "FlexMeeting Frontend Addon"
+msgstr "FlexMeeting 前端扩展"
+
+#: inc/admin/class-admin.php:748
+msgid "Easily create Jitsi meetings from the frontend without accessing the admin dashboard."
+msgstr "无需访问管理员仪表板，即可轻松在前端创建 Jitsi 会议。"
+
+#: inc/admin/licence-cta.php:11
+msgid "Please activate your license"
+msgstr "请激活您的许可证"
+
+#: inc/admin/mannage-callback.php:182
+msgid " New "
+msgstr " 新增 "
+
+#: inc/admin/mannage-callback.php:290
+msgid "Preview Image Upload"
+msgstr "预览图片上传"
+
+#: inc/admin/mannage-callback.php:298
+msgid "Upload an image"
+msgstr "上传图片"
+
+#: inc/admin/mannage-callback.php:323
+msgid "Some settings like Company Logo, Background etc are currently not available via api. You can set your company logo, background etc from the"
+msgstr "公司 Logo、背景等部分设置目前无法通过 API 使用。您可以设置通过以下方式进行设置："
+
+#: inc/admin/mannage-callback.php:323
+msgid "jaas console"
+msgstr "JaaS 控制台"
+
+#: inc/elementor.php:67 blocks/src/blocks.js:166
+msgid "Jitsi Meet"
+msgstr "Jitsi Meet"
+
+#: inc/elementor.php:108
+msgid "Configuration"
+msgstr "配置"
+
+#: inc/elementor.php:115 blocks/src/blocks.js:69
+msgid "Name"
+msgstr "名称"
+
+#: inc/elementor.php:118
+msgid "Meeting name here"
+msgstr "在此处输入会议名称"
+
+#: inc/elementor.php:125 blocks/src/blocks.js:107
+msgid "Width"
+msgstr "宽度"
+
+#: inc/elementor.php:140 blocks/src/blocks.js:115
+msgid "Height"
+msgstr "高度"
+
+#: inc/elementor.php:152
+msgid "Start audio muted"
+msgstr "加入时音频静音"
+
+#: inc/elementor.php:164
+msgid "Start video muted"
+msgstr "加入时视频静音"
+
+#: inc/jitsi-topbar.php:193
+msgid "New: Host Branded Jitsi Meetings - No Server Needed!"
+msgstr "新增：主持品牌 Jitsi 会议——无需服务器！"
+
+#: inc/jitsi-topbar.php:198
+msgid "Explore now"
+msgstr "立即体验"
+
+#: inc/jitsi-topbar.php:205
+msgid "Close notification"
+msgstr "关闭通知"
+
+#: inc/jitsi-topbar.php:312
+msgid "Invalid nonce"
+msgstr "无效的 Nonce"
+
+#: inc/jitsi-topbar.php:317
+msgid "Insufficient permissions"
+msgstr "权限不足"
+
+#: inc/jitsi-topbar.php:324
+msgid "Topbar dismissed successfully"
+msgstr "顶部栏已成功关闭"
+
+#: inc/jitsi-topbar.php:326
+msgid "Failed to dismiss topbar"
+msgstr "关闭顶部栏失败"
+
+#: inc/jitsi-topbar.php:344
+msgid "Security check failed"
+msgstr "安全性检查失败"
+
+#: inc/jitsi-topbar.php:349
+msgid "You do not have sufficient permissions to access this page."
+msgstr "您没有足够的权限访问此页面。"
+
+#: inc/wppool/class-plugin.php:328
+msgid "Deal Ends In"
+msgstr "优惠倒计时"
+
+#: inc/wppool/class-plugin.php:333 inc/wppool/class-plugin.php:342
+#: inc/wppool/class-plugin.php:351 inc/wppool/class-plugin.php:360
+msgid "00"
+msgstr "00"
+
+#: inc/wppool/class-plugin.php:336
+msgid "Days"
+msgstr "天"
+
+#: inc/wppool/class-plugin.php:345
+msgid "Hours"
+msgstr "小时"
+
+#: inc/wppool/class-plugin.php:354
+msgid "Minutes"
+msgstr "分钟"
+
+#: inc/wppool/class-plugin.php:363
+msgid "Seconds"
+msgstr "秒"
+
+#: inc/wppool/class-plugin.php:370
+msgid "Upgrade to Pro"
+msgstr "升级到专业版"
+
+#: inc/wppool/class-plugin.php:374
+msgid "Try a free demo"
+msgstr "试用免费演示"
+
+#: jitsi-meet-wp.php:154
+msgid "Grab Your Deals"
+msgstr "领取您的优惠"
+
+#: templates/admin/affiliate-notice.php:15
+msgid "Hey! Enjoying <b>Jitsi Meet WP </b> plugin? Join our <a href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" class=\"affiliate-notice-link\">influencer program  </a> to make money from your social media content. You can also check our <a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" class=\"affiliate-notice-link\">affiliate program  </a> to get a 25%% commission on every sale!"
+msgstr "嘿！喜欢 <b>Jitsi Meet WP</b> 插件吗？加入我们的 <a href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" class=\"affiliate-notice-link\">达人计划</a>，通过您的社交媒体内容获利。您还可以查看我们的 <a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" class=\"affiliate-notice-link\">联盟计划</a>，每笔销售都可获得 25%% 的佣金！"
+
+#: templates/admin/affiliate-notice.php:20
+msgid "Tell me more "
+msgstr "了解更多 "
+
+#: templates/admin/affiliate-notice.php:29 templates/admin/review-notice.php:36
+msgid "Would you like us to remind you about this later?"
+msgstr "您希望稍后再提醒您吗？"
+
+#: templates/admin/affiliate-notice.php:32 templates/admin/review-notice.php:39
+msgid "Remind me in 3 days"
+msgstr "3 天后提醒我"
+
+#: templates/admin/affiliate-notice.php:33 templates/admin/review-notice.php:40
+msgid "Remind me in 10 days"
+msgstr "10 天后提醒我"
+
+#: templates/admin/affiliate-notice.php:34 templates/admin/review-notice.php:42
+msgid "Don't remind me about this"
+msgstr "不再提醒我"
+
+#: templates/admin/review-notice.php:17
+msgid ""
+"Hi there, it seems like Jitsi Meet WP is bringing you some value, and that is pretty awesome!\r\n"
+"    Can you please show us some love and rate Jitsi Meet WP on WordPress? It will take two minutes of your time, and will really help us spread the world."
+msgstr "你好，看来 Jitsi Meet WP 正为您带来价值，这太棒了！您能支持我们一下，在 WordPress 上为 Jitsi Meet WP 评分吗？只需耽误您两分钟时间，就能帮我们推广给更多人。"
+
+#: templates/admin/review-notice.php:26
+msgid "I'd love to help :)"
+msgstr "我很乐意帮忙 :)"
+
+#: templates/admin/review-notice.php:29
+msgid "Not this time"
+msgstr "这次就算了"
+
+#: templates/admin/review-notice.php:31
+msgid "I've already rated you"
+msgstr "我已经评过分了"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:170
+msgid "jitsi"
+msgstr "jitsi"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:171
+msgid "meeting"
+msgstr "会议"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:172
+msgid "video"
+msgstr "视频"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:173
+msgid "conference"
+msgstr "会议/协商"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:174
+msgid "zoom"
+msgstr "zoom"
+
+#: blocks/src/blocks.js:75
+msgid "Domain"
+msgstr "域名"
+
+#: blocks/src/blocks.js:82
+msgid "Config from global"
+msgstr "从全局配置"
+
+#: blocks/src/blocks.js:123
+msgid "Start with audio muted"
+msgstr "加入时音频设为静音"
+
+#: blocks/src/blocks.js:128
+msgid "Start with video muted"
+msgstr "加入时视频设为静音"
+
+#: blocks/src/blocks.js:133
+msgid "Start with screen sharing"
+msgstr "以屏幕共享模式启动"
+
+#: blocks/src/blocks.js:157
+msgid "Room name:"
+msgstr "房间名称："
+
+#: blocks/src/blocks.js:158
+msgid "Domain :"
+msgstr "域名："
+
+#: inc/admin/class-admin.php:188 init.php:188 blocks/src/blocks.js:67
+msgid "Settings"
+msgstr "设置"
+
+#: inc/admin/class-admin.php:454
+msgid "Self hosted domain missing"
+msgstr "缺少自托管域名"
+
+#: inc/admin/class-admin.php:458
+msgid "App id missing"
+msgstr "缺少应用 ID"
+
+#: inc/admin/class-admin.php:461
+msgid "Api key is missing"
+msgstr "缺少 API 密钥"
+
+#: inc/admin/class-admin.php:464
+msgid "Private key is missing"
+msgstr "缺少私钥"
+
+#: inc/admin/class-admin.php:518
+msgid "Skip"
+msgstr "跳过"
+
+#: inc/admin/class-admin.php:520
+msgid "Continue"
+msgstr "继续"
+
+#: inc/admin/class-admin.php:571 inc/admin/class-admin.php:584
+#: inc/admin/class-admin.php:597 inc/admin/class-admin.php:610
+#: inc/admin/class-admin.php:622
+msgid "Save Changes"
+msgstr "保存更改"
+
+msgid "Default (Public Hosting)"
+msgstr "默认（公共托管）"
+
+msgid "Use the default public Jitsi"
+msgstr "使用默认公共 Jitsi"
+
+msgid "Managed Branded Meeting"
+msgstr "管理型品牌会议"
+
+msgid "We host and maintain your branded server"
+msgstr "我们托管并维护您的品牌服务器"
+
+msgid "Jitsi as a Service (8x8 JaaS)"
+msgstr "Jitsi 即服务 (8x8 JaaS)"
+
+msgid "Use your JaaS credentials"
+msgstr "使用您的 JaaS 凭据"
+
+msgid "Self-Hosted"
+msgstr "自主托管"
+
+msgid "Connect your self-hosted server"
+msgstr "连接您的自主托管服务器"
+
+msgid "Choose where your meetings will run:"
+msgstr "选择会议运行位置："
+
+msgid "Save & Test Connection"
+msgstr "保存并测试连接"
+
+msgid "Domain changed. Please re-test connection."
+msgstr "域名已更改。请重新测试连接。"
+
+msgid "Connecting..."
+msgstr "连接中..."
+
+msgid "Connected. Meetings will run on"
+msgstr "已连接。会议将在此节点上运行"
+
+msgid "Disconnect"
+msgstr "断开连接"
+
+msgid "We couldn't reach this server. Please double-check the URL or try again."
+msgstr "我们无法访问该服务器。请再次检查 URL 或重试。"
+
+msgid "Disconnecting..."
+msgstr "断开连接中..."
+
+msgid "Disconnect failed"
+msgstr "断开连接失败"
+
+msgid "Error: Could not reach the server."
+msgstr "错误：无法访问服务器。"
+
+msgid "🎁"
+msgstr "🎁"
+
+msgid "Benefits:"
+msgstr "优势："
+
+msgid "Need help setting up your branded server?"
+msgstr "需要帮助设置您的品牌服务器？"
+
+msgid "How Hosted Meetings works?"
+msgstr "托管会议如何运作？"
+
+msgid "Default Public Hosting"
+msgstr "默认公共托管"
+
+msgid "Select a public domain to run your meeting."
+msgstr "选择用于运行会议的公共域名。"
+
+msgid "Completely Free to Use"
+msgstr "完全免费使用"
+
+msgid "Instant Setup"
+msgstr "即时设置"
+
+msgid "No Account Required"
+msgstr "无需帐户"
+
+msgid "Standard Privacy Features"
+msgstr "标准隐私功能"
+
+msgid "Your Branded Meeting Server"
+msgstr "您的品牌会议服务器"
+
+msgid "Branded Meetings, Zero Server Hassle!"
+msgstr "品牌会议，零服务器烦恼！"
+
+msgid "Get your own private branded meeting server (logo + brand name). We'll host and maintain it - just paste your Hosted Server Domain URL below and enjoy your branded meetings."
+msgstr "获取您自己的私人品牌会议服务器（徽标 + 品牌名称）。我们将托管并维护它 - 只需在下面粘贴您的托管服务器域名 URL，即可享受品牌会议的乐趣。"
+
+msgid "e.g. https://yourbrand.jitsihosted.com"
+msgstr "例如：https://yourbrand.jitsihosted.com"
+
+msgid "✅"
+msgstr "✅"
+
+msgid "Don't have a Hosted Server URL yet? "
+msgstr "还没有托管服务器 URL 吗？ "
+
+msgid "Request setup now →"
+msgstr "立即申请设置 →"
+
+msgid "Hosted Server Domain:"
+msgstr "托管服务器域名："
+
+msgid "<strong>Request</strong> your branded setup first (<a href=\\\"#\\\">request now →</a>)"
+msgstr "<strong>首先申请</strong>您的品牌设置（<a href=\"#\">立即申请 →</a>）"
+
+msgid "<strong>We set it up</strong> and email your Hosted Server URL"
+msgstr "<strong>我们进行设置</strong>并通过电子邮件发送您的托管服务器 URL"
+
+msgid "<strong>Paste the URL here</strong> → Save & Test → meetings start running on your hosted server"
+msgstr "<strong>在此处粘贴 URL</strong> → 保存并测试 → 会议将开始在您的托管服务器上运行"
+
+msgid "🤩"
+msgstr "🤩"
+
+msgid "That's it - no technical setup needed from you. Wahhhhhhhhhh!"
+msgstr "就是这样 - 您无需进行任何技术设置。哇！"
+
+msgid "Complete Privacy and Control over your data"
+msgstr "完全的隐私以及对数据的控制"
+
+msgid "Ultra-fast performance with dedicated resources"
+msgstr "利用专属资源实现超快性能"
+
+msgid "Global reach with low-latency server locations"
+msgstr "位置遍及全球的低延迟服务器节点"
+
+msgid "99.9% Uptime guarantee with 24/7 monitoring"
+msgstr "通过 24/7 监控享受 99.9% 正常运行时间保证"
+
+msgid "Scalable to hundreds of concurrent participants"
+msgstr "可扩展到支持数百名并发参与者"
+
+msgid "End-to-end encryption and advanced security"
+msgstr "端到端加密和高级安全性"
+
+msgid "Request branded meeting server for FREE!"
+msgstr "免费申请品牌会议服务器！"
+
+msgid "What is a self-hosted FlexMeeting server?"
+msgstr "什么是自主托管式 FlexMeeting 服务器？"
+
+msgid "A self-hosted Jitsi server means the entire video conferencing system runs on your own server or hosting environment, not on Jitsi's public infrastructure. This gives you full control, privacy, and customization flexibility."
+msgstr "自主托管式 Jitsi 服务器是指整个视频会议系统在您自己的服务器或托管环境中运行，而不是在 Jitsi 的公共基础架构上。这使您可以发挥完全的掌控权、隐私和自定义灵活性。"
+
+msgid "Why should I use a self-hosted Jitsi server instead of using public Jitsi?"
+msgstr "我为什么要使用自主托管的 Jitsi 服务器，而不是使用公共 Jitsi？"
+
+msgid "Public servers like meet.jit.si are shared by millions. This can lead to performance issues, limited features, and a lack of branding. With your own server, you get dedicated resources, your own logo, and enhanced security."
+msgstr "数以百万计的人共享诸如 meet.jit.si 等公共服务器。这可能会遇到性能下降、功能限制和缺乏品牌化。有了自己的服务器后，您便能获得专用资源、专属的徽标并享有更高的安全性。"
+
+msgid "What do you provide in this service?"
+msgstr "在此项服务中你们提供什么？"
+
+msgid "We provide complete installation, configuration, and maintenance of your Jitsi server. This includes automatic updates, performance monitoring, and SSL setup so you can focus on your meetings."
+msgstr "我们为您提供 Jitsi 服务器的全面安装、配置和维护服务。这包括自动化更新、性能监控和 SSL 安装，以便您可以专注于召开会议。"
+
+msgid "Do I need technical knowledge to maintain the server?"
+msgstr "我不懂技术，也能维护这种服务器吗？"
+
+msgid "Not at all! Our managed service is designed to be \\\"hands-off\\\" for you. We handle all the server-side complexity, security patches, and scaling."
+msgstr "绝对可以！这等托管服务专为您打造“全自动”的部署体验。我们一手承揽所有繁杂琐事的服务器端管理、安全补丁修复以及扩展功能。"
+
+msgid "What are the server requirements?"
+msgstr "需要什么样的服务器配置要求？"
+
+msgid "If you use our managed hosting, we provide the infrastructure. If you host it yourself, a basic server with 4GB RAM and 2 CPUs is usually enough for up to 20-30 concurrent users."
+msgstr "若您使用我们的管理型主机，则由我们提供基础架构；而如果您将网站自行存管在此类主机的设备中，只要服务器拥具配备有 4GB RAm 的运存并附带有 2 个 CPU 进行作业分配的操作标准就可以保障它流畅使用而其可顺畅支撑大约达到或保持有最高支持容量至同一时间在线 20 到三十位参会网友。  "
+
+msgid "Can I use this with my existing website or LMS?"
+msgstr "我可否将它与我现有的网站或者说在当前的LMS组合运用？"
+
+msgid "Yes! Our plugin integrates seamlessly with WordPress, LMS platforms, and other CMS. You can embed meetings directly into your pages."
+msgstr "没问题。该插件在Wordpress及各大支持搭建与建制的其他平台的组合搭建应用之中体现的是近于没有门槛或者是说兼容的！它可以顺利衔接直接将网络聚会嵌于相关页。 "
+
+msgid "How long does it take to set everything up?"
+msgstr "完整架构需花多少时间来配置这套设施服务？"
+
+msgid "Managed servers are usually ready within 24 hours. If you're using the \\\"Request\\\" option, we'll reach out to finalize the branding before deployment."
+msgstr "受管理的服务器服务项目正常会在部署好的短短二十四小时以内得到交付备用;若是采取申请需求这种途径来解决定制请求那么在这个具体动作敲定实施完毕及下放给用户使用体验它之际我们都得事先相互之间深入交流一次来确定落实品牌的特例化细节从而完善方案实施进程。"
+
+msgid "Frequently Asked Questions"
+msgstr "常见问题"
+
+msgid "Jitsi as a Service (8x8)"
+msgstr "Jitsi 即服务 (8x8)"
+
+msgid "Paste private key content here"
+msgstr "在此处粘贴私钥内容"
+
+msgid "Enterprise Grade Reliability"
+msgstr "企业级可靠性"
+
+msgid "Advanced Analytics"
+msgstr "高级分析"
+
+msgid "Global Low-latency Network"
+msgstr "全球低延迟网络"
+
+msgid "Secure Recorded Meetings"
+msgstr "安全记录的会议"
+
+msgid "Self-Hosted Server"
+msgstr "自主托管服务器"
+
+msgid "Your Server Domain"
+msgstr "您的服务器域"
+
+msgid "Enter your self-hosted Jitsi domain (e.g., meet.yourdomain.com)"
+msgstr "输入您的自主托管 Jitsi 域（例如 meet.yourdomain.com）"
+
+msgid "Premium Feature"
+msgstr "高级功能"
+
+msgid "Full Data Control"
+msgstr "全面的数据控制"
+
+msgid "Custom Security Policies"
+msgstr "自定义安全策略"
+
+msgid "No Third-party Tracking"
+msgstr "无第三方跟踪"
+
+msgid "Infrastructure Ownership"
+msgstr "基础架构所有权"

@@ -324,5 +324,14 @@ jQuery(document).ready(function($) {
                 setTimeout(toggleHostedSection, 100);
             }
         });
+
+        // Add toggle for "How it works?" guide
+        $(document).on('click', '.guide-toggle', function() {
+            var $guide = $(this).closest('.jitsi-setup-guide');
+            var $content = $(this).next('.guide-steps-wrap');
+            
+            $guide.toggleClass('is-active');
+            $content.stop().slideToggle(300);
+        });
     });
 }(jQuery));

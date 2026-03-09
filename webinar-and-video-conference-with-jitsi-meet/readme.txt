@@ -2,9 +2,9 @@
 Contributors: wppool, azizultex, shahreyar46, foysalremon
 Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 5.4
-Stable tag: 2.7.9
+Stable tag: 2.8.0
 License: GPL-2.0+
 License URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -240,6 +240,10 @@ Yes. Live streaming to platforms like YouTube is supported when using the approp
 11. Self Hosted
 
 == Changelog ==
+
+= 2.8.0 – 09 Mar 2026 =
+* **New:** Revamped API Settings interface for a cleaner and more intuitive configuration experience.
+* **New:** Introduced Managed Branded Meeting feature for easier branded meeting management. 🚀
 
 = 2.7.9 – 09 Dec 2025 =
 * **Improvement:** Regular maintenance & enhancement update

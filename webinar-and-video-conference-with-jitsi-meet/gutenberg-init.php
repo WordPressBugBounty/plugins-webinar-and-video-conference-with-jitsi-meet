@@ -70,7 +70,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 		 */
 		public function __clone() {
 			// Cloning instances of the class is forbidden.
-			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'jitsi-meet-wp' ), '1.0.0' );
+			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'webinar-and-video-conference-with-jitsi-meet' ), '1.0.0' );
 		}
 
 		/**
@@ -85,7 +85,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 		 */
 		public function __wakeup() {
 			// Unserializing instances of the class is forbidden.
-			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'jitsi-meet-wp' ), '1.0.0' );
+			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'webinar-and-video-conference-with-jitsi-meet' ), '1.0.0' );
 		}
 
 		/**
@@ -113,8 +113,23 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 		public function jitsi_meet_wp_gutenberg_blocks() {
 			wp_register_script( 'jitsi-meet-wp-block', plugins_url( '/blocks/dist/blocks.build.js', __FILE__ ), array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n' ), filemtime( plugin_dir_path( __FILE__ ) . '/blocks/dist/blocks.build.js' ), false );
 
-			$selected_domain = get_option( 'jitsi_opt_select_api', true );
+			$selected_domain = get_option( 'jitsi_opt_select_api', 'free' );
 			$free_domain     = get_option( 'jitsi_opt_free_domain', 'jitsi-01.csn.tu-chemnitz.de' );
+			$custom_domain   = $free_domain;
+
+			if ( 'branded' === $selected_domain ) {
+				$subdomain_domain = get_option( 'jitsi_opt_subdomain_domain', '' );
+				if ( ! empty( $subdomain_domain ) ) {
+					$custom_domain = preg_replace( '/^https?:\/\//i', '', $subdomain_domain );
+					$custom_domain = rtrim( $custom_domain, '/' );
+				}
+			} elseif ( 'jaas' === $selected_domain ) {
+				$custom_domain = '8x8.vc';
+			} elseif ( 'self' === $selected_domain ) {
+				$custom_domain = get_option( 'jitsi_opt_custom_domain', 'meet.jit.si' );
+				$custom_domain = preg_replace( '/^https?:\/\//i', '', $custom_domain );
+				$custom_domain = rtrim( $custom_domain, '/' );
+			}
 
 			wp_localize_script(
 				'jitsi-meet-wp-block',
@@ -126,7 +141,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 					'startwithvideomuted' => get_option( 'jitsi_opt_startWithVideoMuted', 0 ) ? 1 : 0,
 					'startscreensharing'  => get_option( 'jitsi_opt_startScreenSharing', 0 ) ? 1 : 0,
 					'invite'              => get_option( 'jitsi_opt_invite', 1 ) ? 1 : 0,
-					'domain'              => 'jaas' === $selected_domain ? '8x8.vc' : $free_domain,
+					'domain'              => $custom_domain,
 
 				)
 			);
@@ -154,20 +169,56 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 		public function jitsi_meet_wp_gutenberg_front_assets() {
 			$jisit_css_ver = gmdate( 'ymd-Gis', filemtime( plugin_dir_path( __FILE__ ) . '/blocks/dist/blocks.style.build.css' ) );
 
-			wp_enqueue_style( 'jitsi-meet-wp', plugins_url( '/blocks/dist/blocks.style.build.css', __FILE__ ), false, $jisit_css_ver );
+			wp_enqueue_style( 'webinar-and-video-conference-with-jitsi-meet', plugins_url( '/blocks/dist/blocks.style.build.css', __FILE__ ), false, $jisit_css_ver );
 
 			if ( is_singular() ) {
 				wp_enqueue_script( 'jitsi-8x8-api', 'https://8x8.vc/external_api.js', null, '2.1.2', false );
 				wp_enqueue_script( 'jitsi-script', plugins_url( '/blocks/dist/jitsi.js', __FILE__ ), array( 'jquery', 'wp-blocks' ), filemtime( plugin_dir_path( __FILE__ ) . '/blocks/dist/jitsi.js' ), '2.1.2' );
 
+				$api_select = get_option( 'jitsi_opt_select_api', 'free' );
+				$jwt_token = '';
+				$custom_domain = '';
+
+				// Generate JWT for JaaS
+				if ( 'jaas' === $api_select ) {
+					$jwt_token = $this->jitsi_pro_generate_jwt();
+				}
+
+				// Generate JWT for Branded Meetings
+				if ( 'branded' === $api_select ) {
+					$subdomain_domain = get_option( 'jitsi_opt_subdomain_domain', '' );
+					if ( ! empty( $subdomain_domain ) ) {
+						// Include JWT Service class
+						if ( ! class_exists( 'Jitsi_JWT_Service' ) ) {
+							require_once JITSI_MEET_WP_FILE_PATH . 'inc/admin/class-jitsi-jwt-service.php';
+						}
+
+						$current_user_id = get_current_user_id();
+						$room_name = '*'; // Use wildcard for Gutenberg blocks
+						$is_moderator = current_user_can( 'edit_posts' );
+
+						$jwt_token = Jitsi_JWT_Service::get_meeting_token(
+							$current_user_id,
+							$subdomain_domain,
+							$room_name,
+							$is_moderator
+						);
+
+						// Sanitize domain for Jitsi External API compatibility
+						$custom_domain = preg_replace( '/^https?:\/\//i', '', $subdomain_domain );
+						$custom_domain = rtrim( $custom_domain, '/' );
+					}
+				}
+
 				wp_localize_script(
 					'jitsi-script',
 					'jitsi_free',
 					array(
-						'appid'      => get_option( 'jitsi_opt_app_id', '' ),
-						'api_select' => get_option( 'jitsi_opt_select_api', 'jaas' ),
-						'jwt'        => $this->jitsi_pro_generate_jwt(),
-						'ajaxurl'    => admin_url( 'admin-ajax.php' ),
+						'appid'         => get_option( 'jitsi_opt_app_id', '' ),
+						'api_select'    => $api_select,
+						'jwt'           => $jwt_token,
+						'custom_domain' => $custom_domain,
+						'ajaxurl'       => admin_url( 'admin-ajax.php' ),
 					)
 				);
 			}

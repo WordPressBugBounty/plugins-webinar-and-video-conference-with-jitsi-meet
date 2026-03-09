@@ -1,6 +1,5 @@
 /**
  * Jitsi Topbar CSS - Fixed and Optimized
- * Removed excessive rules and fixed width overflow issues
  */
 
 /* Reset and base positioning */
@@ -51,22 +50,6 @@
 body.post-type-meeting .jitsi-topbar-notification,
 body.edit-php .jitsi-topbar-notification {
   z-index: 999999;
-}
-
-/* Make wpbody-content a flex container for proper ordering */
-#wpbody-content {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Ensure topbar appears first */
-#wpbody-content .jitsi-topbar-notification {
-  order: -1;
-}
-
-/* All other content follows normal flow */
-#wpbody-content > *:not(.jitsi-topbar-notification) {
-  order: 1;
 }
 
 /* Preserve original layout for screen options area */

@@ -64,7 +64,7 @@ class Jitsi_Elementor extends Widget_Base {
 	 * @return  string
 	 */
 	public function get_title() {
-		return __( 'Jitsi Meet', 'jitsi-meet-wp' );
+		return __( 'Jitsi Meet', 'webinar-and-video-conference-with-jitsi-meet' );
 	}
 
 	/**
@@ -105,24 +105,24 @@ class Jitsi_Elementor extends Widget_Base {
 		$this->start_controls_section(
 			'Configuration',
 			array(
-				'label' => __( 'Configuration', 'jitsi-meet-wp' ),
+				'label' => __( 'Configuration', 'webinar-and-video-conference-with-jitsi-meet' ),
 			)
 		);
 
 		$this->add_control(
 			'name',
 			array(
-				'label'       => __( 'Name', 'jitsi-meet-wp' ),
+				'label'       => __( 'Name', 'webinar-and-video-conference-with-jitsi-meet' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => 'SampleJitsiMeetRoom',
-				'placeholder' => __( 'Meeting name here', 'jitsi-meet-wp' ),
+				'placeholder' => __( 'Meeting name here', 'webinar-and-video-conference-with-jitsi-meet' ),
 			)
 		);
 
 		$this->add_control(
 			'width',
 			array(
-				'label'     => __( 'Width', 'jitsi-meet-wp' ),
+				'label'     => __( 'Width', 'webinar-and-video-conference-with-jitsi-meet' ),
 				'type'      => Controls_Manager::NUMBER,
 				'min'       => 100,
 				'max'       => 2000,
@@ -137,7 +137,7 @@ class Jitsi_Elementor extends Widget_Base {
 		$this->add_control(
 			'height',
 			array(
-				'label'   => __( 'Height', 'jitsi-meet-wp' ),
+				'label'   => __( 'Height', 'webinar-and-video-conference-with-jitsi-meet' ),
 				'type'    => Controls_Manager::NUMBER,
 				'min'     => 100,
 				'max'     => 2000,
@@ -149,7 +149,7 @@ class Jitsi_Elementor extends Widget_Base {
 		$this->add_control(
 			'audio_muted',
 			array(
-				'label'        => __( 'Start audio muted', 'jitsi-meet-wp' ),
+				'label'        => __( 'Start audio muted', 'webinar-and-video-conference-with-jitsi-meet' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
 				'label_on'     => '',
 				'label_off'    => '',
@@ -161,7 +161,7 @@ class Jitsi_Elementor extends Widget_Base {
 		$this->add_control(
 			'video_muted',
 			array(
-				'label'        => __( 'Start video muted', 'jitsi-meet-wp' ),
+				'label'        => __( 'Start video muted', 'webinar-and-video-conference-with-jitsi-meet' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
 				'label_on'     => '',
 				'label_off'    => '',
@@ -173,7 +173,7 @@ class Jitsi_Elementor extends Widget_Base {
 		$this->add_control(
 			'screen_sharing',
 			array(
-				'label'        => __( 'Screen Sharing', 'jitsi-meet-wp' ),
+				'label'        => __( 'Screen Sharing', 'webinar-and-video-conference-with-jitsi-meet' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
 				'label_on'     => '',
 				'label_off'    => '',
@@ -185,7 +185,7 @@ class Jitsi_Elementor extends Widget_Base {
 		$this->add_control(
 			'invite',
 			array(
-				'label'        => __( 'Enable Inviting', 'jitsi-meet-wp' ),
+				'label'        => __( 'Enable Inviting', 'webinar-and-video-conference-with-jitsi-meet' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
 				'label_on'     => '',
 				'label_off'    => '',

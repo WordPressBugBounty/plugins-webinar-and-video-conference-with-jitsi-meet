@@ -51,7 +51,6 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 				'jitsi-pro-video',
 				'jitsi-pro-frontend',
 				'jitsi-pro-add-ons',
-				'jitsi-meet-welcome',
 				'jitsi-pro-settings',
 				// Screen IDs for admin pages (usually prefixed with toplevel_page_ or admin_page_).
 				'toplevel_page_jitsi-meet',
@@ -62,7 +61,6 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 				'admin_page_jitsi-pro-video',
 				'admin_page_jitsi-pro-frontend',
 				'admin_page_jitsi-pro-add-ons',
-				'admin_page_jitsi-meet-welcome',
 				'admin_page_jitsi-pro-settings',
 				// Meeting post type pages.
 				'meeting',
@@ -163,6 +161,13 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 				return;
 			}
 
+			// Explicitly exclude Welcome page.
+			$screen = get_current_screen();
+			$page   = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
+			if ( 'jitsi-meet-welcome' === $page || ( $screen && ( 'jitsi-meet-welcome' === $screen->id || false !== strpos( $screen->id, 'jitsi-meet-welcome' ) ) ) ) {
+				return;
+			}
+
 			// Check if dismissed.
 			if ( get_user_meta( get_current_user_id(), 'jitsi_hosted_topbar_dismissed', true ) ) {
 				return;
@@ -188,21 +193,25 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 			<div class="jitsi-topbar-notification <?php echo esc_attr( $body_class ); ?>" id="jitsi-topbar-notification">
 				<div class="jitsi-topbar-container">
 					<div class="jitsi-topbar-content">
-						<span class="jitsi-topbar-icon">🎉</span>
+						<span class="jitsi-topbar-icon"><?php echo esc_html__( '🎉', 'webinar-and-video-conference-with-jitsi-meet' ); ?></span>
 						<span class="jitsi-topbar-message">
-							<?php esc_html_e( 'New: Host Branded Jitsi Meetings - No Server Needed!', 'jitsi-pro' ); ?> 
-							<a href="https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/" 
-								class="jitsi-topbar-cta" 
-								target="_blank" 
-								rel="noopener noreferrer">
-								<?php esc_html_e( 'Explore now', 'jitsi-pro' ); ?> →
-							</a>
+							<?php
+							$page_slug = function_exists( 'jitsi_meet_wp_is_any_premium_active' ) && jitsi_meet_wp_is_any_premium_active() ? 'jitsi-pro-apis' : 'jitsi-pro-settings';
+							printf(
+								/* translators: 1: opening strong tag, 2: closing strong tag, 3: opening anchor tag, 4: closing anchor tag */
+								esc_html__( 'New: Get your own %1$sbranded Jitsi meeting%2$s experience! %3$sSet Up Now%4$s →', 'webinar-and-video-conference-with-jitsi-meet' ),
+								'<strong>',
+								'</strong>',
+								'<a href="' . esc_url( admin_url( 'admin.php?page=' . $page_slug . '&select_api=branded' ) ) . '" class="jitsi-topbar-cta">',
+								'</a>'
+							);
+							?>
 						</span>
 					</div>
 					<button type="button" 
 							class="jitsi-topbar-close" 
 							id="jitsi-topbar-close"
-							aria-label="<?php esc_attr_e( 'Close notification', 'jitsi-pro' ); ?>">
+							aria-label="<?php esc_attr_e( 'Close notification', 'webinar-and-video-conference-with-jitsi-meet' ); ?>">
 							<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
 								<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
 							</svg>
@@ -309,21 +318,21 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 			// Verify nonce.
 			$nonce = isset( $_POST['nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ) : '';
 			if ( ! wp_verify_nonce( $nonce, 'jitsi_topbar_dismiss' ) ) {
-				wp_send_json_error( array( 'message' => 'Invalid nonce' ) );
+				wp_send_json_error( array( 'message' => __( 'Invalid nonce', 'webinar-and-video-conference-with-jitsi-meet' ) ) );
 			}
 
 			// Check permissions.
 			if ( ! current_user_can( 'manage_options' ) ) {
-				wp_send_json_error( array( 'message' => 'Insufficient permissions' ) );
+				wp_send_json_error( array( 'message' => __( 'Insufficient permissions', 'webinar-and-video-conference-with-jitsi-meet' ) ) );
 			}
 
 			// Update user meta.
 			$result = update_user_meta( get_current_user_id(), 'jitsi_hosted_topbar_dismissed', true );
 
 			if ( $result ) {
-				wp_send_json_success( array( 'message' => 'Topbar dismissed successfully' ) );
+				wp_send_json_success( array( 'message' => __( 'Topbar dismissed successfully', 'webinar-and-video-conference-with-jitsi-meet' ) ) );
 			} else {
-				wp_send_json_error( array( 'message' => 'Failed to dismiss topbar' ) );
+				wp_send_json_error( array( 'message' => __( 'Failed to dismiss topbar', 'webinar-and-video-conference-with-jitsi-meet' ) ) );
 			}
 		}
 
@@ -341,12 +350,12 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 			// Verify nonce.
 			$nonce = sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) );
 			if ( ! wp_verify_nonce( $nonce, 'jitsi_reset_topbar' ) ) {
-				wp_die( esc_html__( 'Security check failed', 'jitsi-pro' ) );
+				wp_die( esc_html__( 'Security check failed', 'webinar-and-video-conference-with-jitsi-meet' ) );
 			}
 
 			// Check permissions.
 			if ( ! current_user_can( 'manage_options' ) ) {
-				wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'jitsi-pro' ) );
+				wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'webinar-and-video-conference-with-jitsi-meet' ) );
 			}
 
 			// Delete user meta.

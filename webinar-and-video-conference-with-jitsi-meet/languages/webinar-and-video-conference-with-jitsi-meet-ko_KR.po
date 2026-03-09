@@ -1,0 +1,1102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FlexMeeting 2.7.9\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/webinar-and-video-conference-with-jitsi-meet\n"
+"POT-Creation-Date: 2026-02-24T10:47:23+00:00\n"
+"PO-Revision-Date: 2026-03-04 12:27+0600\n"
+"Last-Translator: Antigravity AI\n"
+"Language-Team: Korean <ko_KR@li.org>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+"X-Domain: webinar-and-video-conference-with-jitsi-meet\n"
+
+#. Plugin Name of the plugin
+#: jitsi-meet-wp.php inc/admin/class-admin.php:158
+#: inc/admin/class-admin.php:169 inc/admin/class-admin.php:241
+#: inc/admin/class-admin.php:559 blocks/dist/blocks.build.js:314
+msgid "FlexMeeting"
+msgstr "FlexMeeting"
+
+#. Plugin URI of the plugin
+#: jitsi-meet-wp.php
+msgid "https://jitsi-meet-wp.wppool.dev/"
+msgstr "https://jitsi-meet-wp.wppool.dev/"
+
+#. Description of the plugin
+#: jitsi-meet-wp.php
+msgid "Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block"
+msgstr "Gutenberg 블록을 사용하여 WordPress 웹사이트에서 바로 라이브 웨비나, 회의, 온라인 수업, 화상 통화를 호스팅하세요."
+
+#. Author of the plugin
+#: jitsi-meet-wp.php
+msgid "WPPOOL"
+msgstr "WPPOOL"
+
+#. Author URI of the plugin
+#: jitsi-meet-wp.php
+msgid "https://wppool.dev"
+msgstr "https://wppool.dev"
+
+#: gutenberg-init.php:73 gutenberg-init.php:88 init.php:68 init.php:83
+msgid "Cheatin&#8217; huh?"
+msgstr "반칙인가요?"
+
+#: inc/admin/admin-settings.php:256
+msgid "Select API"
+msgstr "API 선택"
+
+#: inc/admin/admin-settings.php:256
+msgid "Select your api"
+msgstr "API를 선택하세요"
+
+#: inc/admin/admin-settings.php:273
+msgid "FlexMeeting Free"
+msgstr "FlexMeeting 무료 버전"
+
+#: inc/admin/admin-settings.php:273
+msgid "Get access to all the free features of the video conference application Jitsi Meet."
+msgstr "화상 회의 애플리케이션 Jitsi Meet의 모든 무료 기능을 이용할 수 있습니다."
+
+#: inc/admin/admin-settings.php:277
+msgid "JaaS 8x8"
+msgstr "JaaS 8x8"
+
+#: inc/admin/admin-settings.php:277
+msgid "Access to enterprise standard video meeting features and modify everything as you like."
+msgstr "기업 표준 화상 회의 기능을 이용하고 원하는 대로 모든 것을 수정할 수 있습니다."
+
+#: inc/admin/admin-settings.php:282
+msgid "Self Hosted"
+msgstr "셀프 호스팅"
+
+#: inc/admin/admin-settings.php:282
+msgid "Opportunity to host Jitsi Meet on self-hosting with a branded domain and high security."
+msgstr "브랜드 도메인과 높은 보안을 갖춘 셀프 호스팅 환경에서 Jitsi Meet을 호스팅할 수 있는 기회입니다."
+
+#: inc/admin/admin-settings.php:289
+msgid "Default Public Domain"
+msgstr "기본 퍼블릭 도메인"
+
+#: inc/admin/admin-settings.php:289
+msgid "Select a public domain to run your meeting. If you face issues or the meeting fails to load, switch the server from the dropdown, and it will be fixed."
+msgstr "회의를 진행할 퍼블릭 도메인을 선택하세요. 문제가 발생하거나 회의가 로드되지 않는 경우 드롭다운에서 서버를 전환하면 해결됩니다."
+
+#: inc/admin/admin-settings.php:297
+msgid "Domain One"
+msgstr "도메인 1"
+
+#: inc/admin/admin-settings.php:298
+msgid "Domain Two"
+msgstr "도메인 2"
+
+#: inc/admin/admin-settings.php:299
+msgid "Domain Three"
+msgstr "도메인 3"
+
+#: inc/admin/admin-settings.php:300
+msgid "Domain Four"
+msgstr "도메인 4"
+
+#: inc/admin/admin-settings.php:313
+msgid "Hosted Domain"
+msgstr "호스팅 도메인"
+
+#: inc/admin/admin-settings.php:313
+msgid "Without http or https"
+msgstr "http 또는 https 제외"
+
+#: inc/admin/admin-settings.php:334
+msgid "APP ID"
+msgstr "앱 ID"
+
+#: inc/admin/admin-settings.php:335 inc/admin/admin-settings.php:360
+msgid "Get it from "
+msgstr "가져오기: "
+
+#: inc/admin/admin-settings.php:337 inc/admin/admin-settings.php:362
+msgid "JAAS Admin"
+msgstr "JAAS 관리자"
+
+#: inc/admin/admin-settings.php:339
+msgid "Copy the APP ID from JaaS admin"
+msgstr "JaaS 관리자 페이지에서 앱 ID를 복사하세요."
+
+#: inc/admin/admin-settings.php:359
+msgid "API Key"
+msgstr "API 키"
+
+#: inc/admin/admin-settings.php:364
+msgid "Copy the API Key from JaaS admin"
+msgstr "JaaS 관리자 페이지에서 API 키를 복사하세요."
+
+#: inc/admin/admin-settings.php:384
+msgid "Private Key"
+msgstr "개인 키"
+
+#: inc/admin/admin-settings.php:385
+msgid "Paste private key content here "
+msgstr "여기에 개인 키 내용을 붙여넣으세요. "
+
+#: inc/admin/admin-settings.php:387
+msgid "Generate private key and download"
+msgstr "개인 키 생성 및 다운로드"
+
+#: inc/admin/admin-settings.php:405
+msgid "User Email"
+msgstr "사용자 이메일"
+
+#: inc/admin/admin-settings.php:405
+msgid "Email address of admin"
+msgstr "관리자의 이메일 주소"
+
+#: inc/admin/admin-settings.php:417
+msgid "User Username"
+msgstr "사용자 이름"
+
+#: inc/admin/admin-settings.php:417
+msgid "Username of the admin"
+msgstr "관리자의 사용자 이름"
+
+#: inc/admin/admin-settings.php:429
+msgid "User Avatar"
+msgstr "사용자 아바타"
+
+#: inc/admin/admin-settings.php:429
+msgid "The avatar url of the admin user"
+msgstr "관리자 사용자의 아바타 URL"
+
+#: inc/admin/admin-settings.php:436
+msgid "280x70px png, up to 4MB"
+msgstr "280x70px png, 최대 4MB"
+
+#: inc/admin/admin-settings.php:443
+msgid "Enable Moderator Access"
+msgstr "중재자 액세스 활성화"
+
+#: inc/admin/admin-settings.php:443
+msgid "Allow this user to join as a moderator in Jass 8x8 meetings (only users with edit access)"
+msgstr "이 사용자가 Jass 8x8 회의에 중재자로 참여할 수 있도록 허용합니다(편집 권한이 있는 사용자만 가능)."
+
+#: inc/admin/admin-settings.php:456
+msgid "Other Admin Config"
+msgstr "기타 관리자 설정"
+
+#: inc/admin/admin-settings.php:456
+msgid "Those are on https://jaas.8x8.vc/#/branding"
+msgstr "해당 설정은 https://jaas.8x8.vc/#/branding에 있습니다."
+
+#: inc/admin/admin-settings.php:469
+msgid "Meeting Width"
+msgstr "회의 너비"
+
+#: inc/admin/admin-settings.php:469
+msgid "Width in pixel when not on fullscreen"
+msgstr "전체 화면이 아닐 때의 너비(픽셀)"
+
+#: inc/admin/admin-settings.php:481
+msgid "Meeting Height"
+msgstr "회의 높이"
+
+#: inc/admin/admin-settings.php:481
+msgid "Height in pixel when not on fullscreen"
+msgstr "전체 화면이 아닐 때의 높이(픽셀)"
+
+#: inc/admin/admin-settings.php:493 inc/elementor.php:188
+#: blocks/src/blocks.js:138
+msgid "Enable Inviting"
+msgstr "초대 활성화"
+
+#: inc/admin/admin-settings.php:493
+msgid "Attendee can invite people"
+msgstr "참석자가 다른 사람을 초대할 수 있습니다."
+
+#: inc/admin/admin-settings.php:505
+msgid "Welcome Page"
+msgstr "시작 페이지"
+
+#: inc/admin/admin-settings.php:505
+msgid "Enable/Disable welcome page"
+msgstr "시작 페이지 활성화/비활성화"
+
+#: inc/admin/admin-settings.php:518
+msgid "Yourself muted"
+msgstr "자신의 마이크 음소거"
+
+#: inc/admin/admin-settings.php:518
+msgid "Start with yourself muted"
+msgstr "참여 시 자신의 마이크를 음소거된 상태로 시작"
+
+#: inc/admin/admin-settings.php:530
+msgid "Audio Only"
+msgstr "오디오 전용"
+
+#: inc/admin/admin-settings.php:530
+msgid "Start conference on audio only"
+msgstr "오디오 전용으로 회의 시작"
+
+#: inc/admin/admin-settings.php:543
+msgid "Audio Muted"
+msgstr "오디오 음소거"
+
+#: inc/admin/admin-settings.php:543
+msgid "Participant after nth will be muted"
+msgstr "n번째 참여자부터는 마이크가 음소거됩니다."
+
+#: inc/admin/admin-settings.php:556
+msgid "Start Silent"
+msgstr "무음 시작"
+
+#: inc/admin/admin-settings.php:556
+msgid "Disable local audio output"
+msgstr "로컬 오디오 출력 비활성화"
+
+#: inc/admin/admin-settings.php:569
+msgid "Start Video Muted"
+msgstr "비디오 음소거로 시작"
+
+#: inc/admin/admin-settings.php:569
+msgid "Start call with video muted"
+msgstr "비디오가 꺼진 상태로 통화 시작"
+
+#: inc/admin/admin-settings.php:581 inc/elementor.php:176
+msgid "Screen Sharing"
+msgstr "화면 공유"
+
+#: inc/admin/admin-settings.php:581
+msgid "Enabling this feature allow you to share your screen while attending a meeting"
+msgstr "이 기능을 활성화하면 회의 중에 화면을 공유할 수 있습니다."
+
+#: inc/admin/admin-settings.php:593
+msgid "Video Resolution"
+msgstr "비디오 해상도"
+
+#: inc/admin/admin-settings.php:593
+msgid "Start with preferred resolution"
+msgstr "기본 해상도로 시작"
+
+#: inc/admin/admin-settings.php:614
+msgid "Max Full Resolution"
+msgstr "최대 전체 해상도"
+
+#: inc/admin/admin-settings.php:614
+msgid "Number of participant with default resolution"
+msgstr "기본 해상도를 사용할 참여자 수"
+
+#: inc/admin/admin-settings.php:627
+msgid "Video Muted After"
+msgstr "지정 인원 이후 비디오 음소거"
+
+#: inc/admin/admin-settings.php:627
+msgid "Every participant after nth will start video muted"
+msgstr "n번째 참여자부터는 비디오가 꺼진 상태로 시작합니다."
+
+#: inc/admin/admin-settings.php:640
+msgid "Enable Livestream"
+msgstr "라이브 스트리밍 활성화"
+
+#: inc/admin/admin-settings.php:640
+msgid "Turn on livestreaming"
+msgstr "라이브 스트리밍 켜기"
+
+#: inc/admin/admin-settings.php:653
+msgid "Enable Recording"
+msgstr "녹화 활성화"
+
+#: inc/admin/admin-settings.php:653
+msgid "Turn on to record the meeting"
+msgstr "회의 녹화를 위해 켜기"
+
+#: inc/admin/admin-settings.php:666
+msgid "Enable Outbound"
+msgstr "아웃바운드 활성화"
+
+#: inc/admin/admin-settings.php:666
+msgid "Allow outbound on the meeting"
+msgstr "회의에서 아웃바운드 허용"
+
+#: inc/admin/admin-settings.php:679
+msgid "Enable Transcription"
+msgstr "자막(텍스트 변환) 활성화"
+
+#: inc/admin/admin-settings.php:679
+msgid "Transcript the meeting"
+msgstr "회의 내용을 텍스트로 기록"
+
+#: inc/admin/admin-settings.php:692
+msgid "Hide Jitsi Sidebar"
+msgstr "Jitsi 사이드바 숨기기"
+
+#: inc/admin/admin-settings.php:692
+msgid "Enable to hide Jitsi sidebar from Jitsi Meeting room"
+msgstr "Jitsi 회의실에서 Jitsi 사이드바를 숨기려면 활성화하세요."
+
+#: inc/admin/admin-settings.php:706
+msgid "Simulcast"
+msgstr "사이멀캐스트"
+
+#: inc/admin/admin-settings.php:706
+msgid "Enable/Disable simulcast"
+msgstr "사이멀캐스트 활성화/비활성화"
+
+#: inc/admin/admin-settings.php:719
+msgid "Enable Whiteboard"
+msgstr "화이트보드 활성화"
+
+#: inc/admin/admin-settings.php:719
+msgid "Enable to use the whiteboard on Jass 8x8"
+msgstr "Jass 8x8에서 화이트보드를 사용하려면 활성화하세요."
+
+#: inc/admin/admin-settings.php:733
+msgid "Enable to Change Post-type Slug"
+msgstr "포스트 타입 슬러그 변경 활성화"
+
+#: inc/admin/admin-settings.php:733
+msgid "You can enable/disable custom slug"
+msgstr "사용자 정의 슬러그를 활성화/비활성화할 수 있습니다."
+
+#: inc/admin/class-admin.php:74 inc/admin/class-admin.php:104
+msgid "Invalid request"
+msgstr "잘못된 요청"
+
+#: inc/admin/class-admin.php:80 inc/admin/class-admin.php:110
+#: inc/admin/class-admin.php:135
+msgid "You do not have permission to do this action"
+msgstr "이 작업을 수행할 권한이 없습니다."
+
+#: inc/admin/class-admin.php:170 inc/admin/class-admin.php:353
+msgid "Documentation"
+msgstr "문서"
+
+#: inc/admin/class-admin.php:178
+msgid "Jitsi Meet Welcome"
+msgstr "Jitsi Meet 시작하기"
+
+#: inc/admin/class-admin.php:187
+msgid "APP Settings"
+msgstr "앱 설정"
+
+#: inc/admin/class-admin.php:196 inc/admin/class-admin.php:201
+#: inc/admin/class-admin.php:701
+msgid "Add-ons"
+msgstr "애드온"
+
+#: inc/admin/class-admin.php:202
+msgid "New"
+msgstr "신규"
+
+#: inc/admin/class-admin.php:212 init.php:189
+msgid "Upgrade to Ultimate"
+msgstr "Ultimate 버전으로 업그레이드"
+
+#: inc/admin/class-admin.php:251
+msgid "Gutenberg"
+msgstr "구텐베르크"
+
+#: inc/admin/class-admin.php:256
+msgid "Elementor"
+msgstr "엘리멘터"
+
+#: inc/admin/class-admin.php:261
+msgid "Shortcode"
+msgstr "숏코드"
+
+#: inc/admin/class-admin.php:272
+msgid "How to set a conference room"
+msgstr "회의실 설정 방법"
+
+#: inc/admin/class-admin.php:273
+msgid "Very simple and easy steps"
+msgstr "매우 간단하고 쉬운 단계"
+
+#: inc/admin/class-admin.php:277
+msgid "While you are on the post/page edit screen click on gutenberg plus icon to add a new gutenberg block"
+msgstr "글/페이지 편집 화면에서 구텐베르크 플러스(+) 아이콘을 클릭하여 새 구텐베르크 블록을 추가하세요."
+
+#: inc/admin/class-admin.php:279
+msgid "Add new gutenberg block on page"
+msgstr "페이지에 새 구텐베르크 블록 추가"
+
+#: inc/admin/class-admin.php:283
+msgid "Add \"Jitsi Meet\" from \"Embeds\" category"
+msgstr "'임베드' 카테고리에서 'Jitsi Meet'를 추가하세요."
+
+#: inc/admin/class-admin.php:285
+msgid "Add Jitsi Meet from Embeds category"
+msgstr "임베드 카테고리에서 Jitsi Meet 추가"
+
+#: inc/admin/class-admin.php:289
+msgid "Set width and height and you are done"
+msgstr "너비와 높이를 설정하면 완료됩니다."
+
+#: inc/admin/class-admin.php:291 inc/admin/class-admin.php:311
+#: inc/admin/class-admin.php:332
+msgid "Jitsi Meet Settings"
+msgstr "Jitsi Meet 설정"
+
+#: inc/admin/class-admin.php:298
+msgid "How to set with elementor"
+msgstr "엘리멘터로 설정하는 방법"
+
+#: inc/admin/class-admin.php:299
+msgid "Setup a video conference room with elementor"
+msgstr "엘리멘터로 화상 회의실 설정"
+
+#: inc/admin/class-admin.php:303
+msgid "While you are on elementor edit screen drag and drop <strong>Jitsi Meet</strong> element to your page"
+msgstr "엘리멘터 편집 화면에서 <strong>Jitsi Meet</strong> 요소를 페이지로 드래그 앤 드롭하세요."
+
+#: inc/admin/class-admin.php:305
+msgid "Add new jitsi meet element on page"
+msgstr "페이지에 새 Jitsi Meet 요소 추가"
+
+#: inc/admin/class-admin.php:309
+msgid "Set name, width, height etc and you are done"
+msgstr "이름, 너비, 높이 등을 설정하면 완료됩니다."
+
+#: inc/admin/class-admin.php:318
+msgid "How to set with shortcode"
+msgstr "숏코드로 설정하는 방법"
+
+#: inc/admin/class-admin.php:319
+msgid "Setup a video conference room with shortcode"
+msgstr "숏코드로 화상 회의실 설정"
+
+#: inc/admin/class-admin.php:321
+msgid "Write down the shortcode below and set width, height and name of conference"
+msgstr "아래 숏코드를 작성하고 회의의 너비, 높이, 이름을 설정하세요."
+
+#: inc/admin/class-admin.php:323
+msgid "Click on shortcode to copy"
+msgstr "숏코드를 클릭하여 복사하세요."
+
+#: inc/admin/class-admin.php:327
+msgid "name:"
+msgstr "이름:"
+
+#: inc/admin/class-admin.php:327
+msgid "A unique name to generate the url of the room"
+msgstr "방 URL을 생성하기 위한 고유한 이름"
+
+#: inc/admin/class-admin.php:328
+msgid "width:"
+msgstr "너비:"
+
+#: inc/admin/class-admin.php:328
+msgid "Width of the jitsi meet embedded"
+msgstr "임베드된 Jitsi Meet의 너비"
+
+#: inc/admin/class-admin.php:329
+msgid "height:"
+msgstr "높이:"
+
+#: inc/admin/class-admin.php:329
+msgid "Height of the jitsi meet embedded"
+msgstr "임베드된 Jitsi Meet의 높이"
+
+#: inc/admin/class-admin.php:353
+msgid "How to embed"
+msgstr "임베드 방법"
+
+#: inc/admin/class-admin.php:355
+msgid "API Settings"
+msgstr "API 설정"
+
+#: inc/admin/class-admin.php:355
+msgid "Authenticate with JAAS"
+msgstr "JAAS로 인증"
+
+#: inc/admin/class-admin.php:357
+msgid "Admin Settings"
+msgstr "관리자 설정"
+
+#: inc/admin/class-admin.php:357
+msgid "Username, email, avatar etc."
+msgstr "사용자 이름, 이메일, 아바타 등"
+
+#: inc/admin/class-admin.php:359
+msgid "Configurations"
+msgstr "구성"
+
+#: inc/admin/class-admin.php:359
+msgid "Width, height, recording etc..."
+msgstr "너비, 높이, 녹화 등..."
+
+#: inc/admin/class-admin.php:361
+msgid "Audio Settings"
+msgstr "오디오 설정"
+
+#: inc/admin/class-admin.php:361
+msgid "Initial audio configurations..."
+msgstr "초기 오디오 구성..."
+
+#: inc/admin/class-admin.php:363
+msgid "Video Settings"
+msgstr "비디오 설정"
+
+#: inc/admin/class-admin.php:363
+msgid "Initial video configurations..."
+msgstr "초기 비디오 구성..."
+
+#: inc/admin/class-admin.php:509
+msgid "Welcome to FlexMeeting"
+msgstr "FlexMeeting에 오신 것을 환영합니다"
+
+#: inc/admin/class-admin.php:510
+msgid "Select for which kind of api you want to use with our plugin and give credential accordingly."
+msgstr "플러그인과 함께 사용할 API 종류를 선택하고 그에 맞는 자격 증명을 입력하세요."
+
+#: inc/admin/class-admin.php:525
+msgid "How to select Jitsi Meet server?"
+msgstr "Jitsi Meet 서버를 선택하는 방법은?"
+
+#: inc/admin/class-admin.php:633
+msgid "Or, Go Fully Branded - Zero Server Setup!"
+msgstr "또는 완전히 브랜딩된 서비스를 이용하세요 - 서버 설정이 필요 없습니다!"
+
+#: inc/admin/class-admin.php:640
+msgid "With Your Branding, Your Rules!"
+msgstr "귀하의 브랜드로, 귀하의 규칙대로!"
+
+#: inc/admin/class-admin.php:643
+msgid "Host Secure Video Meetings Under Your Own Domain."
+msgstr "귀하의 도메인에서 안전한 화상 회의를 호스팅하세요."
+
+#: inc/admin/class-admin.php:649
+msgid "Fully branded under your domain"
+msgstr "귀하의 도메인에 따른 완벽한 브랜딩"
+
+#: inc/admin/class-admin.php:653
+msgid "Zero server setup required"
+msgstr "서버 설정 필요 없음"
+
+#: inc/admin/class-admin.php:657
+msgid "Unlimited high-quality meetings"
+msgstr "무제한 고화질 회의"
+
+#: inc/admin/class-admin.php:661
+msgid "No technical hassle"
+msgstr "기술적 번거로움 없음"
+
+#: inc/admin/class-admin.php:666
+msgid "Explore Hosted Jitsi"
+msgstr "호스팅된 Jitsi 살펴보기"
+
+#: inc/admin/class-admin.php:674
+msgid "Jitsi Meeting Interface"
+msgstr "Jitsi 회의 인터페이스"
+
+#: inc/admin/class-admin.php:702
+msgid "Add your favourite add-ons and supercharge your workflow"
+msgstr "즐겨 찾는 애드온을 추가하여 워크플로우를 강화하십시오."
+
+#: inc/admin/class-admin.php:716
+msgid "Multivendor Addon for FlexMeeting"
+msgstr "FlexMeeting용 멀티벤더 애드온"
+
+#: inc/admin/class-admin.php:717
+msgid "Power up your multi-vendor experience & create meetings right from your vendor dashboard. Elevate your store with monetizable video meetings."
+msgstr "멀티벤더 경험을 강화하고 벤더 대시보드에서 바로 회의를 만드십시오. 수익 창출이 가능한 화상 회의로 스토어의 가치를 높이세요."
+
+#: inc/admin/class-admin.php:724 inc/admin/class-admin.php:760
+msgid "Not activate"
+msgstr "활성화되지 않음"
+
+#: inc/admin/class-admin.php:726 inc/admin/class-admin.php:762
+#: inc/admin/licence-cta.php:13
+msgid "Activate"
+msgstr "활성화"
+
+#: inc/admin/class-admin.php:745
+msgid "FlexMeeting Frontend Addon"
+msgstr "FlexMeeting 프론트엔드 애드온"
+
+#: inc/admin/class-admin.php:748
+msgid "Easily create Jitsi meetings from the frontend without accessing the admin dashboard."
+msgstr "관리자 대시보드에 접속하지 않고도 프론트엔드에서 간편하게 Jitsi 회의를 생성할 수 있습니다."
+
+#: inc/admin/licence-cta.php:11
+msgid "Please activate your license"
+msgstr "라이선스를 활성화해 주세요."
+
+#: inc/admin/mannage-callback.php:182
+msgid " New "
+msgstr " 신규 "
+
+#: inc/admin/mannage-callback.php:290
+msgid "Preview Image Upload"
+msgstr "미리보기 이미지 업로드"
+
+#: inc/admin/mannage-callback.php:298
+msgid "Upload an image"
+msgstr "이미지 업로드"
+
+#: inc/admin/mannage-callback.php:323
+msgid "Some settings like Company Logo, Background etc are currently not available via api. You can set your company logo, background etc from the"
+msgstr "회사 로고, 배경 등의 일부 설정은 현재 API를 통해 사용할 수 없습니다. 다음 위치에서 설정할 수 있습니다: "
+
+#: inc/admin/mannage-callback.php:323
+msgid "jaas console"
+msgstr "JaaS 콘솔"
+
+#: inc/elementor.php:67 blocks/src/blocks.js:166
+msgid "Jitsi Meet"
+msgstr "Jitsi Meet"
+
+#: inc/elementor.php:108
+msgid "Configuration"
+msgstr "구성"
+
+#: inc/elementor.php:115 blocks/src/blocks.js:69
+msgid "Name"
+msgstr "이름"
+
+#: inc/elementor.php:118
+msgid "Meeting name here"
+msgstr "회의 이름을 여기에 입력하세요"
+
+#: inc/elementor.php:125 blocks/src/blocks.js:107
+msgid "Width"
+msgstr "너비"
+
+#: inc/elementor.php:140 blocks/src/blocks.js:115
+msgid "Height"
+msgstr "높이"
+
+#: inc/elementor.php:152
+msgid "Start audio muted"
+msgstr "참여 시 오디오 음소거"
+
+#: inc/elementor.php:164
+msgid "Start video muted"
+msgstr "참여 시 비디오 음소거"
+
+#: inc/jitsi-topbar.php:193
+msgid "New: Host Branded Jitsi Meetings - No Server Needed!"
+msgstr "신규: 브랜딩된 Jitsi 회의 호스팅 - 서버가 필요 없습니다!"
+
+#: inc/jitsi-topbar.php:198
+msgid "Explore now"
+msgstr "지금 살펴보기"
+
+#: inc/jitsi-topbar.php:205
+msgid "Close notification"
+msgstr "알림 닫기"
+
+#: inc/jitsi-topbar.php:312
+msgid "Invalid nonce"
+msgstr "유효하지 않은 nonce"
+
+#: inc/jitsi-topbar.php:317
+msgid "Insufficient permissions"
+msgstr "권한이 부족합니다."
+
+#: inc/jitsi-topbar.php:324
+msgid "Topbar dismissed successfully"
+msgstr "상단 바를 성공적으로 닫았습니다."
+
+#: inc/jitsi-topbar.php:326
+msgid "Failed to dismiss topbar"
+msgstr "상단 바 닫기에 실패했습니다."
+
+#: inc/jitsi-topbar.php:344
+msgid "Security check failed"
+msgstr "보안 검사에 실패했습니다."
+
+#: inc/jitsi-topbar.php:349
+msgid "You do not have sufficient permissions to access this page."
+msgstr "이 페이지에 액세스할 수 있는 권한이 없습니다."
+
+#: inc/wppool/class-plugin.php:328
+msgid "Deal Ends In"
+msgstr "혜택 종료까지"
+
+#: inc/wppool/class-plugin.php:333 inc/wppool/class-plugin.php:342
+#: inc/wppool/class-plugin.php:351 inc/wppool/class-plugin.php:360
+msgid "00"
+msgstr "00"
+
+#: inc/wppool/class-plugin.php:336
+msgid "Days"
+msgstr "일"
+
+#: inc/wppool/class-plugin.php:345
+msgid "Hours"
+msgstr "시간"
+
+#: inc/wppool/class-plugin.php:354
+msgid "Minutes"
+msgstr "분"
+
+#: inc/wppool/class-plugin.php:363
+msgid "Seconds"
+msgstr "초"
+
+#: inc/wppool/class-plugin.php:370
+msgid "Upgrade to Pro"
+msgstr "Pro 버전으로 업그레이드"
+
+#: inc/wppool/class-plugin.php:374
+msgid "Try a free demo"
+msgstr "무료 데모 체험하기"
+
+#: jitsi-meet-wp.php:154
+msgid "Grab Your Deals"
+msgstr "혜택 받기"
+
+#: templates/admin/affiliate-notice.php:15
+msgid "Hey! Enjoying <b>Jitsi Meet WP </b> plugin? Join our <a href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" class=\"affiliate-notice-link\">influencer program  </a> to make money from your social media content. You can also check our <a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" class=\"affiliate-notice-link\">affiliate program  </a> to get a 25%% commission on every sale!"
+msgstr "안녕! <b>Jitsi Meet WP</b> 플러그인을 잘 사용하고 계신가요? <a href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" class=\"affiliate-notice-link\">인플루언서 프로그램</a>에 참여하여 소셜 미디어 콘텐츠로 수익을 창출하세요. <a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" class=\"affiliate-notice-link\">제휴 프로그램</a>을 통해 모든 판매에 대해 25%%의 커미션을 받을 수도 있습니다!"
+
+#: templates/admin/affiliate-notice.php:20
+msgid "Tell me more "
+msgstr "더 알아보기 "
+
+#: templates/admin/affiliate-notice.php:29 templates/admin/review-notice.php:36
+msgid "Would you like us to remind you about this later?"
+msgstr "나중에 다시 알려드릴까요?"
+
+#: templates/admin/affiliate-notice.php:32 templates/admin/review-notice.php:39
+msgid "Remind me in 3 days"
+msgstr "3일 후에 알림"
+
+#: templates/admin/affiliate-notice.php:33 templates/admin/review-notice.php:40
+msgid "Remind me in 10 days"
+msgstr "10일 후에 알림"
+
+#: templates/admin/affiliate-notice.php:34 templates/admin/review-notice.php:42
+msgid "Don't remind me about this"
+msgstr "다시 알리지 않음"
+
+#: templates/admin/review-notice.php:17
+msgid ""
+"Hi there, it seems like Jitsi Meet WP is bringing you some value, and that is pretty awesome!\r\n"
+"    Can you please show us some love and rate Jitsi Meet WP on WordPress? It will take two minutes of your time, and will really help us spread the world."
+msgstr "안녕하세요, Jitsi Meet WP가 도움이 되고 있다니 정말 다행입니다! 평가를 위해 WordPress에서 Jitsi Meet WP에 별점을 남겨주실 수 있나요? 2분 정도면 충분하며 저희 서비스를 널리 알리는 데 큰 도움이 됩니다."
+
+#: templates/admin/review-notice.php:26
+msgid "I'd love to help :)"
+msgstr "도와드리고 싶어요 :)"
+
+#: templates/admin/review-notice.php:29
+msgid "Not this time"
+msgstr "다음번에 할게요"
+
+#: templates/admin/review-notice.php:31
+msgid "I've already rated you"
+msgstr "이미 별점을 남겼습니다"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:170
+msgid "jitsi"
+msgstr "jitsi"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:171
+msgid "meeting"
+msgstr "회의"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:172
+msgid "video"
+msgstr "비디오"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:173
+msgid "conference"
+msgstr "화상회의"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:174
+msgid "zoom"
+msgstr "줌"
+
+#: blocks/src/blocks.js:75
+msgid "Domain"
+msgstr "도메인"
+
+#: blocks/src/blocks.js:82
+msgid "Config from global"
+msgstr "전역 설정에서 구성"
+
+#: blocks/src/blocks.js:123
+msgid "Start with audio muted"
+msgstr "참여 시 오디오 음소거"
+
+#: blocks/src/blocks.js:128
+msgid "Start with video muted"
+msgstr "참여 시 비디오 음소거"
+
+#: blocks/src/blocks.js:133
+msgid "Start with screen sharing"
+msgstr "화면 공유와 함께 시작"
+
+#: blocks/src/blocks.js:157
+msgid "Room name:"
+msgstr "방 이름:"
+
+#: blocks/src/blocks.js:158
+msgid "Domain :"
+msgstr "도메인 :"
+
+#: inc/admin/class-admin.php:188 init.php:188 blocks/src/blocks.js:67
+msgid "Settings"
+msgstr "설정"
+
+#: inc/admin/class-admin.php:454
+msgid "Self hosted domain missing"
+msgstr "자체 호스팅 도메인이 누락되었습니다"
+
+#: inc/admin/class-admin.php:458
+msgid "App id missing"
+msgstr "앱 ID가 누락되었습니다"
+
+#: inc/admin/class-admin.php:461
+msgid "Api key is missing"
+msgstr "API 키가 누락되었습니다"
+
+#: inc/admin/class-admin.php:464
+msgid "Private key is missing"
+msgstr "개인 키가 누락되었습니다"
+
+#: inc/admin/class-admin.php:518
+msgid "Skip"
+msgstr "건너뛰기"
+
+#: inc/admin/class-admin.php:520
+msgid "Continue"
+msgstr "계속"
+
+#: inc/admin/class-admin.php:571 inc/admin/class-admin.php:584
+#: inc/admin/class-admin.php:597 inc/admin/class-admin.php:610
+#: inc/admin/class-admin.php:622
+msgid "Save Changes"
+msgstr "변경 사항 저장"
+
+msgid "Default (Public Hosting)"
+msgstr "기본 (공개 호스팅)"
+
+msgid "Use the default public Jitsi"
+msgstr "기본 공개 Jitsi 사용"
+
+msgid "Managed Branded Meeting"
+msgstr "관리형 브랜드 회의"
+
+msgid "We host and maintain your branded server"
+msgstr "당사가 귀하의 브랜드 서버를 호스팅하고 유지 관리합니다"
+
+msgid "Jitsi as a Service (8x8 JaaS)"
+msgstr "서비스로서의 Jitsi (8x8 JaaS)"
+
+msgid "Use your JaaS credentials"
+msgstr "JaaS 자격 증명 사용"
+
+msgid "Self-Hosted"
+msgstr "자체 호스팅"
+
+msgid "Connect your self-hosted server"
+msgstr "자체 호스팅 서버 연결"
+
+msgid "Choose where your meetings will run:"
+msgstr "회의가 실행될 위치 선택:"
+
+msgid "Save & Test Connection"
+msgstr "저장 및 연결 테스트"
+
+msgid "Domain changed. Please re-test connection."
+msgstr "도메인이 변경되었습니다. 연결을 다시 테스트하십시오."
+
+msgid "Connecting..."
+msgstr "연결 중..."
+
+msgid "Connected. Meetings will run on"
+msgstr "연결됨. 회의가 실행될 위치:"
+
+msgid "Disconnect"
+msgstr "연결 해제"
+
+msgid "We couldn't reach this server. Please double-check the URL or try again."
+msgstr "이 서버에 연결할 수 없습니다. URL을 다시 확인하거나 다시 시도하십시오."
+
+msgid "Disconnecting..."
+msgstr "연결 해제 중..."
+
+msgid "Disconnect failed"
+msgstr "연결 해제 실패"
+
+msgid "Error: Could not reach the server."
+msgstr "오류: 서버에 연결할 수 없습니다."
+
+msgid "🎁"
+msgstr "🎁"
+
+msgid "Benefits:"
+msgstr "이점:"
+
+msgid "Need help setting up your branded server?"
+msgstr "브랜드 서버 설정에 도움이 필요하십니까?"
+
+msgid "How Hosted Meetings works?"
+msgstr "호스팅된 회의의 작동 방식은?"
+
+msgid "Default Public Hosting"
+msgstr "기본 공개 호스팅"
+
+msgid "Select a public domain to run your meeting."
+msgstr "회의를 실행할 공개 도메인을 선택하십시오."
+
+msgid "Completely Free to Use"
+msgstr "완전 무료 사용"
+
+msgid "Instant Setup"
+msgstr "즉시 설정"
+
+msgid "No Account Required"
+msgstr "계정 필요 없음"
+
+msgid "Standard Privacy Features"
+msgstr "표준 개인 정보 보호 기능"
+
+msgid "Your Branded Meeting Server"
+msgstr "귀하의 브랜드 회의 서버"
+
+msgid "Branded Meetings, Zero Server Hassle!"
+msgstr "브랜드 회의, 서버 번거로움 없음!"
+
+msgid "Get your own private branded meeting server (logo + brand name). We'll host and maintain it - just paste your Hosted Server Domain URL below and enjoy your branded meetings."
+msgstr "나만의 사설 브랜드 회의 서버(로고 + 브랜드 이름)를 확보하세요. 당사에서 호스팅 및 유지 관리를 담당합니다. 아래에 호스팅된 서버 도메인 URL을 붙여넣기만 하면 브랜드 회의를 즐길 수 있습니다."
+
+msgid "e.g. https://yourbrand.jitsihosted.com"
+msgstr "예: https://yourbrand.jitsihosted.com"
+
+msgid "✅"
+msgstr "✅"
+
+msgid "Don't have a Hosted Server URL yet? "
+msgstr "아직 호스팅된 서버 URL이 없으신가요? "
+
+msgid "Request setup now →"
+msgstr "지금 설정 요청 →"
+
+msgid "Hosted Server Domain:"
+msgstr "호스팅된 서버 도메인:"
+
+msgid "<strong>Request</strong> your branded setup first (<a href=\\\"#\\\">request now →</a>)"
+msgstr "<strong>먼저</strong> 브랜드 설정을 요청하십시오 (<a href=\"#\">지금 요청 →</a>)"
+
+msgid "<strong>We set it up</strong> and email your Hosted Server URL"
+msgstr "<strong>당사가 설정</strong>하고 호스팅된 서버 URL을 이메일로 보내드립니다"
+
+msgid "<strong>Paste the URL here</strong> → Save & Test → meetings start running on your hosted server"
+msgstr "<strong>여기에 URL 붙여넣기</strong> → 저장 및 테스트 → 호스팅된 서버에서 회의가 시작됩니다"
+
+msgid "🤩"
+msgstr "🤩"
+
+msgid "That's it - no technical setup needed from you. Wahhhhhhhhhh!"
+msgstr "그게 다입니다. 기술적 설정이 필요하지 않습니다. 와!"
+
+msgid "Complete Privacy and Control over your data"
+msgstr "데이터에 대한 완벽한 개인 정보 보호 및 제어"
+
+msgid "Ultra-fast performance with dedicated resources"
+msgstr "전용 리소스를 통한 초고속 성능"
+
+msgid "Global reach with low-latency server locations"
+msgstr "낮은 지연 시간의 서버 위치를 통한 글로벌 도달 범위"
+
+msgid "99.9% Uptime guarantee with 24/7 monitoring"
+msgstr "연중무휴 모니터링을 통한 99.9% 가동 시간 보장"
+
+msgid "Scalable to hundreds of concurrent participants"
+msgstr "수백 명의 동시 참가자로 확장 가능"
+
+msgid "End-to-end encryption and advanced security"
+msgstr "종단 간 암호화 및 고급 보안"
+
+msgid "Request branded meeting server for FREE!"
+msgstr "브랜드 회의 서버 무료 요청!"
+
+msgid "What is a self-hosted FlexMeeting server?"
+msgstr "자체 호스팅 FlexMeeting 서버란 무엇입니까?"
+
+msgid "A self-hosted Jitsi server means the entire video conferencing system runs on your own server or hosting environment, not on Jitsi's public infrastructure. This gives you full control, privacy, and customization flexibility."
+msgstr "자체 호스팅 Jitsi 서버는 화상 회의 시스템 전체가 Jitsi의 공개 인프라가 아닌 자체 서버 또는 호스팅 환경에서 실행됨을 의미합니다. 이는 완벽한 제어, 개인 정보 보호 및 사용자 지정 유연성을 제공합니다."
+
+msgid "Why should I use a self-hosted Jitsi server instead of using public Jitsi?"
+msgstr "공개 Jitsi 대신 자체 호스팅 Jitsi 서버를 사용해야 하는 이유는 무엇입니까?"
+
+msgid "Public servers like meet.jit.si are shared by millions. This can lead to performance issues, limited features, and a lack of branding. With your own server, you get dedicated resources, your own logo, and enhanced security."
+msgstr "meet.jit.si와 같은 공개 서버는 수백만 명과 공유됩니다. 이로 인해 성능 문제, 제한된 기능 및 브랜드 부족이 발생할 수 있습니다. 자체 서버를 사용하면 전용 리소스, 고유한 로고 및 향상된 보안을 얻을 수 있습니다."
+
+msgid "What do you provide in this service?"
+msgstr "이 서비스에서 제공하는 것은 무엇입니까?"
+
+msgid "We provide complete installation, configuration, and maintenance of your Jitsi server. This includes automatic updates, performance monitoring, and SSL setup so you can focus on your meetings."
+msgstr "Jitsi 서버의 완전한 설치, 구성 및 유지 관리를 제공합니다. 여기에는 자동 업데이트, 성능 모니터링 및 SSL 설정이 포함되어 회의에 집중할 수 있습니다."
+
+msgid "Do I need technical knowledge to maintain the server?"
+msgstr "서버를 유지 관리하려면 기술 지식이 필요합니까?"
+
+msgid "Not at all! Our managed service is designed to be \\\"hands-off\\\" for you. We handle all the server-side complexity, security patches, and scaling."
+msgstr "전혀 그렇지 않습니다! 당사의 관리형 서비스는 고객이 신경 쓸 필요가 없도록 설계되었습니다. 서버 측의 모든 복잡성, 보안 패치 및 확장을 당사에서 처리합니다."
+
+msgid "What are the server requirements?"
+msgstr "서버 요구 사항은 무엇입니까?"
+
+msgid "If you use our managed hosting, we provide the infrastructure. If you host it yourself, a basic server with 4GB RAM and 2 CPUs is usually enough for up to 20-30 concurrent users."
+msgstr "당사의 관리형 호스팅을 사용하면 인프라를 제공합니다. 직접 호스팅하는 경우 최대 20-30명의 동시 사용자를 위해 4GB RAM과 2개의 CPU가 있는 기본 서버가 일반적으로 충분합니다."
+
+msgid "Can I use this with my existing website or LMS?"
+msgstr "기존 웹 사이트 또는 LMS에서 이것을 사용할 수 있습니까?"
+
+msgid "Yes! Our plugin integrates seamlessly with WordPress, LMS platforms, and other CMS. You can embed meetings directly into your pages."
+msgstr "예! 이 플러그인은 WordPress, LMS 플랫폼 및 기타 CMS와 완벽하게 통합됩니다. 페이지에 직접 회의를 퍼가기할 수 있습니다."
+
+msgid "How long does it take to set everything up?"
+msgstr "모든 것을 설정하는 데 얼마나 걸립니까?"
+
+msgid "Managed servers are usually ready within 24 hours. If you're using the \\\"Request\\\" option, we'll reach out to finalize the branding before deployment."
+msgstr "관리형 서버는 일반적으로 24시간 이내에 준비됩니다. '요청' 옵션을 사용하는 경우 배포 전에 브랜딩을 마무리하기 위해 연락을 드립니다."
+
+msgid "Frequently Asked Questions"
+msgstr "자주 묻는 질문"
+
+msgid "Jitsi as a Service (8x8)"
+msgstr "Jitsi as a Service (8x8)"
+
+msgid "Paste private key content here"
+msgstr "여기에 개인 키 내용 붙여넣기"
+
+msgid "Enterprise Grade Reliability"
+msgstr "엔터프라이즈급 신뢰성"
+
+msgid "Advanced Analytics"
+msgstr "고급 분석"
+
+msgid "Global Low-latency Network"
+msgstr "글로벌 저 지연 네트워크"
+
+msgid "Secure Recorded Meetings"
+msgstr "안전한 회의 녹화"
+
+msgid "Self-Hosted Server"
+msgstr "자체 호스팅 서버"
+
+msgid "Your Server Domain"
+msgstr "귀하의 서버 도메인"
+
+msgid "Enter your self-hosted Jitsi domain (e.g., meet.yourdomain.com)"
+msgstr "자체 호스팅 Jitsi 도메인 입력 (예: meet.yourdomain.com)"
+
+msgid "Premium Feature"
+msgstr "프리미엄 기능"
+
+msgid "Full Data Control"
+msgstr "완벽한 데이터 제어"
+
+msgid "Custom Security Policies"
+msgstr "사용자 지정 보안 정책"
+
+msgid "No Third-party Tracking"
+msgstr "타사 추적 없음"
+
+msgid "Infrastructure Ownership"
+msgstr "인프라 소유권"

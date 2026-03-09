@@ -3,14 +3,14 @@
  * Plugin Name:       FlexMeeting
  * Plugin URI:        https://jitsi-meet-wp.wppool.dev/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.7.9
+ * Version:           2.8.0
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       jitsi-meet-wp
+ * Text Domain:       webinar-and-video-conference-with-jitsi-meet
  * Requires at least: 5.2
- * Tested up to:      6.8
+ * Tested up to:      6.9
  *
  *  @package JITSI_MEET_WP
  */
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.7.9' );
+define( 'JITSI_MEET_WP_VERSION', '2.8.0' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
@@ -35,7 +35,7 @@ define( 'JITSI_MEET_WP_ASSETS', JITSI_MEET_WP_URL . '/assets' );
  * @return  void
  */
 function jitsi_meet_wp_begin() {
-	$plugin_list    = get_option( 'active_plugins' );
+	$plugin_list    = (array) get_option( 'active_plugins', array() );
 	$jitsi_pro      = 'webinar-and-video-conference-jitsi-meet-pro/jitsi-meet-wp.php';
 	$jitsi_ultimate = 'webinar-and-video-conference-with-jitsi-meet-ultimate/jitsi-meet-wp.php';
 	$jitsi_premium  = 'webinar-and-video-conference-with-jitsi-meet-premium/jitsi-meet-wp.php';
@@ -103,6 +103,14 @@ function jitsi_meet_plugin_activate() {
 
 register_activation_hook( __FILE__, 'jitsi_meet_plugin_activate' );
 
+/**
+ * Load plugin textdomain.
+ */
+function jitsi_meet_wp_load_textdomain() {
+	load_plugin_textdomain( 'webinar-and-video-conference-with-jitsi-meet', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
+add_action( 'plugins_loaded', 'jitsi_meet_wp_load_textdomain' );
+
 add_action( 'init', 'jitsi_meet_wp_begin', 20 );
 
 
@@ -151,7 +159,7 @@ function jitsi_meet_wppool_sdk_campaign() {
 		if ( $jitsi_meet_plugin && is_object( $jitsi_meet_plugin ) && method_exists( $jitsi_meet_plugin, 'set_campaign' ) ) {
 			$to       = '2025-12-04 16:00:00';
 			$from     = '2025-11-17 16:00:00';
-			$cta_text = esc_html__( 'Grab Your Deals', 'jitsi-meet-wp' );
+			$cta_text = esc_html__( 'Grab Your Deals', 'webinar-and-video-conference-with-jitsi-meet' );
 
 			$campain_image = plugin_dir_url( JITSI_MEET_WP__FILE__ ) . '/inc/wppool/bfcm.png';
 			$jitsi_meet_plugin->set_campaign( $campain_image, $to, $from, $cta_text );

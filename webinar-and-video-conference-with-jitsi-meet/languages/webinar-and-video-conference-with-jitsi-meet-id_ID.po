@@ -1,0 +1,1102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FlexMeeting 2.7.9\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/webinar-and-video-conference-with-jitsi-meet\n"
+"POT-Creation-Date: 2026-02-24T10:47:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 12:26+0600\n"
+"Last-Translator: Antigravity AI\n"
+"Language-Team: Indonesian <id_ID@li.org>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+"X-Domain: webinar-and-video-conference-with-jitsi-meet\n"
+
+#. Plugin Name of the plugin
+#: jitsi-meet-wp.php inc/admin/class-admin.php:158
+#: inc/admin/class-admin.php:169 inc/admin/class-admin.php:241
+#: inc/admin/class-admin.php:559 blocks/dist/blocks.build.js:314
+msgid "FlexMeeting"
+msgstr "FlexMeeting"
+
+#. Plugin URI of the plugin
+#: jitsi-meet-wp.php
+msgid "https://jitsi-meet-wp.wppool.dev/"
+msgstr "https://jitsi-meet-wp.wppool.dev/"
+
+#. Description of the plugin
+#: jitsi-meet-wp.php
+msgid "Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block"
+msgstr "Host webinar langsung, konferensi, kelas online, panggilan video langsung di situs web WordPress Anda dengan blok Gutenberg"
+
+#. Author of the plugin
+#: jitsi-meet-wp.php
+msgid "WPPOOL"
+msgstr "WPPOOL"
+
+#. Author URI of the plugin
+#: jitsi-meet-wp.php
+msgid "https://wppool.dev"
+msgstr "https://wppool.dev"
+
+#: gutenberg-init.php:73 gutenberg-init.php:88 init.php:68 init.php:83
+msgid "Cheatin&#8217; huh?"
+msgstr "Lagi curang ya?"
+
+#: inc/admin/admin-settings.php:256
+msgid "Select API"
+msgstr "Pilih API"
+
+#: inc/admin/admin-settings.php:256
+msgid "Select your api"
+msgstr "Pilih API Anda"
+
+#: inc/admin/admin-settings.php:273
+msgid "FlexMeeting Free"
+msgstr "FlexMeeting Gratis"
+
+#: inc/admin/admin-settings.php:273
+msgid "Get access to all the free features of the video conference application Jitsi Meet."
+msgstr "Dapatkan akses ke semua fitur gratis dari aplikasi konferensi video Jitsi Meet."
+
+#: inc/admin/admin-settings.php:277
+msgid "JaaS 8x8"
+msgstr "JaaS 8x8"
+
+#: inc/admin/admin-settings.php:277
+msgid "Access to enterprise standard video meeting features and modify everything as you like."
+msgstr "Akses fitur pertemuan video standar perusahaan dan modifikasi semuanya sesuka Anda."
+
+#: inc/admin/admin-settings.php:282
+msgid "Self Hosted"
+msgstr "Hosting Mandiri"
+
+#: inc/admin/admin-settings.php:282
+msgid "Opportunity to host Jitsi Meet on self-hosting with a branded domain and high security."
+msgstr "Kesempatan untuk meng-host Jitsi Meet di hosting mandiri dengan domain bermerek dan keamanan tinggi."
+
+#: inc/admin/admin-settings.php:289
+msgid "Default Public Domain"
+msgstr "Domain Publik Standar"
+
+#: inc/admin/admin-settings.php:289
+msgid "Select a public domain to run your meeting. If you face issues or the meeting fails to load, switch the server from the dropdown, and it will be fixed."
+msgstr "Pilih domain publik untuk menjalankan rapat Anda. Jika Anda menghadapi masalah atau rapat gagal dimuat, ganti server dari menu dropdown, dan masalah akan teratasi."
+
+#: inc/admin/admin-settings.php:297
+msgid "Domain One"
+msgstr "Domain Satu"
+
+#: inc/admin/admin-settings.php:298
+msgid "Domain Two"
+msgstr "Domain Dua"
+
+#: inc/admin/admin-settings.php:299
+msgid "Domain Three"
+msgstr "Domain Tiga"
+
+#: inc/admin/admin-settings.php:300
+msgid "Domain Four"
+msgstr "Domain Empat"
+
+#: inc/admin/admin-settings.php:313
+msgid "Hosted Domain"
+msgstr "Domain Ter-host"
+
+#: inc/admin/admin-settings.php:313
+msgid "Without http or https"
+msgstr "Tanpa http atau https"
+
+#: inc/admin/admin-settings.php:334
+msgid "APP ID"
+msgstr "ID APLIKASI"
+
+#: inc/admin/admin-settings.php:335 inc/admin/admin-settings.php:360
+msgid "Get it from "
+msgstr "Dapatkan dari "
+
+#: inc/admin/admin-settings.php:337 inc/admin/admin-settings.php:362
+msgid "JAAS Admin"
+msgstr "Admin JAAS"
+
+#: inc/admin/admin-settings.php:339
+msgid "Copy the APP ID from JaaS admin"
+msgstr "Salin ID APLIKASI dari admin JaaS"
+
+#: inc/admin/admin-settings.php:359
+msgid "API Key"
+msgstr "Kunci API"
+
+#: inc/admin/admin-settings.php:364
+msgid "Copy the API Key from JaaS admin"
+msgstr "Salin Kunci API dari admin JaaS"
+
+#: inc/admin/admin-settings.php:384
+msgid "Private Key"
+msgstr "Kunci Pribadi"
+
+#: inc/admin/admin-settings.php:385
+msgid "Paste private key content here "
+msgstr "Tempel konten kunci pribadi di sini "
+
+#: inc/admin/admin-settings.php:387
+msgid "Generate private key and download"
+msgstr "Buat kunci pribadi dan unduh"
+
+#: inc/admin/admin-settings.php:405
+msgid "User Email"
+msgstr "Email Pengguna"
+
+#: inc/admin/admin-settings.php:405
+msgid "Email address of admin"
+msgstr "Alamat email admin"
+
+#: inc/admin/admin-settings.php:417
+msgid "User Username"
+msgstr "Username Pengguna"
+
+#: inc/admin/admin-settings.php:417
+msgid "Username of the admin"
+msgstr "Username admin"
+
+#: inc/admin/admin-settings.php:429
+msgid "User Avatar"
+msgstr "Avatar Pengguna"
+
+#: inc/admin/admin-settings.php:429
+msgid "The avatar url of the admin user"
+msgstr "URL avatar pengguna admin"
+
+#: inc/admin/admin-settings.php:436
+msgid "280x70px png, up to 4MB"
+msgstr "PNG 280x70px, hingga 4MB"
+
+#: inc/admin/admin-settings.php:443
+msgid "Enable Moderator Access"
+msgstr "Aktifkan Akses Moderator"
+
+#: inc/admin/admin-settings.php:443
+msgid "Allow this user to join as a moderator in Jass 8x8 meetings (only users with edit access)"
+msgstr "Izinkan pengguna ini bergabung sebagai moderator dalam rapat Jass 8x8 (hanya pengguna dengan akses edit)"
+
+#: inc/admin/admin-settings.php:456
+msgid "Other Admin Config"
+msgstr "Konfigurasi Admin Lainnya"
+
+#: inc/admin/admin-settings.php:456
+msgid "Those are on https://jaas.8x8.vc/#/branding"
+msgstr "Konfigurasi tersebut ada di https://jaas.8x8.vc/#/branding"
+
+#: inc/admin/admin-settings.php:469
+msgid "Meeting Width"
+msgstr "Lebar Rapat"
+
+#: inc/admin/admin-settings.php:469
+msgid "Width in pixel when not on fullscreen"
+msgstr "Lebar dalam piksel saat tidak dalam layar penuh"
+
+#: inc/admin/admin-settings.php:481
+msgid "Meeting Height"
+msgstr "Tinggi Rapat"
+
+#: inc/admin/admin-settings.php:481
+msgid "Height in pixel when not on fullscreen"
+msgstr "Tinggi dalam piksel saat tidak dalam layar penuh"
+
+#: inc/admin/admin-settings.php:493 inc/elementor.php:188
+#: blocks/src/blocks.js:138
+msgid "Enable Inviting"
+msgstr "Aktifkan Fitur Mengundang"
+
+#: inc/admin/admin-settings.php:493
+msgid "Attendee can invite people"
+msgstr "Peserta dapat mengundang orang lain"
+
+#: inc/admin/admin-settings.php:505
+msgid "Welcome Page"
+msgstr "Halaman Selamat Datang"
+
+#: inc/admin/admin-settings.php:505
+msgid "Enable/Disable welcome page"
+msgstr "Aktifkan/Nonaktifkan halaman selamat datang"
+
+#: inc/admin/admin-settings.php:518
+msgid "Yourself muted"
+msgstr "Mulai dengan mikrofon mati"
+
+#: inc/admin/admin-settings.php:518
+msgid "Start with yourself muted"
+msgstr "Mulai dengan mikrofon Anda dalam keadaan senyap"
+
+#: inc/admin/admin-settings.php:530
+msgid "Audio Only"
+msgstr "Hanya Audio"
+
+#: inc/admin/admin-settings.php:530
+msgid "Start conference on audio only"
+msgstr "Mulai konferensi hanya dengan audio"
+
+#: inc/admin/admin-settings.php:543
+msgid "Audio Muted"
+msgstr "Audio Senyap"
+
+#: inc/admin/admin-settings.php:543
+msgid "Participant after nth will be muted"
+msgstr "Peserta setelah urutan ke-n akan otomatis senyap"
+
+#: inc/admin/admin-settings.php:556
+msgid "Start Silent"
+msgstr "Mulai Diam"
+
+#: inc/admin/admin-settings.php:556
+msgid "Disable local audio output"
+msgstr "Nonaktifkan output audio lokal"
+
+#: inc/admin/admin-settings.php:569
+msgid "Start Video Muted"
+msgstr "Mulai Tanpa Video"
+
+#: inc/admin/admin-settings.php:569
+msgid "Start call with video muted"
+msgstr "Mulai panggilan dengan video dimatikan"
+
+#: inc/admin/admin-settings.php:581 inc/elementor.php:176
+msgid "Screen Sharing"
+msgstr "Berbagi Layar"
+
+#: inc/admin/admin-settings.php:581
+msgid "Enabling this feature allow you to share your screen while attending a meeting"
+msgstr "Mengaktifkan fitur ini memungkinkan Anda berbagi layar saat menghadiri rapat"
+
+#: inc/admin/admin-settings.php:593
+msgid "Video Resolution"
+msgstr "Resolusi Video"
+
+#: inc/admin/admin-settings.php:593
+msgid "Start with preferred resolution"
+msgstr "Mulai dengan resolusi yang diinginkan"
+
+#: inc/admin/admin-settings.php:614
+msgid "Max Full Resolution"
+msgstr "Resolusi Penuh Maksimum"
+
+#: inc/admin/admin-settings.php:614
+msgid "Number of participant with default resolution"
+msgstr "Jumlah peserta dengan resolusi standar"
+
+#: inc/admin/admin-settings.php:627
+msgid "Video Muted After"
+msgstr "Video Dimatikan Setelah"
+
+#: inc/admin/admin-settings.php:627
+msgid "Every participant after nth will start video muted"
+msgstr "Setiap peserta setelah urutan ke-n akan mulai tanpa video"
+
+#: inc/admin/admin-settings.php:640
+msgid "Enable Livestream"
+msgstr "Aktifkan Siaran Langsung"
+
+#: inc/admin/admin-settings.php:640
+msgid "Turn on livestreaming"
+msgstr "Aktifkan siaran langsung"
+
+#: inc/admin/admin-settings.php:653
+msgid "Enable Recording"
+msgstr "Aktifkan Rekaman"
+
+#: inc/admin/admin-settings.php:653
+msgid "Turn on to record the meeting"
+msgstr "Aktifkan untuk merekam rapat"
+
+#: inc/admin/admin-settings.php:666
+msgid "Enable Outbound"
+msgstr "Aktifkan Panggilan Keluar"
+
+#: inc/admin/admin-settings.php:666
+msgid "Allow outbound on the meeting"
+msgstr "Izinkan panggilan keluar dalam rapat"
+
+#: inc/admin/admin-settings.php:679
+msgid "Enable Transcription"
+msgstr "Aktifkan Transkripsi"
+
+#: inc/admin/admin-settings.php:679
+msgid "Transcript the meeting"
+msgstr "Buat transkrip rapat"
+
+#: inc/admin/admin-settings.php:692
+msgid "Hide Jitsi Sidebar"
+msgstr "Sembunyikan Bilah Sisi Jitsi"
+
+#: inc/admin/admin-settings.php:692
+msgid "Enable to hide Jitsi sidebar from Jitsi Meeting room"
+msgstr "Aktifkan untuk menyembunyikan bilah sisi Jitsi dari ruang rapat Jitsi"
+
+#: inc/admin/admin-settings.php:706
+msgid "Simulcast"
+msgstr "Simulcast"
+
+#: inc/admin/admin-settings.php:706
+msgid "Enable/Disable simulcast"
+msgstr "Aktifkan/Nonaktifkan simulcast"
+
+#: inc/admin/admin-settings.php:719
+msgid "Enable Whiteboard"
+msgstr "Aktifkan Papan Tulis"
+
+#: inc/admin/admin-settings.php:719
+msgid "Enable to use the whiteboard on Jass 8x8"
+msgstr "Aktifkan untuk menggunakan papan tulis di Jass 8x8"
+
+#: inc/admin/admin-settings.php:733
+msgid "Enable to Change Post-type Slug"
+msgstr "Aktifkan Perubahan Slug Tipe Post"
+
+#: inc/admin/admin-settings.php:733
+msgid "You can enable/disable custom slug"
+msgstr "Anda dapat mengaktifkan/menonaktifkan slug khusus"
+
+#: inc/admin/class-admin.php:74 inc/admin/class-admin.php:104
+msgid "Invalid request"
+msgstr "Permintaan tidak valid"
+
+#: inc/admin/class-admin.php:80 inc/admin/class-admin.php:110
+#: inc/admin/class-admin.php:135
+msgid "You do not have permission to do this action"
+msgstr "Anda tidak memiliki izin untuk melakukan tindakan ini"
+
+#: inc/admin/class-admin.php:170 inc/admin/class-admin.php:353
+msgid "Documentation"
+msgstr "Dokumentasi"
+
+#: inc/admin/class-admin.php:178
+msgid "Jitsi Meet Welcome"
+msgstr "Selamat Datang di Jitsi Meet"
+
+#: inc/admin/class-admin.php:187
+msgid "APP Settings"
+msgstr "Pengaturan APLIKASI"
+
+#: inc/admin/class-admin.php:196 inc/admin/class-admin.php:201
+#: inc/admin/class-admin.php:701
+msgid "Add-ons"
+msgstr "Add-on"
+
+#: inc/admin/class-admin.php:202
+msgid "New"
+msgstr "Baru"
+
+#: inc/admin/class-admin.php:212 init.php:189
+msgid "Upgrade to Ultimate"
+msgstr "Tingkatkan ke Ultimate"
+
+#: inc/admin/class-admin.php:251
+msgid "Gutenberg"
+msgstr "Gutenberg"
+
+#: inc/admin/class-admin.php:256
+msgid "Elementor"
+msgstr "Elementor"
+
+#: inc/admin/class-admin.php:261
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: inc/admin/class-admin.php:272
+msgid "How to set a conference room"
+msgstr "Cara menyetel ruang konferensi"
+
+#: inc/admin/class-admin.php:273
+msgid "Very simple and easy steps"
+msgstr "Langkah-langkah yang sangat simpel dan mudah"
+
+#: inc/admin/class-admin.php:277
+msgid "While you are on the post/page edit screen click on gutenberg plus icon to add a new gutenberg block"
+msgstr "Saat Anda berada di layar edit pos/halaman, klik ikon plus Gutenberg untuk menambahkan blok Gutenberg baru"
+
+#: inc/admin/class-admin.php:279
+msgid "Add new gutenberg block on page"
+msgstr "Tambahkan blok Gutenberg baru di halaman"
+
+#: inc/admin/class-admin.php:283
+msgid "Add \"Jitsi Meet\" from \"Embeds\" category"
+msgstr "Tambahkan \"Jitsi Meet\" dari kategori \"Embeds\""
+
+#: inc/admin/class-admin.php:285
+msgid "Add Jitsi Meet from Embeds category"
+msgstr "Tambahkan Jitsi Meet dari kategori Embeds"
+
+#: inc/admin/class-admin.php:289
+msgid "Set width and height and you are done"
+msgstr "Setel lebar dan tinggi dan selesai"
+
+#: inc/admin/class-admin.php:291 inc/admin/class-admin.php:311
+#: inc/admin/class-admin.php:332
+msgid "Jitsi Meet Settings"
+msgstr "Pengaturan Jitsi Meet"
+
+#: inc/admin/class-admin.php:298
+msgid "How to set with elementor"
+msgstr "Cara menyetel dengan elementor"
+
+#: inc/admin/class-admin.php:299
+msgid "Setup a video conference room with elementor"
+msgstr "Siapkan ruang konferensi video dengan elementor"
+
+#: inc/admin/class-admin.php:303
+msgid "While you are on elementor edit screen drag and drop <strong>Jitsi Meet</strong> element to your page"
+msgstr "Saat Anda berada di layar edit Elementor, seret dan lepas elemen <strong>Jitsi Meet</strong> ke halaman Anda"
+
+#: inc/admin/class-admin.php:305
+msgid "Add new jitsi meet element on page"
+msgstr "Tambahkan elemen jitsi meet baru di halaman"
+
+#: inc/admin/class-admin.php:309
+msgid "Set name, width, height etc and you are done"
+msgstr "Setel nama, lebar, tinggi, dll. dan selesai"
+
+#: inc/admin/class-admin.php:318
+msgid "How to set with shortcode"
+msgstr "Cara menyetel dengan shortcode"
+
+#: inc/admin/class-admin.php:319
+msgid "Setup a video conference room with shortcode"
+msgstr "Siapkan ruang konferensi video dengan shortcode"
+
+#: inc/admin/class-admin.php:321
+msgid "Write down the shortcode below and set width, height and name of conference"
+msgstr "Tuliskan shortcode di bawah ini dan setel lebar, tinggi, dan nama konferensi"
+
+#: inc/admin/class-admin.php:323
+msgid "Click on shortcode to copy"
+msgstr "Klik pada shortcode untuk menyalin"
+
+#: inc/admin/class-admin.php:327
+msgid "name:"
+msgstr "nama:"
+
+#: inc/admin/class-admin.php:327
+msgid "A unique name to generate the url of the room"
+msgstr "Nama unik untuk menghasilkan URL ruangan"
+
+#: inc/admin/class-admin.php:328
+msgid "width:"
+msgstr "lebar:"
+
+#: inc/admin/class-admin.php:328
+msgid "Width of the jitsi meet embedded"
+msgstr "Lebar jitsi meet yang disematkan"
+
+#: inc/admin/class-admin.php:329
+msgid "height:"
+msgstr "tinggi:"
+
+#: inc/admin/class-admin.php:329
+msgid "Height of the jitsi meet embedded"
+msgstr "Tinggi jitsi meet yang disematkan"
+
+#: inc/admin/class-admin.php:353
+msgid "How to embed"
+msgstr "Cara menyematkan"
+
+#: inc/admin/class-admin.php:355
+msgid "API Settings"
+msgstr "Pengaturan API"
+
+#: inc/admin/class-admin.php:355
+msgid "Authenticate with JAAS"
+msgstr "Otentikasi dengan JAAS"
+
+#: inc/admin/class-admin.php:357
+msgid "Admin Settings"
+msgstr "Pengaturan Admin"
+
+#: inc/admin/class-admin.php:357
+msgid "Username, email, avatar etc."
+msgstr "Username, email, avatar, dll."
+
+#: inc/admin/class-admin.php:359
+msgid "Configurations"
+msgstr "Konfigurasi"
+
+#: inc/admin/class-admin.php:359
+msgid "Width, height, recording etc..."
+msgstr "Lebar, tinggi, rekaman, dll..."
+
+#: inc/admin/class-admin.php:361
+msgid "Audio Settings"
+msgstr "Pengaturan Audio"
+
+#: inc/admin/class-admin.php:361
+msgid "Initial audio configurations..."
+msgstr "Konfigurasi audio awal..."
+
+#: inc/admin/class-admin.php:363
+msgid "Video Settings"
+msgstr "Pengaturan Video"
+
+#: inc/admin/class-admin.php:363
+msgid "Initial video configurations..."
+msgstr "Konfigurasi video awal..."
+
+#: inc/admin/class-admin.php:509
+msgid "Welcome to FlexMeeting"
+msgstr "Selamat Datang di FlexMeeting"
+
+#: inc/admin/class-admin.php:510
+msgid "Select for which kind of api you want to use with our plugin and give credential accordingly."
+msgstr "Pilih jenis API mana yang ingin Anda gunakan dengan plugin kami dan berikan kredensial yang sesuai."
+
+#: inc/admin/class-admin.php:525
+msgid "How to select Jitsi Meet server?"
+msgstr "Bagaimana cara memilih server Jitsi Meet?"
+
+#: inc/admin/class-admin.php:633
+msgid "Or, Go Fully Branded - Zero Server Setup!"
+msgstr "Atau, Gunakan Branding Penuh - Tanpa Pengaturan Server!"
+
+#: inc/admin/class-admin.php:640
+msgid "With Your Branding, Your Rules!"
+msgstr "Dengan Branding Anda, Aturan Anda!"
+
+#: inc/admin/class-admin.php:643
+msgid "Host Secure Video Meetings Under Your Own Domain."
+msgstr "Host Pertemuan Video Aman di Bawah Domain Anda Sendiri."
+
+#: inc/admin/class-admin.php:649
+msgid "Fully branded under your domain"
+msgstr "Bermerek penuh di bawah domain Anda"
+
+#: inc/admin/class-admin.php:653
+msgid "Zero server setup required"
+msgstr "Tanpa pengaturan server"
+
+#: inc/admin/class-admin.php:657
+msgid "Unlimited high-quality meetings"
+msgstr "Pertemuan berkualitas tinggi tanpa batas"
+
+#: inc/admin/class-admin.php:661
+msgid "No technical hassle"
+msgstr "Tanpa kerepotan teknis"
+
+#: inc/admin/class-admin.php:666
+msgid "Explore Hosted Jitsi"
+msgstr "Jelajahi Jitsi Ter-host"
+
+#: inc/admin/class-admin.php:674
+msgid "Jitsi Meeting Interface"
+msgstr "Antarmuka Pertemuan Jitsi"
+
+#: inc/admin/class-admin.php:702
+msgid "Add your favourite add-ons and supercharge your workflow"
+msgstr "Tambahkan add-on favorit Anda dan percepat alur kerja Anda"
+
+#: inc/admin/class-admin.php:716
+msgid "Multivendor Addon for FlexMeeting"
+msgstr "Add-on Multivendor untuk FlexMeeting"
+
+#: inc/admin/class-admin.php:717
+msgid "Power up your multi-vendor experience & create meetings right from your vendor dashboard. Elevate your store with monetizable video meetings."
+msgstr "Tingkatkan pengalaman multivendor Anda & buat pertemuan langsung dari dasbor vendor Anda. Tingkatkan toko Anda dengan pertemuan video yang dapat dimonetisasi."
+
+#: inc/admin/class-admin.php:724 inc/admin/class-admin.php:760
+msgid "Not activate"
+msgstr "Tidak aktif"
+
+#: inc/admin/class-admin.php:726 inc/admin/class-admin.php:762
+#: inc/admin/licence-cta.php:13
+msgid "Activate"
+msgstr "Aktifkan"
+
+#: inc/admin/class-admin.php:745
+msgid "FlexMeeting Frontend Addon"
+msgstr "Add-on Frontend FlexMeeting"
+
+#: inc/admin/class-admin.php:748
+msgid "Easily create Jitsi meetings from the frontend without accessing the admin dashboard."
+msgstr "Buat pertemuan Jitsi dengan mudah dari frontend tanpa mengakses dasbor admin."
+
+#: inc/admin/licence-cta.php:11
+msgid "Please activate your license"
+msgstr "Silakan aktifkan lisensi Anda"
+
+#: inc/admin/mannage-callback.php:182
+msgid " New "
+msgstr " Baru "
+
+#: inc/admin/mannage-callback.php:290
+msgid "Preview Image Upload"
+msgstr "Unggah Gambar Pratinjau"
+
+#: inc/admin/mannage-callback.php:298
+msgid "Upload an image"
+msgstr "Unggah gambar"
+
+#: inc/admin/mannage-callback.php:323
+msgid "Some settings like Company Logo, Background etc are currently not available via api. You can set your company logo, background etc from the"
+msgstr "Beberapa pengaturan seperti Logo Perusahaan, Latar Belakang, dll. saat ini tidak tersedia via api. Anda dapat mengatur logo perusahaan, latar belakang, dll. dari"
+
+#: inc/admin/mannage-callback.php:323
+msgid "jaas console"
+msgstr "konsol JaaS"
+
+#: inc/elementor.php:67 blocks/src/blocks.js:166
+msgid "Jitsi Meet"
+msgstr "Jitsi Meet"
+
+#: inc/elementor.php:108
+msgid "Configuration"
+msgstr "Konfigurasi"
+
+#: inc/elementor.php:115 blocks/src/blocks.js:69
+msgid "Name"
+msgstr "Nama"
+
+#: inc/elementor.php:118
+msgid "Meeting name here"
+msgstr "Nama rapat di sini"
+
+#: inc/elementor.php:125 blocks/src/blocks.js:107
+msgid "Width"
+msgstr "Lebar"
+
+#: inc/elementor.php:140 blocks/src/blocks.js:115
+msgid "Height"
+msgstr "Tinggi"
+
+#: inc/elementor.php:152
+msgid "Start audio muted"
+msgstr "Mulai dengan audio senyap"
+
+#: inc/elementor.php:164
+msgid "Start video muted"
+msgstr "Mulai dengan video dimatikan"
+
+#: inc/jitsi-topbar.php:193
+msgid "New: Host Branded Jitsi Meetings - No Server Needed!"
+msgstr "Baru: Host Pertemuan Jitsi Bermerek - Tanpa Perlu Server!"
+
+#: inc/jitsi-topbar.php:198
+msgid "Explore now"
+msgstr "Jelajahi sekarang"
+
+#: inc/jitsi-topbar.php:205
+msgid "Close notification"
+msgstr "Tutup notifikasi"
+
+#: inc/jitsi-topbar.php:312
+msgid "Invalid nonce"
+msgstr "Nonce tidak valid"
+
+#: inc/jitsi-topbar.php:317
+msgid "Insufficient permissions"
+msgstr "Izin tidak cukup"
+
+#: inc/jitsi-topbar.php:324
+msgid "Topbar dismissed successfully"
+msgstr "Bilah atas berhasil ditutup"
+
+#: inc/jitsi-topbar.php:326
+msgid "Failed to dismiss topbar"
+msgstr "Gagal menutup bilah atas"
+
+#: inc/jitsi-topbar.php:344
+msgid "Security check failed"
+msgstr "Pemeriksaan keamanan gagal"
+
+#: inc/jitsi-topbar.php:349
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Anda tidak memiliki izin yang cukup untuk mengakses halaman ini."
+
+#: inc/wppool/class-plugin.php:328
+msgid "Deal Ends In"
+msgstr "Penawaran Berakhir Dalam"
+
+#: inc/wppool/class-plugin.php:333 inc/wppool/class-plugin.php:342
+#: inc/wppool/class-plugin.php:351 inc/wppool/class-plugin.php:360
+msgid "00"
+msgstr "00"
+
+#: inc/wppool/class-plugin.php:336
+msgid "Days"
+msgstr "Hari"
+
+#: inc/wppool/class-plugin.php:345
+msgid "Hours"
+msgstr "Jam"
+
+#: inc/wppool/class-plugin.php:354
+msgid "Minutes"
+msgstr "Menit"
+
+#: inc/wppool/class-plugin.php:363
+msgid "Seconds"
+msgstr "Detik"
+
+#: inc/wppool/class-plugin.php:370
+msgid "Upgrade to Pro"
+msgstr "Tingkatkan ke Pro"
+
+#: inc/wppool/class-plugin.php:374
+msgid "Try a free demo"
+msgstr "Coba demo gratis"
+
+#: jitsi-meet-wp.php:154
+msgid "Grab Your Deals"
+msgstr "Dapatkan Penawaran Anda"
+
+#: templates/admin/affiliate-notice.php:15
+msgid "Hey! Enjoying <b>Jitsi Meet WP </b> plugin? Join our <a href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" class=\"affiliate-notice-link\">influencer program  </a> to make money from your social media content. You can also check our <a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" class=\"affiliate-notice-link\">affiliate program  </a> to get a 25%% commission on every sale!"
+msgstr "Hei! Menikmati plugin <b>Jitsi Meet WP</b>? Bergabunglah dengan <a href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" class=\"affiliate-notice-link\">program influencer</a> kami untuk menghasilkan uang dari konten media sosial Anda. Anda juga dapat memeriksa <a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" class=\"affiliate-notice-link\">program afiliasi</a> kami untuk mendapatkan komisi 25%% di setiap penjualan!"
+
+#: templates/admin/affiliate-notice.php:20
+msgid "Tell me more "
+msgstr "Katakan lebih lanjut "
+
+#: templates/admin/affiliate-notice.php:29 templates/admin/review-notice.php:36
+msgid "Would you like us to remind you about this later?"
+msgstr "Apakah Anda ingin kami mengingatkan Anda tentang ini nanti?"
+
+#: templates/admin/affiliate-notice.php:32 templates/admin/review-notice.php:39
+msgid "Remind me in 3 days"
+msgstr "Ingatkan saya dalam 3 hari"
+
+#: templates/admin/affiliate-notice.php:33 templates/admin/review-notice.php:40
+msgid "Remind me in 10 days"
+msgstr "Ingatkan saya dalam 10 hari"
+
+#: templates/admin/affiliate-notice.php:34 templates/admin/review-notice.php:42
+msgid "Don't remind me about this"
+msgstr "Jangan ingatkan saya tentang ini"
+
+#: templates/admin/review-notice.php:17
+msgid ""
+"Hi there, it seems like Jitsi Meet WP is bringing you some value, and that is pretty awesome!\r\n"
+"    Can you please show us some love and rate Jitsi Meet WP on WordPress? It will take two minutes of your time, and will really help us spread the world."
+msgstr "Halo, sepertinya Jitsi Meet WP memberikan manfaat bagi Anda, dan itu luar biasa! Tolong tunjukkan dukungan Anda dan beri peringkat Jitsi Meet WP di WordPress? Ini hanya memakan waktu dua menit dari waktu Anda, dan akan sangat membantu kami menyebarkan informasi ini."
+
+#: templates/admin/review-notice.php:26
+msgid "I'd love to help :)"
+msgstr "Saya senang membantu :)"
+
+#: templates/admin/review-notice.php:29
+msgid "Not this time"
+msgstr "Tidak kali ini"
+
+#: templates/admin/review-notice.php:31
+msgid "I've already rated you"
+msgstr "Saya sudah memberi peringkat"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:170
+msgid "jitsi"
+msgstr "jitsi"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:171
+msgid "meeting"
+msgstr "pertemuan"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:172
+msgid "video"
+msgstr "video"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:173
+msgid "conference"
+msgstr "konferensi"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:174
+msgid "zoom"
+msgstr "zoom"
+
+#: blocks/src/blocks.js:75
+msgid "Domain"
+msgstr "Domain"
+
+#: blocks/src/blocks.js:82
+msgid "Config from global"
+msgstr "Konfigurasi dari global"
+
+#: blocks/src/blocks.js:123
+msgid "Start with audio muted"
+msgstr "Mulai dengan audio senyap"
+
+#: blocks/src/blocks.js:128
+msgid "Start with video muted"
+msgstr "Mulai dengan video dimatikan"
+
+#: blocks/src/blocks.js:133
+msgid "Start with screen sharing"
+msgstr "Mulai dengan berbagi layar"
+
+#: blocks/src/blocks.js:157
+msgid "Room name:"
+msgstr "Nama ruangan:"
+
+#: blocks/src/blocks.js:158
+msgid "Domain :"
+msgstr "Domain :"
+
+#: inc/admin/class-admin.php:188 init.php:188 blocks/src/blocks.js:67
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: inc/admin/class-admin.php:454
+msgid "Self hosted domain missing"
+msgstr "Domain yang dihosting sendiri hilang"
+
+#: inc/admin/class-admin.php:458
+msgid "App id missing"
+msgstr "ID aplikasi hilang"
+
+#: inc/admin/class-admin.php:461
+msgid "Api key is missing"
+msgstr "Kunci API hilang"
+
+#: inc/admin/class-admin.php:464
+msgid "Private key is missing"
+msgstr "Kunci privat hilang"
+
+#: inc/admin/class-admin.php:518
+msgid "Skip"
+msgstr "Lewati"
+
+#: inc/admin/class-admin.php:520
+msgid "Continue"
+msgstr "Lanjutkan"
+
+#: inc/admin/class-admin.php:571 inc/admin/class-admin.php:584
+#: inc/admin/class-admin.php:597 inc/admin/class-admin.php:610
+#: inc/admin/class-admin.php:622
+msgid "Save Changes"
+msgstr "Simpan Perubahan"
+
+msgid "Default (Public Hosting)"
+msgstr "Default (Hosting Publik)"
+
+msgid "Use the default public Jitsi"
+msgstr "Gunakan Jitsi publik default"
+
+msgid "Managed Branded Meeting"
+msgstr "Rapat Bermerek Terkelola"
+
+msgid "We host and maintain your branded server"
+msgstr "Kami meng-host dan memelihara server bermerek Anda"
+
+msgid "Jitsi as a Service (8x8 JaaS)"
+msgstr "Jitsi sebagai Layanan (8x8 JaaS)"
+
+msgid "Use your JaaS credentials"
+msgstr "Gunakan kredensial JaaS Anda"
+
+msgid "Self-Hosted"
+msgstr "Di-host Sendiri"
+
+msgid "Connect your self-hosted server"
+msgstr "Hubungkan server yang Anda host sendiri"
+
+msgid "Choose where your meetings will run:"
+msgstr "Pilih di mana rapat Anda akan berjalan:"
+
+msgid "Save & Test Connection"
+msgstr "Simpan & Uji Koneksi"
+
+msgid "Domain changed. Please re-test connection."
+msgstr "Domain diubah. Harap uji ulang koneksi."
+
+msgid "Connecting..."
+msgstr "Menghubungkan..."
+
+msgid "Connected. Meetings will run on"
+msgstr "Terhubung. Rapat akan berjalan pada"
+
+msgid "Disconnect"
+msgstr "Putuskan Sambungan"
+
+msgid "We couldn't reach this server. Please double-check the URL or try again."
+msgstr "Kami tidak dapat menjangkau server ini. Harap periksa kembali URL atau coba lagi."
+
+msgid "Disconnecting..."
+msgstr "Memutuskan sambungan..."
+
+msgid "Disconnect failed"
+msgstr "Gagal memutuskan sambungan"
+
+msgid "Error: Could not reach the server."
+msgstr "Kesalahan: Tidak dapat menjangkau server."
+
+msgid "🎁"
+msgstr "🎁"
+
+msgid "Benefits:"
+msgstr "Manfaat:"
+
+msgid "Need help setting up your branded server?"
+msgstr "Butuh bantuan menyiapkan server bermerek Anda?"
+
+msgid "How Hosted Meetings works?"
+msgstr "Bagaimana cara kerja Rapat yang Di-host?"
+
+msgid "Default Public Hosting"
+msgstr "Hosting Publik Default"
+
+msgid "Select a public domain to run your meeting."
+msgstr "Pilih domain publik untuk menjalankan rapat Anda."
+
+msgid "Completely Free to Use"
+msgstr "Sepenuhnya Gratis Digunakan"
+
+msgid "Instant Setup"
+msgstr "Penyiapan Instan"
+
+msgid "No Account Required"
+msgstr "Tidak Diperlukan Akun"
+
+msgid "Standard Privacy Features"
+msgstr "Fitur Privasi Standar"
+
+msgid "Your Branded Meeting Server"
+msgstr "Server Rapat Bermerek Anda"
+
+msgid "Branded Meetings, Zero Server Hassle!"
+msgstr "Rapat Bermerek, Tanpa Kerumitan Server!"
+
+msgid "Get your own private branded meeting server (logo + brand name). We'll host and maintain it - just paste your Hosted Server Domain URL below and enjoy your branded meetings."
+msgstr "Dapatkan server rapat bermerek pribadi Anda sendiri (logo + nama merek). Kami akan meng-host dan memeliharanya - cukup tempelkan URL Domain Server yang Di-host Anda di bawah ini dan nikmati rapat bermerek Anda."
+
+msgid "e.g. https://yourbrand.jitsihosted.com"
+msgstr "misalnya https://merekanda.jitsihosted.com"
+
+msgid "✅"
+msgstr "✅"
+
+msgid "Don't have a Hosted Server URL yet? "
+msgstr "Belum memiliki URL Server yang Di-host? "
+
+msgid "Request setup now →"
+msgstr "Minta penyiapan sekarang →"
+
+msgid "Hosted Server Domain:"
+msgstr "Domain Server yang Di-host:"
+
+msgid "<strong>Request</strong> your branded setup first (<a href=\\\"#\\\">request now →</a>)"
+msgstr "<strong>Minta</strong> penyiapan bermerek Anda terlebih dahulu (<a href=\"#\">minta sekarang →</a>)"
+
+msgid "<strong>We set it up</strong> and email your Hosted Server URL"
+msgstr "<strong>Kami menyiapkannya</strong> dan mengirim email berisi URL Server yang Di-host Anda"
+
+msgid "<strong>Paste the URL here</strong> → Save & Test → meetings start running on your hosted server"
+msgstr "<strong>Tempel URL di sini</strong> → Simpan & Uji → rapat mulai berjalan di server yang di-host Anda"
+
+msgid "🤩"
+msgstr "🤩"
+
+msgid "That's it - no technical setup needed from you. Wahhhhhhhhhh!"
+msgstr "Itu dia - tanpa perlu penyiapan teknis dari Anda. Wahhhhhhhhhh!"
+
+msgid "Complete Privacy and Control over your data"
+msgstr "Privasi Penuh dan Kontrol atas data Anda"
+
+msgid "Ultra-fast performance with dedicated resources"
+msgstr "Kinerja ultra cepat dengan sumber daya khusus"
+
+msgid "Global reach with low-latency server locations"
+msgstr "Jangkauan global dengan lokasi server latensi rendah"
+
+msgid "99.9% Uptime guarantee with 24/7 monitoring"
+msgstr "Jaminan waktu aktif 99,9% dengan pemantauan 24/7"
+
+msgid "Scalable to hundreds of concurrent participants"
+msgstr "Skalabilitas hingga ratusan peserta bersamaan"
+
+msgid "End-to-end encryption and advanced security"
+msgstr "Enkripsi ujung-ke-ujung dan keamanan tingkat lanjut"
+
+msgid "Request branded meeting server for FREE!"
+msgstr "Minta server rapat bermerek GRATIS!"
+
+msgid "What is a self-hosted FlexMeeting server?"
+msgstr "Apa yang dimaksud dengan server FlexMeeting yang di-host sendiri?"
+
+msgid "A self-hosted Jitsi server means the entire video conferencing system runs on your own server or hosting environment, not on Jitsi's public infrastructure. This gives you full control, privacy, and customization flexibility."
+msgstr "Server Jitsi yang di-host sendiri berarti seluruh sistem konferensi video berjalan pada server atau lingkungan hosting Anda sendiri, bukan pada infrastruktur publik Jitsi. Ini memberi Anda kendali penuh, privasi, dan fleksibilitas penyesuaian."
+
+msgid "Why should I use a self-hosted Jitsi server instead of using public Jitsi?"
+msgstr "Mengapa saya harus menggunakan server Jitsi yang di-host sendiri alih-alih menggunakan Jitsi publik?"
+
+msgid "Public servers like meet.jit.si are shared by millions. This can lead to performance issues, limited features, and a lack of branding. With your own server, you get dedicated resources, your own logo, and enhanced security."
+msgstr "Server publik seperti meet.jit.si digunakan bersama oleh jutaan orang. Hal ini dapat menyebabkan masalah kinerja, fitur terbatas, dan kurangnya pencitraan merek. Dengan server Anda sendiri, Anda mendapatkan sumber daya khusus, logo Anda sendiri, dan keamanan yang ditingkatkan."
+
+msgid "What do you provide in this service?"
+msgstr "Apa yang Anda sediakan dalam layanan ini?"
+
+msgid "We provide complete installation, configuration, and maintenance of your Jitsi server. This includes automatic updates, performance monitoring, and SSL setup so you can focus on your meetings."
+msgstr "Kami menyediakan pemasangan, konfigurasi, dan pemeliharaan penuh untuk server Jitsi Anda. Ini mencakup pembaruan otomatis, pemantauan kinerja, dan penyiapan SSL sehingga Anda dapat fokus pada rapat Anda."
+
+msgid "Do I need technical knowledge to maintain the server?"
+msgstr "Apakah saya memerlukan pengetahuan teknis untuk memelihara server?"
+
+msgid "Not at all! Our managed service is designed to be \\\"hands-off\\\" for you. We handle all the server-side complexity, security patches, and scaling."
+msgstr "Sama sekali tidak! Layanan terkelola kami dirancang agar \"lepas tangan\" bagi Anda. Kami menangani semua kerumitan sisi server, penambalan keamanan, dan penskalaan."
+
+msgid "What are the server requirements?"
+msgstr "Apa persyaratan servernya?"
+
+msgid "If you use our managed hosting, we provide the infrastructure. If you host it yourself, a basic server with 4GB RAM and 2 CPUs is usually enough for up to 20-30 concurrent users."
+msgstr "Jika Anda menggunakan hosting terkelola kami, kami yang menyediakan infrastrukturnya. Jika Anda meng-host sendiri, server dasar dengan RAM 4GB dan 2 CPU biasanya cukup untuk maksimal 20-30 pengguna bersamaan."
+
+msgid "Can I use this with my existing website or LMS?"
+msgstr "Dapatkah saya menggunakan ini dengan situs web atau LMS saya yang sudah ada?"
+
+msgid "Yes! Our plugin integrates seamlessly with WordPress, LMS platforms, and other CMS. You can embed meetings directly into your pages."
+msgstr "Ya! Plugin kami terintegrasi dengan mulus dengan WordPress, platform LMS, dan CMS lainnya. Anda dapat menyematkan rapat secara langsung ke dalam halaman Anda."
+
+msgid "How long does it take to set everything up?"
+msgstr "Berapa lama waktu yang diperlukan untuk menyiapkan semuanya?"
+
+msgid "Managed servers are usually ready within 24 hours. If you're using the \\\"Request\\\" option, we'll reach out to finalize the branding before deployment."
+msgstr "Server yang dikelola biasanya siap dalam 24 jam. Jika Anda menggunakan opsi \"Permintaan\", kami akan menghubungi untuk memfinalisasi pencitraan merek sebelum penerapan."
+
+msgid "Frequently Asked Questions"
+msgstr "Pertanyaan yang Sering Diajukan"
+
+msgid "Jitsi as a Service (8x8)"
+msgstr "Jitsi sebagai Layanan (8x8)"
+
+msgid "Paste private key content here"
+msgstr "Tempel konten kunci privat di sini"
+
+msgid "Enterprise Grade Reliability"
+msgstr "Keandalan Tingkat Perusahaan"
+
+msgid "Advanced Analytics"
+msgstr "Analisis Lanjutan"
+
+msgid "Global Low-latency Network"
+msgstr "Jaringan Latensi Rendah Global"
+
+msgid "Secure Recorded Meetings"
+msgstr "Rapat Terekam dengan Aman"
+
+msgid "Self-Hosted Server"
+msgstr "Server yang Di-host Sendiri"
+
+msgid "Your Server Domain"
+msgstr "Domain Server Anda"
+
+msgid "Enter your self-hosted Jitsi domain (e.g., meet.yourdomain.com)"
+msgstr "Masukkan domain Jitsi yang di-host sendiri Anda (misalnya, meet.domainanda.com)"
+
+msgid "Premium Feature"
+msgstr "Fitur Premium"
+
+msgid "Full Data Control"
+msgstr "Kontrol Data Penuh"
+
+msgid "Custom Security Policies"
+msgstr "Kebijakan Keamanan Kustom"
+
+msgid "No Third-party Tracking"
+msgstr "Tanpa Pelacakan Pihak Ketiga"
+
+msgid "Infrastructure Ownership"
+msgstr "Kepemilikan Infrastruktur"

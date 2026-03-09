@@ -1,0 +1,1102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FlexMeeting 2.7.9\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/webinar-and-video-conference-with-jitsi-meet\n"
+"POT-Creation-Date: 2026-02-24T10:47:21+00:00\n"
+"PO-Revision-Date: 2026-03-04 12:26+0600\n"
+"Last-Translator: Antigravity AI\n"
+"Language-Team: French <fr_FR@li.org>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+"X-Domain: webinar-and-video-conference-with-jitsi-meet\n"
+
+#. Plugin Name of the plugin
+#: jitsi-meet-wp.php inc/admin/class-admin.php:158
+#: inc/admin/class-admin.php:169 inc/admin/class-admin.php:241
+#: inc/admin/class-admin.php:559 blocks/dist/blocks.build.js:314
+msgid "FlexMeeting"
+msgstr "FlexMeeting"
+
+#. Plugin URI of the plugin
+#: jitsi-meet-wp.php
+msgid "https://jitsi-meet-wp.wppool.dev/"
+msgstr "https://jitsi-meet-wp.wppool.dev/"
+
+#. Description of the plugin
+#: jitsi-meet-wp.php
+msgid "Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block"
+msgstr "Organisez des webinaires en direct, des conférences, des cours en ligne et des appels vidéo directement sur votre site WordPress avec le bloc Gutenberg"
+
+#. Author of the plugin
+#: jitsi-meet-wp.php
+msgid "WPPOOL"
+msgstr "WPPOOL"
+
+#. Author URI of the plugin
+#: jitsi-meet-wp.php
+msgid "https://wppool.dev"
+msgstr "https://wppool.dev"
+
+#: gutenberg-init.php:73 gutenberg-init.php:88 init.php:68 init.php:83
+msgid "Cheatin&#8217; huh?"
+msgstr "On triche, hein ?"
+
+#: inc/admin/admin-settings.php:256
+msgid "Select API"
+msgstr "Sélectionner l'API"
+
+#: inc/admin/admin-settings.php:256
+msgid "Select your api"
+msgstr "Sélectionnez votre API"
+
+#: inc/admin/admin-settings.php:273
+msgid "FlexMeeting Free"
+msgstr "FlexMeeting Gratuit"
+
+#: inc/admin/admin-settings.php:273
+msgid "Get access to all the free features of the video conference application Jitsi Meet."
+msgstr "Accédez à toutes les fonctionnalités gratuites de l'application de vidéoconférence Jitsi Meet."
+
+#: inc/admin/admin-settings.php:277
+msgid "JaaS 8x8"
+msgstr "JaaS 8x8"
+
+#: inc/admin/admin-settings.php:277
+msgid "Access to enterprise standard video meeting features and modify everything as you like."
+msgstr "Accédez aux fonctionnalités de réunion vidéo de standard entreprise et modifiez tout selon vos préférences."
+
+#: inc/admin/admin-settings.php:282
+msgid "Self Hosted"
+msgstr "Auto-hébergé"
+
+#: inc/admin/admin-settings.php:282
+msgid "Opportunity to host Jitsi Meet on self-hosting with a branded domain and high security."
+msgstr "Possibilité d'héberger Jitsi Meet sur votre propre serveur avec un domaine personnalisé et une sécurité élevée."
+
+#: inc/admin/admin-settings.php:289
+msgid "Default Public Domain"
+msgstr "Domaine public par défaut"
+
+#: inc/admin/admin-settings.php:289
+msgid "Select a public domain to run your meeting. If you face issues or the meeting fails to load, switch the server from the dropdown, and it will be fixed."
+msgstr "Sélectionnez un domaine public pour organiser votre réunion. Si vous rencontrez des problèmes ou si la réunion ne charge pas, changez de serveur dans le menu déroulant."
+
+#: inc/admin/admin-settings.php:297
+msgid "Domain One"
+msgstr "Domaine Un"
+
+#: inc/admin/admin-settings.php:298
+msgid "Domain Two"
+msgstr "Domaine Deux"
+
+#: inc/admin/admin-settings.php:299
+msgid "Domain Three"
+msgstr "Domaine Trois"
+
+#: inc/admin/admin-settings.php:300
+msgid "Domain Four"
+msgstr "Domaine Quatre"
+
+#: inc/admin/admin-settings.php:313
+msgid "Hosted Domain"
+msgstr "Domaine hébergé"
+
+#: inc/admin/admin-settings.php:313
+msgid "Without http or https"
+msgstr "Sans http ni https"
+
+#: inc/admin/admin-settings.php:334
+msgid "APP ID"
+msgstr "ID de l'application"
+
+#: inc/admin/admin-settings.php:335 inc/admin/admin-settings.php:360
+msgid "Get it from "
+msgstr "Obtenez-le sur "
+
+#: inc/admin/admin-settings.php:337 inc/admin/admin-settings.php:362
+msgid "JAAS Admin"
+msgstr "Admin JAAS"
+
+#: inc/admin/admin-settings.php:339
+msgid "Copy the APP ID from JaaS admin"
+msgstr "Copiez l'ID de l'application depuis l'admin JaaS"
+
+#: inc/admin/admin-settings.php:359
+msgid "API Key"
+msgstr "Clé API"
+
+#: inc/admin/admin-settings.php:364
+msgid "Copy the API Key from JaaS admin"
+msgstr "Copiez la clé API depuis l'admin JaaS"
+
+#: inc/admin/admin-settings.php:384
+msgid "Private Key"
+msgstr "Clé privée"
+
+#: inc/admin/admin-settings.php:385
+msgid "Paste private key content here "
+msgstr "Collez le contenu de la clé privée ici "
+
+#: inc/admin/admin-settings.php:387
+msgid "Generate private key and download"
+msgstr "Générer la clé privée et télécharger"
+
+#: inc/admin/admin-settings.php:405
+msgid "User Email"
+msgstr "E-mail de l'utilisateur"
+
+#: inc/admin/admin-settings.php:405
+msgid "Email address of admin"
+msgstr "Adresse e-mail de l'administrateur"
+
+#: inc/admin/admin-settings.php:417
+msgid "User Username"
+msgstr "Nom d'utilisateur"
+
+#: inc/admin/admin-settings.php:417
+msgid "Username of the admin"
+msgstr "Nom d'utilisateur de l'administrateur"
+
+#: inc/admin/admin-settings.php:429
+msgid "User Avatar"
+msgstr "Avatar de l'utilisateur"
+
+#: inc/admin/admin-settings.php:429
+msgid "The avatar url of the admin user"
+msgstr "L'URL de l'avatar de l'administrateur"
+
+#: inc/admin/admin-settings.php:436
+msgid "280x70px png, up to 4MB"
+msgstr "PNG 280x70px, jusqu'à 4 Mo"
+
+#: inc/admin/admin-settings.php:443
+msgid "Enable Moderator Access"
+msgstr "Activer l'accès modérateur"
+
+#: inc/admin/admin-settings.php:443
+msgid "Allow this user to join as a moderator in Jass 8x8 meetings (only users with edit access)"
+msgstr "Autoriser cet utilisateur à rejoindre les réunions Jass 8x8 en tant que modérateur (uniquement les utilisateurs ayant des droits d'édition)"
+
+#: inc/admin/admin-settings.php:456
+msgid "Other Admin Config"
+msgstr "Autres config admin"
+
+#: inc/admin/admin-settings.php:456
+msgid "Those are on https://jaas.8x8.vc/#/branding"
+msgstr "Celles-ci se trouvent sur https://jaas.8x8.vc/#/branding"
+
+#: inc/admin/admin-settings.php:469
+msgid "Meeting Width"
+msgstr "Largeur de la réunion"
+
+#: inc/admin/admin-settings.php:469
+msgid "Width in pixel when not on fullscreen"
+msgstr "Largeur en pixels hors plein écran"
+
+#: inc/admin/admin-settings.php:481
+msgid "Meeting Height"
+msgstr "Hauteur de la réunion"
+
+#: inc/admin/admin-settings.php:481
+msgid "Height in pixel when not on fullscreen"
+msgstr "Hauteur en pixels hors plein écran"
+
+#: inc/admin/admin-settings.php:493 inc/elementor.php:188
+#: blocks/src/blocks.js:138
+msgid "Enable Inviting"
+msgstr "Activer les invitations"
+
+#: inc/admin/admin-settings.php:493
+msgid "Attendee can invite people"
+msgstr "Le participant peut inviter des personnes"
+
+#: inc/admin/admin-settings.php:505
+msgid "Welcome Page"
+msgstr "Page de bienvenue"
+
+#: inc/admin/admin-settings.php:505
+msgid "Enable/Disable welcome page"
+msgstr "Activer/Désactiver la page de bienvenue"
+
+#: inc/admin/admin-settings.php:518
+msgid "Yourself muted"
+msgstr "Micro coupé par défaut"
+
+#: inc/admin/admin-settings.php:518
+msgid "Start with yourself muted"
+msgstr "Démarrer avec votre micro coupé"
+
+#: inc/admin/admin-settings.php:530
+msgid "Audio Only"
+msgstr "Audio uniquement"
+
+#: inc/admin/admin-settings.php:530
+msgid "Start conference on audio only"
+msgstr "Démarrer la conférence en audio uniquement"
+
+#: inc/admin/admin-settings.php:543
+msgid "Audio Muted"
+msgstr "Audio coupé"
+
+#: inc/admin/admin-settings.php:543
+msgid "Participant after nth will be muted"
+msgstr "Le participant après le n-ième aura le micro coupé"
+
+#: inc/admin/admin-settings.php:556
+msgid "Start Silent"
+msgstr "Démarrer en silence"
+
+#: inc/admin/admin-settings.php:556
+msgid "Disable local audio output"
+msgstr "Désactiver la sortie audio locale"
+
+#: inc/admin/admin-settings.php:569
+msgid "Start Video Muted"
+msgstr "Démarrer sans vidéo"
+
+#: inc/admin/admin-settings.php:569
+msgid "Start call with video muted"
+msgstr "Démarrer l'appel avec la vidéo coupée"
+
+#: inc/admin/admin-settings.php:581 inc/elementor.php:176
+msgid "Screen Sharing"
+msgstr "Partage d'écran"
+
+#: inc/admin/admin-settings.php:581
+msgid "Enabling this feature allow you to share your screen while attending a meeting"
+msgstr "Activer cette fonctionnalité vous permet de partager votre écran lors d'une réunion"
+
+#: inc/admin/admin-settings.php:593
+msgid "Video Resolution"
+msgstr "Résolution vidéo"
+
+#: inc/admin/admin-settings.php:593
+msgid "Start with preferred resolution"
+msgstr "Démarrer avec la résolution préférée"
+
+#: inc/admin/admin-settings.php:614
+msgid "Max Full Resolution"
+msgstr "Résolution maximale"
+
+#: inc/admin/admin-settings.php:614
+msgid "Number of participant with default resolution"
+msgstr "Nombre de participants avec la résolution par défaut"
+
+#: inc/admin/admin-settings.php:627
+msgid "Video Muted After"
+msgstr "Vidéo coupée après"
+
+#: inc/admin/admin-settings.php:627
+msgid "Every participant after nth will start video muted"
+msgstr "Chaque participant après le n-ième démarrera sans vidéo"
+
+#: inc/admin/admin-settings.php:640
+msgid "Enable Livestream"
+msgstr "Activer le direct"
+
+#: inc/admin/admin-settings.php:640
+msgid "Turn on livestreaming"
+msgstr "Activer la diffusion en direct"
+
+#: inc/admin/admin-settings.php:653
+msgid "Enable Recording"
+msgstr "Activer l'enregistrement"
+
+#: inc/admin/admin-settings.php:653
+msgid "Turn on to record the meeting"
+msgstr "Activer pour enregistrer la réunion"
+
+#: inc/admin/admin-settings.php:666
+msgid "Enable Outbound"
+msgstr "Activer les appels sortants"
+
+#: inc/admin/admin-settings.php:666
+msgid "Allow outbound on the meeting"
+msgstr "Autoriser les appels sortants lors de la réunion"
+
+#: inc/admin/admin-settings.php:679
+msgid "Enable Transcription"
+msgstr "Activer la transcription"
+
+#: inc/admin/admin-settings.php:679
+msgid "Transcript the meeting"
+msgstr "Transcrire la réunion"
+
+#: inc/admin/admin-settings.php:692
+msgid "Hide Jitsi Sidebar"
+msgstr "Masquer la barre latérale Jitsi"
+
+#: inc/admin/admin-settings.php:692
+msgid "Enable to hide Jitsi sidebar from Jitsi Meeting room"
+msgstr "Activer pour masquer la barre latérale dans la salle de réunion Jitsi"
+
+#: inc/admin/admin-settings.php:706
+msgid "Simulcast"
+msgstr "Simulcast"
+
+#: inc/admin/admin-settings.php:706
+msgid "Enable/Disable simulcast"
+msgstr "Activer/Désactiver le simulcast"
+
+#: inc/admin/admin-settings.php:719
+msgid "Enable Whiteboard"
+msgstr "Activer le tableau blanc"
+
+#: inc/admin/admin-settings.php:719
+msgid "Enable to use the whiteboard on Jass 8x8"
+msgstr "Activer pour utiliser le tableau blanc sur Jass 8x8"
+
+#: inc/admin/admin-settings.php:733
+msgid "Enable to Change Post-type Slug"
+msgstr "Activer le changement de l'identifiant (slug)"
+
+#: inc/admin/admin-settings.php:733
+msgid "You can enable/disable custom slug"
+msgstr "Vous pouvez activer/désactiver le slug personnalisé"
+
+#: inc/admin/class-admin.php:74 inc/admin/class-admin.php:104
+msgid "Invalid request"
+msgstr "Requête non valide"
+
+#: inc/admin/class-admin.php:80 inc/admin/class-admin.php:110
+#: inc/admin/class-admin.php:135
+msgid "You do not have permission to do this action"
+msgstr "Vous n'avez pas l'autorisation d'effectuer cette action"
+
+#: inc/admin/class-admin.php:170 inc/admin/class-admin.php:353
+msgid "Documentation"
+msgstr "Documentation"
+
+#: inc/admin/class-admin.php:178
+msgid "Jitsi Meet Welcome"
+msgstr "Bienvenue sur Jitsi Meet"
+
+#: inc/admin/class-admin.php:187
+msgid "APP Settings"
+msgstr "Paramètres de l'APP"
+
+#: inc/admin/class-admin.php:196 inc/admin/class-admin.php:201
+#: inc/admin/class-admin.php:701
+msgid "Add-ons"
+msgstr "Extensions"
+
+#: inc/admin/class-admin.php:202
+msgid "New"
+msgstr "Nouveau"
+
+#: inc/admin/class-admin.php:212 init.php:189
+msgid "Upgrade to Ultimate"
+msgstr "Passer à Ultimate"
+
+#: inc/admin/class-admin.php:251
+msgid "Gutenberg"
+msgstr "Gutenberg"
+
+#: inc/admin/class-admin.php:256
+msgid "Elementor"
+msgstr "Elementor"
+
+#: inc/admin/class-admin.php:261
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: inc/admin/class-admin.php:272
+msgid "How to set a conference room"
+msgstr "Comment configurer une salle de conférence"
+
+#: inc/admin/class-admin.php:273
+msgid "Very simple and easy steps"
+msgstr "Étapes très simples et faciles"
+
+#: inc/admin/class-admin.php:277
+msgid "While you are on the post/page edit screen click on gutenberg plus icon to add a new gutenberg block"
+msgstr "Sur l'écran d'édition, cliquez sur l'icône + de Gutenberg pour ajouter un nouveau bloc"
+
+#: inc/admin/class-admin.php:279
+msgid "Add new gutenberg block on page"
+msgstr "Ajouter un nouveau bloc Gutenberg sur la page"
+
+#: inc/admin/class-admin.php:283
+msgid "Add \"Jitsi Meet\" from \"Embeds\" category"
+msgstr "Ajoutez \"Jitsi Meet\" depuis la catégorie \"Contenus embarqués\""
+
+#: inc/admin/class-admin.php:285
+msgid "Add Jitsi Meet from Embeds category"
+msgstr "Ajouter Jitsi Meet depuis la catégorie Contenus embarqués"
+
+#: inc/admin/class-admin.php:289
+msgid "Set width and height and you are done"
+msgstr "Réglez la largeur et la hauteur et le tour est joué"
+
+#: inc/admin/class-admin.php:291 inc/admin/class-admin.php:311
+#: inc/admin/class-admin.php:332
+msgid "Jitsi Meet Settings"
+msgstr "Paramètres Jitsi Meet"
+
+#: inc/admin/class-admin.php:298
+msgid "How to set with elementor"
+msgstr "Comment configurer avec Elementor"
+
+#: inc/admin/class-admin.php:299
+msgid "Setup a video conference room with elementor"
+msgstr "Configurer une salle de vidéoconférence avec Elementor"
+
+#: inc/admin/class-admin.php:303
+msgid "While you are on elementor edit screen drag and drop <strong>Jitsi Meet</strong> element to your page"
+msgstr "Sur l'écran d'édition Elementor, glissez-déposez l'élément <strong>Jitsi Meet</strong> sur votre page"
+
+#: inc/admin/class-admin.php:305
+msgid "Add new jitsi meet element on page"
+msgstr "Ajouter un nouvel élément Jitsi Meet sur la page"
+
+#: inc/admin/class-admin.php:309
+msgid "Set name, width, height etc and you are done"
+msgstr "Réglez le nom, la largeur, la hauteur, etc. et le tour est joué"
+
+#: inc/admin/class-admin.php:318
+msgid "How to set with shortcode"
+msgstr "Comment configurer avec un shortcode"
+
+#: inc/admin/class-admin.php:319
+msgid "Setup a video conference room with shortcode"
+msgstr "Configurer une salle de vidéoconférence avec un shortcode"
+
+#: inc/admin/class-admin.php:321
+msgid "Write down the shortcode below and set width, height and name of conference"
+msgstr "Écrivez le shortcode ci-dessous et réglez la largeur, la hauteur et le nom de la conférence"
+
+#: inc/admin/class-admin.php:323
+msgid "Click on shortcode to copy"
+msgstr "Cliquez sur le shortcode pour le copier"
+
+#: inc/admin/class-admin.php:327
+msgid "name:"
+msgstr "nom :"
+
+#: inc/admin/class-admin.php:327
+msgid "A unique name to generate the url of the room"
+msgstr "Un nom unique pour générer l'URL de la salle"
+
+#: inc/admin/class-admin.php:328
+msgid "width:"
+msgstr "largeur :"
+
+#: inc/admin/class-admin.php:328
+msgid "Width of the jitsi meet embedded"
+msgstr "Largeur du Jitsi Meet intégré"
+
+#: inc/admin/class-admin.php:329
+msgid "height:"
+msgstr "hauteur :"
+
+#: inc/admin/class-admin.php:329
+msgid "Height of the jitsi meet embedded"
+msgstr "Hauteur du Jitsi Meet intégré"
+
+#: inc/admin/class-admin.php:353
+msgid "How to embed"
+msgstr "Comment intégrer"
+
+#: inc/admin/class-admin.php:355
+msgid "API Settings"
+msgstr "Paramètres de l'API"
+
+#: inc/admin/class-admin.php:355
+msgid "Authenticate with JAAS"
+msgstr "S'authentifier avec JAAS"
+
+#: inc/admin/class-admin.php:357
+msgid "Admin Settings"
+msgstr "Paramètres d'administration"
+
+#: inc/admin/class-admin.php:357
+msgid "Username, email, avatar etc."
+msgstr "Nom d'utilisateur, e-mail, avatar etc."
+
+#: inc/admin/class-admin.php:359
+msgid "Configurations"
+msgstr "Configurations"
+
+#: inc/admin/class-admin.php:359
+msgid "Width, height, recording etc..."
+msgstr "Largeur, hauteur, enregistrement etc..."
+
+#: inc/admin/class-admin.php:361
+msgid "Audio Settings"
+msgstr "Paramètres audio"
+
+#: inc/admin/class-admin.php:361
+msgid "Initial audio configurations..."
+msgstr "Configurations audio initiales..."
+
+#: inc/admin/class-admin.php:363
+msgid "Video Settings"
+msgstr "Paramètres vidéo"
+
+#: inc/admin/class-admin.php:363
+msgid "Initial video configurations..."
+msgstr "Configurations vidéo initiales..."
+
+#: inc/admin/class-admin.php:509
+msgid "Welcome to FlexMeeting"
+msgstr "Bienvenue sur FlexMeeting"
+
+#: inc/admin/class-admin.php:510
+msgid "Select for which kind of api you want to use with our plugin and give credential accordingly."
+msgstr "Sélectionnez le type d'API que vous souhaitez utiliser et fournissez les informations d'identification correspondantes."
+
+#: inc/admin/class-admin.php:525
+msgid "How to select Jitsi Meet server?"
+msgstr "Comment sélectionner le serveur Jitsi Meet ?"
+
+#: inc/admin/class-admin.php:633
+msgid "Or, Go Fully Branded - Zero Server Setup!"
+msgstr "Ou passez en marque blanche - sans installation de serveur !"
+
+#: inc/admin/class-admin.php:640
+msgid "With Your Branding, Your Rules!"
+msgstr "Votre marque, vos règles !"
+
+#: inc/admin/class-admin.php:643
+msgid "Host Secure Video Meetings Under Your Own Domain."
+msgstr "Hébergez des réunions vidéo sécurisées sous votre propre domaine."
+
+#: inc/admin/class-admin.php:649
+msgid "Fully branded under your domain"
+msgstr "Entièrement à votre image sous votre domaine"
+
+#: inc/admin/class-admin.php:653
+msgid "Zero server setup required"
+msgstr "Aucune installation de serveur requise"
+
+#: inc/admin/class-admin.php:657
+msgid "Unlimited high-quality meetings"
+msgstr "Réunions illimitées de haute qualité"
+
+#: inc/admin/class-admin.php:661
+msgid "No technical hassle"
+msgstr "Pas de tracas technique"
+
+#: inc/admin/class-admin.php:666
+msgid "Explore Hosted Jitsi"
+msgstr "Explorer Jitsi hébergé"
+
+#: inc/admin/class-admin.php:674
+msgid "Jitsi Meeting Interface"
+msgstr "Interface de réunion Jitsi"
+
+#: inc/admin/class-admin.php:702
+msgid "Add your favourite add-ons and supercharge your workflow"
+msgstr "Ajoutez vos extensions préférées et boostez votre productivité"
+
+#: inc/admin/class-admin.php:716
+msgid "Multivendor Addon for FlexMeeting"
+msgstr "Extension Multivendeur pour FlexMeeting"
+
+#: inc/admin/class-admin.php:717
+msgid "Power up your multi-vendor experience & create meetings right from your vendor dashboard. Elevate your store with monetizable video meetings."
+msgstr "Boostez votre expérience multivendeur et créez des réunions directement depuis votre tableau de bord vendeur. Valorisez votre boutique avec des réunions vidéo monétisables."
+
+#: inc/admin/class-admin.php:724 inc/admin/class-admin.php:760
+msgid "Not activate"
+msgstr "Non activé"
+
+#: inc/admin/class-admin.php:726 inc/admin/class-admin.php:762
+#: inc/admin/licence-cta.php:13
+msgid "Activate"
+msgstr "Activer"
+
+#: inc/admin/class-admin.php:745
+msgid "FlexMeeting Frontend Addon"
+msgstr "Extension Frontend FlexMeeting"
+
+#: inc/admin/class-admin.php:748
+msgid "Easily create Jitsi meetings from the frontend without accessing the admin dashboard."
+msgstr "Créez facilement des réunions Jitsi depuis le frontend sans passer par le tableau de bord admin."
+
+#: inc/admin/licence-cta.php:11
+msgid "Please activate your license"
+msgstr "Veuillez activer votre licence"
+
+#: inc/admin/mannage-callback.php:182
+msgid " New "
+msgstr " Nouveau "
+
+#: inc/admin/mannage-callback.php:290
+msgid "Preview Image Upload"
+msgstr "Aperçu de l'image téléchargée"
+
+#: inc/admin/mannage-callback.php:298
+msgid "Upload an image"
+msgstr "Télécharger une image"
+
+#: inc/admin/mannage-callback.php:323
+msgid "Some settings like Company Logo, Background etc are currently not available via api. You can set your company logo, background etc from the"
+msgstr "Certains paramètres comme le logo de l'entreprise, l'arrière-plan, etc. ne sont pas encore disponibles via l'API. Vous pouvez les configurer depuis la"
+
+#: inc/admin/mannage-callback.php:323
+msgid "jaas console"
+msgstr "console JaaS"
+
+#: inc/elementor.php:67 blocks/src/blocks.js:166
+msgid "Jitsi Meet"
+msgstr "Jitsi Meet"
+
+#: inc/elementor.php:108
+msgid "Configuration"
+msgstr "Configuration"
+
+#: inc/elementor.php:115 blocks/src/blocks.js:69
+msgid "Name"
+msgstr "Nom"
+
+#: inc/elementor.php:118
+msgid "Meeting name here"
+msgstr "Nom de la réunion"
+
+#: inc/elementor.php:125 blocks/src/blocks.js:107
+msgid "Width"
+msgstr "Largeur"
+
+#: inc/elementor.php:140 blocks/src/blocks.js:115
+msgid "Height"
+msgstr "Hauteur"
+
+#: inc/elementor.php:152
+msgid "Start audio muted"
+msgstr "Démarrer avec l'audio coupé"
+
+#: inc/elementor.php:164
+msgid "Start video muted"
+msgstr "Démarrer avec la vidéo coupée"
+
+#: inc/jitsi-topbar.php:193
+msgid "New: Host Branded Jitsi Meetings - No Server Needed!"
+msgstr "Nouveau : Hébergez des réunions Jitsi à votre image - Aucun serveur requis !"
+
+#: inc/jitsi-topbar.php:198
+msgid "Explore now"
+msgstr "Explorer maintenant"
+
+#: inc/jitsi-topbar.php:205
+msgid "Close notification"
+msgstr "Fermer la notification"
+
+#: inc/jitsi-topbar.php:312
+msgid "Invalid nonce"
+msgstr "Nonce non valide"
+
+#: inc/jitsi-topbar.php:317
+msgid "Insufficient permissions"
+msgstr "Permissions insuffisantes"
+
+#: inc/jitsi-topbar.php:324
+msgid "Topbar dismissed successfully"
+msgstr "Barre supérieure fermée avec succès"
+
+#: inc/jitsi-topbar.php:326
+msgid "Failed to dismiss topbar"
+msgstr "Échec de la fermeture de la barre supérieure"
+
+#: inc/jitsi-topbar.php:344
+msgid "Security check failed"
+msgstr "Échec du contrôle de sécurité"
+
+#: inc/jitsi-topbar.php:349
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Vous n'avez pas les permissions suffisantes pour accéder à cette page."
+
+#: inc/wppool/class-plugin.php:328
+msgid "Deal Ends In"
+msgstr "L'offre se termine dans"
+
+#: inc/wppool/class-plugin.php:333 inc/wppool/class-plugin.php:342
+#: inc/wppool/class-plugin.php:351 inc/wppool/class-plugin.php:360
+msgid "00"
+msgstr "00"
+
+#: inc/wppool/class-plugin.php:336
+msgid "Days"
+msgstr "Jours"
+
+#: inc/wppool/class-plugin.php:345
+msgid "Hours"
+msgstr "Heures"
+
+#: inc/wppool/class-plugin.php:354
+msgid "Minutes"
+msgstr "Minutes"
+
+#: inc/wppool/class-plugin.php:363
+msgid "Seconds"
+msgstr "Secondes"
+
+#: inc/wppool/class-plugin.php:370
+msgid "Upgrade to Pro"
+msgstr "Passer à la version Pro"
+
+#: inc/wppool/class-plugin.php:374
+msgid "Try a free demo"
+msgstr "Essayer une démo gratuite"
+
+#: jitsi-meet-wp.php:154
+msgid "Grab Your Deals"
+msgstr "Profitez de vos offres"
+
+#: templates/admin/affiliate-notice.php:15
+msgid "Hey! Enjoying <b>Jitsi Meet WP </b> plugin? Join our <a href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" class=\"affiliate-notice-link\">influencer program  </a> to make money from your social media content. You can also check our <a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" class=\"affiliate-notice-link\">affiliate program  </a> to get a 25%% commission on every sale!"
+msgstr "Hé ! Vous appréciez l'extension <b>Jitsi Meet WP</b> ? Rejoignez notre <a href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" class=\"affiliate-notice-link\">programme d'influenceurs</a> pour gagner de l'argent avec vos contenus sur les réseaux sociaux. Vous pouvez aussi consulter notre <a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" class=\"affiliate-notice-link\">programme d'affiliation</a> pour obtenir 25%% de commission sur chaque vente !"
+
+#: templates/admin/affiliate-notice.php:20
+msgid "Tell me more "
+msgstr "En savoir plus "
+
+#: templates/admin/affiliate-notice.php:29 templates/admin/review-notice.php:36
+msgid "Would you like us to remind you about this later?"
+msgstr "Souhaitez-vous que nous vous le rappelions plus tard ?"
+
+#: templates/admin/affiliate-notice.php:32 templates/admin/review-notice.php:39
+msgid "Remind me in 3 days"
+msgstr "Me le rappeler dans 3 jours"
+
+#: templates/admin/affiliate-notice.php:33 templates/admin/review-notice.php:40
+msgid "Remind me in 10 days"
+msgstr "Me le rappeler dans 10 jours"
+
+#: templates/admin/affiliate-notice.php:34 templates/admin/review-notice.php:42
+msgid "Don't remind me about this"
+msgstr "Ne plus me le rappeler"
+
+#: templates/admin/review-notice.php:17
+msgid ""
+"Hi there, it seems like Jitsi Meet WP is bringing you some value, and that is pretty awesome!\r\n"
+"    Can you please show us some love and rate Jitsi Meet WP on WordPress? It will take two minutes of your time, and will really help us spread the world."
+msgstr "Bonjour ! Il semble que Jitsi Meet WP vous soit utile, et c'est génial ! Pourriez-vous nous montrer votre soutien et noter Jitsi Meet WP sur WordPress ? Cela ne prendra que deux minutes de votre temps et nous aidera vraiment à faire connaître l'extension."
+
+#: templates/admin/review-notice.php:26
+msgid "I'd love to help :)"
+msgstr "Je serais ravi d'aider :)"
+
+#: templates/admin/review-notice.php:29
+msgid "Not this time"
+msgstr "Pas cette fois"
+
+#: templates/admin/review-notice.php:31
+msgid "I've already rated you"
+msgstr "Je vous ai déjà noté"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:170
+msgid "jitsi"
+msgstr "jitsi"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:171
+msgid "meeting"
+msgstr "meeting"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:172
+msgid "video"
+msgstr "video"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:173
+msgid "conference"
+msgstr "conference"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:174
+msgid "zoom"
+msgstr "zoom"
+
+#: blocks/src/blocks.js:75
+msgid "Domain"
+msgstr "Domaine"
+
+#: blocks/src/blocks.js:82
+msgid "Config from global"
+msgstr "Configuration globale"
+
+#: blocks/src/blocks.js:123
+msgid "Start with audio muted"
+msgstr "Démarrer avec l'audio coupé"
+
+#: blocks/src/blocks.js:128
+msgid "Start with video muted"
+msgstr "Démarrer avec la vidéo coupée"
+
+#: blocks/src/blocks.js:133
+msgid "Start with screen sharing"
+msgstr "Démarrer avec le partage d'écran"
+
+#: blocks/src/blocks.js:157
+msgid "Room name:"
+msgstr "Nom de la salle :"
+
+#: blocks/src/blocks.js:158
+msgid "Domain :"
+msgstr "Domaine :"
+
+#: inc/admin/class-admin.php:188 init.php:188 blocks/src/blocks.js:67
+msgid "Settings"
+msgstr "Paramètres"
+
+#: inc/admin/class-admin.php:454
+msgid "Self hosted domain missing"
+msgstr "Domaine auto-hébergé manquant"
+
+#: inc/admin/class-admin.php:458
+msgid "App id missing"
+msgstr "ID d'application manquant"
+
+#: inc/admin/class-admin.php:461
+msgid "Api key is missing"
+msgstr "Clé API manquante"
+
+#: inc/admin/class-admin.php:464
+msgid "Private key is missing"
+msgstr "Clé privée manquante"
+
+#: inc/admin/class-admin.php:518
+msgid "Skip"
+msgstr "Passer"
+
+#: inc/admin/class-admin.php:520
+msgid "Continue"
+msgstr "Continuer"
+
+#: inc/admin/class-admin.php:571 inc/admin/class-admin.php:584
+#: inc/admin/class-admin.php:597 inc/admin/class-admin.php:610
+#: inc/admin/class-admin.php:622
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
+
+msgid "Default (Public Hosting)"
+msgstr "Hébergement public par défaut"
+
+msgid "Use the default public Jitsi"
+msgstr "Utiliser l'hébergement Jitsi public par défaut"
+
+msgid "Managed Branded Meeting"
+msgstr "Réunion de marque gérée"
+
+msgid "We host and maintain your branded server"
+msgstr "Nous hébergeons et maintenons votre serveur de marque"
+
+msgid "Jitsi as a Service (8x8 JaaS)"
+msgstr "Jitsi en tant que service (8x8 JaaS)"
+
+msgid "Use your JaaS credentials"
+msgstr "Utilisez vos identifiants JaaS"
+
+msgid "Self-Hosted"
+msgstr "Auto-hébergé"
+
+msgid "Connect your self-hosted server"
+msgstr "Connectez votre serveur auto-hébergé"
+
+msgid "Choose where your meetings will run:"
+msgstr "Choisissez où vos réunions seront exécutées :"
+
+msgid "Save & Test Connection"
+msgstr "Enregistrer et tester la connexion"
+
+msgid "Domain changed. Please re-test connection."
+msgstr "Domaine modifié. Veuillez tester à nouveau la connexion."
+
+msgid "Connecting..."
+msgstr "Connexion en cours..."
+
+msgid "Connected. Meetings will run on"
+msgstr "Connecté. Les réunions s'exécuteront sur"
+
+msgid "Disconnect"
+msgstr "Déconnecter"
+
+msgid "We couldn't reach this server. Please double-check the URL or try again."
+msgstr "Nous n'avons pas pu joindre ce serveur. Veuillez vérifier l'URL ou réessayer."
+
+msgid "Disconnecting..."
+msgstr "Déconnexion..."
+
+msgid "Disconnect failed"
+msgstr "Échec de la déconnexion"
+
+msgid "Error: Could not reach the server."
+msgstr "Erreur : Impossible de joindre le serveur."
+
+msgid "🎁"
+msgstr "🎁"
+
+msgid "Benefits:"
+msgstr "Avantages :"
+
+msgid "Need help setting up your branded server?"
+msgstr "Besoin d'aide pour configurer votre serveur de marque ?"
+
+msgid "How Hosted Meetings works?"
+msgstr "Comment fonctionnent les réunions hébergées ?"
+
+msgid "Default Public Hosting"
+msgstr "Hébergement public par défaut"
+
+msgid "Select a public domain to run your meeting."
+msgstr "Sélectionnez un domaine public pour exécuter votre réunion."
+
+msgid "Completely Free to Use"
+msgstr "Totalement gratuit à utiliser"
+
+msgid "Instant Setup"
+msgstr "Configuration instantanée"
+
+msgid "No Account Required"
+msgstr "Aucun compte requis"
+
+msgid "Standard Privacy Features"
+msgstr "Fonctionnalités de confidentialité standard"
+
+msgid "Your Branded Meeting Server"
+msgstr "Votre serveur de réunion de marque"
+
+msgid "Branded Meetings, Zero Server Hassle!"
+msgstr "Réunions de marque, sans tracas de serveur !"
+
+msgid "Get your own private branded meeting server (logo + brand name). We'll host and maintain it - just paste your Hosted Server Domain URL below and enjoy your branded meetings."
+msgstr "Obtenez votre propre serveur de réunion de marque privée (logo + nom de la marque). Nous l'hébergeons et le maintenons - collez simplement l'URL du domaine de votre serveur hébergé ci-dessous et profitez de vos réunions de marque."
+
+msgid "e.g. https://yourbrand.jitsihosted.com"
+msgstr "ex. https://votremarque.jitsihosted.com"
+
+msgid "✅"
+msgstr "✅"
+
+msgid "Don't have a Hosted Server URL yet? "
+msgstr "Vous n'avez pas encore d'URL de serveur hébergé ? "
+
+msgid "Request setup now →"
+msgstr "Demander la configuration maintenant →"
+
+msgid "Hosted Server Domain:"
+msgstr "Domaine du serveur hébergé :"
+
+msgid "<strong>Request</strong> your branded setup first (<a href=\\\"#\\\">request now →</a>)"
+msgstr "<strong>Demandez</strong> d'abord votre configuration de marque (<a href=\\\"#\\\">demander maintenant →</a>)"
+
+msgid "<strong>We set it up</strong> and email your Hosted Server URL"
+msgstr "<strong>Nous le configurons</strong> et vous envoyons l'URL de votre serveur hébergé par e-mail"
+
+msgid "<strong>Paste the URL here</strong> → Save & Test → meetings start running on your hosted server"
+msgstr "<strong>Collez l'URL ici</strong> → Enregistrer et tester → les réunions commencent à s'exécuter sur votre serveur hébergé"
+
+msgid "🤩"
+msgstr "🤩"
+
+msgid "That's it - no technical setup needed from you. Wahhhhhhhhhh!"
+msgstr "C'est tout - aucune configuration technique requise de votre part. Génial !"
+
+msgid "Complete Privacy and Control over your data"
+msgstr "Confidentialité et contrôle total de vos données"
+
+msgid "Ultra-fast performance with dedicated resources"
+msgstr "Performances ultra-rapides avec des ressources dédiées"
+
+msgid "Global reach with low-latency server locations"
+msgstr "Portée mondiale avec des emplacements de serveurs à faible latence"
+
+msgid "99.9% Uptime guarantee with 24/7 monitoring"
+msgstr "Garantie de disponibilité de 99,9 % avec surveillance 24h/24 et 7j/7"
+
+msgid "Scalable to hundreds of concurrent participants"
+msgstr "Évolutif pour des centaines de participants simultanés"
+
+msgid "End-to-end encryption and advanced security"
+msgstr "Chiffrement de bout en bout et sécurité avancée"
+
+msgid "Request branded meeting server for FREE!"
+msgstr "Demandez GRATUITEMENT un serveur de réunion de marque !"
+
+msgid "What is a self-hosted FlexMeeting server?"
+msgstr "Qu'est-ce qu'un serveur FlexMeeting auto-hébergé ?"
+
+msgid "A self-hosted Jitsi server means the entire video conferencing system runs on your own server or hosting environment, not on Jitsi's public infrastructure. This gives you full control, privacy, and customization flexibility."
+msgstr "Un serveur Jitsi auto-hébergé signifie que l'ensemble du système de visioconférence s'exécute sur votre propre serveur ou environnement d'hébergement, et non sur l'infrastructure publique de Jitsi. Cela vous donne un contrôle total, une confidentialité et une flexibilité de personnalisation."
+
+msgid "Why should I use a self-hosted Jitsi server instead of using public Jitsi?"
+msgstr "Pourquoi devrais-je utiliser un serveur Jitsi auto-hébergé plutôt que le Jitsi public ?"
+
+msgid "Public servers like meet.jit.si are shared by millions. This can lead to performance issues, limited features, and a lack of branding. With your own server, you get dedicated resources, your own logo, and enhanced security."
+msgstr "Les serveurs publics comme meet.jit.si sont partagés par des millions de personnes. Cela peut entraîner des problèmes de performances, des fonctionnalités limitées et un manque de marque. Avec votre propre serveur, vous obtenez des ressources dédiées, votre propre logo et une sécurité renforcée."
+
+msgid "What do you provide in this service?"
+msgstr "Que fournissez-vous dans ce service ?"
+
+msgid "We provide complete installation, configuration, and maintenance of your Jitsi server. This includes automatic updates, performance monitoring, and SSL setup so you can focus on your meetings."
+msgstr "Nous fournissons l'installation, la configuration et la maintenance complètes de votre serveur Jitsi. Cela inclut les mises à jour automatiques, la surveillance des performances et la configuration SSL afin que vous puissiez vous concentrer sur vos réunions."
+
+msgid "Do I need technical knowledge to maintain the server?"
+msgstr "Ai-je besoin de connaissances techniques pour maintenir le serveur ?"
+
+msgid "Not at all! Our managed service is designed to be \\\"hands-off\\\" for you. We handle all the server-side complexity, security patches, and scaling."
+msgstr "Pas du tout ! Notre service géré est conçu pour être \\\"sans intervention\\\" de votre part. Nous gérons toute la complexité côté serveur, les correctifs de sécurité et la mise à l'échelle."
+
+msgid "What are the server requirements?"
+msgstr "Quelles sont les exigences du serveur ?"
+
+msgid "If you use our managed hosting, we provide the infrastructure. If you host it yourself, a basic server with 4GB RAM and 2 CPUs is usually enough for up to 20-30 concurrent users."
+msgstr "Si vous utilisez notre hébergement géré, nous fournissons l'infrastructure. Si vous l'hébergez vous-même, un serveur de base avec 4 Go de RAM et 2 processeurs est généralement suffisant pour 20 à 30 utilisateurs simultanés."
+
+msgid "Can I use this with my existing website or LMS?"
+msgstr "Puis-je l'utiliser avec mon site Web ou LMS existant ?"
+
+msgid "Yes! Our plugin integrates seamlessly with WordPress, LMS platforms, and other CMS. You can embed meetings directly into your pages."
+msgstr "Oui ! Notre plugin s'intègre parfaitement à WordPress, aux plates-formes LMS et à d'autres CMS. Vous pouvez intégrer des réunions directement dans vos pages."
+
+msgid "How long does it take to set everything up?"
+msgstr "Combien de temps faut-il pour tout mettre en place ?"
+
+msgid "Managed servers are usually ready within 24 hours. If you're using the \\\"Request\\\" option, we'll reach out to finalize the branding before deployment."
+msgstr "Les serveurs gérés sont généralement prêts dans les 24 heures. Si vous utilisez l'option \\\"Demande\\\", nous vous contacterons pour finaliser la marque avant le déploiement."
+
+msgid "Frequently Asked Questions"
+msgstr "Questions fréquemment posées"
+
+msgid "Jitsi as a Service (8x8)"
+msgstr "Jitsi en tant que service (8x8)"
+
+msgid "Paste private key content here"
+msgstr "Collez le contenu de la clé privée ici"
+
+msgid "Enterprise Grade Reliability"
+msgstr "Fiabilité de niveau entreprise"
+
+msgid "Advanced Analytics"
+msgstr "Analyses avancées"
+
+msgid "Global Low-latency Network"
+msgstr "Réseau mondial à faible latence"
+
+msgid "Secure Recorded Meetings"
+msgstr "Réunions enregistrées sécurisées"
+
+msgid "Self-Hosted Server"
+msgstr "Serveur auto-hébergé"
+
+msgid "Your Server Domain"
+msgstr "Le domaine de votre serveur"
+
+msgid "Enter your self-hosted Jitsi domain (e.g., meet.yourdomain.com)"
+msgstr "Entrez votre domaine Jitsi auto-hébergé (ex., meet.votredomaine.com)"
+
+msgid "Premium Feature"
+msgstr "Fonctionnalité Premium"
+
+msgid "Full Data Control"
+msgstr "Contrôle total des données"
+
+msgid "Custom Security Policies"
+msgstr "Politiques de sécurité personnalisées"
+
+msgid "No Third-party Tracking"
+msgstr "Aucun suivi tiers"
+
+msgid "Infrastructure Ownership"
+msgstr "Propriété de l'infrastructure"

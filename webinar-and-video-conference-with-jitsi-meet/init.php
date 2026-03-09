@@ -65,7 +65,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 		 */
 		public function __clone() {
 			// Cloning instances of the class is forbidden.
-			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'jitsi-meet-wp' ), '1.0.0' );
+			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'webinar-and-video-conference-with-jitsi-meet' ), '1.0.0' );
 		}
 
 		/**
@@ -80,7 +80,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 		 */
 		public function __wakeup() {
 			// Unserializing instances of the class is forbidden.
-			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'jitsi-meet-wp' ), '1.0.0' );
+			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'webinar-and-video-conference-with-jitsi-meet' ), '1.0.0' );
 		}
 
 		/**
@@ -93,13 +93,13 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 		 * @access public
 		 */
 		public function __construct() {
-			add_action( 'init', array( $this, 'i18n' ) );
 			add_action( 'admin_notices', array( $this, 'print_notices' ), 15 );
 			add_filter( 'clean_url', array( $this, 'add_async_forscript' ), 11, 1 );
 			add_action( 'admin_enqueue_scripts', array( $this, 'jitsi_meet_wp_editor_scripts' ) );
 			$this->jitsi_meet_wp_admin_files();
 			add_filter( 'plugin_action_links_' . plugin_basename( JITSI_MEET_WP__FILE__ ), array( $this, 'jitsi_meet_add_action_links' ) );
-			add_shortcode( 'jitsi-meet-wp', array( $this, 'jitsi_shortcode_render' ) );
+			add_shortcode( 'webinar-and-video-conference-with-jitsi-meet', array( $this, 'jitsi_shortcode_render' ) );
+			add_shortcode( 'jitsi-meet-wp', array( $this, 'jitsi_shortcode_render' ) ); // Short alias
 			$this->jitsi_init_elementor();
 		}
 
@@ -185,8 +185,8 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 		 */
 		public function jitsi_meet_add_action_links( $actions ) {
 			$mylinks = array(
-				'<a href="' . esc_url( admin_url( 'admin.php?page=jitsi-meet' ) ) . '">' . esc_html( 'Settings' ) . '</a>',
-				'<a class="special-action-link" target="_blank" href="' . esc_url( 'https://go.wppool.dev/Gv5' ) . '">' . esc_html( 'Upgrade to Ultimate' ) . '</a>',
+				'<a href="' . esc_url( admin_url( 'admin.php?page=jitsi-meet' ) ) . '">' . esc_html__( 'Settings', 'webinar-and-video-conference-with-jitsi-meet' ) . '</a>',
+				'<a class="special-action-link" target="_blank" href="' . esc_url( 'https://go.wppool.dev/Gv5' ) . '">' . esc_html__( 'Upgrade to Ultimate', 'webinar-and-video-conference-with-jitsi-meet' ) . '</a>',
 			);
 			$actions = array_merge( $actions, $mylinks );
 			return $actions;
@@ -202,7 +202,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 		 * @access public
 		 */
 		public function i18n() {
-			load_plugin_textdomain( 'jitsi-meet-wp', false, plugin_basename( __DIR__ ) . '/languages' );
+			load_plugin_textdomain( 'webinar-and-video-conference-with-jitsi-meet', false, plugin_basename( JITSI_MEET_WP_DIR_PATH ) . '/languages' );
 		}
 
 		/**

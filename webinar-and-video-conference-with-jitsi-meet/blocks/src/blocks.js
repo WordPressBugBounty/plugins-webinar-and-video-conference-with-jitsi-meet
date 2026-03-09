@@ -64,22 +64,22 @@ class EditBlock extends Component {
     return (
       <Fragment>
         <InspectorControls>
-          <PanelBody title={__('Settings')} initialOpen={true}>
+          <PanelBody title={__('Settings', 'webinar-and-video-conference-with-jitsi-meet')} initialOpen={true}>
             <TextControl
-              label={__('Name')}
+              label={__('Name', 'webinar-and-video-conference-with-jitsi-meet')}
               value={name}
               onChange={(val) => setAttributes({ name: val })}
             />
 
             <TextControl
-              label={__('Domain')}
+              label={__('Domain', 'webinar-and-video-conference-with-jitsi-meet')}
               value={domain}
               onChange={(val) => setAttributes({ domain: val })}
               disabled={true}
             />
 
             <CheckboxControl
-              label={__('Config from global')}
+              label={__('Config from global', 'webinar-and-video-conference-with-jitsi-meet')}
               checked={fromGlobal}
               onChange={(val) => {
                 setAttributes({ fromGlobal: val });
@@ -104,7 +104,7 @@ class EditBlock extends Component {
             {!fromGlobal && (
               <div>
                 <RangeControl
-                  label={__('Width')}
+                  label={__('Width', 'webinar-and-video-conference-with-jitsi-meet')}
                   value={width}
                   onChange={(val) => setAttributes({ width: val })}
                   min={100}
@@ -112,7 +112,7 @@ class EditBlock extends Component {
                   step={10}
                 />
                 <RangeControl
-                  label={__('Height')}
+                  label={__('Height', 'webinar-and-video-conference-with-jitsi-meet')}
                   value={height}
                   onChange={(val) => setAttributes({ height: val })}
                   min={100}
@@ -120,22 +120,22 @@ class EditBlock extends Component {
                   step={10}
                 />
                 <CheckboxControl
-                  label={__('Start with audio muted')}
+                  label={__('Start with audio muted', 'webinar-and-video-conference-with-jitsi-meet')}
                   checked={audioMuted}
                   onChange={(val) => setAttributes({ audioMuted: val })}
                 />
                 <CheckboxControl
-                  label={__('Start with video muted')}
+                  label={__('Start with video muted', 'webinar-and-video-conference-with-jitsi-meet')}
                   checked={videoMuted}
                   onChange={(val) => setAttributes({ videoMuted: val })}
                 />
                 <CheckboxControl
-                  label={__('Start with screen sharing')}
+                  label={__('Start with screen sharing', 'webinar-and-video-conference-with-jitsi-meet')}
                   checked={screenSharing}
                   onChange={(val) => setAttributes({ screenSharing: val })}
                 />
                 <CheckboxControl
-                  label={__('Enable Inviting')}
+                  label={__('Enable Inviting', 'webinar-and-video-conference-with-jitsi-meet')}
                   checked={invite}
                   onChange={(val) => setAttributes({ invite: val })}
                 />
@@ -154,8 +154,8 @@ class EditBlock extends Component {
           data-screen={screenSharing}
           data-invite={invite}
         >
-         <span> Room name: {name}</span> <br></br>
-         <span> Domain : {domain}</span>
+         <span> {__('Room name:', 'webinar-and-video-conference-with-jitsi-meet')} {name}</span> <br></br>
+         <span> {__('Domain :', 'webinar-and-video-conference-with-jitsi-meet')} {domain}</span>
           </div>
       </Fragment>
     );
@@ -163,15 +163,15 @@ class EditBlock extends Component {
 }
 
 registerBlockType('jitsi-meet-wp/jitsi-meet', {
-  title: __('Jitsi Meet', 'jitsi-meet-wp'),
+  title: __('Jitsi Meet', 'webinar-and-video-conference-with-jitsi-meet'),
   icon: blockIcon,
   category: 'embed',
   keywords: [
-    __('jitsi', 'jitsi-meet-wp'),
-    __('meeting', 'jitsi-meet-wp'),
-    __('video', 'jitsi-meet-wp'),
-    __('conference', 'jitsi-meet-wp'),
-    __('zoom', 'jitsi-meet-wp'),
+    __('jitsi', 'webinar-and-video-conference-with-jitsi-meet'),
+    __('meeting', 'webinar-and-video-conference-with-jitsi-meet'),
+    __('video', 'webinar-and-video-conference-with-jitsi-meet'),
+    __('conference', 'webinar-and-video-conference-with-jitsi-meet'),
+    __('zoom', 'webinar-and-video-conference-with-jitsi-meet'),
   ],
   attributes: {
     name: {
