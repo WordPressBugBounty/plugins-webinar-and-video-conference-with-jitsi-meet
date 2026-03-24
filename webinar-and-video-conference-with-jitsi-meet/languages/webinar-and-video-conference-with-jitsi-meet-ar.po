@@ -4,11 +4,11 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/webinar-and-video-conference-with-"
 "jitsi-meet\n"
-"POT-Creation-Date: 2026-02-24T10:47:21+00:00\n"
-"PO-Revision-Date: 2026-03-11 16:15+0600\n"
+"POT-Creation-Date: 2026-02-24T10:47:22+00:00\n"
+"PO-Revision-Date: 2026-03-12 01:22+0600\n"
 "Last-Translator: Antigravity AI\n"
-"Language-Team: Indonesian <id_ID@li.org>\n"
-"Language: id_ID\n"
+"Language-Team: Arabic <ar@li.org>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: inc/admin/class-admin.php:255 inc/admin/class-admin.php:689
 #. Plugin Name of the plugin
 msgid "FlexMeeting"
-msgstr "FlexMeeting Ultimate"
+msgstr "فليكس ميتينج ألتيميت"
 
 #: jitsi-meet-wp.php
 #. Plugin URI of the plugin
@@ -32,8 +32,8 @@ msgid ""
 "Host live webinars, conferences, online classes, video calls directly on "
 "your WordPress website with gutenberg block"
 msgstr ""
-"Host webinar langsung, konferensi, kelas online, panggilan video langsung "
-"di situs web WordPress Anda dengan blok Gutenberg"
+"استضف ندوات مباشرة ومؤتمرات وفصولاً دراسية عبر الإنترنت ومكالمات فيديو "
+"مباشرة على موقع ووردبريس الخاص بك باستخدام قالب جوتنبرج"
 
 #: jitsi-meet-wp.php
 #. Author of the plugin
@@ -47,542 +47,536 @@ msgstr "https://wppool.dev"
 
 #: gutenberg-init.php:73 gutenberg-init.php:88 init.php:68 init.php:83
 msgid "Cheatin&#8217; huh?"
-msgstr "Lagi curang ya?"
+msgstr "هل تحاول الغش؟"
 
 #: inc/admin/admin-settings.php:275
 msgid "Default (Public Hosting)"
-msgstr "Default (Hosting Publik)"
+msgstr "(استضافة عامة) الافتراضي"
 
 #: inc/admin/admin-settings.php:276
 msgid "Use the default public Jitsi"
-msgstr "Gunakan Jitsi publik default"
+msgstr "استخدم Jitsi العام الافتراضي"
 
 #: inc/admin/admin-settings.php:279 inc/admin/mannage-callback.php:708
 msgid "Managed Branded Meeting"
-msgstr "Rapat Bermerek Terkelola"
+msgstr "اجتماع مُدار بعلامة تجارية"
 
 #: inc/admin/admin-settings.php:280
 msgid "We host and maintain your branded server"
-msgstr "Kami meng-host dan memelihara server bermerek Anda"
+msgstr "نحن نستضيف ونحافظ على الخادم الخاص بك"
 
 #: inc/admin/admin-settings.php:283
 msgid "Jitsi as a Service (8x8 JaaS)"
-msgstr "Jitsi sebagai Layanan (8x8 JaaS)"
+msgstr "Jitsi كخدمة (8x8 JaaS)"
 
 #: inc/admin/admin-settings.php:284
 msgid "Use your JaaS credentials"
-msgstr "Gunakan kredensial JaaS Anda"
+msgstr "استخدم بيانات اعتماد JaaS الخاصة بك"
 
 #: inc/admin/admin-settings.php:287
 msgid "Self-Hosted"
-msgstr "Di-host Sendiri"
+msgstr "استضافة ذاتية"
 
 #: inc/admin/admin-settings.php:288
 msgid "Connect your self-hosted server"
-msgstr "Hubungkan server yang Anda host sendiri"
+msgstr "قم بتوصيل خادم الاستضافة الذاتية الخاص بك"
 
 #: inc/admin/admin-settings.php:328
 msgid "User Email"
-msgstr "Email Pengguna"
+msgstr "البريد الإلكتروني للمستخدم"
 
 #: inc/admin/admin-settings.php:328
 msgid "Email address of admin"
-msgstr "Alamat email admin"
+msgstr "عنوان البريد الإلكتروني للمسؤول"
 
 #: inc/admin/admin-settings.php:340
 msgid "User Username"
-msgstr "Username Pengguna"
+msgstr "اسم المستخدم"
 
 #: inc/admin/admin-settings.php:340
 msgid "Username of the admin"
-msgstr "Username admin"
+msgstr "اسم المستخدم للمسؤول"
 
 #: inc/admin/admin-settings.php:352
 msgid "User Avatar"
-msgstr "Avatar Pengguna"
+msgstr "الصورة الشخصية"
 
 #: inc/admin/admin-settings.php:352
 msgid "The avatar url of the admin user"
-msgstr "URL avatar pengguna admin"
+msgstr "رابط الصورة الشخصية للمسؤول"
 
 #: inc/admin/admin-settings.php:359
 msgid "280x70px png, up to 4MB"
-msgstr "PNG 280x70px, hingga 4MB"
+msgstr "280x70 بكسل بصيغة png، حتى 4 ميجابايت"
 
 #: inc/admin/admin-settings.php:366
 msgid "Enable Moderator Access"
-msgstr "Aktifkan Akses Moderator"
+msgstr "تفعيل وصول المشرف"
 
 #: inc/admin/admin-settings.php:366
 msgid ""
 "Allow this user to join as a moderator in Jass 8x8 meetings (only users "
 "with edit access)"
 msgstr ""
-"Izinkan pengguna ini bergabung sebagai moderator dalam rapat Jass 8x8 "
-"(hanya pengguna dengan akses edit)"
+"السماح لهذا المستخدم بالانضمام كمشرف في اجتماعات Jass 8x8 (المستخدمون الذين "
+"لديهم صلاحية التعديل فقط)السماح لهذا المستخدم بالانضمام كمشرف في اجتماعات "
+"Jass 8x8 (فقط المستخدمون الذين لديهم صلاحية التعديل)"
 
 #: inc/admin/admin-settings.php:379
 msgid "Other Admin Config"
-msgstr "Konfigurasi Admin Lainnya"
+msgstr "إعدادات المسؤول الأخرى"
 
 #: inc/admin/admin-settings.php:379
 msgid "Those are on https://jaas.8x8.vc/#/branding"
-msgstr "Konfigurasi tersebut ada di https://jaas.8x8.vc/#/branding"
+msgstr "هذه الإعدادات متاحة على https://jaas.8x8.vc/#/branding"
 
 #: inc/admin/admin-settings.php:392
 msgid "Meeting Width"
-msgstr "Lebar Rapat"
+msgstr "عرض الاجتماع"
 
 #: inc/admin/admin-settings.php:392
 msgid "Width in pixel when not on fullscreen"
-msgstr "Lebar dalam piksel saat tidak dalam layar penuh"
+msgstr "العرض بالبكسل عندما لا يكون في وضع ملء الشاشة"
 
 #: inc/admin/admin-settings.php:404
 msgid "Meeting Height"
-msgstr "Tinggi Rapat"
+msgstr "ارتفاع الاجتماع"
 
 #: inc/admin/admin-settings.php:404
 msgid "Height in pixel when not on fullscreen"
-msgstr "Tinggi dalam piksel saat tidak dalam layar penuh"
+msgstr "الارتفاع بالبكسل عندما لا يكون في وضع ملء الشاشة"
 
-#: inc/admin/admin-settings.php:416 inc/elementor.php:188
-#: blocks/dist/blocks.build.js:289 blocks/src/blocks.js:138
+#: inc/admin/admin-settings.php:416 inc/elementor.php:188 blocks/dist/blocks.build.js:289
+#: blocks/src/blocks.js:138
 msgid "Enable Inviting"
-msgstr "Aktifkan Fitur Mengundang"
+msgstr "تفعيل الدعوات"
 
 #: inc/admin/admin-settings.php:416
 msgid "Attendee can invite people"
-msgstr "Peserta dapat mengundang orang lain"
+msgstr "يمكن للحضور دعوة أشخاص آخرين"
 
 #: inc/admin/admin-settings.php:428
 msgid "Welcome Page"
-msgstr "Halaman Selamat Datang"
+msgstr "صفحة الترحيب"
 
 #: inc/admin/admin-settings.php:428
 msgid "Enable/Disable welcome page"
-msgstr "Aktifkan/Nonaktifkan halaman selamat datang"
+msgstr "تفعيل/تعطيل صفحة الترحيب"
 
 #: inc/admin/admin-settings.php:441
 msgid "Yourself muted"
-msgstr "Mulai dengan mikrofon mati"
+msgstr "ابدأ والميكروفون مكتوم"
 
 #: inc/admin/admin-settings.php:441
 msgid "Start with yourself muted"
-msgstr "Mulai dengan mikrofon Anda dalam keadaan senyap"
+msgstr "ابدأ الدخول إلى الاجتماع بميكروفون صامت"
 
 #: inc/admin/admin-settings.php:453
 msgid "Audio Only"
-msgstr "Hanya Audio"
+msgstr "صوت فقط"
 
 #: inc/admin/admin-settings.php:453
 msgid "Start conference on audio only"
-msgstr "Mulai konferensi hanya dengan audio"
+msgstr "بدء المؤتمر بالصوت فقط"
 
 #: inc/admin/admin-settings.php:466
 msgid "Audio Muted"
-msgstr "Audio Senyap"
+msgstr "كتم الصوت"
 
 #: inc/admin/admin-settings.php:466
 msgid "Participant after nth will be muted"
-msgstr "Peserta setelah urutan ke-n akan otomatis senyap"
+msgstr "سيتم كتم صوت المشاركين بعد العدد المحدد"
 
 #: inc/admin/admin-settings.php:479
 msgid "Start Silent"
-msgstr "Mulai Diam"
+msgstr "بدء صامت"
 
 #: inc/admin/admin-settings.php:479
 msgid "Disable local audio output"
-msgstr "Nonaktifkan output audio lokal"
+msgstr "تعطيل إخراج الصوت المحلي"
 
 #: inc/admin/admin-settings.php:492
 msgid "Start Video Muted"
-msgstr "Mulai Tanpa Video"
+msgstr "بدء والكاميرا مغلقة"
 
 #: inc/admin/admin-settings.php:492
 msgid "Start call with video muted"
-msgstr "Mulai panggilan dengan video dimatikan"
+msgstr "بدء المكالمة والفيديو مكتوم"
 
 #: inc/admin/admin-settings.php:504 inc/elementor.php:176
 msgid "Screen Sharing"
-msgstr "Berbagi Layar"
+msgstr "مشاركة الشاشة"
 
 #: inc/admin/admin-settings.php:504
 msgid ""
 "Enabling this feature allow you to share your screen while attending a "
 "meeting"
-msgstr "Mengaktifkan fitur ini memungkinkan Anda berbagi layar saat menghadiri rapat"
+msgstr "تفعيل هذه الميزة يسمح لك بمشاركة شاشتك أثناء حضور الاجتماع"
 
 #: inc/admin/admin-settings.php:516
 msgid "Video Resolution"
-msgstr "Resolusi Video"
+msgstr "دقة الفيديو"
 
 #: inc/admin/admin-settings.php:516
 msgid "Start with preferred resolution"
-msgstr "Mulai dengan resolusi yang diinginkan"
+msgstr "البدء بالدقة المفضلة"
 
 #: inc/admin/admin-settings.php:537
 msgid "Max Full Resolution"
-msgstr "Resolusi Penuh Maksimum"
+msgstr "أقصى دقة كاملة"
 
 #: inc/admin/admin-settings.php:537
 msgid "Number of participant with default resolution"
-msgstr "Jumlah peserta dengan resolusi standar"
+msgstr "عدد المشاركين بالدقة الافتراضية"
 
 #: inc/admin/admin-settings.php:550
 msgid "Video Muted After"
-msgstr "Video Dimatikan Setelah"
+msgstr "كتم الفيديو بعد"
 
 #: inc/admin/admin-settings.php:550
 msgid "Every participant after nth will start video muted"
-msgstr "Setiap peserta setelah urutan ke-n akan mulai tanpa video"
+msgstr "كل مشارك بعد العدد المحدد سيبدأ الفيديو الخاص به مكتوماً"
 
 #: inc/admin/admin-settings.php:563
 msgid "Enable Livestream"
-msgstr "Aktifkan Siaran Langsung"
+msgstr "تفعيل البث المباشر"
 
 #: inc/admin/admin-settings.php:563
 msgid "Turn on livestreaming"
-msgstr "Aktifkan siaran langsung"
+msgstr "تشغيل البث المباشر"
 
 #: inc/admin/admin-settings.php:576
 msgid "Enable Recording"
-msgstr "Aktifkan Rekaman"
+msgstr "تفعيل التسجيل"
 
 #: inc/admin/admin-settings.php:576
 msgid "Turn on to record the meeting"
-msgstr "Aktifkan untuk merekam rapat"
+msgstr "تشغيل لتسجيل الاجتماع"
 
 #: inc/admin/admin-settings.php:589
 msgid "Enable Outbound"
-msgstr "Aktifkan Panggilan Keluar"
+msgstr "تفعيل المكالمات الخارجية"
 
 #: inc/admin/admin-settings.php:589
 msgid "Allow outbound on the meeting"
-msgstr "Izinkan panggilan keluar dalam rapat"
+msgstr "السماح بالمكالمات الخارجية في الاجتماع"
 
 #: inc/admin/admin-settings.php:602
 msgid "Enable Transcription"
-msgstr "Aktifkan Transkripsi"
+msgstr "تفعيل النسخ النصي"
 
 #: inc/admin/admin-settings.php:602
 msgid "Transcript the meeting"
-msgstr "Buat transkrip rapat"
+msgstr "تدوين وقائع الاجتماع نصياً"
 
 #: inc/admin/admin-settings.php:615
 msgid "Hide Jitsi Sidebar"
-msgstr "Sembunyikan Bilah Sisi Jitsi"
+msgstr "إخفاء شريط جيتسي الجانبي"
 
 #: inc/admin/admin-settings.php:615
 msgid "Enable to hide Jitsi sidebar from Jitsi Meeting room"
-msgstr "Aktifkan untuk menyembunyikan bilah sisi Jitsi dari ruang rapat Jitsi"
+msgstr "التفعيل لإخفاء شريط جيتسي الجانبي من غرفة اجتماعات جيتسي"
 
 #: inc/admin/admin-settings.php:629
 msgid "Simulcast"
-msgstr "Siaran Bersamaan"
+msgstr "بث متزامن (Simulcast)"
 
 #: inc/admin/admin-settings.php:629
 msgid "Enable/Disable simulcast"
-msgstr "Aktifkan/Nonaktifkan simulcast"
+msgstr "تفعيل/تعطيل البث المتزامن"
 
 #: inc/admin/admin-settings.php:642
 msgid "Enable Whiteboard"
-msgstr "Aktifkan Papan Tulis"
+msgstr "تفعيل السبورة"
 
 #: inc/admin/admin-settings.php:642
 msgid "Enable to use the whiteboard on Jass 8x8"
-msgstr "Aktifkan untuk menggunakan papan tulis di Jass 8x8"
+msgstr "التفعيل لاستخدام السبورة على Jass 8x8"
 
 #: inc/admin/admin-settings.php:656
 msgid "Enable to Change Post-type Slug"
-msgstr "Aktifkan Perubahan Slug Tipe Post"
+msgstr "تمكين تغيير الاسم اللطيف لنوع المنشور"
 
 #: inc/admin/admin-settings.php:656
 msgid "You can enable/disable custom slug"
-msgstr "Anda dapat mengaktifkan/menonaktifkan slug khusus"
+msgstr "يمكنك تفعيل أو تعطيل الاسم اللطيف المخصص"
 
 #: inc/admin/class-admin.php:76 inc/admin/class-admin.php:106
 msgid "Invalid request"
-msgstr "Permintaan tidak valid"
+msgstr "طلب غير صالح"
 
-#: inc/admin/class-admin.php:82 inc/admin/class-admin.php:112
-#: inc/admin/class-admin.php:149
+#: inc/admin/class-admin.php:82 inc/admin/class-admin.php:112 inc/admin/class-admin.php:149
 msgid "You do not have permission to do this action"
-msgstr "Anda tidak memiliki izin untuk melakukan tindakan ini"
+msgstr "ليس لديك الصلاحية للقيام بهذا الإجراء"
 
 #: inc/admin/class-admin.php:184 inc/admin/class-admin.php:367
 msgid "Documentation"
-msgstr "Dokumentasi"
+msgstr "التوثيق"
 
 #: inc/admin/class-admin.php:192
 msgid "Jitsi Meet Welcome"
-msgstr "Selamat Datang di Jitsi Meet"
+msgstr "مرحباً بك في Jitsi Meet"
 
 #: inc/admin/class-admin.php:201
 msgid "APP Settings"
-msgstr "Pengaturan APLIKASI"
+msgstr "إعدادات التطبيق"
 
-#: inc/admin/class-admin.php:202 init.php:188 blocks/dist/blocks.build.js:204
-#: blocks/src/blocks.js:67
+#: inc/admin/class-admin.php:202 init.php:188 blocks/dist/blocks.build.js:204 blocks/src/blocks.js:67
 msgid "Settings"
-msgstr "Pengaturan"
+msgstr "الإعدادات"
 
-#: inc/admin/class-admin.php:210 inc/admin/class-admin.php:215
-#: inc/admin/class-admin.php:779
+#: inc/admin/class-admin.php:210 inc/admin/class-admin.php:215 inc/admin/class-admin.php:779
 msgid "Add-ons"
-msgstr "Add-on"
+msgstr "الإضافات"
 
 #: inc/admin/class-admin.php:216 inc/admin/mannage-callback.php:371
 msgid "New"
-msgstr "Baru"
+msgstr "جديد"
 
 #: inc/admin/class-admin.php:226 init.php:189
 msgid "Upgrade to Ultimate"
-msgstr "Tingkatkan ke Ultimate"
+msgstr "الترقية إلى النسخة النهائية (Ultimate)"
 
 #: inc/admin/class-admin.php:265
 msgid "Gutenberg"
-msgstr "Gutenberg"
+msgstr "جوتنبرج (Gutenberg)"
 
 #: inc/admin/class-admin.php:270
 msgid "Elementor"
-msgstr "Elementor"
+msgstr "إليمنتور (Elementor)"
 
 #: inc/admin/class-admin.php:275
 msgid "Shortcode"
-msgstr "Shortcode"
+msgstr "كود قصير (Shortcode)"
 
 #: inc/admin/class-admin.php:286
 msgid "How to set a conference room"
-msgstr "Cara menyetel ruang konferensi"
+msgstr "كيفية إعداد غرفة مؤتمرات"
 
 #: inc/admin/class-admin.php:287
 msgid "Very simple and easy steps"
-msgstr "Langkah-langkah yang sangat simpel dan mudah"
+msgstr "خطوات بسيطة وسهلة للغاية"
 
 #: inc/admin/class-admin.php:291
 msgid ""
 "While you are on the post/page edit screen click on gutenberg plus icon to "
 "add a new gutenberg block"
 msgstr ""
-"Saat Anda berada di layar edit pos/halaman, klik ikon plus Gutenberg untuk "
-"menambahkan blok Gutenberg baru"
+"أثناء وجودك في شاشة تحرير المقالة/الصفحة، انقر على أيقونة (زائد) في جوتنبرج "
+"لإضافة قالب جديد"
 
 #: inc/admin/class-admin.php:293
 msgid "Add new gutenberg block on page"
-msgstr "Tambahkan blok Gutenberg baru di halaman"
+msgstr "إضافة قالب جوتنبرج جديد في الصفحة"
 
 #: inc/admin/class-admin.php:297
 msgid "Add \"Jitsi Meet\" from \"Embeds\" category"
-msgstr "Tambahkan \"Jitsi Meet\" dari kategori \"Embeds\""
+msgstr "أضف \"Jitsi Meet\" من فئة \"التضمينات\""
 
 #: inc/admin/class-admin.php:299
 msgid "Add Jitsi Meet from Embeds category"
-msgstr "Tambahkan Jitsi Meet dari kategori Embeds"
+msgstr "أضف Jitsi Meet من فئة التضمينات"
 
 #: inc/admin/class-admin.php:303
 msgid "Set width and height and you are done"
-msgstr "Setel lebar dan tinggi dan selesai"
+msgstr "حدد العرض والارتفاع وبذلك تكون قد انتهيت"
 
-#: inc/admin/class-admin.php:305 inc/admin/class-admin.php:325
-#: inc/admin/class-admin.php:346
+#: inc/admin/class-admin.php:305 inc/admin/class-admin.php:325 inc/admin/class-admin.php:346
 msgid "Jitsi Meet Settings"
-msgstr "Pengaturan Jitsi Meet"
+msgstr "إعدادات Jitsi Meet"
 
 #: inc/admin/class-admin.php:312
 msgid "How to set with elementor"
-msgstr "Cara menyetel dengan elementor"
+msgstr "كيفية الإعداد باستخدام إليمنتور"
 
 #: inc/admin/class-admin.php:313
 msgid "Setup a video conference room with elementor"
-msgstr "Siapkan ruang konferensi video dengan elementor"
+msgstr "إعداد غرفة اجتماعات فيديو باستخدام إليمنتور"
 
 #: inc/admin/class-admin.php:317
 msgid ""
 "While you are on elementor edit screen drag and drop <strong>Jitsi "
 "Meet</strong> element to your page"
 msgstr ""
-"Saat Anda berada di layar edit Elementor, seret dan lepas elemen "
-"<strong>Jitsi Meet</strong> ke halaman Anda"
+"أثناء وجودك في شاشة تحرير إليمنتور، قم بسحب وإسقاط عنصر <strong>Jitsi "
+"Meet</strong> في صفحتك"
 
 #: inc/admin/class-admin.php:319
 msgid "Add new jitsi meet element on page"
-msgstr "Tambahkan elemen jitsi meet baru di halaman"
+msgstr "إضافة عنصر Jitsi Meet جديد في الصفحة"
 
 #: inc/admin/class-admin.php:323
 msgid "Set name, width, height etc and you are done"
-msgstr "Setel nama, lebar, tinggi, dll. dan selesai"
+msgstr "حدد الاسم والعرض والارتفاع وما إلى ذلك وبذلك تكون قد انتهيت"
 
 #: inc/admin/class-admin.php:332
 msgid "How to set with shortcode"
-msgstr "Cara menyetel dengan shortcode"
+msgstr "كيفية الإعداد باستخدام الكود القصير"
 
 #: inc/admin/class-admin.php:333
 msgid "Setup a video conference room with shortcode"
-msgstr "Siapkan ruang konferensi video dengan shortcode"
+msgstr "إعداد غرفة اجتماعات فيديو باستخدام كود قصير"
 
 #: inc/admin/class-admin.php:335
 msgid "Write down the shortcode below and set width, height and name of conference"
-msgstr "Tuliskan shortcode di bawah ini dan setel lebar, tinggi, dan nama konferensi"
+msgstr "اكتب الكود القصير أدناه وقم بتعيين العرض والارتفاع واسم المؤتمر"
 
 #: inc/admin/class-admin.php:337
 msgid "Click on shortcode to copy"
-msgstr "Klik pada shortcode untuk menyalin"
+msgstr "انقر على الكود القصير للنسخ"
 
 #: inc/admin/class-admin.php:341
 msgid "name:"
-msgstr "nama:"
+msgstr "الاسم:"
 
 #: inc/admin/class-admin.php:341
 msgid "A unique name to generate the url of the room"
-msgstr "Nama unik untuk menghasilkan URL ruangan"
+msgstr "اسم فريد لتوليد رابط الغرفة"
 
 #: inc/admin/class-admin.php:342
 msgid "width:"
-msgstr "lebar:"
+msgstr "العرض:"
 
 #: inc/admin/class-admin.php:342
 msgid "Width of the jitsi meet embedded"
-msgstr "Lebar jitsi meet yang disematkan"
+msgstr "عرض نافذة Jitsi Meet المضمنة"
 
 #: inc/admin/class-admin.php:343
 msgid "height:"
-msgstr "tinggi:"
+msgstr "الارتفاع:"
 
 #: inc/admin/class-admin.php:343
 msgid "Height of the jitsi meet embedded"
-msgstr "Tinggi jitsi meet yang disematkan"
+msgstr "ارتفاع نافذة Jitsi Meet المضمنة"
 
 #: inc/admin/class-admin.php:367
 msgid "How to embed"
-msgstr "Cara menyematkan"
+msgstr "كيفية التضمين"
 
 #: inc/admin/class-admin.php:369
 msgid "API Settings"
-msgstr "Pengaturan API"
+msgstr "إعدادات واجهة البرمجة (API)"
 
 #: inc/admin/class-admin.php:369
 msgid "Authenticate with JAAS"
-msgstr "Otentikasi dengan JAAS"
+msgstr "المصادقة باستخدام JAAS"
 
 #: inc/admin/class-admin.php:371
 msgid "Admin Settings"
-msgstr "Pengaturan Admin"
+msgstr "إعدادات المسؤول"
 
 #: inc/admin/class-admin.php:371
 msgid "Username, email, avatar etc."
-msgstr "Username, email, avatar, dll."
+msgstr "اسم المستخدم، البريد الإلكتروني، الصورة الرمزية، إلخ."
 
 #: inc/admin/class-admin.php:373
 msgid "Configurations"
-msgstr "Konfigurasi"
+msgstr "تكوينات"
 
 #: inc/admin/class-admin.php:373
 msgid "Width, height, recording etc..."
-msgstr "Lebar, tinggi, rekaman, dll..."
+msgstr "العرض، الارتفاع، التسجيل، إلخ..."
 
 #: inc/admin/class-admin.php:375
 msgid "Audio Settings"
-msgstr "Pengaturan Audio"
+msgstr "إعدادات الصوت"
 
 #: inc/admin/class-admin.php:375
 msgid "Initial audio configurations..."
-msgstr "Konfigurasi audio awal..."
+msgstr "تكوينات الصوت الأولية..."
 
 #: inc/admin/class-admin.php:377
 msgid "Video Settings"
-msgstr "Pengaturan Video"
+msgstr "إعدادات الفيديو"
 
 #: inc/admin/class-admin.php:377
 msgid "Initial video configurations..."
-msgstr "Konfigurasi video awal..."
+msgstr "تكوينات الفيديو الأولية..."
 
 #: inc/admin/class-admin.php:468
 msgid "Self hosted domain missing"
-msgstr "Domain yang dihosting sendiri hilang"
+msgstr "نطاق الاستضافة الذاتية مفقود"
 
 #: inc/admin/class-admin.php:472
 msgid "App id missing"
-msgstr "ID aplikasi hilang"
+msgstr "معرف التطبيق مفقود"
 
 #: inc/admin/class-admin.php:475
 msgid "Api key is missing"
-msgstr "Kunci API hilang"
+msgstr "مفتاح API مفقود"
 
 #: inc/admin/class-admin.php:478
 msgid "Private key is missing"
-msgstr "Kunci privat hilang"
+msgstr "المفتاح الخاص مفقود"
 
 #: inc/admin/class-admin.php:612
 msgid "Welcome to FlexMeeting Ultimate"
-msgstr "Selamat Datang di FlexMeeting Ultimate"
+msgstr "مرحباً بك في فليكس ميتينج ألتيميت"
 
 #: inc/admin/class-admin.php:613
 msgid ""
 "Select for which kind of api you want to use with our plugin and give "
 "credential accordingly."
 msgstr ""
-"Pilih jenis API mana yang ingin Anda gunakan dengan plugin kami dan berikan "
-"kredensial yang sesuai."
+"اختر نوع واجهة البرمجة (API) التي تريد استخدامها مع إضافتنا وقدم بيانات "
+"الاعتماد وفقاً لذلك."
 
 #: inc/admin/class-admin.php:621
 msgid "Skip"
-msgstr "Lewati"
+msgstr "تخطي"
 
 #: inc/admin/class-admin.php:623
 msgid "Continue"
-msgstr "Lanjutkan"
+msgstr "متابعة"
 
 #: inc/admin/class-admin.php:628
 msgid "How to select Jitsi Meet server?"
-msgstr "Bagaimana cara memilih server Jitsi Meet?"
+msgstr "كيفية اختيار خادم Jitsi Meet؟"
 
-#: inc/admin/class-admin.php:701 inc/admin/class-admin.php:714
-#: inc/admin/class-admin.php:727 inc/admin/class-admin.php:740
-#: inc/admin/class-admin.php:752 inc/admin/mannage-callback.php:772
+#: inc/admin/class-admin.php:701 inc/admin/class-admin.php:714 inc/admin/class-admin.php:727
+#: inc/admin/class-admin.php:740 inc/admin/class-admin.php:752 inc/admin/mannage-callback.php:772
 msgid "Save Changes"
-msgstr "Simpan Perubahan"
+msgstr "حفظ التغييرات"
 
 #: inc/admin/class-admin.php:780
 msgid "Add your favourite add-ons and supercharge your workflow"
-msgstr "Tambahkan add-on favorit Anda dan percepat alur kerja Anda"
+msgstr "أضف إضافاتك المفضلة وعزز سير عملك"
 
 #: inc/admin/class-admin.php:794
 msgid "Multivendor Addon for FlexMeeting"
-msgstr "Add-on Multivendor untuk FlexMeeting"
+msgstr "إضافة تعدد البائعين لفليكس ميتينج"
 
 #: inc/admin/class-admin.php:795
 msgid ""
 "Power up your multi-vendor experience & create meetings right from your "
 "vendor dashboard. Elevate your store with monetizable video meetings."
 msgstr ""
-"Tingkatkan pengalaman multivendor Anda & buat pertemuan langsung dari "
-"dasbor vendor Anda. Tingkatkan toko Anda dengan pertemuan video yang dapat "
-"dimonetisasi."
+"عزز تجربة تعدد البائعين لديك وأنشئ اجتماعات مباشرة من لوحة تحكم البائع. "
+"ارتقِ بمتجرك من خلال اجتماعات الفيديو التي يمكن تعويضها مادياً."
 
 #: inc/admin/class-admin.php:802 inc/admin/class-admin.php:838
 msgid "Not activate"
-msgstr "Tidak aktif"
+msgstr "غير مفعل"
 
-#: inc/admin/class-admin.php:804 inc/admin/class-admin.php:840
-#: inc/admin/licence-cta.php:13
+#: inc/admin/class-admin.php:804 inc/admin/class-admin.php:840 inc/admin/licence-cta.php:13
 msgid "Activate"
-msgstr "Aktifkan"
+msgstr "تفعيل"
 
 #: inc/admin/class-admin.php:823
 msgid "FlexMeeting Frontend Addon"
-msgstr "Add-on Frontend FlexMeeting"
+msgstr "إضافة الواجهة الأمامية لفليكس ميتينج"
 
 #: inc/admin/class-admin.php:826
 msgid ""
 "Easily create Jitsi meetings from the frontend without accessing the admin "
 "dashboard."
 msgstr ""
-"Buat pertemuan Jitsi dengan mudah dari frontend tanpa mengakses dasbor "
-"admin."
+"أنشئ اجتماعات جيتسي بسهولة من الواجهة الأمامية دون الحاجة للدخول إلى لوحة "
+"تحكم المسؤول."
 
 #: inc/admin/class-jitsi-jwt-service.php:50
 msgid "Domain is required to generate a JWT token."
-msgstr "Domain diperlukan untuk membuat token JWT."
+msgstr "النطاق مطلوب لإنشاء رمز JWT."
 
 #: inc/admin/class-jitsi-jwt-service.php:114
 msgid ""
@@ -590,41 +584,40 @@ msgid ""
 "blocking outbound connections to port 8090. Please contact your host "
 "support."
 msgstr ""
-"Tidak dapat terhubung ke server token. Penyedia hosting Anda mungkin "
-"memblokir koneksi keluar ke port 8090."
+"تعذر الاتصال بخادم الرمز المميز. قد يحظر موفر الاستضافة الاتصالات الصادرة "
+"بالمنفذ 8090. يرجى الاتصال بدعم المضيف."
 
 #: inc/admin/class-jitsi-jwt-service.php:127
 #. translators: 1: HTTP code, 2: API response body
 #, php-format
 msgid "Token generation failed. The server returned HTTP %1$d: %2$s"
-msgstr "Pembuatan token gagal. Server mengembalikan HTTP %1$d: %2$s"
+msgstr "فشل إنشاء الرمز. أعاد الخادم HTTP %1$d: %2$s"
 
 #: inc/admin/class-jitsi-jwt-service.php:147
 msgid "Invalid response from token server."
-msgstr "Respons tidak valid dari server token."
+msgstr "استجابة غير صالحة من خادم الرمز."
 
-#: inc/admin/class-jitsi-jwt-service.php:213
-#: inc/admin/class-jitsi-jwt-service.php:427
+#: inc/admin/class-jitsi-jwt-service.php:213 inc/admin/class-jitsi-jwt-service.php:427
 msgid "Please enter a valid URL (include https://)."
-msgstr "Masukkan URL yang valid (sertakan https://)."
+msgstr "يرجى إدخال عنوان URL صحيح (يجب أن يتضمن https://)."
 
 #: inc/admin/class-jitsi-jwt-service.php:248
 msgid "We couldn't reach the verification server. Please try again."
-msgstr "Tidak dapat menjangkau server verifikasi. Silakan coba lagi."
+msgstr "تعذّر الوصول إلى خادم التحقق. يرجى المحاولة مرة أخرى."
 
 #: inc/admin/class-jitsi-jwt-service.php:252
 msgid ""
 "Your hosted server isn't active yet. If you just requested it, wait for our "
 "email."
-msgstr "Server Anda belum aktif. Mohon tunggu email kami."
+msgstr ""
+"خادمك المستضاف غير نشط بعد. إذا كنت قد طلبته للتو، انتظر رسالتنا على البريد "
+"الإلكتروني."
 
 #: inc/admin/class-jitsi-jwt-service.php:340
 msgid ""
 "Invalid URL. Please enter a full domain like "
 "https://yourbrand.jitsihosted.app"
-msgstr ""
-"URL tidak valid. Masukkan domain lengkap (misal: "
-"https://brandanda.jitsihosted.app)."
+msgstr "رابط غير صالح. يرجى إدخال نطاق كامل مثل https://yourbrand.jitsihosted.app"
 
 #: inc/admin/class-jitsi-jwt-service.php:358
 #. translators: %s = the domain hostname the user typed
@@ -632,7 +625,9 @@ msgstr ""
 msgid ""
 "Domain \"%s\" could not be found (DNS lookup failed). Please check the URL "
 "and try again."
-msgstr "Domain \"%s\" tidak ditemukan."
+msgstr ""
+"تعذّر العثور على النطاق \"%s\" (فشل البحث في DNS). يرجى التحقق من الرابط "
+"والمحاولة مرة أخرى."
 
 #: inc/admin/class-jitsi-jwt-service.php:383
 #. translators: %s = the domain hostname
@@ -640,7 +635,9 @@ msgstr "Domain \"%s\" tidak ditemukan."
 msgid ""
 "Domain \"%s\" resolved but the server did not respond. It may be offline or "
 "not a Jitsi server."
-msgstr "Domain \"%s\" ditemukan tetapi server tidak merespons."
+msgstr ""
+"تم حل النطاق \"%s\" ولكن الخادم لم يستجب. قد يكون غير متصل أو ليس خادم "
+"Jitsi."
 
 #: inc/admin/class-jitsi-jwt-service.php:397
 #. translators: 1: domain hostname, 2: HTTP status code
@@ -648,83 +645,88 @@ msgstr "Domain \"%s\" ditemukan tetapi server tidak merespons."
 msgid ""
 "\"%1$s\" is reachable but does not appear to be a Jitsi server (expected "
 "HTTP 200 from /config.js, got %2$d). Please double-check the URL."
-msgstr "\"%1$s\" dapat dijangkau tetapi tampaknya bukan server Jitsi."
+msgstr ""
+"يمكن الوصول إلى \"%1$s\" ولكنه لا يبدو أنه خادم Jitsi (متوقع HTTP 200 من "
+"/config.js، تم الحصول على %2$d). يرجى التحقق من عنوان URL."
 
-#: inc/admin/class-jitsi-jwt-service.php:419
-#: inc/admin/class-jitsi-jwt-service.php:514
+#: inc/admin/class-jitsi-jwt-service.php:419 inc/admin/class-jitsi-jwt-service.php:514
 msgid "Permission denied."
-msgstr "Izin ditolak."
+msgstr "تم رفض الإذن."
 
 #: inc/admin/class-jitsi-jwt-service.php:483
 msgid "Connected successfully!"
-msgstr "Berhasil terhubung!"
+msgstr "تم الاتصال بنجاح!"
 
 #: inc/admin/class-jitsi-jwt-service.php:497
 msgid ""
 "Connection failed: The token server did not return a valid response. Your "
 "hosting provider may be blocking outbound connections to port 8090. Please "
 "contact your host support."
-msgstr "Koneksi gagal: Server token tidak memberikan respons yang valid."
+msgstr ""
+"فشل الاتصال: لم يرجع خادم الرمز المميز استجابة صالحة. قد يحظر موفر "
+"الاستضافة الاتصالات الصادرة بالمنفذ 8090. يرجى الاتصال بدعم المضيف."
 
 #: inc/admin/class-jitsi-jwt-service.php:499
 msgid ""
 "Connection failed: An unknown error occurred while generating the JWT "
 "token. Please check your server setup or contact support."
-msgstr "Koneksi gagal: Terjadi kesalahan saat membuat token JWT."
+msgstr ""
+"فشل الاتصال: حدث خطأ غير معروف أثناء إنشاء رمز JWT. يرجى التحقق من إعداد "
+"الخادم الخاص بك أو الاتصال بالدعم."
 
 #: inc/admin/class-jitsi-jwt-service.php:524
 msgid "Disconnected successfully."
-msgstr "Berhasil terputus."
+msgstr "تم قطع الاتصال بنجاح."
 
 #: inc/admin/licence-cta.php:11
 msgid "Please activate your license"
-msgstr "Silakan aktifkan lisensi Anda"
+msgstr "يرجى تفعيل ترخيصك"
 
 #: inc/admin/mannage-callback.php:182
 msgid " New "
-msgstr " Baru "
+msgstr " جديد "
 
 #: inc/admin/mannage-callback.php:290
 msgid "Preview Image Upload"
-msgstr "Unggah Gambar Pratinjau"
+msgstr "تحميل صورة المعاينة"
 
 #: inc/admin/mannage-callback.php:298
 msgid "Upload an image"
-msgstr "Unggah gambar"
+msgstr "تحميل صورة"
 
 #: inc/admin/mannage-callback.php:323
 msgid "Choose where your meetings will run:"
-msgstr "Pilih di mana rapat Anda akan berjalan:"
+msgstr "اختر أين سيتم تشغيل اجتماعاتك:"
 
 #: inc/admin/mannage-callback.php:418 inc/admin/mannage-callback.php:482
 #: inc/admin/mannage-callback.php:505 inc/admin/mannage-callback.php:527
 #: inc/admin/mannage-callback.php:729
 msgid "Test Connection"
-msgstr "Uji Koneksi"
+msgstr "اختبار الاتصال"
 
 #: inc/admin/mannage-callback.php:424
 msgid "Domain changed. Please re-test connection."
-msgstr "Domain diubah. Harap uji ulang koneksi."
+msgstr "تغير النطاق. يرجى إعادة اختبار الاتصال."
 
 #: inc/admin/mannage-callback.php:450
 msgid "Connecting..."
-msgstr "Menghubungkan..."
+msgstr "جارٍ الاتصال..."
 
 #: inc/admin/mannage-callback.php:468
 msgid "Connection tested successfully."
-msgstr "Koneksi berhasil diuji."
+msgstr "تم اختبار الاتصال بنجاح."
 
 #: inc/admin/mannage-callback.php:468
 msgid "Click \"Save Changes\" to apply."
-msgstr "Klik \"Simpan Perubahan\" untuk menerapkan."
+msgstr "انقر على \"حفظ التغييرات\" للتطبيق."
 
 #: inc/admin/mannage-callback.php:512
 msgid "Connection failed. Please check your domain."
-msgstr "Koneksi gagal. Periksa domain Anda."
+msgstr "فشل الاتصال. يرجى التحقق من نطاقك."
 
 #: inc/admin/mannage-callback.php:534
 msgid "Connection disconnected. Save changes to apply."
-msgstr "Koneksi terputus. Simpan perubahan untuk menerapkan."
+msgstr "تم قطع الاتصال. احفظ التغييرات للتطبيق."
 
 #: inc/admin/mannage-callback.php:589
 msgid "🎁"
@@ -732,84 +734,87 @@ msgstr "🎁"
 
 #: inc/admin/mannage-callback.php:589
 msgid "Benefits:"
-msgstr "Manfaat:"
+msgstr "الفوائد:"
 
 #: inc/admin/mannage-callback.php:611
 msgid "Need help setting up your branded server?"
-msgstr "Butuh bantuan menyiapkan server bermerek Anda?"
+msgstr "هل تحتاج إلى مساعدة في إعداد الخادم الخاص بك؟"
 
 #: inc/admin/mannage-callback.php:620
 msgid "How Hosted Meetings works?"
-msgstr "Bagaimana cara kerja Rapat yang Di-host?"
+msgstr "كيف تعمل الاجتماعات المستضافة؟"
 
 #: inc/admin/mannage-callback.php:671
 msgid "Default Public Hosting"
-msgstr "Hosting Publik Default"
+msgstr "الاستضافة العامة الافتراضية"
 
 #: inc/admin/mannage-callback.php:678
 msgid "Domain One"
-msgstr "Domain Satu"
+msgstr "النطاق الأول"
 
 #: inc/admin/mannage-callback.php:679
 msgid "Domain Two"
-msgstr "Domain Dua"
+msgstr "النطاق الثاني"
 
 #: inc/admin/mannage-callback.php:680
 msgid "Domain Three"
-msgstr "Domain Tiga"
+msgstr "النطاق الثالث"
 
 #: inc/admin/mannage-callback.php:681
 msgid "Domain Four"
-msgstr "Domain Empat"
+msgstr "النطاق الرابع"
 
 #: inc/admin/mannage-callback.php:689
 msgid "Default Public Domain"
-msgstr "Domain Publik Standar"
+msgstr "النطاق العام الافتراضي"
 
 #: inc/admin/mannage-callback.php:689
 msgid "Select a public domain to run your meeting."
-msgstr "Pilih domain publik untuk menjalankan rapat Anda."
+msgstr "حدد نطاقًا عامًا لتشغيل اجتماعك."
 
 #: inc/admin/mannage-callback.php:694
 msgid "Completely Free to Use"
-msgstr "Sepenuhnya Gratis Digunakan"
+msgstr "مجاني تمامًا للاستخدام"
 
 #: inc/admin/mannage-callback.php:695
 msgid "Instant Setup"
-msgstr "Penyiapan Instan"
+msgstr "إعداد فوري"
 
 #: inc/admin/mannage-callback.php:696
 msgid "No Account Required"
-msgstr "Tidak Diperlukan Akun"
+msgstr "لا يتطلب حساب"
 
 #: inc/admin/mannage-callback.php:697
 msgid "Standard Privacy Features"
-msgstr "Fitur Privasi Standar"
+msgstr "ميزات الخصوصية القياسية"
 
 #: inc/admin/mannage-callback.php:708
 msgid "We’ll handle hosting"
-msgstr "Kami akan menangani hosting"
+msgstr "سنتولى الاستضافة"
 
 #: inc/admin/mannage-callback.php:711
 msgid ""
 "Get your own private branded meeting server (logo + brand name). We host "
 "and maintain it - just paste your Hosted Server Domain URL below and enjoy "
 "your branded meetings."
-msgstr "Dapatkan server pertemuan khusus merek Anda sendiri."
+msgstr ""
+"احصل على خادم اجتماعات خاص بعلامتك التجارية (شعار + اسم علامتي التجارية). "
+"نحن نستضيفه ونقوم بصيانته - فقط قم بلصق عنوان URL لنطاق الخادم المستضاف "
+"أدناه واستمتع باجتماعاتك التي تحمل علامتك التجارية."
 
 #: inc/admin/mannage-callback.php:726
 msgid "Paste the Domain URL we emailed you (example: yourbrand.jitsihosted.com)"
 msgstr ""
-"Tempel URL Domain yang kami kirimkan via email (contoh: "
-"merekanda.jitsihosted.com)"
+"الصق عنوان URL للنطاق الذي أرسلناه إليك عبر البريد الإلكتروني (مثال: "
+"yourbrand.jitsihosted.com)"
 
 #: inc/admin/mannage-callback.php:728
 msgid "Enter the Domain URL"
-msgstr "Masukkan URL Domain"
+msgstr "أدخل عنوان URL للنطاق"
 
 #: inc/admin/mannage-callback.php:730
 msgid "Disconnect"
-msgstr "Putuskan Sambungan"
+msgstr "قطع الاتصال"
 
 #: inc/admin/mannage-callback.php:736
 msgid "✅"
@@ -817,19 +822,19 @@ msgstr "✅"
 
 #: inc/admin/mannage-callback.php:736
 msgid "Connected. Meetings will run on"
-msgstr "Terhubung. Rapat akan berjalan pada"
+msgstr "متصل. ستعمل الاجتماعات على"
 
 #: inc/admin/mannage-callback.php:741
 msgid "Don't have a Hosted Server URL yet? "
-msgstr "Belum memiliki URL Server yang Di-host? "
+msgstr "ليس لديك رابط خادم مستضاف بعد؟ "
 
 #: inc/admin/mannage-callback.php:741
 msgid "Request setup now →"
-msgstr "Minta penyiapan sekarang →"
+msgstr "اطلب الإعداد الآن →"
 
 #: inc/admin/mannage-callback.php:746
 msgid "Hosted Server Domain:"
-msgstr "Domain Server yang Di-host:"
+msgstr "نطاق الخادم المستضاف:"
 
 #: inc/admin/mannage-callback.php:749
 msgid ""
@@ -837,24 +842,25 @@ msgid ""
 "href=\"https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/"
 "service/\" target=\"_blank\">request now →</a>)"
 msgstr ""
-"<strong>Ajukan</strong> pengaturan khusus Anda terlebih dahulu (<a "
+"<strong>اطلب</strong> إعداد علامتك التجارية أولاً (<a "
 "href=\"https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/"
-"service/\" target=\"_blank\">ajukan sekarang →</a>)"
+"service/\" target=\"_blank\">اطلب الآن ←</a>)"
 
 #: inc/admin/mannage-callback.php:750
 msgid "<strong>We set it up</strong> and email your Hosted Server URL"
 msgstr ""
-"<strong>Kami menyiapkannya</strong> dan mengirimkan URL Server Hosted Anda "
-"melalui email<strong>Kami menyiapkannya</strong> dan mengirim email berisi "
-"URL Server yang Di-host Anda"
+"<strong>نحن نقوم بالإعداد</strong> ونرسل عنوان URL لخادمك المستضاف عبر "
+"البريد الإلكتروني<strong>نحن نقوم بالإعداد</strong> ونرسل عنوان URL لخادمك "
+"المستضاف عبر البريد الإلكتروني<strong>نحن نقوم بإعداده</strong> ونرسل رابط "
+"الخادم الخاص بك عبر البريد الإلكتروني"
 
 #: inc/admin/mannage-callback.php:751
 msgid ""
 "<strong>Paste the URL here</strong> → Test Connection → meetings start "
 "running on your hosted server"
 msgstr ""
-"<strong>Tempel URL di sini</strong> → Tes Koneksi → pertemuan dimulai di "
-"server Anda"
+"<strong>الصق عنوان URL هنا</strong> ← اختبر الاتصال ← تبدأ الاجتماعات "
+"بالعمل على خادمك المستضاف"
 
 #: inc/admin/mannage-callback.php:752
 msgid "🤩"
@@ -862,38 +868,38 @@ msgstr "🤩"
 
 #: inc/admin/mannage-callback.php:752
 msgid "That's it - no technical setup needed from you. Wahhhhhhhhhh!"
-msgstr "Itu dia - tanpa perlu penyiapan teknis dari Anda. Wahhhhhhhhhh!"
+msgstr "هذا كل شيء - لا حاجة لإعداد تقني من جانبك. رائع!"
 
 #: inc/admin/mannage-callback.php:779
 msgid "Branded meeting URL"
-msgstr "URL rapat bermerek"
+msgstr "عنوان URL مخصص للاجتماعات"
 
 #: inc/admin/mannage-callback.php:780
 msgid "Branded logo and other customizations"
-msgstr "Logo bermerek dan kustomisasi lainnya"
+msgstr "شعار مخصص وتخصيصات أخرى"
 
 #: inc/admin/mannage-callback.php:781
 msgid "No server cost + maintenance"
-msgstr "Tanpa biaya server atau pemeliharaan"
+msgstr "بدون تكاليف خادم أو صيانة"
 
 #: inc/admin/mannage-callback.php:782
 msgid "Private hosting (no shared public server)"
-msgstr "Hosting pribadi (bukan server publik bersama)"
+msgstr "استضافة خاصة (بدون خادم عام مشترك)"
 
 #: inc/admin/mannage-callback.php:783
 msgid "White-labeled experience"
-msgstr "Pengalaman white-label"
+msgstr "تجربة ذات علامة تجارية بيضاء"
 
 msgid "Live streaming support"
-msgstr "Dukungan streaming langsung"
+msgstr "دعم البث المباشر"
 
 #: inc/admin/mannage-callback.php:785
 msgid "Request branded meeting server for FREE!"
-msgstr "Minta server rapat bermerek GRATIS!"
+msgstr "اطلب خادم اجتماعات مجانًا!"
 
 #: inc/admin/mannage-callback.php:794
 msgid "What is a server?"
-msgstr "Apa itu server?"
+msgstr "ما هو الخادم؟"
 
 #: inc/admin/mannage-callback.php:795
 msgid ""
@@ -902,12 +908,13 @@ msgid ""
 "in the world. Think of it as the \"home\" for your meeting system that "
 "stays online 24/7."
 msgstr ""
-"Server adalah komputer yang selalu menyala untuk menjalankan sistem "
-"pertemuan Anda."
+"الخادم هو جهاز كمبيوتر قوي يعمل دائمًا يقوم بتخزين وتشغيل برنامج Jitsi، مما "
+"يسمح للمستخدمين بالاتصال وعقد اجتماعات فيديو من أي مكان في العالم. فكر فيه "
+"كـ \"منزل\" لنظام الاجتماعات الخاص بك والذي يظل متاحًا على الإنترنت 24/7."
 
 #: inc/admin/mannage-callback.php:798
 msgid "What is a self-hosted FlexMeeting server?"
-msgstr "Apa yang dimaksud dengan server FlexMeeting yang di-host sendiri?"
+msgstr "ما هو خادم FlexMeeting ذاتي الاستضافة؟"
 
 #: inc/admin/mannage-callback.php:799
 msgid ""
@@ -915,14 +922,17 @@ msgid ""
 "on your own server or hosting environment, not on Jitsi’s public "
 "infrastructure. This gives you full control, privacy, and customization "
 "flexibility."
-msgstr "Server Jitsi mandiri berarti sistem berjalan di server Anda sendiri."
+msgstr ""
+"خادم Jitsi المستضاف ذاتيًا يعني أن نظام عقد مؤتمرات الفيديو بالكامل يعمل "
+"على خادمك الخاص أو بيئة الاستضافة الخاصة بك، وليس على بنية Jitsi التحتية "
+"العامة. يمنحك هذا التحكم الكامل والخصوصية ومرونة التخصيص."
 
 #: inc/admin/mannage-callback.php:802
 msgid "Why should I use a self-hosted Jitsi server instead of using public Jitsi?"
 msgstr ""
-"Mengapa harus menggunakan server Jitsi self-hosted daripada Jitsi "
-"publik?Mengapa saya harus menggunakan server Jitsi yang di-host sendiri "
-"alih-alih menggunakan Jitsi publik?"
+"لماذا يجب أن أستخدم خادم Jitsi ذاتي الاستضافة بدلاً من Jitsi العام؟لماذا "
+"يجب أن أستخدم خادم Jitsi ذاتي الاستضافة بدلاً من Jitsi العام؟لماذا يجب علي "
+"استخدام خادم Jitsi المستضاف ذاتيًا بدلاً من استخدام Jitsi العام؟"
 
 #: inc/admin/mannage-callback.php:803
 msgid ""
@@ -931,13 +941,14 @@ msgid ""
 "performance <br>- No limitations on usage <br>- Your own branding and "
 "domain <br>- Control over features and integrations"
 msgstr ""
-"Server publik bersifat berbagi. Dengan hosting mandiri, Anda mendapatkan: "
-"<br>- Privasi lebih baik <br>- Performa lebih baik <br>- Tanpa batas "
-"penggunaan"
+"خوادم Jitsi العامة مشتركة ومحدودة وغير آمنة للاستخدام المهني. مع الاستضافة "
+"الذاتية، ستحصل على: <br>- خصوصية محسنة <br>- أداء أفضل <br>- لا توجد قيود "
+"على الاستخدام <br>- علامتك التجارية ونطاقك الخاص <br>- التحكم في الميزات "
+"والتكاملات"
 
 #: inc/admin/mannage-callback.php:806
 msgid "What do you provide in this service?"
-msgstr "Apa yang Anda sediakan dalam layanan ini?"
+msgstr "ماذا تقدمون في هذه الخدمة؟"
 
 #: inc/admin/mannage-callback.php:807
 msgid ""
@@ -946,22 +957,26 @@ msgid ""
 "Integrate it into your website <br>- Provide admin access and documentation "
 "<br>- Offer post-installation support if needed"
 msgstr ""
-"- Kami menyiapkan server Jitsi di VPS Anda <br>- Mengamankannya dengan SSL "
-"<br>- Memberi merek dengan logo Anda"
+"- نقوم بإعداد خادم Jitsi على خادمك الافتراضي الخاص (VPS)/السحابة <br>- "
+"تأمينه بشهادة SSL وجدران الحماية <br>- تمييزه بشعارك ونطاقك (اختياري) <br>- "
+"دمجه في موقعك الإلكتروني <br>- توفير وصول المشرف والوثائق <br>- تقديم دعم "
+"ما بعد التثبيت إذا لزم الأمر"
 
 #: inc/admin/mannage-callback.php:810
 msgid "Do I need technical knowledge to maintain the server?"
-msgstr "Apakah saya memerlukan pengetahuan teknis untuk memelihara server?"
+msgstr "هل أحتاج إلى معرفة تقنية للحفاظ على الخادم؟"
 
 #: inc/admin/mannage-callback.php:811
 msgid ""
 "No. We handle everything during setup. If you opt for our support plan, we "
 "also handle maintenance, upgrades, and any issues that arise."
-msgstr "Tidak. Kami menangani semuanya selama pengaturan."
+msgstr ""
+"لا. نحن نتولى كل شيء أثناء الإعداد. إذا اخترت خطة الدعم الخاصة بنا، فسنقوم "
+"أيضًا بالتعامل مع الصيانة والترقيات وأي مشكلات تطرأ."
 
 #: inc/admin/mannage-callback.php:814
 msgid "What are the server requirements?"
-msgstr "Apa persyaratan servernya?"
+msgstr "ما هي متطلبات الخادم؟"
 
 #: inc/admin/mannage-callback.php:815
 msgid ""
@@ -969,52 +984,60 @@ msgid ""
 "RAM <br>- 100 Mbps+ bandwidth <br>We’ll guide you to choose the right "
 "hosting based on your expected usage."
 msgstr ""
-"Persyaratan minimum: <br>- VPS Ubuntu/Debian <br>- 4+ core CPU <br>- 8GB+ "
-"RAM"
+"الحد أدنى من المتطلبات: <br>- خادم افتراضي خاص (VPS) يعمل بنظام "
+"Ubuntu/Debian <br>- 4 أنوية معالج أو أكثر <br>- ذاكرة وصول عشوائي (RAM) سعة "
+"8 جيجابايت أو أكثر <br>- عرض نطاق ترددي 100 ميجابت في الثانية أو أكثر "
+"<br>سنرشدك لاختيار الاستضافة المناسبة بناءً على استخدامك المتوقع."
 
 #: inc/admin/mannage-callback.php:818
 msgid "Can I use this with my existing website or LMS?"
-msgstr "Dapatkah saya menggunakan ini dengan situs web atau LMS saya yang sudah ada?"
+msgstr "هل يمكنني استخدام هذا مع موقع الويب الخاص بي أو نظام إدارة التعلم (LMS)؟"
 
 #: inc/admin/mannage-callback.php:819
 msgid ""
 "Yes. We can integrate Jitsi into any website, including WordPress, Moodle, "
 "TutorLMS, LearnDash, or even custom-built platforms."
-msgstr "Ya. Kami dapat mengintegrasikan Jitsi ke situs web mana pun."
+msgstr ""
+"نعم. يمكننا دمج Jitsi في أي موقع إلكتروني، بما في ذلك WordPress أو Moodle "
+"أو TutorLMS أو LearnDash أو حتى المنصات المصممة خصيصًا."
 
 #: inc/admin/mannage-callback.php:822
 msgid "How long does it take to set everything up?"
-msgstr "Berapa lama waktu yang diperlukan untuk menyiapkan semuanya?"
+msgstr "كم من الوقت يستغرق إعداد كل شيء؟"
 
 #: inc/admin/mannage-callback.php:823
 msgid ""
 "Typically between 1–3 business days, depending on your customization and "
 "hosting setup."
-msgstr "Biasanya antara 1–3 hari kerja."
+msgstr "عادةً ما بين 1 إلى 3 أيام عمل، اعتمادًا على إعداداتك المخصصة والاستضافة."
 
 #: inc/admin/mannage-callback.php:826
 msgid "Can I record meetings or stream them?"
-msgstr "Bisakah saya merekam rapat atau melakukan streaming?"
+msgstr "هل يمكنني تسجيل الاجتماعات أو بثها؟"
 
 #: inc/admin/mannage-callback.php:827
 msgid ""
 "Yes, we can enable recording (using Jibri) and YouTube live streaming on "
 "request. Note that these features require additional server resources."
-msgstr "Ya, kami dapat mengaktifkan rekaman dan live streaming YouTube."
+msgstr ""
+"نعم، يمكننا تمكين التسجيل (باستخدام Jibri) والبث المباشر على YouTube عند "
+"الطلب. لاحظ أن هذه الميزات تتطلب موارد خادم إضافية."
 
 #: inc/admin/mannage-callback.php:830
 msgid "Is it one-time setup or recurring service?"
-msgstr "Apakah ini pengaturan sekali atau layanan berulang?"
+msgstr "هل هو إعداد لمرة واحدة أم خدمة متكررة؟"
 
 #: inc/admin/mannage-callback.php:831
 msgid ""
 "The setup is one-time unless you choose our optional support & maintenance "
 "plan for updates, backups, and ongoing help."
-msgstr "Pengaturan bersifat sekali bayar kecuali Anda memilih paket pemeliharaan."
+msgstr ""
+"الإعداد لمرة واحدة ما لم تختر خطة الدعم والصيانة الاختيارية الخاصة بنا "
+"للتحديثات والنسخ الاحتياطي والمساعدة المستمرة."
 
 #: inc/admin/mannage-callback.php:834
 msgid "Ready to Launch Your Private Meeting System?"
-msgstr "Siap Meluncurkan Sistem Rapat Pribadi Anda?"
+msgstr "هل أنت مستعد لإطلاق نظام الاجتماعات الخاص بك؟"
 
 #: inc/admin/mannage-callback.php:835
 msgid ""
@@ -1023,113 +1046,110 @@ msgid ""
 "target=\"_blank\" style=\"color: #3b82f6; font-weight: 600; "
 "text-decoration: none;\">Contact Support &rarr;</a>"
 msgstr ""
-"Kami menangani pekerjaan teknis. <br><br> <a "
-"href=\"https://wppool.dev/contact/\" target=\"_blank\" style=\"color: "
-"#3b82f6; font-weight: 600; text-decoration: none;\">Hubungi Dukungan "
-"&rarr;</a>"
+"سنتولى جميع الأعمال التقنية، وكل ما عليك فعله هو الاستمتاع باجتماعات آمنة "
+"وعالية الجودة مع مستخدميك. <br><br> <a href=\"https://wppool.dev/contact/\" "
+"target=\"_blank\" style=\"color: #3b82f6; font-weight: 600; "
+"text-decoration: none;\">اتصل بالدعم &larr;</a>"
 
 #: inc/admin/mannage-callback.php:840
 msgid "Frequently Asked Questions"
-msgstr "Pertanyaan yang Sering Diajukan"
+msgstr "الأسئلة الشائعة"
 
 #: inc/admin/mannage-callback.php:866
 msgid "Jitsi as a Service (8x8)"
-msgstr "Jitsi sebagai Layanan (8x8)"
+msgstr "Jitsi كخدمة (8x8)"
 
 #: inc/admin/mannage-callback.php:873
 msgid "APP ID"
-msgstr "ID APLIKASI"
+msgstr "معرف التطبيق (APP ID)"
 
 #: inc/admin/mannage-callback.php:873 inc/admin/mannage-callback.php:882
 msgid "Get it from "
-msgstr "Dapatkan dari "
+msgstr "احصل عليه من "
 
 #: inc/admin/mannage-callback.php:875
 msgid "Copy the APP ID from JaaS admin"
-msgstr "Salin ID APLIKASI dari admin JaaS"
+msgstr "انسخ معرف التطبيق من لوحة تحكم مسؤول JaaS"
 
 #: inc/admin/mannage-callback.php:882
 msgid "API Key"
-msgstr "Kunci API"
+msgstr "مفتاح API"
 
 #: inc/admin/mannage-callback.php:884
 msgid "Copy the API Key from JaaS admin"
-msgstr "Salin Kunci API dari admin JaaS"
+msgstr "انسخ مفتاح API من لوحة تحكم مسؤول JaaS"
 
 #: inc/admin/mannage-callback.php:891
 msgid "Private Key"
-msgstr "Kunci Pribadi"
+msgstr "المفتاح الخاص"
 
 #: inc/admin/mannage-callback.php:891
 msgid "Paste private key content here"
-msgstr "Tempel konten kunci privat di sini"
+msgstr "الصق محتوى المفتاح الخاص هنا"
 
 #: inc/admin/mannage-callback.php:893
 msgid "Generate private key and download"
-msgstr "Buat kunci pribadi dan unduh"
+msgstr "توليد المفتاح الخاص وتحميله"
 
 #: inc/admin/mannage-callback.php:899
 msgid "Enterprise Grade Reliability"
-msgstr "Keandalan Tingkat Perusahaan"
+msgstr "موثوقية على مستوى المؤسسات"
 
 #: inc/admin/mannage-callback.php:900
 msgid "Advanced Analytics"
-msgstr "Analisis Lanjutan"
+msgstr "تحليلات متقدمة"
 
 #: inc/admin/mannage-callback.php:901
 msgid "Global Low-latency Network"
-msgstr "Jaringan Latensi Rendah Global"
+msgstr "شبكة عالمية منخفضة زمن الوصول"
 
 #: inc/admin/mannage-callback.php:902
 msgid "Secure Recorded Meetings"
-msgstr "Rapat Terekam dengan Aman"
+msgstr "اجتماعات مسجلة ومؤمنة"
 
 #: inc/admin/mannage-callback.php:912
 msgid "Self-Hosted Server"
-msgstr "Server yang Di-host Sendiri"
+msgstr "خادم ذاتي الاستضافة"
 
 #: inc/admin/mannage-callback.php:921
 msgid "Your Server Domain"
-msgstr "Domain Server Anda"
+msgstr "نطاق خادمك"
 
 #: inc/admin/mannage-callback.php:922
 msgid "Enter your self-hosted Jitsi domain (e.g., meet.yourdomain.com)"
-msgstr ""
-"Masukkan domain Jitsi self-hosted Anda (mis., meet.domaindanda.com)Masukkan "
-"domain Jitsi yang di-host sendiri Anda (misalnya, meet.domainanda.com)"
+msgstr "أدخل نطاق Jitsi الخاص بك المستضاف ذاتيًا (مثل meet.yourdomain.com)"
 
 #: inc/admin/mannage-callback.php:922
 msgid "Premium Feature"
-msgstr "Fitur Premium"
+msgstr "ميزة مميزة"
 
 #: inc/admin/mannage-callback.php:929
 msgid "Full Data Control"
-msgstr "Kontrol Data Penuh"
+msgstr "تحكم كامل في البيانات"
 
 #: inc/admin/mannage-callback.php:930
 msgid "Custom Security Policies"
-msgstr "Kebijakan Keamanan Kustom"
+msgstr "سياسات أمان مخصصة"
 
 #: inc/admin/mannage-callback.php:931
 msgid "No Third-party Tracking"
-msgstr "Tanpa Pelacakan Pihak Ketiga"
+msgstr "لا يوجد تتبع تابع لجهة خارجية"
 
 #: inc/admin/mannage-callback.php:932
 msgid "Infrastructure Ownership"
-msgstr "Kepemilikan Infrastruktur"
+msgstr "ملكية البنية التحتية"
 
 #: inc/admin/mannage-callback.php:939
 msgid ""
 "Some settings like Company Logo, Background etc are currently not available "
 "via api. You can set your company logo, background etc from the"
 msgstr ""
-"Beberapa pengaturan seperti Logo Perusahaan, Latar Belakang, dll. saat ini "
-"tidak tersedia via api. Anda dapat mengatur logo perusahaan, latar "
-"belakang, dll. dari"
+"بعض الإعدادات مثل شعار الشركة والخلفية وغيرها غير متاحة حالياً عبر واجهة "
+"البرمجة (API). يمكنك ضبط شعار شركتك وخلفيتك وما إلى ذلك من"
 
 #: inc/admin/mannage-callback.php:939
 msgid "jaas console"
-msgstr "konsol JaaS"
+msgstr "لوحة تحكم JaaS"
 
 #: inc/elementor.php:67 blocks/dist/blocks.build.js:314 blocks/src/blocks.js:166
 msgid "Jitsi Meet"
@@ -1137,31 +1157,31 @@ msgstr "Jitsi Meet"
 
 #: inc/elementor.php:108
 msgid "Configuration"
-msgstr "Konfigurasi"
+msgstr "التكوين"
 
 #: inc/elementor.php:115 blocks/dist/blocks.build.js:207 blocks/src/blocks.js:69
 msgid "Name"
-msgstr "Nama"
+msgstr "الاسم"
 
 #: inc/elementor.php:118
 msgid "Meeting name here"
-msgstr "Nama rapat di sini"
+msgstr "اسم الاجتماع هنا"
 
 #: inc/elementor.php:125 blocks/dist/blocks.build.js:243 blocks/src/blocks.js:107
 msgid "Width"
-msgstr "Lebar"
+msgstr "العرض"
 
 #: inc/elementor.php:140 blocks/dist/blocks.build.js:254 blocks/src/blocks.js:115
 msgid "Height"
-msgstr "Tinggi"
+msgstr "الارتفاع"
 
 #: inc/elementor.php:152
 msgid "Start audio muted"
-msgstr "Mulai dengan audio senyap"
+msgstr "بدء والصوت مكتوم"
 
 #: inc/elementor.php:164
 msgid "Start video muted"
-msgstr "Mulai dengan video dimatikan"
+msgstr "بدء والكاميرا مغلقة"
 
 #: inc/jitsi-topbar.php:196
 msgid "🎉"
@@ -1169,68 +1189,68 @@ msgstr "🎉"
 
 #: inc/jitsi-topbar.php:214
 msgid "Close notification"
-msgstr "Tutup notifikasi"
+msgstr "إغلاق التنبيه"
 
 #: inc/jitsi-topbar.php:321
 msgid "Invalid nonce"
-msgstr "Nonce tidak valid"
+msgstr "رمز أمان غير صالح"
 
 #: inc/jitsi-topbar.php:326
 msgid "Insufficient permissions"
-msgstr "Izin tidak cukup"
+msgstr "صلاحيات غير كافية"
 
 #: inc/jitsi-topbar.php:333
 msgid "Topbar dismissed successfully"
-msgstr "Bilah atas berhasil ditutup"
+msgstr "تم إغلاق الشريط العلوي بنجاح"
 
 #: inc/jitsi-topbar.php:335
 msgid "Failed to dismiss topbar"
-msgstr "Gagal menutup bilah atas"
+msgstr "فشل إغلاق الشريط العلوي"
 
 #: inc/jitsi-topbar.php:353
 msgid "Security check failed"
-msgstr "Pemeriksaan keamanan gagal"
+msgstr "فشل فحص الأمان"
 
 #: inc/jitsi-topbar.php:358
 msgid "You do not have sufficient permissions to access this page."
-msgstr "Anda tidak memiliki izin yang cukup untuk mengakses halaman ini."
+msgstr "ليس لديك الصلاحيات الكافية للوصول إلى هذه الصفحة."
 
 #: inc/wppool/class-plugin.php:328
 msgid "Deal Ends In"
-msgstr "Penawaran Berakhir Dalam"
+msgstr "ينتهي العرض خلال"
 
-#: inc/wppool/class-plugin.php:333 inc/wppool/class-plugin.php:342
-#: inc/wppool/class-plugin.php:351 inc/wppool/class-plugin.php:360
+#: inc/wppool/class-plugin.php:333 inc/wppool/class-plugin.php:342 inc/wppool/class-plugin.php:351
+#: inc/wppool/class-plugin.php:360
 msgid "00"
-msgstr "00"
+msgstr "٠٠"
 
 #: inc/wppool/class-plugin.php:336
 msgid "Days"
-msgstr "Hari"
+msgstr "أيام"
 
 #: inc/wppool/class-plugin.php:345
 msgid "Hours"
-msgstr "Jam"
+msgstr "ساعات"
 
 #: inc/wppool/class-plugin.php:354
 msgid "Minutes"
-msgstr "Menit"
+msgstr "دقائق"
 
 #: inc/wppool/class-plugin.php:363
 msgid "Seconds"
-msgstr "Detik"
+msgstr "ثوانٍ"
 
 #: inc/wppool/class-plugin.php:370
 msgid "Upgrade to Pro"
-msgstr "Tingkatkan ke Pro"
+msgstr "الترقية إلى برو"
 
 #: inc/wppool/class-plugin.php:374
 msgid "Try a free demo"
-msgstr "Coba demo gratis"
+msgstr "جرب نسخة ديمو مجانية"
 
 #: jitsi-meet-wp.php:162
 msgid "Grab Your Deals"
-msgstr "Dapatkan Penawaran Anda"
+msgstr "احصل على عروضك"
 
 #: templates/admin/affiliate-notice.php:15
 msgid ""
@@ -1242,33 +1262,33 @@ msgid ""
 "class=\"affiliate-notice-link\">affiliate program  </a> to get a 25%% "
 "commission on every sale!"
 msgstr ""
-"Hei! Menikmati plugin <b>Jitsi Meet WP</b>? Bergabunglah dengan <a "
+"مرحباً! هل تستمتع بإضافة <b>Jitsi Meet WP</b>؟ انضم إلى <a "
 "href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" "
-"class=\"affiliate-notice-link\">program influencer</a> kami untuk "
-"menghasilkan uang dari konten media sosial Anda. Anda juga dapat memeriksa "
-"<a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" "
-"class=\"affiliate-notice-link\">program afiliasi</a> kami untuk mendapatkan "
-"komisi 25%% di setiap penjualan!"
+"class=\"affiliate-notice-link\">برنامج المؤثرين</a> لكسب المال من محتوى "
+"وسائل التواصل الاجتماعي الخاص بك. يمكنك أيضاً مراجعة <a "
+"href=\"https://go.wppool.dev/edUn\" target=\"_blank\" "
+"class=\"affiliate-notice-link\">برنامج التسويق بالعمولة</a> للحصول على "
+"عمولة بنسبة 25%% على كل عملية بيع!"
 
 #: templates/admin/affiliate-notice.php:20
 msgid "Tell me more "
-msgstr "Katakan lebih lanjut "
+msgstr "أخبرني المزيد "
 
 #: templates/admin/affiliate-notice.php:29 templates/admin/review-notice.php:36
 msgid "Would you like us to remind you about this later?"
-msgstr "Apakah Anda ingin kami mengingatkan Anda tentang ini nanti?"
+msgstr "هل تود منا تذكيرك بهذا لاحقاً؟"
 
 #: templates/admin/affiliate-notice.php:32 templates/admin/review-notice.php:39
 msgid "Remind me in 3 days"
-msgstr "Ingatkan saya dalam 3 hari"
+msgstr "ذكرني خلال 3 أيام"
 
 #: templates/admin/affiliate-notice.php:33 templates/admin/review-notice.php:40
 msgid "Remind me in 10 days"
-msgstr "Ingatkan saya dalam 10 hari"
+msgstr "ذكرني خلال 10 أيام"
 
 #: templates/admin/affiliate-notice.php:34 templates/admin/review-notice.php:42
 msgid "Don't remind me about this"
-msgstr "Jangan ingatkan saya tentang ini"
+msgstr "لا تذكرني بهذا"
 
 #: templates/admin/review-notice.php:17
 msgid ""
@@ -1278,103 +1298,102 @@ msgid ""
 "It will take two minutes of your time, and will really help us spread the "
 "world."
 msgstr ""
-"Halo, sepertinya Jitsi Meet WP memberikan manfaat bagi Anda, dan itu luar "
-"biasa! Tolong tunjukkan dukungan Anda dan beri peringkat Jitsi Meet WP di "
-"WordPress? Ini hanya memakan waktu dua menit dari waktu Anda, dan akan "
-"sangat membantu kami menyebarkan informasi ini."
+"مرحباً، يبدو أن Jitsi Meet WP يقدم لك قيمة مضافة، وهذا أمر رائع حقاً! هل "
+"يمكنك التعبير عن دعمك وتقييم الإضافة على ووردبريس؟ سيستغرق الأمر دقيقتين "
+"فقط، وسيساعدنا كثيراً في الانتشار."
 
 #: templates/admin/review-notice.php:26
 msgid "I'd love to help :)"
-msgstr "Saya senang membantu :)"
+msgstr "يسعدني المساعدة :)"
 
 #: templates/admin/review-notice.php:29
 msgid "Not this time"
-msgstr "Tidak kali ini"
+msgstr "ليس هذه المرة"
 
 #: templates/admin/review-notice.php:31
 msgid "I've already rated you"
-msgstr "Saya sudah memberi peringkat"
+msgstr "لقد قمت بتقييمكم بالفعل"
 
 #: blocks/dist/blocks.build.js:215 blocks/src/blocks.js:75
 msgid "Domain"
-msgstr "Domain"
+msgstr "النطاق"
 
 #: blocks/dist/blocks.build.js:224 blocks/src/blocks.js:82
 msgid "Config from global"
-msgstr "Konfigurasi dari global"
+msgstr "التكوين من الإعدادات العامة"
 
 #: blocks/dist/blocks.build.js:265 blocks/src/blocks.js:123
 msgid "Start with audio muted"
-msgstr "Mulai dengan audio senyap"
+msgstr "البدء وكتم الصوت"
 
 #: blocks/dist/blocks.build.js:273 blocks/src/blocks.js:128
 msgid "Start with video muted"
-msgstr "Mulai dengan video dimatikan"
+msgstr "البدء وكتم الفيديو"
 
 #: blocks/dist/blocks.build.js:281 blocks/src/blocks.js:133
 msgid "Start with screen sharing"
-msgstr "Mulai dengan berbagi layar"
+msgstr "البدء مع مشاركة الشاشة"
 
 #: blocks/dist/blocks.build.js:306 blocks/src/blocks.js:157
 msgid "Room name:"
-msgstr "Nama ruangan:"
+msgstr "اسم الغرفة:"
 
 #: blocks/dist/blocks.build.js:306 blocks/src/blocks.js:158
 msgid "Domain :"
-msgstr "Domain:"
+msgstr "النطاق :"
 
 #: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:170
 msgid "jitsi"
-msgstr "Jitsi"
+msgstr "جيتسي"
 
 #: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:171
 msgid "meeting"
-msgstr "pertemuan"
+msgstr "اجتماع"
 
 #: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:172
 msgid "video"
-msgstr "Video"
+msgstr "فيديو"
 
 #: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:173
 msgid "conference"
-msgstr "konferensi"
+msgstr "مؤتمر"
 
 #: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:174
 msgid "zoom"
-msgstr "Zoom"
+msgstr "زوم (zoom)"
 
 #: inc/admin/mannage-callback.php:749
 msgid "<strong>Request</strong> your branded setup first (%s)"
-msgstr "<strong>Minta</strong> penyiapan merek Anda terlebih dahulu (%s)"
+msgstr "<strong>اطلب</strong> إعداد علامتك التجارية أولاً (%s)"
 
 #: inc/admin/mannage-callback.php:749
 msgid "request now →"
-msgstr "minta sekarang →"
+msgstr "اطلب الآن →"
 
 msgid "Branded meeting i.e link, logo, colors"
-msgstr "Rapat bermerek yaitu tautan, logo, warna"
+msgstr "اجتماع يحمل علامة تجارية، أي الرابط، والشعار، والألوان"
 
 msgid "Meeting Moderator support"
-msgstr "Dukungan Moderator Rapat"
+msgstr "دعم منسق الاجتماع"
 
 msgid "No server cost or maintenance (we handle everything)"
-msgstr "Tanpa biaya server atau pemeliharaan (kami menangani semuanya)"
+msgstr "لا توجد تكاليف خادم أو صيانة (نحن نتولى كل شيء)"
 
 msgid "Private hosting (not a shared public server)"
-msgstr "Hosting pribadi (bukan server publik bersama)"
+msgstr "استضافة خاصة (ليس خادمًا عامًا مشتركًا)"
 
 msgid "No third-party branding (fully white-labeled)"
-msgstr "Tanpa pencitraan merek pihak ketiga (berlabel putih sepenuhnya)"
+msgstr "لا توجد علامة تجارية لطرف ثالث (علامة تجارية بيضاء بالكامل)"
 
 msgid "Longer & smoother meetings"
-msgstr "Rapat yang lebih lama & lancar"
+msgstr "اجتماعات أطول وأكثر سلاسة"
 
 msgid "Create & share meeting links from your SaaS dashboard"
-msgstr "Buat & bagikan tautan rapat dari dasbor SaaS Anda"
+msgstr "إنشاء روابط الاجتماعات ومشاركتها من لوحة معلومات SaaS الخاصة بك"
 
 msgid ""
 "New: Get your own %1$sbranded Jitsi meeting%2$s experience! %3$sSet Up "
 "Now%4$s →"
 msgstr ""
-"Baru: Dapatkan pengalaman %1$spertemuan Jitsi bermerek%2$s Anda sendiri! "
-"%3$sSiapkan Sekarang%4$s →"
+"جديد: احصل على %1$sتجربة اجتماع Jitsi بهويتك التجارية%2$s الخاصة! %3$sاعداد "
+"الان%4$s ←"

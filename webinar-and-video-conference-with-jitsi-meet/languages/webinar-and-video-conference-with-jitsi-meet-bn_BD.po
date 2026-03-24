@@ -3,42 +3,47 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FlexMeeting 2.7.9\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/webinar-and-video-conference-with-jitsi-meet\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/webinar-and-video-conference-with-"
+"jitsi-meet\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: Antigravity AI\n"
 "Language-Team: Bangla <bn_BD@li.org>\n"
 "Language: bn_BD\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 "X-Domain: webinar-and-video-conference-with-jitsi-meet\n"
 
+#: jitsi-meet-wp.php inc/admin/class-admin.php:172 inc/admin/class-admin.php:183
+#: inc/admin/class-admin.php:255 inc/admin/class-admin.php:689
 #. Plugin Name of the plugin
-#: jitsi-meet-wp.php inc/admin/class-admin.php:158
-#: inc/admin/class-admin.php:169 inc/admin/class-admin.php:241
-#: inc/admin/class-admin.php:559 blocks/dist/blocks.build.js:314
 msgid "FlexMeeting"
-msgstr "ফ্লেক্সমিটিং"
+msgstr "ফ্লেক্স মিটিং আলটিমেট"
 
-#. Plugin URI of the plugin
 #: jitsi-meet-wp.php
+#. Plugin URI of the plugin
 msgid "https://jitsi-meet-wp.wppool.dev/"
 msgstr "https://jitsi-meet-wp.wppool.dev/"
 
+#: jitsi-meet-wp.php
 #. Description of the plugin
-#: jitsi-meet-wp.php
-msgid "Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block"
-msgstr "গুটেনবার্গ ব্লকের মাধ্যমে আপনার ওয়ার্ডপ্রেস ওয়েবসাইটে সরাসরি লাইভ ওয়েবিনার, কনফারেন্স, অনলাইন ক্লাস এবং ভিডিও কল হোস্ট করুন"
+msgid ""
+"Host live webinars, conferences, online classes, video calls directly on "
+"your WordPress website with gutenberg block"
+msgstr ""
+"গুটেনবার্গ ব্লকের মাধ্যমে আপনার ওয়ার্ডপ্রেস ওয়েবসাইটে সরাসরি লাইভ "
+"ওয়েবিনার, কনফারেন্স, অনলাইন ক্লাস এবং ভিডিও কল হোস্ট করুন"
 
-#. Author of the plugin
 #: jitsi-meet-wp.php
+#. Author of the plugin
 msgid "WPPOOL"
 msgstr "WPPOOL"
 
-#. Author URI of the plugin
 #: jitsi-meet-wp.php
+#. Author URI of the plugin
 msgid "https://wppool.dev"
 msgstr "https://wppool.dev"
 
@@ -46,565 +51,640 @@ msgstr "https://wppool.dev"
 msgid "Cheatin&#8217; huh?"
 msgstr "প্রতারণা করছেন, তাই না?"
 
-#: inc/admin/admin-settings.php:256
-msgid "Select API"
-msgstr "এপিআই (API) নির্বাচন করুন"
+#: inc/admin/admin-settings.php:275
+msgid "Default (Public Hosting)"
+msgstr "ডিফল্ট (পাবলিক হোস্টিং)"
 
-#: inc/admin/admin-settings.php:256
-msgid "Select your api"
-msgstr "আপনার এপিআই (API) নির্বাচন করুন"
+#: inc/admin/admin-settings.php:276
+msgid "Use the default public Jitsi"
+msgstr "ডিফল্ট পাবলিক জিৎসি ব্যবহার করুন"
 
-#: inc/admin/admin-settings.php:273
-msgid "FlexMeeting Free"
-msgstr "ফ্লেক্সমিটিং ফ্রি"
+#: inc/admin/admin-settings.php:279 inc/admin/mannage-callback.php:708
+msgid "Managed Branded Meeting"
+msgstr "পরিচালিত ব্র্যান্ডেড মিটিং"
 
-#: inc/admin/admin-settings.php:273
-msgid "Get access to all the free features of the video conference application Jitsi Meet."
-msgstr "ভিডিও কনফারেন্স অ্যাপ্লিকেশন জিটসি মিট (Jitsi Meet)-এর সমস্ত বিনামূল্যের ফিচারের অ্যাক্সেস পান।"
+#: inc/admin/admin-settings.php:280
+msgid "We host and maintain your branded server"
+msgstr "আমরা আপনার ব্র্যান্ডেড সার্ভার হোস্ট এবং বজায় রাখি"
 
-#: inc/admin/admin-settings.php:277
-msgid "JaaS 8x8"
-msgstr "জেএএএস (JaaS) ৮x৮"
+#: inc/admin/admin-settings.php:283
+msgid "Jitsi as a Service (8x8 JaaS)"
+msgstr "সার্ভিস হিসেবে জিৎসি (8x8 JaaS)"
 
-#: inc/admin/admin-settings.php:277
-msgid "Access to enterprise standard video meeting features and modify everything as you like."
-msgstr "এন্টারপ্রাইজ স্ট্যান্ডার্ড ভিডিও মিটিং ফিচারগুলো অ্যাক্সেস করুন এবং নিজের ইচ্ছেমতো সবকিছু পরিবর্তন করুন।"
+#: inc/admin/admin-settings.php:284
+msgid "Use your JaaS credentials"
+msgstr "আপনার JaaS লগইন ব্যবহার করুন"
 
-#: inc/admin/admin-settings.php:282
-msgid "Self Hosted"
-msgstr "সেলফ হোস্টেড"
+#: inc/admin/admin-settings.php:287
+msgid "Self-Hosted"
+msgstr "স্ব-হোস্ট করা"
 
-#: inc/admin/admin-settings.php:282
-msgid "Opportunity to host Jitsi Meet on self-hosting with a branded domain and high security."
-msgstr "ব্র্যান্ডেড ডোমেইন এবং উচ্চ নিরাপত্তা নিশ্চিত করে নিজস্ব হোস্টিংয়ে জিটসি মিট হোস্ট করার সুযোগ।"
+#: inc/admin/admin-settings.php:288
+msgid "Connect your self-hosted server"
+msgstr "আপনার স্ব-হোস্ট করা সার্ভার কানেক্ট করুন"
 
-#: inc/admin/admin-settings.php:289
-msgid "Default Public Domain"
-msgstr "ডিফল্ট পাবলিক ডোমেইন"
-
-#: inc/admin/admin-settings.php:289
-msgid "Select a public domain to run your meeting. If you face issues or the meeting fails to load, switch the server from the dropdown, and it will be fixed."
-msgstr "আপনার মিটিং শুরু করার জন্য একটি পাবলিক ডোমেইন বেছে নিন। যদি কোনো সমস্যা ফেস করেন বা মিটিং লোড না হয়, ড্রপডাউন থেকে সার্ভার পরিবর্তন করুন, এটি ঠিক হয়ে যাবে"
-
-#: inc/admin/admin-settings.php:297
-msgid "Domain One"
-msgstr "ডোমেইন ওয়ান"
-
-#: inc/admin/admin-settings.php:298
-msgid "Domain Two"
-msgstr "ডোমেইন টু"
-
-#: inc/admin/admin-settings.php:299
-msgid "Domain Three"
-msgstr "ডোমেইন থ্রি"
-
-#: inc/admin/admin-settings.php:300
-msgid "Domain Four"
-msgstr "ডোমেইন ফোর"
-
-#: inc/admin/admin-settings.php:313
-msgid "Hosted Domain"
-msgstr "হোস্টেড ডোমেইন"
-
-#: inc/admin/admin-settings.php:313
-msgid "Without http or https"
-msgstr "http বা https ছাড়া"
-
-#: inc/admin/admin-settings.php:334
-msgid "APP ID"
-msgstr "অ্যাপ আইডি"
-
-#: inc/admin/admin-settings.php:335 inc/admin/admin-settings.php:360
-msgid "Get it from "
-msgstr "এটি থেকে পান "
-
-#: inc/admin/admin-settings.php:337 inc/admin/admin-settings.php:362
-msgid "JAAS Admin"
-msgstr "JAAS অ্যাডমিন"
-
-#: inc/admin/admin-settings.php:339
-msgid "Copy the APP ID from JaaS admin"
-msgstr "JaaS অ্যাডমিন থেকে অ্যাপ আইডিটি কপি করুন"
-
-#: inc/admin/admin-settings.php:359
-msgid "API Key"
-msgstr "API কী"
-
-#: inc/admin/admin-settings.php:364
-msgid "Copy the API Key from JaaS admin"
-msgstr "JaaS অ্যাডমিন থেকে API কীটি কপি করুন"
-
-#: inc/admin/admin-settings.php:384
-msgid "Private Key"
-msgstr "প্রাইভেট কী"
-
-#: inc/admin/admin-settings.php:385
-msgid "Paste private key content here "
-msgstr "আপনার প্রাইভেট কী কন্টেন্ট এখানে পেস্ট করুন "
-
-#: inc/admin/admin-settings.php:387
-msgid "Generate private key and download"
-msgstr "প্রাইভেট কী জেনারেট করুন এবং ডাউনলোড করুন"
-
-#: inc/admin/admin-settings.php:405
+#: inc/admin/admin-settings.php:328
 msgid "User Email"
 msgstr "ইউজার ইমেইল"
 
-#: inc/admin/admin-settings.php:405
+#: inc/admin/admin-settings.php:328
 msgid "Email address of admin"
 msgstr "অ্যাডমিনের ইমেইল এড্রেস"
 
-#: inc/admin/admin-settings.php:417
+#: inc/admin/admin-settings.php:340
 msgid "User Username"
 msgstr "ইউজার ইউজারনেম"
 
-#: inc/admin/admin-settings.php:417
+#: inc/admin/admin-settings.php:340
 msgid "Username of the admin"
 msgstr "অ্যাডমিনের ইউজারনেম"
 
-#: inc/admin/admin-settings.php:429
+#: inc/admin/admin-settings.php:352
 msgid "User Avatar"
 msgstr "ইউজার অবতার"
 
-#: inc/admin/admin-settings.php:429
+#: inc/admin/admin-settings.php:352
 msgid "The avatar url of the admin user"
 msgstr "অ্যাডমিন ইউজারের অবতার ইউআরএল"
 
-#: inc/admin/admin-settings.php:436
+#: inc/admin/admin-settings.php:359
 msgid "280x70px png, up to 4MB"
 msgstr "২৮০x৭০পিএক্স পিএনজি, সর্বোচ্চ ৪এমিবি"
 
-#: inc/admin/admin-settings.php:443
+#: inc/admin/admin-settings.php:366
 msgid "Enable Moderator Access"
 msgstr "মডারেটর অ্যাক্সেস সক্রিয় করুন"
 
-#: inc/admin/admin-settings.php:443
-msgid "Allow this user to join as a moderator in Jass 8x8 meetings (only users with edit access)"
-msgstr "এই ইউজারকে Jass 8x8 মিটিংয়ে মডারেটর হিসেবে যোগদানের অনুমতি দিন (শুধুমাত্র এডিট অ্যাক্সেস থাকা ইউজারদের জন্য)"
+#: inc/admin/admin-settings.php:366
+msgid ""
+"Allow this user to join as a moderator in Jass 8x8 meetings (only users "
+"with edit access)"
+msgstr ""
+"এই ইউজারকে Jass 8x8 মিটিংয়ে মডারেটর হিসেবে যোগদানের অনুমতি দিন (শুধুমাত্র "
+"এডিট অ্যাক্সেস থাকা ইউজারদের জন্য)"
 
-#: inc/admin/admin-settings.php:456
+#: inc/admin/admin-settings.php:379
 msgid "Other Admin Config"
 msgstr "অন্যান্য অ্যাডমিন কনফিগ"
 
-#: inc/admin/admin-settings.php:456
+#: inc/admin/admin-settings.php:379
 msgid "Those are on https://jaas.8x8.vc/#/branding"
 msgstr "এগুলো https://jaas.8x8.vc/#/branding এ পাওয়া যাবে"
 
-#: inc/admin/admin-settings.php:469
+#: inc/admin/admin-settings.php:392
 msgid "Meeting Width"
 msgstr "মিটিংয়ের প্রস্থ (Width)"
 
-#: inc/admin/admin-settings.php:469
+#: inc/admin/admin-settings.php:392
 msgid "Width in pixel when not on fullscreen"
 msgstr "ফুল স্ক্রিন না থাকা অবস্থায় পিক্সেল অনুযায়ী প্রস্থ"
 
-#: inc/admin/admin-settings.php:481
+#: inc/admin/admin-settings.php:404
 msgid "Meeting Height"
 msgstr "মিটিংয়ের দৈর্ঘ্য (Height)"
 
-#: inc/admin/admin-settings.php:481
+#: inc/admin/admin-settings.php:404
 msgid "Height in pixel when not on fullscreen"
 msgstr "ফুল স্ক্রিন না থাকা অবস্থায় পিক্সেল অনুযায়ী দৈর্ঘ্য"
 
-#: inc/admin/admin-settings.php:493 inc/elementor.php:188
+#: inc/admin/admin-settings.php:416 inc/elementor.php:188 blocks/dist/blocks.build.js:289
 #: blocks/src/blocks.js:138
 msgid "Enable Inviting"
 msgstr "ইনভাইটিং সক্রিয় করুন"
 
-#: inc/admin/admin-settings.php:493
+#: inc/admin/admin-settings.php:416
 msgid "Attendee can invite people"
 msgstr "অংশগ্রহণকারীরা অন্যদের ইনভাইট করতে পারবে"
 
-#: inc/admin/admin-settings.php:505
+#: inc/admin/admin-settings.php:428
 msgid "Welcome Page"
 msgstr "ওয়েলকাম পেজ"
 
-#: inc/admin/admin-settings.php:505
+#: inc/admin/admin-settings.php:428
 msgid "Enable/Disable welcome page"
 msgstr "ওয়েলকাম পেজ চালু/বন্ধ করুন"
 
-#: inc/admin/admin-settings.php:518
+#: inc/admin/admin-settings.php:441
 msgid "Yourself muted"
 msgstr "নিজে মিউট থাকা"
 
-#: inc/admin/admin-settings.php:518
+#: inc/admin/admin-settings.php:441
 msgid "Start with yourself muted"
 msgstr "মিটিং শুরুতেই নিজে মিউট থাকুন"
 
-#: inc/admin/admin-settings.php:530
+#: inc/admin/admin-settings.php:453
 msgid "Audio Only"
 msgstr "শুধুমাত্র অডিও"
 
-#: inc/admin/admin-settings.php:530
+#: inc/admin/admin-settings.php:453
 msgid "Start conference on audio only"
 msgstr "শুধুমাত্র অডিও কনফারেন্স শুরু করুন"
 
-#: inc/admin/admin-settings.php:543
+#: inc/admin/admin-settings.php:466
 msgid "Audio Muted"
 msgstr "অডিও মিউট করা"
 
-#: inc/admin/admin-settings.php:543
+#: inc/admin/admin-settings.php:466
 msgid "Participant after nth will be muted"
 msgstr "নির্দিষ্ট সংখ্যক অংশগ্রহণকারীর পরের অংশগ্রহণকারীরা মিউট থাকবে"
 
-#: inc/admin/admin-settings.php:556
+#: inc/admin/admin-settings.php:479
 msgid "Start Silent"
 msgstr "নিঃশব্দে শুরু করুন"
 
-#: inc/admin/admin-settings.php:556
+#: inc/admin/admin-settings.php:479
 msgid "Disable local audio output"
 msgstr "লোকাল অডিও আউটপুট বন্ধ করুন"
 
-#: inc/admin/admin-settings.php:569
+#: inc/admin/admin-settings.php:492
 msgid "Start Video Muted"
 msgstr "ভিডিও মিউট করে শুরু করুন"
 
-#: inc/admin/admin-settings.php:569
+#: inc/admin/admin-settings.php:492
 msgid "Start call with video muted"
 msgstr "কল শুরুর সময় ভিডিও মিউট রাখুন"
 
-#: inc/admin/admin-settings.php:581 inc/elementor.php:176
+#: inc/admin/admin-settings.php:504 inc/elementor.php:176
 msgid "Screen Sharing"
 msgstr "স্ক্রিন শেয়ারিং"
 
-#: inc/admin/admin-settings.php:581
-msgid "Enabling this feature allow you to share your screen while attending a meeting"
+#: inc/admin/admin-settings.php:504
+msgid ""
+"Enabling this feature allow you to share your screen while attending a "
+"meeting"
 msgstr "এই ফিচারটি চালু থাকলে মিটিং চলাকালীন আপনি আপনার স্ক্রিন শেয়ার করতে পারবেন"
 
-#: inc/admin/admin-settings.php:593
+#: inc/admin/admin-settings.php:516
 msgid "Video Resolution"
 msgstr "ভিডিও রেজোলিউশন"
 
-#: inc/admin/admin-settings.php:593
+#: inc/admin/admin-settings.php:516
 msgid "Start with preferred resolution"
 msgstr "পছন্দসই রেজোলিউশন দিয়ে শুরু করুন"
 
-#: inc/admin/admin-settings.php:614
+#: inc/admin/admin-settings.php:537
 msgid "Max Full Resolution"
 msgstr "সর্বোচ্চ ফুল রেজোলিউশন"
 
-#: inc/admin/admin-settings.php:614
+#: inc/admin/admin-settings.php:537
 msgid "Number of participant with default resolution"
 msgstr "ডিফল্ট রেজোলিউশন কতজন অংশগ্রহণকারীদের জন্য প্রযোজ্য হবে"
 
-#: inc/admin/admin-settings.php:627
+#: inc/admin/admin-settings.php:550
 msgid "Video Muted After"
 msgstr "ভিডিও মিউট করা হবে"
 
-#: inc/admin/admin-settings.php:627
+#: inc/admin/admin-settings.php:550
 msgid "Every participant after nth will start video muted"
 msgstr "নির্দিষ্ট সংখ্যক অংশগ্রহণকারীর পর সবাই ভিডিও মিউট অবস্থায় শুরু করবে"
 
-#: inc/admin/admin-settings.php:640
+#: inc/admin/admin-settings.php:563
 msgid "Enable Livestream"
 msgstr "লাইভস্ট্রিম সক্রিয় করুন"
 
-#: inc/admin/admin-settings.php:640
+#: inc/admin/admin-settings.php:563
 msgid "Turn on livestreaming"
 msgstr "লাইভস্ট্রিম চালু করুন"
 
-#: inc/admin/admin-settings.php:653
+#: inc/admin/admin-settings.php:576
 msgid "Enable Recording"
 msgstr "রেকর্ডিং সক্রিয় করুন"
 
-#: inc/admin/admin-settings.php:653
+#: inc/admin/admin-settings.php:576
 msgid "Turn on to record the meeting"
 msgstr "মিটিং রেকর্ড করতে এটি চালু করুন"
 
-#: inc/admin/admin-settings.php:666
+#: inc/admin/admin-settings.php:589
 msgid "Enable Outbound"
 msgstr "আউটবাউন্ড সক্রিয় করুন"
 
-#: inc/admin/class-admin.php:666
+#: inc/admin/admin-settings.php:589
 msgid "Allow outbound on the meeting"
 msgstr "মিটিংয়ে আউটবাউন্ড কলের অনুমতি দিন"
 
-#: inc/admin/admin-settings.php:679
+#: inc/admin/admin-settings.php:602
 msgid "Enable Transcription"
 msgstr "ট্রান্সক্রিপশন সক্রিয় করুন"
 
-#: inc/admin/admin-settings.php:679
+#: inc/admin/admin-settings.php:602
 msgid "Transcript the meeting"
 msgstr "মিটিংয়ের কথাবার্তা ট্রান্সক্রিপ্ট করুন"
 
-#: inc/admin/admin-settings.php:692
+#: inc/admin/admin-settings.php:615
 msgid "Hide Jitsi Sidebar"
 msgstr "জিটসি সাইডবার লুকান"
 
-#: inc/admin/admin-settings.php:692
+#: inc/admin/admin-settings.php:615
 msgid "Enable to hide Jitsi sidebar from Jitsi Meeting room"
 msgstr "মিটিং রুম থেকে জিটসি সাইডবার লুকাতে এটি ব্যবহার করুন"
 
-#: inc/admin/admin-settings.php:706
+#: inc/admin/admin-settings.php:629
 msgid "Simulcast"
 msgstr "সিমুলকাস্ট"
 
-#: inc/admin/admin-settings.php:706
+#: inc/admin/admin-settings.php:629
 msgid "Enable/Disable simulcast"
 msgstr "সিমুলকাস্ট চালু/বন্ধ করুন"
 
-#: inc/admin/admin-settings.php:719
+#: inc/admin/admin-settings.php:642
 msgid "Enable Whiteboard"
 msgstr "হোয়াইটবোর্ড সক্রিয় করুন"
 
-#: inc/admin/admin-settings.php:719
+#: inc/admin/admin-settings.php:642
 msgid "Enable to use the whiteboard on Jass 8x8"
 msgstr "Jass 8x8-এ হোয়াইটবোর্ড ব্যবহার করতে এটি পারমিশন দিন"
 
-#: inc/admin/admin-settings.php:733
+#: inc/admin/admin-settings.php:656
 msgid "Enable to Change Post-type Slug"
 msgstr "পোস্ট-টাইপ স্লাগ পরিবর্তন সক্রিয় করুন"
 
-#: inc/admin/admin-settings.php:733
+#: inc/admin/admin-settings.php:656
 msgid "You can enable/disable custom slug"
 msgstr "আপনি কাস্টম স্লাগ চালু বা বন্ধ করতে পারেন"
 
-#: inc/admin/class-admin.php:74 inc/admin/class-admin.php:104
+#: inc/admin/class-admin.php:76 inc/admin/class-admin.php:106
 msgid "Invalid request"
 msgstr "অনুরোধটি সঠিক নয়"
 
-#: inc/admin/class-admin.php:80 inc/admin/class-admin.php:110
-#: inc/admin/class-admin.php:135
+#: inc/admin/class-admin.php:82 inc/admin/class-admin.php:112 inc/admin/class-admin.php:149
 msgid "You do not have permission to do this action"
 msgstr "আপনার এই কাজটি করার অনুমতি নেই"
 
-#: inc/admin/class-admin.php:170 inc/admin/class-admin.php:353
+#: inc/admin/class-admin.php:184 inc/admin/class-admin.php:367
 msgid "Documentation"
 msgstr "ডকুমেন্টেশন"
 
-#: inc/admin/class-admin.php:178
+#: inc/admin/class-admin.php:192
 msgid "Jitsi Meet Welcome"
 msgstr "জিটিসি মিট ওয়েলকাম"
 
-#: inc/admin/class-admin.php:187
+#: inc/admin/class-admin.php:201
 msgid "APP Settings"
 msgstr "অ্যাপ সেটিংস"
 
-#: inc/admin/class-admin.php:196 inc/admin/class-admin.php:201
-#: inc/admin/class-admin.php:701
+#: inc/admin/class-admin.php:202 init.php:188 blocks/dist/blocks.build.js:204
+#: blocks/src/blocks.js:67
+msgid "Settings"
+msgstr "সেটিংস"
+
+#: inc/admin/class-admin.php:210 inc/admin/class-admin.php:215 inc/admin/class-admin.php:779
 msgid "Add-ons"
 msgstr "অ্যাড-অনস"
 
-#: inc/admin/class-admin.php:202
+#: inc/admin/class-admin.php:216 inc/admin/mannage-callback.php:371
 msgid "New"
 msgstr "নতুন"
 
-#: inc/admin/class-admin.php:212
+#: inc/admin/class-admin.php:226 init.php:189
 msgid "Upgrade to Ultimate"
 msgstr "আলটিমেট ভার্সনে আপগ্রেড করুন"
 
-#: inc/admin/class-admin.php:251
+#: inc/admin/class-admin.php:265
 msgid "Gutenberg"
 msgstr "গুটেনবার্গ"
 
-#: inc/admin/class-admin.php:256
+#: inc/admin/class-admin.php:270
 msgid "Elementor"
 msgstr "এলিমেন্টর"
 
-#: inc/admin/class-admin.php:261
+#: inc/admin/class-admin.php:275
 msgid "Shortcode"
 msgstr "শর্টকোড"
 
-#: inc/admin/class-admin.php:272
+#: inc/admin/class-admin.php:286
 msgid "How to set a conference room"
 msgstr "কিভাবে একটি কনফারেন্স রুম সেট করবেন"
 
-#: inc/admin/class-admin.php:273
+#: inc/admin/class-admin.php:287
 msgid "Very simple and easy steps"
 msgstr "খুবই সহজ এবং সাধারণ কিছু ধাপ"
 
-#: inc/admin/class-admin.php:277
-msgid "While you are on the post/page edit screen click on gutenberg plus icon to add a new gutenberg block"
-msgstr "পোস্ট বা পেজ এডিট স্ক্রিনে থাকা অবস্থায় নতুন গুটেনবার্গ ব্লক যোগ করতে প্লাস (+) আইকনে ক্লিক করুন"
+#: inc/admin/class-admin.php:291
+msgid ""
+"While you are on the post/page edit screen click on gutenberg plus icon to "
+"add a new gutenberg block"
+msgstr ""
+"পোস্ট বা পেজ এডিট স্ক্রিনে থাকা অবস্থায় নতুন গুটেনবার্গ ব্লক যোগ করতে "
+"প্লাস (+) আইকনে ক্লিক করুন"
 
-#: inc/admin/class-admin.php:279
+#: inc/admin/class-admin.php:293
 msgid "Add new gutenberg block on page"
 msgstr "পেজে নতুন গুটেনবার্গ ব্লক যোগ করুন"
 
-#: inc/admin/class-admin.php:283
+#: inc/admin/class-admin.php:297
 msgid "Add \"Jitsi Meet\" from \"Embeds\" category"
 msgstr "\"Embeds\" ক্যাটাগরি থেকে \"Jitsi Meet\" যোগ করুন"
 
-#: inc/admin/class-admin.php:285
+#: inc/admin/class-admin.php:299
 msgid "Add Jitsi Meet from Embeds category"
 msgstr "Embeds ক্যাটাগরি থেকে জিটসি মিট যোগ করুন"
 
-#: inc/admin/class-admin.php:289
+#: inc/admin/class-admin.php:303
 msgid "Set width and height and you are done"
 msgstr "প্রস্থ (width) এবং উচ্চতা (height) সেট করুন এবং কাজ শেষ"
 
-#: inc/admin/class-admin.php:291 inc/admin/class-admin.php:311
-#: inc/admin/class-admin.php:332
+#: inc/admin/class-admin.php:305 inc/admin/class-admin.php:325 inc/admin/class-admin.php:346
 msgid "Jitsi Meet Settings"
 msgstr "জিটিসি মিট সেটিংস"
 
-#: inc/admin/class-admin.php:298
+#: inc/admin/class-admin.php:312
 msgid "How to set with elementor"
 msgstr "কিভাবে এলিমেন্টর দিয়ে সেট করবেন"
 
-#: inc/admin/class-admin.php:299
+#: inc/admin/class-admin.php:313
 msgid "Setup a video conference room with elementor"
 msgstr "এলিমেন্টর ব্যবহার করে ভিডিও কনফারেন্স রুম তৈরি করুন"
 
-#: inc/admin/class-admin.php:303
-msgid "While you are on elementor edit screen drag and drop <strong>Jitsi Meet</strong> element to your page"
-msgstr "এলিমেন্টর এডিট স্ক্রিনে থাকন অবস্থায় আপনার পেজে <strong>Jitsi Meet</strong> এলিমেন্টটিকে ড্র্যাগ এবং ড্রপ করুন"
+#: inc/admin/class-admin.php:317
+msgid ""
+"While you are on elementor edit screen drag and drop <strong>Jitsi "
+"Meet</strong> element to your page"
+msgstr ""
+"এলিমেন্টর এডিট স্ক্রিনে থাকন অবস্থায় আপনার পেজে <strong>Jitsi Meet</strong> "
+"এলিমেন্টটিকে ড্র্যাগ এবং ড্রপ করুন"
 
-#: inc/admin/class-admin.php:305
+#: inc/admin/class-admin.php:319
 msgid "Add new jitsi meet element on page"
 msgstr "পেজে নতুন জিটসি মিট এলিমেন্ট যোগ করুন"
 
-#: inc/admin/class-admin.php:309
+#: inc/admin/class-admin.php:323
 msgid "Set name, width, height etc and you are done"
 msgstr "নাম, প্রস্থ, উচ্চতা ইত্যাদি সেট করুন এবং কাজ শেষ"
 
-#: inc/admin/class-admin.php:318
+#: inc/admin/class-admin.php:332
 msgid "How to set with shortcode"
 msgstr "কিভাবে শর্টকোড দিয়ে সেট করবেন"
 
-#: inc/admin/class-admin.php:319
+#: inc/admin/class-admin.php:333
 msgid "Setup a video conference room with shortcode"
 msgstr "শর্টকোড ব্যবহার করে ভিডিও কনফারেন্স রুম তৈরি করুন"
 
-#: inc/admin/class-admin.php:321
+#: inc/admin/class-admin.php:335
 msgid "Write down the shortcode below and set width, height and name of conference"
 msgstr "নিচের শর্টকোডটি লিখুন এবং কনফারেন্সের নাম, প্রস্থ ও উচ্চতা সেট করুন"
 
-#: inc/admin/class-admin.php:323
+#: inc/admin/class-admin.php:337
 msgid "Click on shortcode to copy"
 msgstr "কপি করতে শর্টকোডের ওপর ক্লিক করুন"
 
-#: inc/admin/class-admin.php:327
+#: inc/admin/class-admin.php:341
 msgid "name:"
 msgstr "নাম:"
 
-#: inc/admin/class-admin.php:327
+#: inc/admin/class-admin.php:341
 msgid "A unique name to generate the url of the room"
 msgstr "রুমের ইউআরএল তৈরি করার জন্য একটি ইউনিক নাম"
 
-#: inc/admin/class-admin.php:328
+#: inc/admin/class-admin.php:342
 msgid "width:"
 msgstr "প্রস্থ:"
 
-#: inc/admin/class-admin.php:328
+#: inc/admin/class-admin.php:342
 msgid "Width of the jitsi meet embedded"
 msgstr "এমবেডেড জিটসি মিটের প্রস্থ"
 
-#: inc/admin/class-admin.php:329
+#: inc/admin/class-admin.php:343
 msgid "height:"
 msgstr "উচ্চতা:"
 
-#: inc/admin/class-admin.php:329
+#: inc/admin/class-admin.php:343
 msgid "Height of the jitsi meet embedded"
 msgstr "এমবেডেড জিটসি মিটের উচ্চতা"
 
-#: inc/admin/class-admin.php:517
+#: inc/admin/class-admin.php:367
 msgid "How to embed"
 msgstr "কিভাবে এমবেড করবেন"
 
-#: inc/admin/class-admin.php:355
+#: inc/admin/class-admin.php:369
 msgid "API Settings"
 msgstr "API সেটিংস"
 
-#: inc/admin/class-admin.php:355
+#: inc/admin/class-admin.php:369
 msgid "Authenticate with JAAS"
 msgstr "JAAS দিয়ে অথেন্টিকেট করুন"
 
-#: inc/admin/class-admin.php:357
+#: inc/admin/class-admin.php:371
 msgid "Admin Settings"
 msgstr "অ্যাডমিন সেটিংস"
 
-#: inc/admin/class-admin.php:357
+#: inc/admin/class-admin.php:371
 msgid "Username, email, avatar etc."
 msgstr "ইউজারনেম, ইমেইল, অবতার ইত্যাদি"
 
-#: inc/admin/class-admin.php:359
+#: inc/admin/class-admin.php:373
 msgid "Configurations"
 msgstr "কনফিগারেশন"
 
-#: inc/admin/class-admin.php:359
+#: inc/admin/class-admin.php:373
 msgid "Width, height, recording etc..."
 msgstr "প্রস্থ, উচ্চতা, রেকর্ডিং ইত্যাদি..."
 
-#: inc/admin/class-admin.php:361
+#: inc/admin/class-admin.php:375
 msgid "Audio Settings"
 msgstr "অডিও সেটিংস"
 
-#: inc/admin/class-admin.php:361
+#: inc/admin/class-admin.php:375
 msgid "Initial audio configurations..."
 msgstr "প্রাথমিক অডিও কনফিগারেশন..."
 
-#: inc/admin/class-admin.php:363
+#: inc/admin/class-admin.php:377
 msgid "Video Settings"
 msgstr "ভিডিও সেটিংস"
 
-#: inc/admin/class-admin.php:363
+#: inc/admin/class-admin.php:377
 msgid "Initial video configurations..."
 msgstr "প্রাথমিক ভিডিও কনফিগারেশন..."
 
-#: inc/admin/class-admin.php:561
-msgid "Welcome to FlexMeeting"
-msgstr "ফ্লেক্সমিটিংয়ে আপনাকে স্বাগতম"
+#: inc/admin/class-admin.php:468
+msgid "Self hosted domain missing"
+msgstr "সেলফ-হোস্টেড ডোমেইন (Self-hosted domain) অনুপস্থিত"
 
-#: inc/admin/class-admin.php:640
-msgid "With Your Branding, Your Rules!"
-msgstr "আপনার ব্র্যান্ডিং, আপনার নিয়ম!"
+#: inc/admin/class-admin.php:472
+msgid "App id missing"
+msgstr "অ্যাপ আইডি অনুপস্থিত"
 
-#: inc/admin/class-admin.php:643
-msgid "Host Secure Video Meetings Under Your Own Domain."
-msgstr "আপনার নিজস্ব ডোমেইনে সুরক্ষিত ভিডিও মিটিং হোস্ট করুন।"
+#: inc/admin/class-admin.php:475
+msgid "Api key is missing"
+msgstr "API কী অনুপস্থিত"
 
-#: inc/admin/class-admin.php:649
-msgid "Fully branded under your domain"
-msgstr "আপনার ডোমেইনের অধীনে সম্পূর্ণ ব্র্যান্ডিং"
+#: inc/admin/class-admin.php:478
+msgid "Private key is missing"
+msgstr "প্রাইভেট কী অনুপস্থিত"
 
-#: inc/admin/class-admin.php:653
-msgid "Zero server setup required"
-msgstr "কোনো সার্ভার সেটআপের ঝামেলা নেই"
+#: inc/admin/class-admin.php:612
+msgid "Welcome to FlexMeeting Ultimate"
+msgstr "ফ্লেক্স মিটিং আলটিমেট-এ আপনাকে স্বাগতম"
 
-#: inc/admin/class-admin.php:657
-msgid "Unlimited high-quality meetings"
-msgstr "আনলিমিটেড হাই-কোয়ালিটি মিটিং"
+#: inc/admin/class-admin.php:613
+msgid ""
+"Select for which kind of api you want to use with our plugin and give "
+"credential accordingly."
+msgstr ""
+"আমাদের প্লাগইনের সাথে আপনি কোন ধরণের API ব্যবহার করতে চান তা নির্বাচন করুন "
+"এবং সেই অনুযায়ী তথ্য প্রদান করুন।"
 
-#: inc/admin/class-admin.php:661
-msgid "No technical hassle"
-msgstr "কোনো টেকনিক্যাল জটিলতা নেই"
+#: inc/admin/class-admin.php:621
+msgid "Skip"
+msgstr "স্কিপ"
 
-#: inc/admin/class-admin.php:666
-msgid "Explore Hosted Jitsi"
-msgstr "হোস্টেড জিটসি এক্সপ্লোর করুন"
+#: inc/admin/class-admin.php:623
+msgid "Continue"
+msgstr "চালিয়ে যান"
 
-#: inc/admin/class-admin.php:674
-msgid "Jitsi Meeting Interface"
-msgstr "জিটিসি মিটিং ইন্টারফেস"
+#: inc/admin/class-admin.php:628
+msgid "How to select Jitsi Meet server?"
+msgstr "Jitsi Meet সার্ভার কীভাবে নির্বাচন করবেন?"
 
-#: inc/admin/class-admin.php:702
+#: inc/admin/class-admin.php:701 inc/admin/class-admin.php:714 inc/admin/class-admin.php:727
+#: inc/admin/class-admin.php:740 inc/admin/class-admin.php:752
+#: inc/admin/mannage-callback.php:772
+msgid "Save Changes"
+msgstr "পরিবর্তনগুলো সেভ করুন"
+
+#: inc/admin/class-admin.php:780
 msgid "Add your favourite add-ons and supercharge your workflow"
 msgstr "আপনার প্রিয় অ্যাড-অনগুলো যোগ করুন এবং আপনার কাজের গতি বাড়ান"
 
-#: inc/admin/class-admin.php:716
+#: inc/admin/class-admin.php:794
 msgid "Multivendor Addon for FlexMeeting"
 msgstr "ফ্লেক্সমিটিংয়ের জন্য মাল্টিভেন্ডর অ্যাড-অন"
 
-#: inc/admin/class-admin.php:717
-msgid "Power up your multi-vendor experience & create meetings right from your vendor dashboard. Elevate your store with monetizable video meetings."
-msgstr "আপনার মাল্টি-ভেন্ডর অভিজ্ঞতা সমৃদ্ধ করুন এবং ভেন্ডর ড্যাশবোর্ড থেকেই মিটিং তৈরি করুন। ভিডিও মিটিং সার্ভিসের মাধ্যমে আপনার স্টোরের ইনকাম বাড়ান।"
+#: inc/admin/class-admin.php:795
+msgid ""
+"Power up your multi-vendor experience & create meetings right from your "
+"vendor dashboard. Elevate your store with monetizable video meetings."
+msgstr ""
+"আপনার মাল্টি-ভেন্ডর অভিজ্ঞতা সমৃদ্ধ করুন এবং ভেন্ডর ড্যাশবোর্ড থেকেই মিটিং "
+"তৈরি করুন। ভিডিও মিটিং সার্ভিসের মাধ্যমে আপনার স্টোরের ইনকাম বাড়ান।"
 
-#: inc/admin/class-admin.php:724
+#: inc/admin/class-admin.php:802 inc/admin/class-admin.php:838
 msgid "Not activate"
 msgstr "সক্রিয় নয়"
 
-#: inc/admin/class-admin.php:726 inc/admin/licence-cta.php:13
+#: inc/admin/class-admin.php:804 inc/admin/class-admin.php:840 inc/admin/licence-cta.php:13
 msgid "Activate"
 msgstr "সক্রিয় করুন"
 
-#: inc/admin/class-admin.php:745
+#: inc/admin/class-admin.php:823
 msgid "FlexMeeting Frontend Addon"
 msgstr "ফ্লেক্সমিটিং ফ্রন্টএন্ড অ্যাড-অন"
 
-#: inc/admin/class-admin.php:748
-msgid "Easily create Jitsi meetings from the frontend without accessing the admin dashboard."
-msgstr "অ্যাডমিন ড্যাশবোর্ডে প্রবেশ না করেই ফ্রন্টএন্ড থেকে সহজে জিটসি মিটিং তৈরি করুন।"
+#: inc/admin/class-admin.php:826
+msgid ""
+"Easily create Jitsi meetings from the frontend without accessing the admin "
+"dashboard."
+msgstr ""
+"অ্যাডমিন ড্যাশবোর্ডে প্রবেশ না করেই ফ্রন্টএন্ড থেকে সহজে জিটসি মিটিং তৈরি "
+"করুন।"
+
+#: inc/admin/class-jitsi-jwt-service.php:50
+msgid "Domain is required to generate a JWT token."
+msgstr "JWT টোকেন তৈরি করতে ডোমেইন প্রয়োজন।"
+
+#: inc/admin/class-jitsi-jwt-service.php:114
+msgid ""
+"Could not connect to the token server. Your hosting provider may be "
+"blocking outbound connections to port 8090. Please contact your host "
+"support."
+msgstr ""
+"টোকেন সার্ভারের সাথে সংযোগ করা যায়নি। আপনার হোস্টিং প্রোভাইডার হয়তো ৮০৯০ "
+"পোর্টের আউটবাউন্ড সংযোগ ব্লক করছে। অনুগ্রহ করে আপনার হোস্ট সাপোর্টের সাথে "
+"যোগাযোগ করুন।"
+
+#: inc/admin/class-jitsi-jwt-service.php:127
+#. translators: 1: HTTP code, 2: API response body
+#, php-format
+msgid "Token generation failed. The server returned HTTP %1$d: %2$s"
+msgstr "টোকেন তৈরি ব্যর্থ হয়েছে। সার্ভার HTTP %1$d ফেরত দিয়েছে: %2$s"
+
+#: inc/admin/class-jitsi-jwt-service.php:147
+msgid "Invalid response from token server."
+msgstr "টোকেন সার্ভার থেকে অবৈধ প্রতিক্রিয়া।"
+
+#: inc/admin/class-jitsi-jwt-service.php:213 inc/admin/class-jitsi-jwt-service.php:427
+msgid "Please enter a valid URL (include https://)."
+msgstr "একটি বৈধ URL লিখুন (https:// সহ)।"
+
+#: inc/admin/class-jitsi-jwt-service.php:248
+msgid "We couldn't reach the verification server. Please try again."
+msgstr "যাচাইকরণ সার্ভারে পৌঁছানো সম্ভব হয়নি। অনুগ্রহ করে আবার চেষ্টা করুন।"
+
+#: inc/admin/class-jitsi-jwt-service.php:252
+msgid ""
+"Your hosted server isn't active yet. If you just requested it, wait for our "
+"email."
+msgstr ""
+"আপনার হোস্টেড সার্ভার এখনো সক্রিয় হয়নি। যদি আপনি এইমাত্র অনুরোধ করে "
+"থাকেন, আমাদের ইমেইলের জন্য অপেক্ষা করুন।"
+
+#: inc/admin/class-jitsi-jwt-service.php:340
+msgid ""
+"Invalid URL. Please enter a full domain like "
+"https://yourbrand.jitsihosted.app"
+msgstr ""
+"অবৈধ URL। অনুগ্রহ করে https://yourbrand.jitsihosted.app-এর মতো একটি "
+"সম্পূর্ণ ডোমেইন লিখুন"
+
+#: inc/admin/class-jitsi-jwt-service.php:358
+#. translators: %s = the domain hostname the user typed
+#, php-format
+msgid ""
+"Domain \"%s\" could not be found (DNS lookup failed). Please check the URL "
+"and try again."
+msgstr ""
+"ডোমেইন \"%s\" খুঁজে পাওয়া যায়নি (DNS লুকআপ ব্যর্থ)। অনুগ্রহ করে URLটি "
+"পরীক্ষা করে আবার চেষ্টা করুন।"
+
+#: inc/admin/class-jitsi-jwt-service.php:383
+#. translators: %s = the domain hostname
+#, php-format
+msgid ""
+"Domain \"%s\" resolved but the server did not respond. It may be offline or "
+"not a Jitsi server."
+msgstr ""
+"ডোমেইন \"%s\" পাওয়া গেছে কিন্তু সার্ভার সাড়া দেয়নি। এটি অফলাইন থাকতে পারে "
+"বা একটি জিৎসি সার্ভার নাও হতে পারে।"
+
+#: inc/admin/class-jitsi-jwt-service.php:397
+#. translators: 1: domain hostname, 2: HTTP status code
+#, php-format
+msgid ""
+"\"%1$s\" is reachable but does not appear to be a Jitsi server (expected "
+"HTTP 200 from /config.js, got %2$d). Please double-check the URL."
+msgstr ""
+"\"%1$s\" পৌঁছানোযোগ্য কিন্তু এটি একটি জিৎসি সার্ভার বলে মনে হয় না "
+"(/config.js থেকে HTTP 200 প্রত্যাশিত ছিল কিন্তু পাওয়া গেছে %2$d)। অনুগ্রহ "
+"করে URLটি পুনরায় পরীক্ষা করুন।"
+
+#: inc/admin/class-jitsi-jwt-service.php:419 inc/admin/class-jitsi-jwt-service.php:514
+msgid "Permission denied."
+msgstr "অনুমতি প্রত্যাখ্যাত।"
+
+#: inc/admin/class-jitsi-jwt-service.php:483
+msgid "Connected successfully!"
+msgstr "সফলভাবে সংযুক্ত হয়েছে!"
+
+#: inc/admin/class-jitsi-jwt-service.php:497
+msgid ""
+"Connection failed: The token server did not return a valid response. Your "
+"hosting provider may be blocking outbound connections to port 8090. Please "
+"contact your host support."
+msgstr ""
+"সংযোগ ব্যর্থ হয়েছে: টোকেন সার্ভার কোনও বৈধ রেসপন্স পাঠায়নি। আপনার হোস্টিং "
+"প্রোভাইডার হয়তো ৮০৯০ পোর্টের আউটবাউন্ড সংযোগ ব্লক করছে। অনুগ্রহ করে আপনার "
+"হোস্ট সাপোর্টের সাথে যোগাযোগ করুন।"
+
+#: inc/admin/class-jitsi-jwt-service.php:499
+msgid ""
+"Connection failed: An unknown error occurred while generating the JWT "
+"token. Please check your server setup or contact support."
+msgstr ""
+"সংযোগ ব্যর্থ হয়েছে: JWT টোকেন জেনারেট করার সময় একটি অজানা ত্রুটি ঘটেছে। "
+"অনুগ্রহ করে আপনার সার্ভার সেটআপ পরীক্ষা করুন বা সাপোর্টে যোগাযোগ করুন।"
+
+#: inc/admin/class-jitsi-jwt-service.php:524
+msgid "Disconnected successfully."
+msgstr "সফলভাবে সংযোগ বিচ্ছিন্ন হয়েছে।"
 
 #: inc/admin/licence-cta.php:11
 msgid "Please activate your license"
@@ -623,289 +703,706 @@ msgid "Upload an image"
 msgstr "একটি ছবি আপলোড করুন"
 
 #: inc/admin/mannage-callback.php:323
-msgid "Some settings like Company Logo, Background etc are currently not available via api. You can set your company logo, background etc from the"
-msgstr "কোম্পানি লোগো, ব্যাকগ্রাউন্ড ইত্যাদির মতো কিছু সেটিংস বর্তমানে API-এর মাধ্যমে পাওয়া যাচ্ছে না। আপনি আপনার কোম্পানি লোগো, ব্যাকগ্রাউন্ড ইত্যাদি সেট করতে পারেন"
-
-#: inc/admin/mannage-callback.php:323
-msgid "jaas console"
-msgstr "jaas কনসোল"
-
-#: inc/admin/class-admin.php:188 init.php:188 blocks/src/blocks.js:67
-msgid "Settings"
-msgstr "সেটিংস"
-
-#: inc/admin/class-admin.php:454
-msgid "Self hosted domain missing"
-msgstr "সেলফ-হোস্টেড ডোমেইন (Self-hosted domain) অনুপস্থিত"
-
-#: inc/admin/class-admin.php:458
-msgid "App id missing"
-msgstr "অ্যাপ আইডি অনুপস্থিত"
-
-#: inc/admin/class-admin.php:461
-msgid "Api key is missing"
-msgstr "API কী অনুপস্থিত"
-
-#: inc/admin/class-admin.php:464
-msgid "Private key is missing"
-msgstr "প্রাইভেট কী অনুপস্থিত"
-
-#: inc/admin/class-admin.php:518
-msgid "Skip"
-msgstr "স্কিপ"
-
-#: inc/admin/class-admin.php:520
-msgid "Continue"
-msgstr "চালিয়ে যান"
-
-#: inc/admin/class-admin.php:571 inc/admin/class-admin.php:584
-#: inc/admin/class-admin.php:597 inc/admin/class-admin.php:610
-#: inc/admin/class-admin.php:622
-msgid "Save Changes"
-msgstr "পরিবর্তনগুলো সেভ করুন"
-
-msgid "Default (Public Hosting)"
-msgstr "ডিফল্ট (পাবলিক হোস্টিং)"
-
-msgid "Use the default public Jitsi"
-msgstr "ডিফল্ট পাবলিক জিৎসি ব্যবহার করুন"
-
-msgid "Managed Branded Meeting"
-msgstr "পরিচালিত ব্র্যান্ডেড মিটিং"
-
-msgid "We host and maintain your branded server"
-msgstr "আমরা আপনার ব্র্যান্ডেড সার্ভার হোস্ট এবং বজায় রাখি"
-
-msgid "Jitsi as a Service (8x8 JaaS)"
-msgstr "সার্ভিস হিসেবে জিৎসি (8x8 JaaS)"
-
-msgid "Use your JaaS credentials"
-msgstr "আপনার JaaS লগইন ব্যবহার করুন"
-
-msgid "Self-Hosted"
-msgstr "স্ব-হোস্ট করা"
-
-msgid "Connect your self-hosted server"
-msgstr "আপনার স্ব-হোস্ট করা সার্ভার কানেক্ট করুন"
-
 msgid "Choose where your meetings will run:"
 msgstr "আপনার মিটিংগুলি কোথায় চলবে তা বেছে নিন:"
 
-msgid "Save & Test Connection"
-msgstr "সেভ করুন এবং কানেকশন টেস্ট করুন"
-
-msgid "Domain changed. Please re-test connection."
-msgstr "ডোমেন পরিবর্তন হয়েছে। আবার কানেকশন টেস্ট করুন।"
-
-msgid "Connecting..."
-msgstr "কানেক্ট করা হচ্ছে..."
-
-msgid "Connected. Meetings will run on"
-msgstr "কানেক্ট হয়ে গেছে। মিটিংগুলি চলবে এখানে:"
-
-msgid "Disconnect"
-msgstr "ডিসকানেক্ট করুন"
-
-msgid "We couldn't reach this server. Please double-check the URL or try again."
-msgstr "আমরা এই সার্ভারে পৌঁছাতে পারিনি। দয়া করে URL টি আবার যাচাই করুন অথবা আবার চেষ্টা করুন।"
-
-msgid "Disconnecting..."
-msgstr "ডিসকানেক্ট করা হচ্ছে..."
-
-msgid "Disconnect failed"
-msgstr "ডিসকানেক্ট করতে ব্যর্থ হয়েছে"
-
-msgid "Error: Could not reach the server."
-msgstr "ত্রুটি: সার্ভারে পৌঁছানো যায়নি।"
-
-msgid "🎁"
-msgstr "🎁"
-
-msgid "Benefits:"
-msgstr "সুবিধাসমূহ:"
-
-msgid "Need help setting up your branded server?"
-msgstr "আপনার ব্র্যান্ডেড সার্ভার সেট আপ করতে সাহায্য প্রয়োজন?"
-
-msgid "How Hosted Meetings works?"
-msgstr "হোস্ট করা মিটিংগুলি কীভাবে কাজ করে?"
-
-msgid "Default Public Hosting"
-msgstr "ডিফল্ট পাবলিক হোস্টিং"
-
-msgid "Select a public domain to run your meeting."
-msgstr "আপনার মিটিং চালানোর জন্য একটি পাবলিক ডোমেন বেছে নিন।"
-
-msgid "Completely Free to Use"
-msgstr "ব্যবহারের জন্য সম্পূর্ণ বিনামূল্যে"
-
-msgid "Instant Setup"
-msgstr "তাত্ক্ষণিক সেটআপ"
-
-msgid "No Account Required"
-msgstr "কোন অ্যাকাউন্টের প্রয়োজন নেই"
-
-msgid "Standard Privacy Features"
-msgstr "স্ট্যান্ডার্ড গোপনীয়তা বৈশিষ্ট্য"
-
-msgid "Your Branded Meeting Server"
-msgstr "আপনার ব্র্যান্ডেড মিটিং সার্ভার"
-
-msgid "Branded Meetings, Zero Server Hassle!"
-msgstr "ব্র্যান্ডেড মিটিং, জিরো সার্ভার ঝামেলা!"
-
-msgid "Get your own private branded meeting server (logo + brand name). We'll host and maintain it - just paste your Hosted Server Domain URL below and enjoy your branded meetings."
-msgstr "আপনার নিজস্ব ব্যক্তিগত ব্র্যান্ডেড মিটিং সার্ভার (লোগো + ব্র্যান্ডের নাম) নিন। আমরা এটি হোস্ট করব এবং রক্ষণাবেক্ষণ করব - শুধু নিচে আপনার হোস্টেড সার্ভার ডোমেন URL পেস্ট করুন এবং আপনার ব্র্যান্ডেড মিটিংগুলি উপভোগ করুন।"
-
-msgid "e.g. https://yourbrand.jitsihosted.com"
-msgstr "যেমন https://yourbrand.jitsihosted.com"
-
-msgid "✅"
-msgstr "✅"
-
-msgid "Don't have a Hosted Server URL yet? "
-msgstr "এখনও কোনো হোস্টেড সার্ভার URL নেই? "
-
-msgid "Request setup now →"
-msgstr "এখনই সেটআপের জন্য অনুরোধ করুন →"
-
-msgid "Hosted Server Domain:"
-msgstr "হোস্টেড সার্ভার ডোমেন:"
-
-msgid "<strong>Request</strong> your branded setup first (<a href=\\\"#\\\">request now →</a>)"
-msgstr "<strong>প্রথমে</strong> আপনার ব্র্যান্ডেড সেটআপের জন্য অনুরোধ করুন (<a href=\"#\">এখনই অনুরোধ করুন →</a>)"
-
-msgid "<strong>We set it up</strong> and email your Hosted Server URL"
-msgstr "<strong>আমরা এটি সেটআপ করি</strong> এবং আপনার হোস্টেড সার্ভার URL ইমেল করি"
-
-msgid "<strong>Paste the URL here</strong> → Save & Test → meetings start running on your hosted server"
-msgstr "<strong>এখানে URL পেস্ট করুন</strong> → সেভ ও টেস্ট করুন → হোস্টেড সার্ভারে আপনার মিটিংগুলি চলতে শুরু করবে"
-
-msgid "🤩"
-msgstr "🤩"
-
-msgid "That's it - no technical setup needed from you. Wahhhhhhhhhh!"
-msgstr "ব্যাস - আপনার দিক থেকে কোনো প্রযুক্তিগত সেটআপের প্রয়োজন নেই। দারুণ!"
-
-msgid "Complete Privacy and Control over your data"
-msgstr "সম্পূর্ণ গোপনীয়তা এবং আপনার ডেটার উপর নিয়ন্ত্রণ"
-
-msgid "Ultra-fast performance with dedicated resources"
-msgstr "উৎসর্গীকৃত সংস্থান সহ অতি-দ্রুত পারফরম্যান্স"
-
-msgid "Global reach with low-latency server locations"
-msgstr "কম-লেটেন্সি সার্ভার অবস্থানের সাথে বিশ্বব্যাপী পৌঁছানো"
-
-msgid "99.9% Uptime guarantee with 24/7 monitoring"
-msgstr "24/7 নজরদারি সহ 99.9% আপটাইম গ্যারান্টি"
-
-msgid "Scalable to hundreds of concurrent participants"
-msgstr "শত শত যুগপৎ অংশগ্রহণকারীদের কাছে পরিমাপযোগ্য"
-
-msgid "End-to-end encryption and advanced security"
-msgstr "এন্ড-টু-এন্ড এনক্রিপশন এবং উন্নত নিরাপত্তা"
-
-msgid "Request branded meeting server for FREE!"
-msgstr "ব্র্যান্ডেড মিটিং সার্ভারের জন্য বিনামূল্যে অনুরোধ করুন!"
-
-msgid "What is a self-hosted FlexMeeting server?"
-msgstr "স্ব-হোস্ট করা FlexMeeting সার্ভার কী?"
-
-msgid "A self-hosted Jitsi server means the entire video conferencing system runs on your own server or hosting environment, not on Jitsi's public infrastructure. This gives you full control, privacy, and customization flexibility."
-msgstr "একটি স্ব-হোস্ট করা Jitsi সার্ভারের মানে হল সম্পূর্ণ ভিডিও কনফারেন্সিং সিস্টেম আপনার নিজস্ব সার্ভারে বা হোস্টিং এনভায়রনমেন্টে চলে, Jitsi এর পাবলিক পরিকাঠামোতে নয়। এটি আপনাকে সম্পূর্ণ নিয়ন্ত্রণ, গোপনীয়তা এবং কাস্টমাইজেশনের নমনীয়তা দেয়।"
-
-msgid "Why should I use a self-hosted Jitsi server instead of using public Jitsi?"
-msgstr "পাবলিক জিৎসি ব্যবহার না করে আমার কেন স্ব-হোস্ট করা জিৎসি সার্ভার ব্যবহার করা উচিত?"
-
-msgid "Public servers like meet.jit.si are shared by millions. This can lead to performance issues, limited features, and a lack of branding. With your own server, you get dedicated resources, your own logo, and enhanced security."
-msgstr "meet.jit.si এর মতো পাবলিক সার্ভার লক্ষ লক্ষ লোক ব্যবহার করে। এতে পারফরম্যান্স জট, সীমিত বৈশিষ্ট্য এবং ব্র্যান্ডিংয়ের অভাব হতে পারে। আপনার নিজস্ব সার্ভারের সাহায্যে, আপনি উৎসর্গীকৃত সংস্থান, আপনার নিজস্ব লোগো এবং উন্নত নিরাপত্তা পান।"
-
-msgid "What do you provide in this service?"
-msgstr "আপনি এই পরিষেবাতে কী প্রদান করেন?"
-
-msgid "We provide complete installation, configuration, and maintenance of your Jitsi server. This includes automatic updates, performance monitoring, and SSL setup so you can focus on your meetings."
-msgstr "আমরা আপনার Jitsi সার্ভারের সম্পূর্ণ ইনস্টলেশন, কনফিগারেশন এবং রক্ষণাবেক্ষণ প্রদান করি। এতে স্বয়ংক্রিয় আপডেট, পারফরম্যান্স মনিটরিং এবং SSL সেটআপ অন্তর্ভুক্ত, যাতে আপনি আপনার মিটিংগুলিতে ফোকাস করতে পারেন।"
-
-msgid "Do I need technical knowledge to maintain the server?"
-msgstr "সার্ভারটি বজায় রাখার জন্য আমার কি প্রযুক্তিগত জ্ঞান প্রয়োজন?"
-
-msgid "Not at all! Our managed service is designed to be \\\"hands-off\\\" for you. We handle all the server-side complexity, security patches, and scaling."
-msgstr "একেবারেই না! আমাদের পরিচালিত পরিষেবাটি আপনার জন্য \"হ্যান্ডস-অফ\" হওয়ার জন্য তৈরি করা হয়েছে। আমরা সার্ভারের সব জটিলা, নিরাপত্তা প্যাচিং এবং স্কেলিং পরিচালনা করি।"
-
-msgid "What are the server requirements?"
-msgstr "সার্ভারের প্রয়োজনীয়তাগুলি কী কী?"
-
-msgid "If you use our managed hosting, we provide the infrastructure. If you host it yourself, a basic server with 4GB RAM and 2 CPUs is usually enough for up to 20-30 concurrent users."
-msgstr "আপনি যদি আমাদের পরিচালিত হোস্টিং ব্যবহার করেন তবে আমরা পরিকাঠামো প্রদান করি। আপনি যদি এটি নিজে হোস্ট করেন, তবে 4GB র‍্যাম এবং 2 CPU সহ একটি বুনিয়াদি সার্ভার সাধারণত 20-30 জন যুগপৎ ব্যবহারকারীর জন্য যথেষ্ট।"
-
-msgid "Can I use this with my existing website or LMS?"
-msgstr "আমি কি আমার বিদ্যমান ওয়েবসাইট বা LMS এর সাথে এটি ব্যবহার করতে পারি?"
-
-msgid "Yes! Our plugin integrates seamlessly with WordPress, LMS platforms, and other CMS. You can embed meetings directly into your pages."
-msgstr "হ্যাঁ! আমাদের প্লাগইন ওয়ার্ডপ্রেস, LMS প্ল্যাটফর্ম এবং অন্যান্য CMS এর সাথে নির্বিঘ্নে একীভূত হয়। আপনি সরাসরি আপনার পৃষ্ঠাগুলিতে মিটিং এম্বেড করতে পারেন।"
-
-msgid "How long does it take to set everything up?"
-msgstr "সবকিছু সেট আপ করতে কতক্ষণ সময় লাগে?"
-
-msgid "Managed servers are usually ready within 24 hours. If you're using the \\\"Request\\\" option, we'll reach out to finalize the branding before deployment."
-msgstr "পরিচালিত সার্ভারগুলি সাধারণত 24 ঘন্টার মধ্যে প্রস্তুত হয়ে যায়। আপনি যদি \"অনুরোধ করুন\" বিকল্প ব্যবহার করেন, তবে আমরা ডেলিভারির আগে ব্র্যান্ডিং চূড়ান্ত করতে যোগাযোগ করব।"
-
-msgid "Frequently Asked Questions"
-msgstr "সচরাচর জিজ্ঞাস্য প্রশ্ন"
-
-msgid "Jitsi as a Service (8x8)"
-msgstr "সার্ভিস হিসেবে জিৎসি (8x8)"
-
-msgid "Paste private key content here"
-msgstr "এখানে ব্যক্তিগত কীর বিষয়বস্তু পেস্ট করুন"
-
-msgid "Enterprise Grade Reliability"
-msgstr "এন্টারপ্রাইজ গ্রেড নির্ভরযোগ্যতা"
-
-msgid "Advanced Analytics"
-msgstr "উন্নত অ্যানালিটিক্স"
-
-msgid "Global Low-latency Network"
-msgstr "বিশ্বব্যাপী কম-লেটেন্সি নেটওয়ার্ক"
-
-msgid "Secure Recorded Meetings"
-msgstr "নিরাপদ রেকর্ড করা মিটিংগুলি"
-
-msgid "Self-Hosted Server"
-msgstr "স্ব-হোস্ট করা সার্ভার"
-
-msgid "Your Server Domain"
-msgstr "আপনার সার্ভার ডোমেন"
-
-msgid "Enter your self-hosted Jitsi domain (e.g., meet.yourdomain.com)"
-msgstr "আপনার স্ব-হোস্ট করা জিৎসি ডোমেন লিখুন (যেমন, meet.yourdomain.com)"
-
-msgid "Premium Feature"
-msgstr "প্রিমিয়াম বৈশিষ্ট্য"
-
-msgid "Full Data Control"
-msgstr "সম্পূর্ণ ডেটা কন্ট্রোল"
-
-msgid "Custom Security Policies"
-msgstr "কাস্টম নিরাপত্তা ডিরেক্টিভ"
-
-msgid "No Third-party Tracking"
-msgstr "কোন তৃতীয়-পক্ষের ট্র্যাকিং নেই"
-
-msgid "Infrastructure Ownership"
-msgstr "ইনফ্রাস্ট্রাকচার মালিকানা"
-
+#: inc/admin/mannage-callback.php:418 inc/admin/mannage-callback.php:482
+#: inc/admin/mannage-callback.php:505 inc/admin/mannage-callback.php:527
+#: inc/admin/mannage-callback.php:729
 msgid "Test Connection"
 msgstr "লিঙ্ক টেস্ট করুন"
 
+#: inc/admin/mannage-callback.php:424
+msgid "Domain changed. Please re-test connection."
+msgstr "ডোমেন পরিবর্তন হয়েছে। আবার কানেকশন টেস্ট করুন।"
+
+#: inc/admin/mannage-callback.php:450
+msgid "Connecting..."
+msgstr "কানেক্ট করা হচ্ছে..."
+
+#: inc/admin/mannage-callback.php:468
 msgid "Connection tested successfully."
 msgstr "লিঙ্ক টেস্ট সফল হয়েছে।"
 
+#: inc/admin/mannage-callback.php:468
 msgid "Click \"Save Changes\" to apply."
 msgstr "আবেদন করতে \"সেভ চেঞ্জেস\" ক্লিক করুন।"
 
+#: inc/admin/mannage-callback.php:512
 msgid "Connection failed. Please check your domain."
 msgstr "সংযোগ ব্যর্থ হয়েছে। আপনার ডোমেইন চেক করুন।"
 
+#: inc/admin/mannage-callback.php:534
 msgid "Connection disconnected. Save changes to apply."
 msgstr "সংযোগ বিচ্ছিন্ন করা হয়েছে। পরিবর্তন সংরক্ষণ করতে সেভ ক্লিক করুন।"
+
+#: inc/admin/mannage-callback.php:589
+msgid "🎁"
+msgstr "🎁"
+
+#: inc/admin/mannage-callback.php:589
+msgid "Benefits:"
+msgstr "সুবিধাসমূহ:"
+
+#: inc/admin/mannage-callback.php:611
+msgid "Need help setting up your branded server?"
+msgstr "আপনার ব্র্যান্ডেড সার্ভার সেট আপ করতে সাহায্য প্রয়োজন?"
+
+#: inc/admin/mannage-callback.php:620
+msgid "How Hosted Meetings works?"
+msgstr "হোস্ট করা মিটিংগুলি কীভাবে কাজ করে?"
+
+#: inc/admin/mannage-callback.php:671
+msgid "Default Public Hosting"
+msgstr "ডিফল্ট পাবলিক হোস্টিং"
+
+#: inc/admin/mannage-callback.php:678
+msgid "Domain One"
+msgstr "ডোমেইন ওয়ান"
+
+#: inc/admin/mannage-callback.php:679
+msgid "Domain Two"
+msgstr "ডোমেইন টু"
+
+#: inc/admin/mannage-callback.php:680
+msgid "Domain Three"
+msgstr "ডোমেইন থ্রি"
+
+#: inc/admin/mannage-callback.php:681
+msgid "Domain Four"
+msgstr "ডোমেইন ফোর"
+
+#: inc/admin/mannage-callback.php:689
+msgid "Default Public Domain"
+msgstr "ডিফল্ট পাবলিক ডোমেইন"
+
+#: inc/admin/mannage-callback.php:689
+msgid "Select a public domain to run your meeting."
+msgstr "আপনার মিটিং চালানোর জন্য একটি পাবলিক ডোমেন বেছে নিন।"
+
+#: inc/admin/mannage-callback.php:694
+msgid "Completely Free to Use"
+msgstr "ব্যবহারের জন্য সম্পূর্ণ বিনামূল্যে"
+
+#: inc/admin/mannage-callback.php:695
+msgid "Instant Setup"
+msgstr "তাত্ক্ষণিক সেটআপ"
+
+#: inc/admin/mannage-callback.php:696
+msgid "No Account Required"
+msgstr "কোন অ্যাকাউন্টের প্রয়োজন নেই"
+
+#: inc/admin/mannage-callback.php:697
+msgid "Standard Privacy Features"
+msgstr "স্ট্যান্ডার্ড গোপনীয়তা বৈশিষ্ট্য"
+
+#: inc/admin/mannage-callback.php:708
+msgid "We’ll handle hosting"
+msgstr "আমরা হোস্টিং পরিচালনা করব"
+
+#: inc/admin/mannage-callback.php:711
+msgid ""
+"Get your own private branded meeting server (logo + brand name). We host "
+"and maintain it - just paste your Hosted Server Domain URL below and enjoy "
+"your branded meetings."
+msgstr ""
+"আপনার নিজস্ব ব্যক্তিগত ব্র্যান্ডেড মিটিং সার্ভার (লোগো + ব্র্যান্ডের নাম) "
+"নিন। আমরা এটি হোস্ট এবং রক্ষণাবেক্ষণ করব - নিচে আপনার হোস্টেড সার্ভার ডোমেন "
+"URL পেস্ট করুন এবং আপনার ব্র্যান্ডেড মিটিংগুলি উপভোগ করুন।"
+
+#: inc/admin/mannage-callback.php:726
+msgid "Paste the Domain URL we emailed you (example: yourbrand.jitsihosted.com)"
+msgstr "আপনাকে ইমেইল করা ডোমেন URL-টি পেস্ট করুন (উদাহরণ: yourbrand.jitsihosted.com)"
+
+#: inc/admin/mannage-callback.php:728
+msgid "Enter the Domain URL"
+msgstr "ডোমেন URL লিখুন"
+
+#: inc/admin/mannage-callback.php:730
+msgid "Disconnect"
+msgstr "ডিসকানেক্ট করুন"
+
+#: inc/admin/mannage-callback.php:736
+msgid "✅"
+msgstr "✅"
+
+#: inc/admin/mannage-callback.php:736
+msgid "Connected. Meetings will run on"
+msgstr "কানেক্ট হয়ে গেছে। মিটিংগুলি চলবে এখানে:"
+
+#: inc/admin/mannage-callback.php:741
+msgid "Don't have a Hosted Server URL yet? "
+msgstr "এখনও কোনো হোস্টেড সার্ভার URL নেই? "
+
+#: inc/admin/mannage-callback.php:741
+msgid "Request setup now →"
+msgstr "এখনই সেটআপের জন্য অনুরোধ করুন →"
+
+#: inc/admin/mannage-callback.php:746
+msgid "Hosted Server Domain:"
+msgstr "হোস্টেড সার্ভার ডোমেন:"
+
+#: inc/admin/mannage-callback.php:749
+msgid ""
+"<strong>Request</strong> your branded setup first (<a "
+"href=\"https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/"
+"service/\" target=\"_blank\">request now →</a>)"
+msgstr ""
+"প্রথমে আপনার ব্র্যান্ডেড সেটআপের <strong>অনুরোধ করুন</strong> (<a "
+"href=\"https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/"
+"service/\" target=\"_blank\">এখনই অনুরোধ করুন →</a>)"
+
+#: inc/admin/mannage-callback.php:750
+msgid "<strong>We set it up</strong> and email your Hosted Server URL"
+msgstr "<strong>আমরা এটি সেটআপ করি</strong> এবং আপনার হোস্টেড সার্ভার URL ইমেল করি"
+
+#: inc/admin/mannage-callback.php:751
+msgid ""
+"<strong>Paste the URL here</strong> → Test Connection → meetings start "
+"running on your hosted server"
+msgstr ""
+"<strong>এখানে URL পেস্ট করুন</strong> → কানেকশন টেস্ট করুন → আপনার হোস্টেড "
+"সার্ভারে মিটিংগুলি চলতে শুরু করবে"
+
+#: inc/admin/mannage-callback.php:752
+msgid "🤩"
+msgstr "🤩"
+
+#: inc/admin/mannage-callback.php:752
+msgid "That's it - no technical setup needed from you. Wahhhhhhhhhh!"
+msgstr "ব্যাস - আপনার দিক থেকে কোনো প্রযুক্তিগত সেটআপের প্রয়োজন নেই। দারুণ!"
+
+#: inc/admin/mannage-callback.php:779
+msgid "Branded meeting URL"
+msgstr "ব্র্যান্ডেড মিটিং URL"
+
+#: inc/admin/mannage-callback.php:780
+msgid "Branded logo and other customizations"
+msgstr "ব্র্যান্ডেড লোগো এবং অন্যান্য কাস্টমাইজেশন"
+
+#: inc/admin/mannage-callback.php:781
+msgid "No server cost + maintenance"
+msgstr "সার্ভার খরচ + রক্ষণাবেক্ষণ ছাড়াই"
+
+#: inc/admin/mannage-callback.php:782
+msgid "Private hosting (no shared public server)"
+msgstr "প্রাইভেট হোস্টিং (কোনো শেয়ারড পাবলিক সার্ভার নেই)"
+
+#: inc/admin/mannage-callback.php:783
+msgid "White-labeled experience"
+msgstr "হোয়াইট-লেবেল অভিজ্ঞতা"
+
+msgid "Live streaming support"
+msgstr "লাইভ স্ট্রিমিং সমর্থন"
+
+#: inc/admin/mannage-callback.php:785
+msgid "Request branded meeting server for FREE!"
+msgstr "ব্র্যান্ডেড মিটিং সার্ভারের জন্য বিনামূল্যে অনুরোধ করুন!"
+
+#: inc/admin/mannage-callback.php:794
+msgid "What is a server?"
+msgstr "সার্ভার কী?"
+
+#: inc/admin/mannage-callback.php:795
+msgid ""
+"A server is a powerful, always-on computer that stores and runs the Jitsi "
+"software, allowing users to connect and hold video meetings from anywhere "
+"in the world. Think of it as the \"home\" for your meeting system that "
+"stays online 24/7."
+msgstr ""
+"সার্ভার হলো একটি শক্তিশালী, সর্বদা চালু থাকা কম্পিউটার যা জিৎসি সফটওয়্যার "
+"সংরক্ষণ এবং পরিচালনা করে, যা ব্যবহারকারীদের বিশ্বের যেকোনো প্রান্ত থেকে "
+"ভিডিও মিটিংয়ে যুক্ত হতে সাহায্য করে। এটিকে আপনার মিটিং সিস্টেমের জন্য একটি "
+"\"বাড়ি\" হিসেবে মনে করতে পারেন যা ২৪/৭ অনলাইনে থাকে।"
+
+#: inc/admin/mannage-callback.php:798
+msgid "What is a self-hosted FlexMeeting server?"
+msgstr "স্ব-হোস্ট করা FlexMeeting সার্ভার কী?"
+
+#: inc/admin/mannage-callback.php:799
+msgid ""
+"A self-hosted Jitsi server means the entire video conferencing system runs "
+"on your own server or hosting environment, not on Jitsi’s public "
+"infrastructure. This gives you full control, privacy, and customization "
+"flexibility."
+msgstr ""
+"স্ব-হোস্ট করা জিৎসি সার্ভার মানে হলো পুরো ভিডিও কনফারেন্সিং সিস্টেমটি আপনার "
+"নিজস্ব সার্ভার বা হোস্টিং পরিবেশে চলে, জিৎসির পাবলিক অবকাঠামোতে নয়। এটি "
+"আপনাকে পূর্ণ নিয়ন্ত্রণ, গোপনীয়তা এবং কাস্টমাইজেশনের স্বাধীনতা দেয়।"
+
+#: inc/admin/mannage-callback.php:802
+msgid "Why should I use a self-hosted Jitsi server instead of using public Jitsi?"
+msgstr ""
+"পাবলিক জিৎসি ব্যবহার না করে আমার কেন স্ব-হোস্ট করা জিৎসি সার্ভার ব্যবহার "
+"করা উচিত?"
+
+#: inc/admin/mannage-callback.php:803
+msgid ""
+"Public Jitsi servers are shared, limited, and not secure for professional "
+"use. With self-hosting, you get: <br>- Enhanced privacy <br>- Better "
+"performance <br>- No limitations on usage <br>- Your own branding and "
+"domain <br>- Control over features and integrations"
+msgstr ""
+"পাবলিক জিৎসি সার্ভারগুলো শেয়ার্ড, সীমিত এবং পেশাদার ব্যবহারের জন্য নিরাপদ "
+"নয়। স্ব-হোস্টিংয়ের মাধ্যমে আপনি পাচ্ছেন: <br>- উন্নত গোপনীয়তা <br>- আরও "
+"ভালো পারফরম্যান্স <br>- ব্যবহারে কোনো সীমাবদ্ধতা নেই <br>- আপনার নিজস্ব "
+"ব্র্যান্ডিং এবং ডোমেন <br>- ফিচার এবং ইন্টিগ্রেশনের উপর নিয়ন্ত্রণ"
+
+#: inc/admin/mannage-callback.php:806
+msgid "What do you provide in this service?"
+msgstr "আপনি এই পরিষেবাতে কী প্রদান করেন?"
+
+#: inc/admin/mannage-callback.php:807
+msgid ""
+"- We set up a Jitsi server on your VPS/cloud <br>- Secure it with SSL and "
+"firewalls <br>- Brand it with your logo and domain (optional) <br>- "
+"Integrate it into your website <br>- Provide admin access and documentation "
+"<br>- Offer post-installation support if needed"
+msgstr ""
+"- আমরা আপনার VPS/ক্লাউডে একটি জিৎসি সার্ভার সেট আপ করি <br>- এটিকে SSL এবং "
+"ফায়ারওয়ালের মাধ্যমে সুরক্ষিত করি <br>- আপনার লোগো এবং ডোমেন দিয়ে "
+"ব্র্যান্ডিং করি (ঐচ্ছিক) <br>- আপনার ওয়েবসাইটে এটিকে ইন্টিগ্রেট করি <br>- "
+"অ্যাডমিন অ্যাক্সেস এবং ডকুমেন্টেশন প্রদান করি <br>- প্রয়োজন হলে ইনস্টলেশন "
+"পরবর্তী সাপোর্ট দিই"
+
+#: inc/admin/mannage-callback.php:810
+msgid "Do I need technical knowledge to maintain the server?"
+msgstr "সার্ভারটি বজায় রাখার জন্য আমার কি প্রযুক্তিগত জ্ঞান প্রয়োজন?"
+
+#: inc/admin/mannage-callback.php:811
+msgid ""
+"No. We handle everything during setup. If you opt for our support plan, we "
+"also handle maintenance, upgrades, and any issues that arise."
+msgstr ""
+"না। আমরা সেটআপের সময় সবকিছু পরিচালনা করি। আপনি যদি আমাদের সাপোর্ট প্ল্যান "
+"গ্রহণ করেন, তবে আমরা রক্ষণাবেক্ষণ, আপগ্রেড এবং যেকোনো সমস্যাও সমাধান করি।"
+
+#: inc/admin/mannage-callback.php:814
+msgid "What are the server requirements?"
+msgstr "সার্ভারের প্রয়োজনীয়তাগুলি কী কী?"
+
+#: inc/admin/mannage-callback.php:815
+msgid ""
+"Minimum requirements: <br>- Ubuntu/Debian VPS <br>- 4+ CPU cores <br>- 8GB+ "
+"RAM <br>- 100 Mbps+ bandwidth <br>We’ll guide you to choose the right "
+"hosting based on your expected usage."
+msgstr ""
+"ন্যূনতম প্রয়োজনীয়তা: <br>- Ubuntu/Debian VPS <br>- ৪+ CPU কোর <br>- "
+"৮জিবি+ RAM <br>- ১০০ Mbps+ ব্যান্ডউইথ <br>আপনার প্রত্যাশিত ব্যবহারের উপর "
+"ভিত্তি করে সঠিক হোস্টিং বেছে নিতে আমরা আপনাকে সাহায্য করব।"
+
+#: inc/admin/mannage-callback.php:818
+msgid "Can I use this with my existing website or LMS?"
+msgstr "আমি কি আমার বিদ্যমান ওয়েবসাইট বা LMS এর সাথে এটি ব্যবহার করতে পারি?"
+
+#: inc/admin/mannage-callback.php:819
+msgid ""
+"Yes. We can integrate Jitsi into any website, including WordPress, Moodle, "
+"TutorLMS, LearnDash, or even custom-built platforms."
+msgstr ""
+"হ্যাঁ। আমরা যেকোনো ওয়েবসাইটে জিৎসি ইন্টিগ্রেট করতে পারি, যার মধ্যে রয়েছে "
+"ওয়ার্ডপ্রেস, মুডল (Moodle), TutorLMS, LearnDash বা এমনকি কাস্টম-বিল্ট "
+"প্ল্যাটফর্ম।"
+
+#: inc/admin/mannage-callback.php:822
+msgid "How long does it take to set everything up?"
+msgstr "সবকিছু সেট আপ করতে কতক্ষণ সময় লাগে?"
+
+#: inc/admin/mannage-callback.php:823
+msgid ""
+"Typically between 1–3 business days, depending on your customization and "
+"hosting setup."
+msgstr ""
+"সাধারণত ১-৩ কার্যদিবস, যা আপনার কাস্টমাইজেশন এবং হোস্টিং সেটআপের ওপর নির্ভর "
+"করে।"
+
+#: inc/admin/mannage-callback.php:826
+msgid "Can I record meetings or stream them?"
+msgstr "আমি কি মিটিং রেকর্ড বা স্ট্রিম করতে পারি?"
+
+#: inc/admin/mannage-callback.php:827
+msgid ""
+"Yes, we can enable recording (using Jibri) and YouTube live streaming on "
+"request. Note that these features require additional server resources."
+msgstr ""
+"হ্যাঁ, আমরা অনুরোধ সাপেক্ষে রেকর্ডিং (জিব্রি ব্যবহার করে) এবং ইউটিউব লাইভ "
+"স্ট্রিমিং সক্রিয় করতে পারি। মনে রাখবেন যে এই ফিচারগুলোর জন্য অতিরিক্ত "
+"সার্ভার রিসোর্স প্রয়োজন।"
+
+#: inc/admin/mannage-callback.php:830
+msgid "Is it one-time setup or recurring service?"
+msgstr "এটি কি এককালীন সেটআপ নাকি পুনরাবৃত্তিমূলক পরিষেবা?"
+
+#: inc/admin/mannage-callback.php:831
+msgid ""
+"The setup is one-time unless you choose our optional support & maintenance "
+"plan for updates, backups, and ongoing help."
+msgstr ""
+"সেটআপটি এককালীন, যদি না আপনি আপডেট, ব্যাকআপ এবং চলমান সহায়তার জন্য আমাদের "
+"ঐচ্ছিক সাপোর্ট এবং রক্ষণাবেক্ষণ প্ল্যান বেছে নেন।"
+
+#: inc/admin/mannage-callback.php:834
+msgid "Ready to Launch Your Private Meeting System?"
+msgstr "আপনার নিজস্ব ব্যক্তিগত মিটিং সিস্টেম চালু করতে প্রস্তুত?"
+
+#: inc/admin/mannage-callback.php:835
+msgid ""
+"We’ll handle all the technical work you just enjoy secure, high-quality "
+"meetings with your users. <br><br> <a href=\"https://wppool.dev/contact/\" "
+"target=\"_blank\" style=\"color: #3b82f6; font-weight: 600; "
+"text-decoration: none;\">Contact Support &rarr;</a>"
+msgstr ""
+"আমরা সমস্ত প্রযুক্তিগত কাজ পরিচালনা করব, আপনি কেবল আপনার ব্যবহারকারীদের "
+"সাথে নিরাপদ এবং উচ্চ-মানের মিটিং উপভোগ করবেন। <br><br> <a "
+"href=\"https://wppool.dev/contact/\" target=\"_blank\" style=\"color: "
+"#3b82f6; font-weight: 600; text-decoration: none;\">সাপোর্ট টিমের সাথে "
+"যোগাযোগ করুন &rarr;</a>"
+
+#: inc/admin/mannage-callback.php:840
+msgid "Frequently Asked Questions"
+msgstr "সচরাচর জিজ্ঞাস্য প্রশ্ন"
+
+#: inc/admin/mannage-callback.php:866
+msgid "Jitsi as a Service (8x8)"
+msgstr "সার্ভিস হিসেবে জিৎসি (8x8)"
+
+#: inc/admin/mannage-callback.php:873
+msgid "APP ID"
+msgstr "অ্যাপ আইডি"
+
+#: inc/admin/mannage-callback.php:873 inc/admin/mannage-callback.php:882
+msgid "Get it from "
+msgstr "এটি থেকে পান "
+
+#: inc/admin/mannage-callback.php:875
+msgid "Copy the APP ID from JaaS admin"
+msgstr "JaaS অ্যাডমিন থেকে অ্যাপ আইডিটি কপি করুন"
+
+#: inc/admin/mannage-callback.php:882
+msgid "API Key"
+msgstr "API কী"
+
+#: inc/admin/mannage-callback.php:884
+msgid "Copy the API Key from JaaS admin"
+msgstr "JaaS অ্যাডমিন থেকে API কীটি কপি করুন"
+
+#: inc/admin/mannage-callback.php:891
+msgid "Private Key"
+msgstr "প্রাইভেট কী"
+
+#: inc/admin/mannage-callback.php:891
+msgid "Paste private key content here"
+msgstr "এখানে ব্যক্তিগত কীর বিষয়বস্তু পেস্ট করুন"
+
+#: inc/admin/mannage-callback.php:893
+msgid "Generate private key and download"
+msgstr "প্রাইভেট কী জেনারেট করুন এবং ডাউনলোড করুন"
+
+#: inc/admin/mannage-callback.php:899
+msgid "Enterprise Grade Reliability"
+msgstr "এন্টারপ্রাইজ গ্রেড নির্ভরযোগ্যতা"
+
+#: inc/admin/mannage-callback.php:900
+msgid "Advanced Analytics"
+msgstr "উন্নত অ্যানালিটিক্স"
+
+#: inc/admin/mannage-callback.php:901
+msgid "Global Low-latency Network"
+msgstr "বিশ্বব্যাপী কম-লেটেন্সি নেটওয়ার্ক"
+
+#: inc/admin/mannage-callback.php:902
+msgid "Secure Recorded Meetings"
+msgstr "নিরাপদ রেকর্ড করা মিটিংগুলি"
+
+#: inc/admin/mannage-callback.php:912
+msgid "Self-Hosted Server"
+msgstr "স্ব-হোস্ট করা সার্ভার"
+
+#: inc/admin/mannage-callback.php:921
+msgid "Your Server Domain"
+msgstr "আপনার সার্ভার ডোমেন"
+
+#: inc/admin/mannage-callback.php:922
+msgid "Enter your self-hosted Jitsi domain (e.g., meet.yourdomain.com)"
+msgstr "আপনার স্ব-হোস্ট করা জিৎসি ডোমেন লিখুন (যেমন, meet.yourdomain.com)"
+
+#: inc/admin/mannage-callback.php:922
+msgid "Premium Feature"
+msgstr "প্রিমিয়াম বৈশিষ্ট্য"
+
+#: inc/admin/mannage-callback.php:929
+msgid "Full Data Control"
+msgstr "সম্পূর্ণ ডেটা কন্ট্রোল"
+
+#: inc/admin/mannage-callback.php:930
+msgid "Custom Security Policies"
+msgstr "কাস্টম নিরাপত্তা ডিরেক্টিভ"
+
+#: inc/admin/mannage-callback.php:931
+msgid "No Third-party Tracking"
+msgstr "কোন তৃতীয়-পক্ষের ট্র্যাকিং নেই"
+
+#: inc/admin/mannage-callback.php:932
+msgid "Infrastructure Ownership"
+msgstr "ইনফ্রাস্ট্রাকচার মালিকানা"
+
+#: inc/admin/mannage-callback.php:939
+msgid ""
+"Some settings like Company Logo, Background etc are currently not available "
+"via api. You can set your company logo, background etc from the"
+msgstr ""
+"কোম্পানি লোগো, ব্যাকগ্রাউন্ড ইত্যাদির মতো কিছু সেটিংস বর্তমানে API-এর "
+"মাধ্যমে পাওয়া যাচ্ছে না। আপনি আপনার কোম্পানি লোগো, ব্যাকগ্রাউন্ড ইত্যাদি "
+"সেট করতে পারেন"
+
+#: inc/admin/mannage-callback.php:939
+msgid "jaas console"
+msgstr "jaas কনসোল"
+
+#: inc/elementor.php:67 blocks/dist/blocks.build.js:314 blocks/src/blocks.js:166
+msgid "Jitsi Meet"
+msgstr "Jitsi Meet"
+
+#: inc/elementor.php:108
+msgid "Configuration"
+msgstr "কনফিগারেশন"
+
+#: inc/elementor.php:115 blocks/dist/blocks.build.js:207 blocks/src/blocks.js:69
+msgid "Name"
+msgstr "নাম"
+
+#: inc/elementor.php:118
+msgid "Meeting name here"
+msgstr "এখানে মিটিংয়ের নাম লিখুন"
+
+#: inc/elementor.php:125 blocks/dist/blocks.build.js:243 blocks/src/blocks.js:107
+msgid "Width"
+msgstr "প্রস্থ"
+
+#: inc/elementor.php:140 blocks/dist/blocks.build.js:254 blocks/src/blocks.js:115
+msgid "Height"
+msgstr "উচ্চতা"
+
+#: inc/elementor.php:152
+msgid "Start audio muted"
+msgstr "অডিও মিউট করে শুরু করুন"
+
+#: inc/elementor.php:164
+msgid "Start video muted"
+msgstr "ভিডিও মিউট করে শুরু করুন"
+
+#: inc/jitsi-topbar.php:196
+msgid "🎉"
+msgstr "🎉"
+
+#: inc/jitsi-topbar.php:214
+msgid "Close notification"
+msgstr "বিজ্ঞপ্তি বন্ধ করুন"
+
+#: inc/jitsi-topbar.php:321
+msgid "Invalid nonce"
+msgstr "অবৈধ nonce"
+
+#: inc/jitsi-topbar.php:326
+msgid "Insufficient permissions"
+msgstr "অপর্যাপ্ত অনুমতি"
+
+#: inc/jitsi-topbar.php:333
+msgid "Topbar dismissed successfully"
+msgstr "টপবার সফলভাবে বন্ধ করা হয়েছে"
+
+#: inc/jitsi-topbar.php:335
+msgid "Failed to dismiss topbar"
+msgstr "টপবার বন্ধ করতে ব্যর্থ হয়েছে"
+
+#: inc/jitsi-topbar.php:353
+msgid "Security check failed"
+msgstr "নিরাপত্তা যাচাই ব্যর্থ হয়েছে"
+
+#: inc/jitsi-topbar.php:358
+msgid "You do not have sufficient permissions to access this page."
+msgstr "এই পেজটি অ্যাক্সেস করার জন্য আপনার যথেষ্ট অনুমতি নেই।"
+
+#: inc/wppool/class-plugin.php:328
+msgid "Deal Ends In"
+msgstr "ডিল শেষ হবে"
+
+#: inc/wppool/class-plugin.php:333 inc/wppool/class-plugin.php:342
+#: inc/wppool/class-plugin.php:351 inc/wppool/class-plugin.php:360
+msgid "00"
+msgstr "০০"
+
+#: inc/wppool/class-plugin.php:336
+msgid "Days"
+msgstr "দিন"
+
+#: inc/wppool/class-plugin.php:345
+msgid "Hours"
+msgstr "ঘণ্টা"
+
+#: inc/wppool/class-plugin.php:354
+msgid "Minutes"
+msgstr "মিনিট"
+
+#: inc/wppool/class-plugin.php:363
+msgid "Seconds"
+msgstr "সেকেন্ড"
+
+#: inc/wppool/class-plugin.php:370
+msgid "Upgrade to Pro"
+msgstr "প্রো-তে আপগ্রেড করুন"
+
+#: inc/wppool/class-plugin.php:374
+msgid "Try a free demo"
+msgstr "বিনামূল্যে ডেমো ব্যবহার করুন"
+
+#: jitsi-meet-wp.php:162
+msgid "Grab Your Deals"
+msgstr "আপনার ডিল নিন"
+
+#: templates/admin/affiliate-notice.php:15
+msgid ""
+"Hey! Enjoying <b>Jitsi Meet WP </b> plugin? Join our <a "
+"href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" "
+"class=\"affiliate-notice-link\">influencer program  </a> to make money from "
+"your social media content. You can also check our <a "
+"href=\"https://go.wppool.dev/edUn\" target=\"_blank\" "
+"class=\"affiliate-notice-link\">affiliate program  </a> to get a 25%% "
+"commission on every sale!"
+msgstr ""
+"আরে! <b>Jitsi Meet WP</b> প্লাগইনটি উপভোগ করছেন? আপনার সোশ্যাল মিডিয়া "
+"কন্টেন্ট থেকে টাকা ইনকাম করতে আমাদের <a href=\"https://go.wppool.dev/8dIc\" "
+"target=\"_blank\" class=\"affiliate-notice-link\">ইনফ্লুয়েন্সার "
+"প্রোগ্রামে</a> যোগ দিন। এছাড়াও আপনি আমাদের প্রতি সেলে ২৫%% কমিশন পেতে "
+"আমাদের <a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" "
+"class=\"affiliate-notice-link\">অ্যাফিলিয়েট প্রোগ্রামটি</a> দেখতে পারেন!"
+
+#: templates/admin/affiliate-notice.php:20
+msgid "Tell me more "
+msgstr "আরো জানতে চাই"
+
+#: templates/admin/affiliate-notice.php:29 templates/admin/review-notice.php:36
+msgid "Would you like us to remind you about this later?"
+msgstr "আপনি কি চান আমরা পরে এটি সম্পর্কে আপনাকে মনে করিয়ে দিই?"
+
+#: templates/admin/affiliate-notice.php:32 templates/admin/review-notice.php:39
+msgid "Remind me in 3 days"
+msgstr "৩ দিন পর মনে করিয়ে দিন"
+
+#: templates/admin/affiliate-notice.php:33 templates/admin/review-notice.php:40
+msgid "Remind me in 10 days"
+msgstr "১০ দিন পর মনে করিয়ে দিন"
+
+#: templates/admin/affiliate-notice.php:34 templates/admin/review-notice.php:42
+msgid "Don't remind me about this"
+msgstr "এটি সম্পর্কে আর মনে করিয়ে দেবেন না"
+
+#: templates/admin/review-notice.php:17
+msgid ""
+"Hi there, it seems like Jitsi Meet WP is bringing you some value, and that "
+"is pretty awesome!\r\n"
+"    Can you please show us some love and rate Jitsi Meet WP on WordPress? "
+"It will take two minutes of your time, and will really help us spread the "
+"world."
+msgstr ""
+"হ্যালো, মনে হচ্ছে Jitsi Meet WP আপনার কোনো কাজে আসছে, এটি চমৎকার একটি "
+"বিষয়!\r\n"
+"    আপনি কি দয়া করে আমাদের একটু ভালোবাসা দেখাতে পারেন এবং ওয়ার্ডপ্রেসে "
+"Jitsi Meet WP-কে রেট দিতে পারেন? এটি আপনার মাত্র দুই মিনিট সময় নেবে, কিন্তু "
+"এটি আমাদের পরিচিতি বাড়াতে অনেক সাহায্য করবে।"
+
+#: templates/admin/review-notice.php:26
+msgid "I'd love to help :)"
+msgstr "আমি সাহায্য করতে চাই :)"
+
+#: templates/admin/review-notice.php:29
+msgid "Not this time"
+msgstr "এবার নয়"
+
+#: templates/admin/review-notice.php:31
+msgid "I've already rated you"
+msgstr "আমি ইতিমধ্যে রেটিং দিয়েছি"
+
+#: blocks/dist/blocks.build.js:215 blocks/src/blocks.js:75
+msgid "Domain"
+msgstr "ডোমেইন"
+
+#: blocks/dist/blocks.build.js:224 blocks/src/blocks.js:82
+msgid "Config from global"
+msgstr "গ্লোবাল থেকে কনফিগ"
+
+#: blocks/dist/blocks.build.js:265 blocks/src/blocks.js:123
+msgid "Start with audio muted"
+msgstr "অডিও মিউট করে শুরু করুন"
+
+#: blocks/dist/blocks.build.js:273 blocks/src/blocks.js:128
+msgid "Start with video muted"
+msgstr "ভিডিও মিউট করে শুরু করুন"
+
+#: blocks/dist/blocks.build.js:281 blocks/src/blocks.js:133
+msgid "Start with screen sharing"
+msgstr "স্ক্রিন শেয়ারিং সহ শুরু করুন"
+
+#: blocks/dist/blocks.build.js:306 blocks/src/blocks.js:157
+msgid "Room name:"
+msgstr "রুমের নাম:"
+
+#: blocks/dist/blocks.build.js:306 blocks/src/blocks.js:158
+msgid "Domain :"
+msgstr "ডোমেইন:"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:170
+msgid "jitsi"
+msgstr "জিটসি"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:171
+msgid "meeting"
+msgstr "মিটিং"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:172
+msgid "video"
+msgstr "ভিডিও"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:173
+msgid "conference"
+msgstr "কনফারেন্স"
+
+#: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:174
+msgid "zoom"
+msgstr "জুম"
+
+#: inc/admin/mannage-callback.php:749
+msgid "<strong>Request</strong> your branded setup first (%s)"
+msgstr "<strong>অনুরোধ</strong> আপনার ব্র্যান্ডেড সেটআপ আগে করুন (%s)"
+
+#: inc/admin/mannage-callback.php:749
+msgid "request now →"
+msgstr "এখন অনুরোধ →"
+
+msgid "Branded meeting i.e link, logo, colors"
+msgstr "ব্র্যান্ডেড মিটিং অর্থাৎ লিঙ্ক, লোগো, রং"
+
+msgid "Meeting Moderator support"
+msgstr "মিটিং মডারেটর সমর্থন"
+
+msgid "No server cost or maintenance (we handle everything)"
+msgstr "সার্ভার খরচ বা রক্ষণাবেক্ষণ নেই (আমরা সবকিছু পরিচালনা করি)"
+
+msgid "Private hosting (not a shared public server)"
+msgstr "ব্যক্তিগত সার্ভার (পাবলিক সার্ভার নয়)"
+
+msgid "No third-party branding (fully white-labeled)"
+msgstr "কোনও তৃতীয় পক্ষের ব্র্যান্ডিং নেই (সম্পূর্ণ সাদা-লেবেলযুক্ত)"
+
+msgid "Longer & smoother meetings"
+msgstr "দীর্ঘতর এবং মসৃণ মিটিং"
+
+msgid "Create & share meeting links from your SaaS dashboard"
+msgstr "আপনার SaaS ড্যাশবোর্ড থেকে মিটিং লিঙ্ক তৈরি এবং শেয়ার করুন"
+
+msgid ""
+"New: Get your own %1$sbranded Jitsi meeting%2$s experience! %3$sSet Up "
+"Now%4$s →"
+msgstr ""
+"নতুন: আপনার নিজস্ব %1$sব্র্যান্ডের জিৎসি মিটিং%2$s অভিজ্ঞতা পান! %3$sএখন "
+"সেট আপ করুন%4$s →"

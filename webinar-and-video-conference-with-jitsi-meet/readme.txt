@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 5.4
-Stable tag: 2.8.0
+Stable tag: 2.8.1
 License: GPL-2.0+
 License URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -240,6 +240,10 @@ Yes. Live streaming to platforms like YouTube is supported when using the approp
 11. Self Hosted
 
 == Changelog ==
+
+= 2.8.1 – 24 Mar 2026 =
+* **Improvement:** Introduced multilingual support.
+* **Improvement:** Enhanced Settings API UI for better user experience.
 
 = 2.8.0 – 09 Mar 2026 =
 * **New:** Revamped API Settings interface for a cleaner and more intuitive configuration experience.

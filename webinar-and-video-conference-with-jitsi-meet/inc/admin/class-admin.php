@@ -564,6 +564,9 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 					.jitsi-branded-sidebar .benefits-list {
 						margin-bottom: 10px !important;
 					}
+					.jitsi-branded-sidebar .benefits-list li {
+						margin-bottom: 5px !important;
+					}
 					.jitsi-welcome-option-form table, 
 					.jitsi-welcome-option-form tbody, 
 					.jitsi-welcome-option-form tr, 
@@ -609,7 +612,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 										<?php
 										printf(
 											'<p class="wc-title">%1$s</p><p class="wc-text">%2$s</p>',
-											esc_html__( 'Welcome to FlexMeeting', 'webinar-and-video-conference-with-jitsi-meet' ),
+											esc_html__( 'Welcome to FlexMeeting Ultimate', 'webinar-and-video-conference-with-jitsi-meet' ),
 											esc_html__( 'Select for which kind of api you want to use with our plugin and give credential accordingly.', 'webinar-and-video-conference-with-jitsi-meet' )
 										);
 										?>

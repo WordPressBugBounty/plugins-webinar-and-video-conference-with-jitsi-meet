@@ -4,11 +4,11 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/webinar-and-video-conference-with-"
 "jitsi-meet\n"
-"POT-Creation-Date: 2026-02-24T10:47:21+00:00\n"
+"POT-Creation-Date: 2026-02-24T10:47:22+00:00\n"
 "PO-Revision-Date: 2026-03-11 16:15+0600\n"
 "Last-Translator: Antigravity AI\n"
-"Language-Team: Indonesian <id_ID@li.org>\n"
-"Language: id_ID\n"
+"Language-Team: Japanese <ja@li.org>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: inc/admin/class-admin.php:255 inc/admin/class-admin.php:689
 #. Plugin Name of the plugin
 msgid "FlexMeeting"
-msgstr "FlexMeeting Ultimate"
+msgstr "フレックスミーティング・アルティメット"
 
 #: jitsi-meet-wp.php
 #. Plugin URI of the plugin
@@ -32,8 +32,8 @@ msgid ""
 "Host live webinars, conferences, online classes, video calls directly on "
 "your WordPress website with gutenberg block"
 msgstr ""
-"Host webinar langsung, konferensi, kelas online, panggilan video langsung "
-"di situs web WordPress Anda dengan blok Gutenberg"
+"Gutenberg ブロックを使用して、WordPress Web サイト上でライブ ウェビナー、会議、オンライン "
+"クラス、ビデオ通話を直接ホストできます"
 
 #: jitsi-meet-wp.php
 #. Author of the plugin
@@ -47,297 +47,295 @@ msgstr "https://wppool.dev"
 
 #: gutenberg-init.php:73 gutenberg-init.php:88 init.php:68 init.php:83
 msgid "Cheatin&#8217; huh?"
-msgstr "Lagi curang ya?"
+msgstr "不正行為ですか ?"
 
 #: inc/admin/admin-settings.php:275
 msgid "Default (Public Hosting)"
-msgstr "Default (Hosting Publik)"
+msgstr "デフォルト (パブリックホスティング)"
 
 #: inc/admin/admin-settings.php:276
 msgid "Use the default public Jitsi"
-msgstr "Gunakan Jitsi publik default"
+msgstr "デフォルトのパブリックJitsiを使用する"
 
 #: inc/admin/admin-settings.php:279 inc/admin/mannage-callback.php:708
 msgid "Managed Branded Meeting"
-msgstr "Rapat Bermerek Terkelola"
+msgstr "マネージドブランドミーティング"
 
 #: inc/admin/admin-settings.php:280
 msgid "We host and maintain your branded server"
-msgstr "Kami meng-host dan memelihara server bermerek Anda"
+msgstr "ブランドサーバーのホスティングと保守を行います"
 
 #: inc/admin/admin-settings.php:283
 msgid "Jitsi as a Service (8x8 JaaS)"
-msgstr "Jitsi sebagai Layanan (8x8 JaaS)"
+msgstr "Jitsi as a Service (8x8 JaaS)"
 
 #: inc/admin/admin-settings.php:284
 msgid "Use your JaaS credentials"
-msgstr "Gunakan kredensial JaaS Anda"
+msgstr "JaaSの認証情報を使用する"
 
 #: inc/admin/admin-settings.php:287
 msgid "Self-Hosted"
-msgstr "Di-host Sendiri"
+msgstr "セルフホスト"
 
 #: inc/admin/admin-settings.php:288
 msgid "Connect your self-hosted server"
-msgstr "Hubungkan server yang Anda host sendiri"
+msgstr "セルフホストサーバーを接続する"
 
 #: inc/admin/admin-settings.php:328
 msgid "User Email"
-msgstr "Email Pengguna"
+msgstr "ユーザーのメールアドレス"
 
 #: inc/admin/admin-settings.php:328
 msgid "Email address of admin"
-msgstr "Alamat email admin"
+msgstr "管理者のメールアドレス"
 
 #: inc/admin/admin-settings.php:340
 msgid "User Username"
-msgstr "Username Pengguna"
+msgstr "ユーザーのユーザー名"
 
 #: inc/admin/admin-settings.php:340
 msgid "Username of the admin"
-msgstr "Username admin"
+msgstr "管理者のユーザー名"
 
 #: inc/admin/admin-settings.php:352
 msgid "User Avatar"
-msgstr "Avatar Pengguna"
+msgstr "ユーザーのアバター"
 
 #: inc/admin/admin-settings.php:352
 msgid "The avatar url of the admin user"
-msgstr "URL avatar pengguna admin"
+msgstr "管理者ユーザーのアバター URL"
 
 #: inc/admin/admin-settings.php:359
 msgid "280x70px png, up to 4MB"
-msgstr "PNG 280x70px, hingga 4MB"
+msgstr "280x70px png, 最大 4MB"
 
 #: inc/admin/admin-settings.php:366
 msgid "Enable Moderator Access"
-msgstr "Aktifkan Akses Moderator"
+msgstr "モデレーターアクセスを有効にする"
 
 #: inc/admin/admin-settings.php:366
 msgid ""
 "Allow this user to join as a moderator in Jass 8x8 meetings (only users "
 "with edit access)"
-msgstr ""
-"Izinkan pengguna ini bergabung sebagai moderator dalam rapat Jass 8x8 "
-"(hanya pengguna dengan akses edit)"
+msgstr "このユーザーが Jass 8x8 会議にモデレーターとして参加することを許可します（編集権限を持つユーザーのみ）"
 
 #: inc/admin/admin-settings.php:379
 msgid "Other Admin Config"
-msgstr "Konfigurasi Admin Lainnya"
+msgstr "その他の管理者設定"
 
 #: inc/admin/admin-settings.php:379
 msgid "Those are on https://jaas.8x8.vc/#/branding"
-msgstr "Konfigurasi tersebut ada di https://jaas.8x8.vc/#/branding"
+msgstr "これらは https://jaas.8x8.vc/#/branding にあります"
 
 #: inc/admin/admin-settings.php:392
 msgid "Meeting Width"
-msgstr "Lebar Rapat"
+msgstr "会議の幅"
 
 #: inc/admin/admin-settings.php:392
 msgid "Width in pixel when not on fullscreen"
-msgstr "Lebar dalam piksel saat tidak dalam layar penuh"
+msgstr "全画面表示でない時の幅（ピクセル）"
 
 #: inc/admin/admin-settings.php:404
 msgid "Meeting Height"
-msgstr "Tinggi Rapat"
+msgstr "会議の高さ"
 
 #: inc/admin/admin-settings.php:404
 msgid "Height in pixel when not on fullscreen"
-msgstr "Tinggi dalam piksel saat tidak dalam layar penuh"
+msgstr "全画面表示でない時の高さ（ピクセル）"
 
 #: inc/admin/admin-settings.php:416 inc/elementor.php:188
 #: blocks/dist/blocks.build.js:289 blocks/src/blocks.js:138
 msgid "Enable Inviting"
-msgstr "Aktifkan Fitur Mengundang"
+msgstr "招待を有効にする"
 
 #: inc/admin/admin-settings.php:416
 msgid "Attendee can invite people"
-msgstr "Peserta dapat mengundang orang lain"
+msgstr "参加者が他の人を招待できるようにします"
 
 #: inc/admin/admin-settings.php:428
 msgid "Welcome Page"
-msgstr "Halaman Selamat Datang"
+msgstr "ウェルカムページ"
 
 #: inc/admin/admin-settings.php:428
 msgid "Enable/Disable welcome page"
-msgstr "Aktifkan/Nonaktifkan halaman selamat datang"
+msgstr "ウェルカムページの有効化/無効化"
 
 #: inc/admin/admin-settings.php:441
 msgid "Yourself muted"
-msgstr "Mulai dengan mikrofon mati"
+msgstr "自分をミュートにする"
 
 #: inc/admin/admin-settings.php:441
 msgid "Start with yourself muted"
-msgstr "Mulai dengan mikrofon Anda dalam keadaan senyap"
+msgstr "参加時に自分をミュートにする"
 
 #: inc/admin/admin-settings.php:453
 msgid "Audio Only"
-msgstr "Hanya Audio"
+msgstr "音声のみ"
 
 #: inc/admin/admin-settings.php:453
 msgid "Start conference on audio only"
-msgstr "Mulai konferensi hanya dengan audio"
+msgstr "音声をのみで会議を開始する"
 
 #: inc/admin/admin-settings.php:466
 msgid "Audio Muted"
-msgstr "Audio Senyap"
+msgstr "オーディオミュート"
 
 #: inc/admin/admin-settings.php:466
 msgid "Participant after nth will be muted"
-msgstr "Peserta setelah urutan ke-n akan otomatis senyap"
+msgstr "n 番目以降の参加者はミュートになります"
 
 #: inc/admin/admin-settings.php:479
 msgid "Start Silent"
-msgstr "Mulai Diam"
+msgstr "サイレントスタート"
 
 #: inc/admin/admin-settings.php:479
 msgid "Disable local audio output"
-msgstr "Nonaktifkan output audio lokal"
+msgstr "ローカルのオーディオ出力を無効にする"
 
 #: inc/admin/admin-settings.php:492
 msgid "Start Video Muted"
-msgstr "Mulai Tanpa Video"
+msgstr "ビデオをミュートで開始"
 
 #: inc/admin/admin-settings.php:492
 msgid "Start call with video muted"
-msgstr "Mulai panggilan dengan video dimatikan"
+msgstr "ビデオをオフにして通話を開始する"
 
 #: inc/admin/admin-settings.php:504 inc/elementor.php:176
 msgid "Screen Sharing"
-msgstr "Berbagi Layar"
+msgstr "画面共有"
 
 #: inc/admin/admin-settings.php:504
 msgid ""
 "Enabling this feature allow you to share your screen while attending a "
 "meeting"
-msgstr "Mengaktifkan fitur ini memungkinkan Anda berbagi layar saat menghadiri rapat"
+msgstr "この機能を有効にすると、会議中に画面を共有できるようになります"
 
 #: inc/admin/admin-settings.php:516
 msgid "Video Resolution"
-msgstr "Resolusi Video"
+msgstr "ビデオ解像度"
 
 #: inc/admin/admin-settings.php:516
 msgid "Start with preferred resolution"
-msgstr "Mulai dengan resolusi yang diinginkan"
+msgstr "優先解像度で開始する"
 
 #: inc/admin/admin-settings.php:537
 msgid "Max Full Resolution"
-msgstr "Resolusi Penuh Maksimum"
+msgstr "最大フル解像度"
 
 #: inc/admin/admin-settings.php:537
 msgid "Number of participant with default resolution"
-msgstr "Jumlah peserta dengan resolusi standar"
+msgstr "デフォルトの解像度を使用する参加者の数"
 
 #: inc/admin/admin-settings.php:550
 msgid "Video Muted After"
-msgstr "Video Dimatikan Setelah"
+msgstr "指定人数以降はビデオをミュート"
 
 #: inc/admin/admin-settings.php:550
 msgid "Every participant after nth will start video muted"
-msgstr "Setiap peserta setelah urutan ke-n akan mulai tanpa video"
+msgstr "n 番目以降のすべての参加者はビデオをオフにして参加します"
 
 #: inc/admin/admin-settings.php:563
 msgid "Enable Livestream"
-msgstr "Aktifkan Siaran Langsung"
+msgstr "ライブストリームを有効にする"
 
 #: inc/admin/admin-settings.php:563
 msgid "Turn on livestreaming"
-msgstr "Aktifkan siaran langsung"
+msgstr "ライブストリーミングをオンにする"
 
 #: inc/admin/admin-settings.php:576
 msgid "Enable Recording"
-msgstr "Aktifkan Rekaman"
+msgstr "録画を有効にする"
 
 #: inc/admin/admin-settings.php:576
 msgid "Turn on to record the meeting"
-msgstr "Aktifkan untuk merekam rapat"
+msgstr "会議を録画するためにオンにする"
 
 #: inc/admin/admin-settings.php:589
 msgid "Enable Outbound"
-msgstr "Aktifkan Panggilan Keluar"
+msgstr "アウトバウンドを有効にする"
 
 #: inc/admin/admin-settings.php:589
 msgid "Allow outbound on the meeting"
-msgstr "Izinkan panggilan keluar dalam rapat"
+msgstr "会議でのアウトバウンドを許可する"
 
 #: inc/admin/admin-settings.php:602
 msgid "Enable Transcription"
-msgstr "Aktifkan Transkripsi"
+msgstr "文字起こしを有効にする"
 
 #: inc/admin/admin-settings.php:602
 msgid "Transcript the meeting"
-msgstr "Buat transkrip rapat"
+msgstr "会議の内容を文字に起こす"
 
 #: inc/admin/admin-settings.php:615
 msgid "Hide Jitsi Sidebar"
-msgstr "Sembunyikan Bilah Sisi Jitsi"
+msgstr "Jitsi サイドバーを隠す"
 
 #: inc/admin/admin-settings.php:615
 msgid "Enable to hide Jitsi sidebar from Jitsi Meeting room"
-msgstr "Aktifkan untuk menyembunyikan bilah sisi Jitsi dari ruang rapat Jitsi"
+msgstr "Jitsi 会議室から Jitsi サイドバーを非表示にします"
 
 #: inc/admin/admin-settings.php:629
 msgid "Simulcast"
-msgstr "Siaran Bersamaan"
+msgstr "サイマルキャスト"
 
 #: inc/admin/admin-settings.php:629
 msgid "Enable/Disable simulcast"
-msgstr "Aktifkan/Nonaktifkan simulcast"
+msgstr "サイマルキャストの有効化/無効化"
 
 #: inc/admin/admin-settings.php:642
 msgid "Enable Whiteboard"
-msgstr "Aktifkan Papan Tulis"
+msgstr "ホワイトボードを有効にする"
 
 #: inc/admin/admin-settings.php:642
 msgid "Enable to use the whiteboard on Jass 8x8"
-msgstr "Aktifkan untuk menggunakan papan tulis di Jass 8x8"
+msgstr "Jass 8x8 でホワイトボードを使用できるようにします"
 
 #: inc/admin/admin-settings.php:656
 msgid "Enable to Change Post-type Slug"
-msgstr "Aktifkan Perubahan Slug Tipe Post"
+msgstr "投稿タイプのスラッグ変更を有効にする"
 
 #: inc/admin/admin-settings.php:656
 msgid "You can enable/disable custom slug"
-msgstr "Anda dapat mengaktifkan/menonaktifkan slug khusus"
+msgstr "カスタムスラッグの有効化/無効化ができます"
 
 #: inc/admin/class-admin.php:76 inc/admin/class-admin.php:106
 msgid "Invalid request"
-msgstr "Permintaan tidak valid"
+msgstr "無効なリクエスト"
 
 #: inc/admin/class-admin.php:82 inc/admin/class-admin.php:112
 #: inc/admin/class-admin.php:149
 msgid "You do not have permission to do this action"
-msgstr "Anda tidak memiliki izin untuk melakukan tindakan ini"
+msgstr "この操作を実行する権限がありません"
 
 #: inc/admin/class-admin.php:184 inc/admin/class-admin.php:367
 msgid "Documentation"
-msgstr "Dokumentasi"
+msgstr "ドキュメント"
 
 #: inc/admin/class-admin.php:192
 msgid "Jitsi Meet Welcome"
-msgstr "Selamat Datang di Jitsi Meet"
+msgstr "Jitsi Meet へようこそ"
 
 #: inc/admin/class-admin.php:201
 msgid "APP Settings"
-msgstr "Pengaturan APLIKASI"
+msgstr "アプリ設定"
 
 #: inc/admin/class-admin.php:202 init.php:188 blocks/dist/blocks.build.js:204
 #: blocks/src/blocks.js:67
 msgid "Settings"
-msgstr "Pengaturan"
+msgstr "設定"
 
 #: inc/admin/class-admin.php:210 inc/admin/class-admin.php:215
 #: inc/admin/class-admin.php:779
 msgid "Add-ons"
-msgstr "Add-on"
+msgstr "アドオン"
 
 #: inc/admin/class-admin.php:216 inc/admin/mannage-callback.php:371
 msgid "New"
-msgstr "Baru"
+msgstr "新規"
 
 #: inc/admin/class-admin.php:226 init.php:189
 msgid "Upgrade to Ultimate"
-msgstr "Tingkatkan ke Ultimate"
+msgstr "アルティメット版にアップグレード"
 
 #: inc/admin/class-admin.php:265
 msgid "Gutenberg"
@@ -349,282 +347,267 @@ msgstr "Elementor"
 
 #: inc/admin/class-admin.php:275
 msgid "Shortcode"
-msgstr "Shortcode"
+msgstr "ショートコード"
 
 #: inc/admin/class-admin.php:286
 msgid "How to set a conference room"
-msgstr "Cara menyetel ruang konferensi"
+msgstr "会議室の設定方法"
 
 #: inc/admin/class-admin.php:287
 msgid "Very simple and easy steps"
-msgstr "Langkah-langkah yang sangat simpel dan mudah"
+msgstr "非常にシンプルで簡単な手順"
 
 #: inc/admin/class-admin.php:291
 msgid ""
 "While you are on the post/page edit screen click on gutenberg plus icon to "
 "add a new gutenberg block"
-msgstr ""
-"Saat Anda berada di layar edit pos/halaman, klik ikon plus Gutenberg untuk "
-"menambahkan blok Gutenberg baru"
+msgstr "投稿または固定ページの編集画面で、Gutenberg のプラスアイコンをクリックして新しいブロックを追加します。"
 
 #: inc/admin/class-admin.php:293
 msgid "Add new gutenberg block on page"
-msgstr "Tambahkan blok Gutenberg baru di halaman"
+msgstr "ページに新しい Gutenberg ブロックを追加します"
 
 #: inc/admin/class-admin.php:297
 msgid "Add \"Jitsi Meet\" from \"Embeds\" category"
-msgstr "Tambahkan \"Jitsi Meet\" dari kategori \"Embeds\""
+msgstr "「埋め込み」カテゴリから「Jitsi Meet」を追加します"
 
 #: inc/admin/class-admin.php:299
 msgid "Add Jitsi Meet from Embeds category"
-msgstr "Tambahkan Jitsi Meet dari kategori Embeds"
+msgstr "埋め込みカテゴリから Jitsi Meet を追加"
 
 #: inc/admin/class-admin.php:303
 msgid "Set width and height and you are done"
-msgstr "Setel lebar dan tinggi dan selesai"
+msgstr "幅と高さを設定すれば完了です"
 
 #: inc/admin/class-admin.php:305 inc/admin/class-admin.php:325
 #: inc/admin/class-admin.php:346
 msgid "Jitsi Meet Settings"
-msgstr "Pengaturan Jitsi Meet"
+msgstr "Jitsi Meet 設定"
 
 #: inc/admin/class-admin.php:312
 msgid "How to set with elementor"
-msgstr "Cara menyetel dengan elementor"
+msgstr "Elementor での設定方法"
 
 #: inc/admin/class-admin.php:313
 msgid "Setup a video conference room with elementor"
-msgstr "Siapkan ruang konferensi video dengan elementor"
+msgstr "Elementor でビデオ会議室をセットアップします"
 
 #: inc/admin/class-admin.php:317
 msgid ""
 "While you are on elementor edit screen drag and drop <strong>Jitsi "
 "Meet</strong> element to your page"
-msgstr ""
-"Saat Anda berada di layar edit Elementor, seret dan lepas elemen "
-"<strong>Jitsi Meet</strong> ke halaman Anda"
+msgstr "Elementor の編集画面で、<strong>Jitsi Meet</strong> 要素をページにドラッグアンドドロップします。"
 
 #: inc/admin/class-admin.php:319
 msgid "Add new jitsi meet element on page"
-msgstr "Tambahkan elemen jitsi meet baru di halaman"
+msgstr "ページに新しい Jitsi Meet 要素を追加します"
 
 #: inc/admin/class-admin.php:323
 msgid "Set name, width, height etc and you are done"
-msgstr "Setel nama, lebar, tinggi, dll. dan selesai"
+msgstr "名前、幅、高さなどを設定すれば完了です"
 
 #: inc/admin/class-admin.php:332
 msgid "How to set with shortcode"
-msgstr "Cara menyetel dengan shortcode"
+msgstr "ショートコードでの設定方法"
 
 #: inc/admin/class-admin.php:333
 msgid "Setup a video conference room with shortcode"
-msgstr "Siapkan ruang konferensi video dengan shortcode"
+msgstr "ショートコードでビデオ会議室をセットアップします"
 
 #: inc/admin/class-admin.php:335
 msgid "Write down the shortcode below and set width, height and name of conference"
-msgstr "Tuliskan shortcode di bawah ini dan setel lebar, tinggi, dan nama konferensi"
+msgstr "以下のショートコードを記述し、会議の幅、高さ、名前を設定してください。"
 
 #: inc/admin/class-admin.php:337
 msgid "Click on shortcode to copy"
-msgstr "Klik pada shortcode untuk menyalin"
+msgstr "クリックしてショートコードをコピー"
 
 #: inc/admin/class-admin.php:341
 msgid "name:"
-msgstr "nama:"
+msgstr "名前 :"
 
 #: inc/admin/class-admin.php:341
 msgid "A unique name to generate the url of the room"
-msgstr "Nama unik untuk menghasilkan URL ruangan"
+msgstr "部屋の URL を生成するためのユニークな名前"
 
 #: inc/admin/class-admin.php:342
 msgid "width:"
-msgstr "lebar:"
+msgstr "幅 :"
 
 #: inc/admin/class-admin.php:342
 msgid "Width of the jitsi meet embedded"
-msgstr "Lebar jitsi meet yang disematkan"
+msgstr "埋め込まれた Jitsi Meet の幅"
 
 #: inc/admin/class-admin.php:343
 msgid "height:"
-msgstr "tinggi:"
+msgstr "高さ :"
 
 #: inc/admin/class-admin.php:343
 msgid "Height of the jitsi meet embedded"
-msgstr "Tinggi jitsi meet yang disematkan"
+msgstr "埋め込まれた Jitsi Meet の高さ"
 
 #: inc/admin/class-admin.php:367
 msgid "How to embed"
-msgstr "Cara menyematkan"
+msgstr "埋め込み方法"
 
 #: inc/admin/class-admin.php:369
 msgid "API Settings"
-msgstr "Pengaturan API"
+msgstr "API 設定"
 
 #: inc/admin/class-admin.php:369
 msgid "Authenticate with JAAS"
-msgstr "Otentikasi dengan JAAS"
+msgstr "JAAS で認証する"
 
 #: inc/admin/class-admin.php:371
 msgid "Admin Settings"
-msgstr "Pengaturan Admin"
+msgstr "管理者設定"
 
 #: inc/admin/class-admin.php:371
 msgid "Username, email, avatar etc."
-msgstr "Username, email, avatar, dll."
+msgstr "ユーザー名、メールアドレス、アバターなど。"
 
 #: inc/admin/class-admin.php:373
 msgid "Configurations"
-msgstr "Konfigurasi"
+msgstr "構成設定"
 
 #: inc/admin/class-admin.php:373
 msgid "Width, height, recording etc..."
-msgstr "Lebar, tinggi, rekaman, dll..."
+msgstr "幅、高さ、録画など..."
 
 #: inc/admin/class-admin.php:375
 msgid "Audio Settings"
-msgstr "Pengaturan Audio"
+msgstr "オーディオ設定"
 
 #: inc/admin/class-admin.php:375
 msgid "Initial audio configurations..."
-msgstr "Konfigurasi audio awal..."
+msgstr "初期オーディオ構成..."
 
 #: inc/admin/class-admin.php:377
 msgid "Video Settings"
-msgstr "Pengaturan Video"
+msgstr "ビデオ設定"
 
 #: inc/admin/class-admin.php:377
 msgid "Initial video configurations..."
-msgstr "Konfigurasi video awal..."
+msgstr "初期ビデオ構成..."
 
 #: inc/admin/class-admin.php:468
 msgid "Self hosted domain missing"
-msgstr "Domain yang dihosting sendiri hilang"
+msgstr "セルフホスト型ドメインがありません"
 
 #: inc/admin/class-admin.php:472
 msgid "App id missing"
-msgstr "ID aplikasi hilang"
+msgstr "アプリIDがありません"
 
 #: inc/admin/class-admin.php:475
 msgid "Api key is missing"
-msgstr "Kunci API hilang"
+msgstr "APIキーがありません"
 
 #: inc/admin/class-admin.php:478
 msgid "Private key is missing"
-msgstr "Kunci privat hilang"
+msgstr "非公開キーがありません"
 
 #: inc/admin/class-admin.php:612
 msgid "Welcome to FlexMeeting Ultimate"
-msgstr "Selamat Datang di FlexMeeting Ultimate"
+msgstr "フレックスミーティング・アルティメットへようこそ"
 
 #: inc/admin/class-admin.php:613
 msgid ""
 "Select for which kind of api you want to use with our plugin and give "
 "credential accordingly."
-msgstr ""
-"Pilih jenis API mana yang ingin Anda gunakan dengan plugin kami dan berikan "
-"kredensial yang sesuai."
+msgstr "このプラグインで使用する API の種類を選択し、それに応じた資格情報を入力してください。"
 
 #: inc/admin/class-admin.php:621
 msgid "Skip"
-msgstr "Lewati"
+msgstr "スキップ"
 
 #: inc/admin/class-admin.php:623
 msgid "Continue"
-msgstr "Lanjutkan"
+msgstr "続行"
 
 #: inc/admin/class-admin.php:628
 msgid "How to select Jitsi Meet server?"
-msgstr "Bagaimana cara memilih server Jitsi Meet?"
+msgstr "Jitsi Meet サーバーの選択方法は ?"
 
 #: inc/admin/class-admin.php:701 inc/admin/class-admin.php:714
 #: inc/admin/class-admin.php:727 inc/admin/class-admin.php:740
 #: inc/admin/class-admin.php:752 inc/admin/mannage-callback.php:772
 msgid "Save Changes"
-msgstr "Simpan Perubahan"
+msgstr "変更を保存"
 
 #: inc/admin/class-admin.php:780
 msgid "Add your favourite add-ons and supercharge your workflow"
-msgstr "Tambahkan add-on favorit Anda dan percepat alur kerja Anda"
+msgstr "お気に入りのアドオンを追加して、ワークフローを強化しましょう"
 
 #: inc/admin/class-admin.php:794
 msgid "Multivendor Addon for FlexMeeting"
-msgstr "Add-on Multivendor untuk FlexMeeting"
+msgstr "FlexMeeting 用マルチベンダーアドオン"
 
 #: inc/admin/class-admin.php:795
 msgid ""
 "Power up your multi-vendor experience & create meetings right from your "
 "vendor dashboard. Elevate your store with monetizable video meetings."
-msgstr ""
-"Tingkatkan pengalaman multivendor Anda & buat pertemuan langsung dari "
-"dasbor vendor Anda. Tingkatkan toko Anda dengan pertemuan video yang dapat "
-"dimonetisasi."
+msgstr "マルチベンダー体験をパワーアップし、ベンダーダッシュボードから直接会議を作成できます。収益化可能なビデオ会議でストアの価値を高めましょう。"
 
 #: inc/admin/class-admin.php:802 inc/admin/class-admin.php:838
 msgid "Not activate"
-msgstr "Tidak aktif"
+msgstr "未有効化"
 
 #: inc/admin/class-admin.php:804 inc/admin/class-admin.php:840
 #: inc/admin/licence-cta.php:13
 msgid "Activate"
-msgstr "Aktifkan"
+msgstr "有効化"
 
 #: inc/admin/class-admin.php:823
 msgid "FlexMeeting Frontend Addon"
-msgstr "Add-on Frontend FlexMeeting"
+msgstr "FlexMeeting フロントエンドアドオン"
 
 #: inc/admin/class-admin.php:826
 msgid ""
 "Easily create Jitsi meetings from the frontend without accessing the admin "
 "dashboard."
-msgstr ""
-"Buat pertemuan Jitsi dengan mudah dari frontend tanpa mengakses dasbor "
-"admin."
+msgstr "管理ダッシュボードにアクセスすることなく、フロントエンドから簡単に Jitsi 会議を作成できます。"
 
 #: inc/admin/class-jitsi-jwt-service.php:50
 msgid "Domain is required to generate a JWT token."
-msgstr "Domain diperlukan untuk membuat token JWT."
+msgstr "JWTトークンを生成するにはドメインが必要です。"
 
 #: inc/admin/class-jitsi-jwt-service.php:114
 msgid ""
 "Could not connect to the token server. Your hosting provider may be "
 "blocking outbound connections to port 8090. Please contact your host "
 "support."
-msgstr ""
-"Tidak dapat terhubung ke server token. Penyedia hosting Anda mungkin "
-"memblokir koneksi keluar ke port 8090."
+msgstr "トークンサーバーに接続できませんでした。ホスティングプロバイダーがポート8090への送信接続をブロックしている可能性があります。"
 
 #: inc/admin/class-jitsi-jwt-service.php:127
 #. translators: 1: HTTP code, 2: API response body
 #, php-format
 msgid "Token generation failed. The server returned HTTP %1$d: %2$s"
-msgstr "Pembuatan token gagal. Server mengembalikan HTTP %1$d: %2$s"
+msgstr "トークンの生成に失敗しました。サーバーがHTTP %1$d: %2$sを返しました"
 
 #: inc/admin/class-jitsi-jwt-service.php:147
 msgid "Invalid response from token server."
-msgstr "Respons tidak valid dari server token."
+msgstr "トークンサーバーからの無効な応答。"
 
 #: inc/admin/class-jitsi-jwt-service.php:213
 #: inc/admin/class-jitsi-jwt-service.php:427
 msgid "Please enter a valid URL (include https://)."
-msgstr "Masukkan URL yang valid (sertakan https://)."
+msgstr "有効なURL（https://を含む）を入力してください。"
 
 #: inc/admin/class-jitsi-jwt-service.php:248
 msgid "We couldn't reach the verification server. Please try again."
-msgstr "Tidak dapat menjangkau server verifikasi. Silakan coba lagi."
+msgstr "検証サーバーに到達できませんでした。もう一度お試しください。"
 
 #: inc/admin/class-jitsi-jwt-service.php:252
 msgid ""
 "Your hosted server isn't active yet. If you just requested it, wait for our "
 "email."
-msgstr "Server Anda belum aktif. Mohon tunggu email kami."
+msgstr "ホストサーバーはまだアクティブではありません。メールをお待ちください。"
 
 #: inc/admin/class-jitsi-jwt-service.php:340
 msgid ""
 "Invalid URL. Please enter a full domain like "
 "https://yourbrand.jitsihosted.app"
-msgstr ""
-"URL tidak valid. Masukkan domain lengkap (misal: "
-"https://brandanda.jitsihosted.app)."
+msgstr "無効なURLです。フルドメイン（例：https://yourbrand.jitsihosted.app）を入力してください。"
 
 #: inc/admin/class-jitsi-jwt-service.php:358
 #. translators: %s = the domain hostname the user typed
@@ -632,7 +615,7 @@ msgstr ""
 msgid ""
 "Domain \"%s\" could not be found (DNS lookup failed). Please check the URL "
 "and try again."
-msgstr "Domain \"%s\" tidak ditemukan."
+msgstr "ドメイン \"%s\" が見つかりませんでした。"
 
 #: inc/admin/class-jitsi-jwt-service.php:383
 #. translators: %s = the domain hostname
@@ -640,7 +623,7 @@ msgstr "Domain \"%s\" tidak ditemukan."
 msgid ""
 "Domain \"%s\" resolved but the server did not respond. It may be offline or "
 "not a Jitsi server."
-msgstr "Domain \"%s\" ditemukan tetapi server tidak merespons."
+msgstr "ドメイン \"%s\" は解決されましたが、サーバーが応答しませんでした。"
 
 #: inc/admin/class-jitsi-jwt-service.php:397
 #. translators: 1: domain hostname, 2: HTTP status code
@@ -648,83 +631,83 @@ msgstr "Domain \"%s\" ditemukan tetapi server tidak merespons."
 msgid ""
 "\"%1$s\" is reachable but does not appear to be a Jitsi server (expected "
 "HTTP 200 from /config.js, got %2$d). Please double-check the URL."
-msgstr "\"%1$s\" dapat dijangkau tetapi tampaknya bukan server Jitsi."
+msgstr "\"%1$s\" にアクセス可能ですが、Jitsiサーバーではないようです。"
 
 #: inc/admin/class-jitsi-jwt-service.php:419
 #: inc/admin/class-jitsi-jwt-service.php:514
 msgid "Permission denied."
-msgstr "Izin ditolak."
+msgstr "アクセスが拒否されました。"
 
 #: inc/admin/class-jitsi-jwt-service.php:483
 msgid "Connected successfully!"
-msgstr "Berhasil terhubung!"
+msgstr "正常に接続されました！"
 
 #: inc/admin/class-jitsi-jwt-service.php:497
 msgid ""
 "Connection failed: The token server did not return a valid response. Your "
 "hosting provider may be blocking outbound connections to port 8090. Please "
 "contact your host support."
-msgstr "Koneksi gagal: Server token tidak memberikan respons yang valid."
+msgstr "接続に失敗しました：トークンサーバーが有効な応答を返しませんでした。"
 
 #: inc/admin/class-jitsi-jwt-service.php:499
 msgid ""
 "Connection failed: An unknown error occurred while generating the JWT "
 "token. Please check your server setup or contact support."
-msgstr "Koneksi gagal: Terjadi kesalahan saat membuat token JWT."
+msgstr "接続に失敗しました：JWTトークンの生成中に不明なエラーが発生しました。"
 
 #: inc/admin/class-jitsi-jwt-service.php:524
 msgid "Disconnected successfully."
-msgstr "Berhasil terputus."
+msgstr "正常に切断されました。"
 
 #: inc/admin/licence-cta.php:11
 msgid "Please activate your license"
-msgstr "Silakan aktifkan lisensi Anda"
+msgstr "ライセンスを有効化してください"
 
 #: inc/admin/mannage-callback.php:182
 msgid " New "
-msgstr " Baru "
+msgstr " 新規 "
 
 #: inc/admin/mannage-callback.php:290
 msgid "Preview Image Upload"
-msgstr "Unggah Gambar Pratinjau"
+msgstr "プレビュー画像のアップロード"
 
 #: inc/admin/mannage-callback.php:298
 msgid "Upload an image"
-msgstr "Unggah gambar"
+msgstr "画像をアップロード"
 
 #: inc/admin/mannage-callback.php:323
 msgid "Choose where your meetings will run:"
-msgstr "Pilih di mana rapat Anda akan berjalan:"
+msgstr "ミーティングの実行場所を選択してください:"
 
 #: inc/admin/mannage-callback.php:418 inc/admin/mannage-callback.php:482
 #: inc/admin/mannage-callback.php:505 inc/admin/mannage-callback.php:527
 #: inc/admin/mannage-callback.php:729
 msgid "Test Connection"
-msgstr "Uji Koneksi"
+msgstr "接続テスト"
 
 #: inc/admin/mannage-callback.php:424
 msgid "Domain changed. Please re-test connection."
-msgstr "Domain diubah. Harap uji ulang koneksi."
+msgstr "ドメインが変更されました。接続を再テストしてください。"
 
 #: inc/admin/mannage-callback.php:450
 msgid "Connecting..."
-msgstr "Menghubungkan..."
+msgstr "接続中..."
 
 #: inc/admin/mannage-callback.php:468
 msgid "Connection tested successfully."
-msgstr "Koneksi berhasil diuji."
+msgstr "接続テストが正常に完了しました。"
 
 #: inc/admin/mannage-callback.php:468
 msgid "Click \"Save Changes\" to apply."
-msgstr "Klik \"Simpan Perubahan\" untuk menerapkan."
+msgstr "「変更を保存」をクリックして適用します。"
 
 #: inc/admin/mannage-callback.php:512
 msgid "Connection failed. Please check your domain."
-msgstr "Koneksi gagal. Periksa domain Anda."
+msgstr "接続に失敗しました。ドメインを確認してください。"
 
 #: inc/admin/mannage-callback.php:534
 msgid "Connection disconnected. Save changes to apply."
-msgstr "Koneksi terputus. Simpan perubahan untuk menerapkan."
+msgstr "接続が切断されました。変更を保存して適用してください。"
 
 #: inc/admin/mannage-callback.php:589
 msgid "🎁"
@@ -732,84 +715,82 @@ msgstr "🎁"
 
 #: inc/admin/mannage-callback.php:589
 msgid "Benefits:"
-msgstr "Manfaat:"
+msgstr "メリット:"
 
 #: inc/admin/mannage-callback.php:611
 msgid "Need help setting up your branded server?"
-msgstr "Butuh bantuan menyiapkan server bermerek Anda?"
+msgstr "ブランドサーバーのセットアップにサポートが必要ですか?"
 
 #: inc/admin/mannage-callback.php:620
 msgid "How Hosted Meetings works?"
-msgstr "Bagaimana cara kerja Rapat yang Di-host?"
+msgstr "ホスト型ミーティングの仕組み"
 
 #: inc/admin/mannage-callback.php:671
 msgid "Default Public Hosting"
-msgstr "Hosting Publik Default"
+msgstr "デフォルトのパブリックホスティング"
 
 #: inc/admin/mannage-callback.php:678
 msgid "Domain One"
-msgstr "Domain Satu"
+msgstr "ドメイン 1"
 
 #: inc/admin/mannage-callback.php:679
 msgid "Domain Two"
-msgstr "Domain Dua"
+msgstr "ドメイン 2"
 
 #: inc/admin/mannage-callback.php:680
 msgid "Domain Three"
-msgstr "Domain Tiga"
+msgstr "ドメイン 3"
 
 #: inc/admin/mannage-callback.php:681
 msgid "Domain Four"
-msgstr "Domain Empat"
+msgstr "ドメイン 4"
 
 #: inc/admin/mannage-callback.php:689
 msgid "Default Public Domain"
-msgstr "Domain Publik Standar"
+msgstr "デフォルトのパブリックドメイン"
 
 #: inc/admin/mannage-callback.php:689
 msgid "Select a public domain to run your meeting."
-msgstr "Pilih domain publik untuk menjalankan rapat Anda."
+msgstr "ミーティングを実行するパブリックドメインを選択してください。"
 
 #: inc/admin/mannage-callback.php:694
 msgid "Completely Free to Use"
-msgstr "Sepenuhnya Gratis Digunakan"
+msgstr "完全無料"
 
 #: inc/admin/mannage-callback.php:695
 msgid "Instant Setup"
-msgstr "Penyiapan Instan"
+msgstr "即時セットアップ"
 
 #: inc/admin/mannage-callback.php:696
 msgid "No Account Required"
-msgstr "Tidak Diperlukan Akun"
+msgstr "アカウント不要"
 
 #: inc/admin/mannage-callback.php:697
 msgid "Standard Privacy Features"
-msgstr "Fitur Privasi Standar"
+msgstr "標準のプライバシー機能"
 
 #: inc/admin/mannage-callback.php:708
 msgid "We’ll handle hosting"
-msgstr "Kami akan menangani hosting"
+msgstr "ホスティングはお任せください"
 
 #: inc/admin/mannage-callback.php:711
 msgid ""
 "Get your own private branded meeting server (logo + brand name). We host "
 "and maintain it - just paste your Hosted Server Domain URL below and enjoy "
 "your branded meetings."
-msgstr "Dapatkan server pertemuan khusus merek Anda sendiri."
+msgstr "あなた専用のブランド化されたプライベートミーティングサーバーを手に入れましょう。"
 
 #: inc/admin/mannage-callback.php:726
 msgid "Paste the Domain URL we emailed you (example: yourbrand.jitsihosted.com)"
-msgstr ""
-"Tempel URL Domain yang kami kirimkan via email (contoh: "
-"merekanda.jitsihosted.com)"
+msgstr "メールで送信したドメインURLを貼り付けてください（例：yourbrand.jitsihosted.com）"
 
 #: inc/admin/mannage-callback.php:728
 msgid "Enter the Domain URL"
-msgstr "Masukkan URL Domain"
+msgstr "ドメインURLを入力してください"
 
 #: inc/admin/mannage-callback.php:730
 msgid "Disconnect"
-msgstr "Putuskan Sambungan"
+msgstr "切断"
 
 #: inc/admin/mannage-callback.php:736
 msgid "✅"
@@ -817,19 +798,19 @@ msgstr "✅"
 
 #: inc/admin/mannage-callback.php:736
 msgid "Connected. Meetings will run on"
-msgstr "Terhubung. Rapat akan berjalan pada"
+msgstr "接続されました。ミーティングの実行場所:"
 
 #: inc/admin/mannage-callback.php:741
 msgid "Don't have a Hosted Server URL yet? "
-msgstr "Belum memiliki URL Server yang Di-host? "
+msgstr "ホストサーバーURLをまだお持ちではありませんか?"
 
 #: inc/admin/mannage-callback.php:741
 msgid "Request setup now →"
-msgstr "Minta penyiapan sekarang →"
+msgstr "今すぐセットアップをリクエスト →"
 
 #: inc/admin/mannage-callback.php:746
 msgid "Hosted Server Domain:"
-msgstr "Domain Server yang Di-host:"
+msgstr "ホストサーバードメイン:"
 
 #: inc/admin/mannage-callback.php:749
 msgid ""
@@ -837,24 +818,21 @@ msgid ""
 "href=\"https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/"
 "service/\" target=\"_blank\">request now →</a>)"
 msgstr ""
-"<strong>Ajukan</strong> pengaturan khusus Anda terlebih dahulu (<a "
+"まずブランド化セットアップを<strong>リクエスト</strong>してください (<a "
 "href=\"https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/"
-"service/\" target=\"_blank\">ajukan sekarang →</a>)"
+"service/\" target=\"_blank\">今すぐリクエスト →</a>)"
 
 #: inc/admin/mannage-callback.php:750
 msgid "<strong>We set it up</strong> and email your Hosted Server URL"
 msgstr ""
-"<strong>Kami menyiapkannya</strong> dan mengirimkan URL Server Hosted Anda "
-"melalui email<strong>Kami menyiapkannya</strong> dan mengirim email berisi "
-"URL Server yang Di-host Anda"
+"<strong>私たちがセットアップし</strong>、ホスト済みサーバーのURLをメールでお送りします<strong>私たちがセットアップ</"
+"strong>し、ホストサーバー URL をメールで送信します"
 
 #: inc/admin/mannage-callback.php:751
 msgid ""
 "<strong>Paste the URL here</strong> → Test Connection → meetings start "
 "running on your hosted server"
-msgstr ""
-"<strong>Tempel URL di sini</strong> → Tes Koneksi → pertemuan dimulai di "
-"server Anda"
+msgstr "<strong>ここにURLを貼り付け</strong> → 接続テスト → ホストサーバーでミーティングが開始されます"
 
 #: inc/admin/mannage-callback.php:752
 msgid "🤩"
@@ -862,38 +840,38 @@ msgstr "🤩"
 
 #: inc/admin/mannage-callback.php:752
 msgid "That's it - no technical setup needed from you. Wahhhhhhhhhh!"
-msgstr "Itu dia - tanpa perlu penyiapan teknis dari Anda. Wahhhhhhhhhh!"
+msgstr "それだけです。技術的な設定は必要ありません。すばらしい!"
 
 #: inc/admin/mannage-callback.php:779
 msgid "Branded meeting URL"
-msgstr "URL rapat bermerek"
+msgstr "ブランド付きミーティングURL"
 
 #: inc/admin/mannage-callback.php:780
 msgid "Branded logo and other customizations"
-msgstr "Logo bermerek dan kustomisasi lainnya"
+msgstr "ブランドロゴとその他のカスタマイズ"
 
 #: inc/admin/mannage-callback.php:781
 msgid "No server cost + maintenance"
-msgstr "Tanpa biaya server atau pemeliharaan"
+msgstr "サーバー費用・保守不要"
 
 #: inc/admin/mannage-callback.php:782
 msgid "Private hosting (no shared public server)"
-msgstr "Hosting pribadi (bukan server publik bersama)"
+msgstr "プライベートホスティング（共有公開サーバーなし）"
 
 #: inc/admin/mannage-callback.php:783
 msgid "White-labeled experience"
-msgstr "Pengalaman white-label"
+msgstr "ホワイトラベルの体験"
 
 msgid "Live streaming support"
-msgstr "Dukungan streaming langsung"
+msgstr "ライブストリーミングのサポート"
 
 #: inc/admin/mannage-callback.php:785
 msgid "Request branded meeting server for FREE!"
-msgstr "Minta server rapat bermerek GRATIS!"
+msgstr "ブランドミーティングサーバーを無料でリクエスト!"
 
 #: inc/admin/mannage-callback.php:794
 msgid "What is a server?"
-msgstr "Apa itu server?"
+msgstr "サーバーとは何ですか？"
 
 #: inc/admin/mannage-callback.php:795
 msgid ""
@@ -901,13 +879,11 @@ msgid ""
 "software, allowing users to connect and hold video meetings from anywhere "
 "in the world. Think of it as the \"home\" for your meeting system that "
 "stays online 24/7."
-msgstr ""
-"Server adalah komputer yang selalu menyala untuk menjalankan sistem "
-"pertemuan Anda."
+msgstr "サーバーは、24時間年中無休でミーティングシステムを稼働させるための強力なコンピューターです。"
 
 #: inc/admin/mannage-callback.php:798
 msgid "What is a self-hosted FlexMeeting server?"
-msgstr "Apa yang dimaksud dengan server FlexMeeting yang di-host sendiri?"
+msgstr "セルフホスト型 フレックスミーティング サーバーとは何ですか?"
 
 #: inc/admin/mannage-callback.php:799
 msgid ""
@@ -915,14 +891,13 @@ msgid ""
 "on your own server or hosting environment, not on Jitsi’s public "
 "infrastructure. This gives you full control, privacy, and customization "
 "flexibility."
-msgstr "Server Jitsi mandiri berarti sistem berjalan di server Anda sendiri."
+msgstr "セルフホスト型Jitsiサーバーは、すべてのシステムが独自のサーバーで動作することを意味します。"
 
 #: inc/admin/mannage-callback.php:802
 msgid "Why should I use a self-hosted Jitsi server instead of using public Jitsi?"
 msgstr ""
-"Mengapa harus menggunakan server Jitsi self-hosted daripada Jitsi "
-"publik?Mengapa saya harus menggunakan server Jitsi yang di-host sendiri "
-"alih-alih menggunakan Jitsi publik?"
+"なぜ公開Jitsiではなく自己ホスト型Jitsiサーバーを使用すべきですか？パブリックJitsiの代わりにセルフホスト型Jitsiサーバーを使用する必要"
+"があるのはなぜですか?"
 
 #: inc/admin/mannage-callback.php:803
 msgid ""
@@ -931,13 +906,12 @@ msgid ""
 "performance <br>- No limitations on usage <br>- Your own branding and "
 "domain <br>- Control over features and integrations"
 msgstr ""
-"Server publik bersifat berbagi. Dengan hosting mandiri, Anda mendapatkan: "
-"<br>- Privasi lebih baik <br>- Performa lebih baik <br>- Tanpa batas "
-"penggunaan"
+"パブリックサーバーは共有されています。セルフホストでは以下が得られます： <br>- プライバシーの強化 <br>- パフォーマンスの向上 <br>- "
+"使用制限なし"
 
 #: inc/admin/mannage-callback.php:806
 msgid "What do you provide in this service?"
-msgstr "Apa yang Anda sediakan dalam layanan ini?"
+msgstr "このサービスでは何が提供されますか?"
 
 #: inc/admin/mannage-callback.php:807
 msgid ""
@@ -945,76 +919,72 @@ msgid ""
 "firewalls <br>- Brand it with your logo and domain (optional) <br>- "
 "Integrate it into your website <br>- Provide admin access and documentation "
 "<br>- Offer post-installation support if needed"
-msgstr ""
-"- Kami menyiapkan server Jitsi di VPS Anda <br>- Mengamankannya dengan SSL "
-"<br>- Memberi merek dengan logo Anda"
+msgstr "- VPS上へのJitsiサーバーのセットアップ <br>- SSLによるセキュリティ保護 <br>- ロゴによるブランド化"
 
 #: inc/admin/mannage-callback.php:810
 msgid "Do I need technical knowledge to maintain the server?"
-msgstr "Apakah saya memerlukan pengetahuan teknis untuk memelihara server?"
+msgstr "サーバーを維持するために技術的な知識は必要ですか?"
 
 #: inc/admin/mannage-callback.php:811
 msgid ""
 "No. We handle everything during setup. If you opt for our support plan, we "
 "also handle maintenance, upgrades, and any issues that arise."
-msgstr "Tidak. Kami menangani semuanya selama pengaturan."
+msgstr "いいえ。セットアップ中のすべての作業は弊社が行います。"
 
 #: inc/admin/mannage-callback.php:814
 msgid "What are the server requirements?"
-msgstr "Apa persyaratan servernya?"
+msgstr "サーバーの要件は何ですか?"
 
 #: inc/admin/mannage-callback.php:815
 msgid ""
 "Minimum requirements: <br>- Ubuntu/Debian VPS <br>- 4+ CPU cores <br>- 8GB+ "
 "RAM <br>- 100 Mbps+ bandwidth <br>We’ll guide you to choose the right "
 "hosting based on your expected usage."
-msgstr ""
-"Persyaratan minimum: <br>- VPS Ubuntu/Debian <br>- 4+ core CPU <br>- 8GB+ "
-"RAM"
+msgstr "最小要件： <br>- Ubuntu/Debian VPS <br>- 4コア以上のCPU <br>- 8GB以上のRAM"
 
 #: inc/admin/mannage-callback.php:818
 msgid "Can I use this with my existing website or LMS?"
-msgstr "Dapatkah saya menggunakan ini dengan situs web atau LMS saya yang sudah ada?"
+msgstr "既存のウェブサイトやLMSで使用できますか?"
 
 #: inc/admin/mannage-callback.php:819
 msgid ""
 "Yes. We can integrate Jitsi into any website, including WordPress, Moodle, "
 "TutorLMS, LearnDash, or even custom-built platforms."
-msgstr "Ya. Kami dapat mengintegrasikan Jitsi ke situs web mana pun."
+msgstr "はい。WordPressなどのあらゆるウェブサイトにJitsiを統合できます。"
 
 #: inc/admin/mannage-callback.php:822
 msgid "How long does it take to set everything up?"
-msgstr "Berapa lama waktu yang diperlukan untuk menyiapkan semuanya?"
+msgstr "すべての設定にはどのくらいの時間がかかりますか?"
 
 #: inc/admin/mannage-callback.php:823
 msgid ""
 "Typically between 1–3 business days, depending on your customization and "
 "hosting setup."
-msgstr "Biasanya antara 1–3 hari kerja."
+msgstr "通常、1〜3営業日以内です。"
 
 #: inc/admin/mannage-callback.php:826
 msgid "Can I record meetings or stream them?"
-msgstr "Bisakah saya merekam rapat atau melakukan streaming?"
+msgstr "ミーティングを録画またはストリーミングできますか？"
 
 #: inc/admin/mannage-callback.php:827
 msgid ""
 "Yes, we can enable recording (using Jibri) and YouTube live streaming on "
 "request. Note that these features require additional server resources."
-msgstr "Ya, kami dapat mengaktifkan rekaman dan live streaming YouTube."
+msgstr "はい、リクエストに応じて録画やライブ配信を有効にできます。"
 
 #: inc/admin/mannage-callback.php:830
 msgid "Is it one-time setup or recurring service?"
-msgstr "Apakah ini pengaturan sekali atau layanan berulang?"
+msgstr "一回限りの設定ですか、それとも継続サービスですか？"
 
 #: inc/admin/mannage-callback.php:831
 msgid ""
 "The setup is one-time unless you choose our optional support & maintenance "
 "plan for updates, backups, and ongoing help."
-msgstr "Pengaturan bersifat sekali bayar kecuali Anda memilih paket pemeliharaan."
+msgstr "セットアップは一回限りですが、保守プランも選択可能です。"
 
 #: inc/admin/mannage-callback.php:834
 msgid "Ready to Launch Your Private Meeting System?"
-msgstr "Siap Meluncurkan Sistem Rapat Pribadi Anda?"
+msgstr "プライベートミーティングシステムを開始する準備はできていますか？"
 
 #: inc/admin/mannage-callback.php:835
 msgid ""
@@ -1023,113 +993,107 @@ msgid ""
 "target=\"_blank\" style=\"color: #3b82f6; font-weight: 600; "
 "text-decoration: none;\">Contact Support &rarr;</a>"
 msgstr ""
-"Kami menangani pekerjaan teknis. <br><br> <a "
-"href=\"https://wppool.dev/contact/\" target=\"_blank\" style=\"color: "
-"#3b82f6; font-weight: 600; text-decoration: none;\">Hubungi Dukungan "
-"&rarr;</a>"
+"技術的な作業はすべて弊社が行います。 <br><br> <a href=\"https://wppool.dev/contact/\" "
+"target=\"_blank\" style=\"color: #3b82f6; font-weight: 600; "
+"text-decoration: none;\">サポートに連絡 →</a>"
 
 #: inc/admin/mannage-callback.php:840
 msgid "Frequently Asked Questions"
-msgstr "Pertanyaan yang Sering Diajukan"
+msgstr "よくある質問"
 
 #: inc/admin/mannage-callback.php:866
 msgid "Jitsi as a Service (8x8)"
-msgstr "Jitsi sebagai Layanan (8x8)"
+msgstr "Jitsi as a Service (8x8)"
 
 #: inc/admin/mannage-callback.php:873
 msgid "APP ID"
-msgstr "ID APLIKASI"
+msgstr "アプリID"
 
 #: inc/admin/mannage-callback.php:873 inc/admin/mannage-callback.php:882
 msgid "Get it from "
-msgstr "Dapatkan dari "
+msgstr "取得先 : "
 
 #: inc/admin/mannage-callback.php:875
 msgid "Copy the APP ID from JaaS admin"
-msgstr "Salin ID APLIKASI dari admin JaaS"
+msgstr "JaaS 管理画面から APP ID をコピーしてください"
 
 #: inc/admin/mannage-callback.php:882
 msgid "API Key"
-msgstr "Kunci API"
+msgstr "API キー"
 
 #: inc/admin/mannage-callback.php:884
 msgid "Copy the API Key from JaaS admin"
-msgstr "Salin Kunci API dari admin JaaS"
+msgstr "JaaS 管理画面から API キーをコピーしてください"
 
 #: inc/admin/mannage-callback.php:891
 msgid "Private Key"
-msgstr "Kunci Pribadi"
+msgstr "秘密鍵"
 
 #: inc/admin/mannage-callback.php:891
 msgid "Paste private key content here"
-msgstr "Tempel konten kunci privat di sini"
+msgstr "ここに秘密キーの内容を貼り付けます"
 
 #: inc/admin/mannage-callback.php:893
 msgid "Generate private key and download"
-msgstr "Buat kunci pribadi dan unduh"
+msgstr "秘密鍵を生成してダウンロード"
 
 #: inc/admin/mannage-callback.php:899
 msgid "Enterprise Grade Reliability"
-msgstr "Keandalan Tingkat Perusahaan"
+msgstr "エンタープライズレベルの信頼性"
 
 #: inc/admin/mannage-callback.php:900
 msgid "Advanced Analytics"
-msgstr "Analisis Lanjutan"
+msgstr "高度な分析"
 
 #: inc/admin/mannage-callback.php:901
 msgid "Global Low-latency Network"
-msgstr "Jaringan Latensi Rendah Global"
+msgstr "グローバルな低遅延ネットワーク"
 
 #: inc/admin/mannage-callback.php:902
 msgid "Secure Recorded Meetings"
-msgstr "Rapat Terekam dengan Aman"
+msgstr "安全な録画ミーティング"
 
 #: inc/admin/mannage-callback.php:912
 msgid "Self-Hosted Server"
-msgstr "Server yang Di-host Sendiri"
+msgstr "セルフホストサーバー"
 
 #: inc/admin/mannage-callback.php:921
 msgid "Your Server Domain"
-msgstr "Domain Server Anda"
+msgstr "サーバードメイン"
 
 #: inc/admin/mannage-callback.php:922
 msgid "Enter your self-hosted Jitsi domain (e.g., meet.yourdomain.com)"
-msgstr ""
-"Masukkan domain Jitsi self-hosted Anda (mis., meet.domaindanda.com)Masukkan "
-"domain Jitsi yang di-host sendiri Anda (misalnya, meet.domainanda.com)"
+msgstr "セルフホスト型Jitsiドメインを入力します (例: meet.yourdomain.com)"
 
 #: inc/admin/mannage-callback.php:922
 msgid "Premium Feature"
-msgstr "Fitur Premium"
+msgstr "プレミアム機能"
 
 #: inc/admin/mannage-callback.php:929
 msgid "Full Data Control"
-msgstr "Kontrol Data Penuh"
+msgstr "完全なデータ制御"
 
 #: inc/admin/mannage-callback.php:930
 msgid "Custom Security Policies"
-msgstr "Kebijakan Keamanan Kustom"
+msgstr "カスタム セキュリティ ポリシー"
 
 #: inc/admin/mannage-callback.php:931
 msgid "No Third-party Tracking"
-msgstr "Tanpa Pelacakan Pihak Ketiga"
+msgstr "サードパーティの追跡なし"
 
 #: inc/admin/mannage-callback.php:932
 msgid "Infrastructure Ownership"
-msgstr "Kepemilikan Infrastruktur"
+msgstr "インフラストラクチャの所有権"
 
 #: inc/admin/mannage-callback.php:939
 msgid ""
 "Some settings like Company Logo, Background etc are currently not available "
 "via api. You can set your company logo, background etc from the"
-msgstr ""
-"Beberapa pengaturan seperti Logo Perusahaan, Latar Belakang, dll. saat ini "
-"tidak tersedia via api. Anda dapat mengatur logo perusahaan, latar "
-"belakang, dll. dari"
+msgstr "会社ロゴや背景などの一部の設定は、現在 API 経由では利用できません。これらは以下から設定できます："
 
 #: inc/admin/mannage-callback.php:939
 msgid "jaas console"
-msgstr "konsol JaaS"
+msgstr "JaaS コンソール"
 
 #: inc/elementor.php:67 blocks/dist/blocks.build.js:314 blocks/src/blocks.js:166
 msgid "Jitsi Meet"
@@ -1137,31 +1101,31 @@ msgstr "Jitsi Meet"
 
 #: inc/elementor.php:108
 msgid "Configuration"
-msgstr "Konfigurasi"
+msgstr "構成"
 
 #: inc/elementor.php:115 blocks/dist/blocks.build.js:207 blocks/src/blocks.js:69
 msgid "Name"
-msgstr "Nama"
+msgstr "名前"
 
 #: inc/elementor.php:118
 msgid "Meeting name here"
-msgstr "Nama rapat di sini"
+msgstr "会議名をここに入力"
 
 #: inc/elementor.php:125 blocks/dist/blocks.build.js:243 blocks/src/blocks.js:107
 msgid "Width"
-msgstr "Lebar"
+msgstr "幅"
 
 #: inc/elementor.php:140 blocks/dist/blocks.build.js:254 blocks/src/blocks.js:115
 msgid "Height"
-msgstr "Tinggi"
+msgstr "高さ"
 
 #: inc/elementor.php:152
 msgid "Start audio muted"
-msgstr "Mulai dengan audio senyap"
+msgstr "音声をミュートで開始"
 
 #: inc/elementor.php:164
 msgid "Start video muted"
-msgstr "Mulai dengan video dimatikan"
+msgstr "ビデオをオフで開始"
 
 #: inc/jitsi-topbar.php:196
 msgid "🎉"
@@ -1169,35 +1133,35 @@ msgstr "🎉"
 
 #: inc/jitsi-topbar.php:214
 msgid "Close notification"
-msgstr "Tutup notifikasi"
+msgstr "通知を閉じる"
 
 #: inc/jitsi-topbar.php:321
 msgid "Invalid nonce"
-msgstr "Nonce tidak valid"
+msgstr "無効な nonce"
 
 #: inc/jitsi-topbar.php:326
 msgid "Insufficient permissions"
-msgstr "Izin tidak cukup"
+msgstr "権限が不足しています"
 
 #: inc/jitsi-topbar.php:333
 msgid "Topbar dismissed successfully"
-msgstr "Bilah atas berhasil ditutup"
+msgstr "トップバーを正常に閉じました"
 
 #: inc/jitsi-topbar.php:335
 msgid "Failed to dismiss topbar"
-msgstr "Gagal menutup bilah atas"
+msgstr "トップバーを閉じるのに失敗しました"
 
 #: inc/jitsi-topbar.php:353
 msgid "Security check failed"
-msgstr "Pemeriksaan keamanan gagal"
+msgstr "セキュリティチェックに失敗しました"
 
 #: inc/jitsi-topbar.php:358
 msgid "You do not have sufficient permissions to access this page."
-msgstr "Anda tidak memiliki izin yang cukup untuk mengakses halaman ini."
+msgstr "このページにアクセスするのに十分な権限がありません。"
 
 #: inc/wppool/class-plugin.php:328
 msgid "Deal Ends In"
-msgstr "Penawaran Berakhir Dalam"
+msgstr "セール終了まで残り"
 
 #: inc/wppool/class-plugin.php:333 inc/wppool/class-plugin.php:342
 #: inc/wppool/class-plugin.php:351 inc/wppool/class-plugin.php:360
@@ -1206,31 +1170,31 @@ msgstr "00"
 
 #: inc/wppool/class-plugin.php:336
 msgid "Days"
-msgstr "Hari"
+msgstr "日"
 
 #: inc/wppool/class-plugin.php:345
 msgid "Hours"
-msgstr "Jam"
+msgstr "時間"
 
 #: inc/wppool/class-plugin.php:354
 msgid "Minutes"
-msgstr "Menit"
+msgstr "分"
 
 #: inc/wppool/class-plugin.php:363
 msgid "Seconds"
-msgstr "Detik"
+msgstr "秒"
 
 #: inc/wppool/class-plugin.php:370
 msgid "Upgrade to Pro"
-msgstr "Tingkatkan ke Pro"
+msgstr "Pro 版にアップグレード"
 
 #: inc/wppool/class-plugin.php:374
 msgid "Try a free demo"
-msgstr "Coba demo gratis"
+msgstr "無料デモを試す"
 
 #: jitsi-meet-wp.php:162
 msgid "Grab Your Deals"
-msgstr "Dapatkan Penawaran Anda"
+msgstr "お得な情報をゲット"
 
 #: templates/admin/affiliate-notice.php:15
 msgid ""
@@ -1242,33 +1206,32 @@ msgid ""
 "class=\"affiliate-notice-link\">affiliate program  </a> to get a 25%% "
 "commission on every sale!"
 msgstr ""
-"Hei! Menikmati plugin <b>Jitsi Meet WP</b>? Bergabunglah dengan <a "
+"こんにちは ! <b>Jitsi Meet WP</b> プラグインはお役に立っていますか ? 私たちの <a "
 "href=\"https://go.wppool.dev/8dIc\" target=\"_blank\" "
-"class=\"affiliate-notice-link\">program influencer</a> kami untuk "
-"menghasilkan uang dari konten media sosial Anda. Anda juga dapat memeriksa "
-"<a href=\"https://go.wppool.dev/edUn\" target=\"_blank\" "
-"class=\"affiliate-notice-link\">program afiliasi</a> kami untuk mendapatkan "
-"komisi 25%% di setiap penjualan!"
+"class=\"affiliate-notice-link\">インフルエンサープログラム</a> "
+"に参加して、ソーシャルメディアコンテンツから収益を上げましょう。また、<a href=\"https://go.wppool.dev/edUn\" "
+"target=\"_blank\" class=\"affiliate-notice-link\">アフィリエイトプログラム</a> では、1 "
+"回の販売につき 25%% のコミッションを獲得できます !"
 
 #: templates/admin/affiliate-notice.php:20
 msgid "Tell me more "
-msgstr "Katakan lebih lanjut "
+msgstr "詳細を見る "
 
 #: templates/admin/affiliate-notice.php:29 templates/admin/review-notice.php:36
 msgid "Would you like us to remind you about this later?"
-msgstr "Apakah Anda ingin kami mengingatkan Anda tentang ini nanti?"
+msgstr "後で再通知を受け取りますか ?"
 
 #: templates/admin/affiliate-notice.php:32 templates/admin/review-notice.php:39
 msgid "Remind me in 3 days"
-msgstr "Ingatkan saya dalam 3 hari"
+msgstr "3 日後に通知する"
 
 #: templates/admin/affiliate-notice.php:33 templates/admin/review-notice.php:40
 msgid "Remind me in 10 days"
-msgstr "Ingatkan saya dalam 10 hari"
+msgstr "10 日後に通知する"
 
 #: templates/admin/affiliate-notice.php:34 templates/admin/review-notice.php:42
 msgid "Don't remind me about this"
-msgstr "Jangan ingatkan saya tentang ini"
+msgstr "通知を受け取らない"
 
 #: templates/admin/review-notice.php:17
 msgid ""
@@ -1278,50 +1241,48 @@ msgid ""
 "It will take two minutes of your time, and will really help us spread the "
 "world."
 msgstr ""
-"Halo, sepertinya Jitsi Meet WP memberikan manfaat bagi Anda, dan itu luar "
-"biasa! Tolong tunjukkan dukungan Anda dan beri peringkat Jitsi Meet WP di "
-"WordPress? Ini hanya memakan waktu dua menit dari waktu Anda, dan akan "
-"sangat membantu kami menyebarkan informasi ini."
+"こんにちは ! Jitsi Meet WP がお役に立てているようで、大変嬉しく思います。もしよろしければ、WordPress で Jitsi "
+"Meet WP を評価していただけませんか ? 2 分ほどで完了します。あなたの評価が私たちの励みになります。"
 
 #: templates/admin/review-notice.php:26
 msgid "I'd love to help :)"
-msgstr "Saya senang membantu :)"
+msgstr "協力します :)"
 
 #: templates/admin/review-notice.php:29
 msgid "Not this time"
-msgstr "Tidak kali ini"
+msgstr "今回は遠慮しておきます"
 
 #: templates/admin/review-notice.php:31
 msgid "I've already rated you"
-msgstr "Saya sudah memberi peringkat"
+msgstr "すでに評価済みです"
 
 #: blocks/dist/blocks.build.js:215 blocks/src/blocks.js:75
 msgid "Domain"
-msgstr "Domain"
+msgstr "ドメイン"
 
 #: blocks/dist/blocks.build.js:224 blocks/src/blocks.js:82
 msgid "Config from global"
-msgstr "Konfigurasi dari global"
+msgstr "グローバル構成から設定"
 
 #: blocks/dist/blocks.build.js:265 blocks/src/blocks.js:123
 msgid "Start with audio muted"
-msgstr "Mulai dengan audio senyap"
+msgstr "音声をミュートで開始"
 
 #: blocks/dist/blocks.build.js:273 blocks/src/blocks.js:128
 msgid "Start with video muted"
-msgstr "Mulai dengan video dimatikan"
+msgstr "ビデオをオフで開始"
 
 #: blocks/dist/blocks.build.js:281 blocks/src/blocks.js:133
 msgid "Start with screen sharing"
-msgstr "Mulai dengan berbagi layar"
+msgstr "画面共有をオンにして開始"
 
 #: blocks/dist/blocks.build.js:306 blocks/src/blocks.js:157
 msgid "Room name:"
-msgstr "Nama ruangan:"
+msgstr "部屋名 :"
 
 #: blocks/dist/blocks.build.js:306 blocks/src/blocks.js:158
 msgid "Domain :"
-msgstr "Domain:"
+msgstr "ドメイン :"
 
 #: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:170
 msgid "jitsi"
@@ -1329,15 +1290,15 @@ msgstr "Jitsi"
 
 #: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:171
 msgid "meeting"
-msgstr "pertemuan"
+msgstr "会議"
 
 #: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:172
 msgid "video"
-msgstr "Video"
+msgstr "ビデオ"
 
 #: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:173
 msgid "conference"
-msgstr "konferensi"
+msgstr "カンファレンス"
 
 #: blocks/dist/blocks.build.js:317 blocks/src/blocks.js:174
 msgid "zoom"
@@ -1345,36 +1306,34 @@ msgstr "Zoom"
 
 #: inc/admin/mannage-callback.php:749
 msgid "<strong>Request</strong> your branded setup first (%s)"
-msgstr "<strong>Minta</strong> penyiapan merek Anda terlebih dahulu (%s)"
+msgstr "最初にブランド設定を<strong>リクエスト</strong>してください (%s)"
 
 #: inc/admin/mannage-callback.php:749
 msgid "request now →"
-msgstr "minta sekarang →"
+msgstr "今すぐリクエスト →"
 
 msgid "Branded meeting i.e link, logo, colors"
-msgstr "Rapat bermerek yaitu tautan, logo, warna"
+msgstr "ブランディングされたミーティング（リンク、ロゴ、色）"
 
 msgid "Meeting Moderator support"
-msgstr "Dukungan Moderator Rapat"
+msgstr "ミーティングモデレーターのサポート"
 
 msgid "No server cost or maintenance (we handle everything)"
-msgstr "Tanpa biaya server atau pemeliharaan (kami menangani semuanya)"
+msgstr "サーバー費用やメンテナンスは不要（すべて弊社が対応します）"
 
 msgid "Private hosting (not a shared public server)"
-msgstr "Hosting pribadi (bukan server publik bersama)"
+msgstr "プライベートホスティング（共有公開サーバーではありません）"
 
 msgid "No third-party branding (fully white-labeled)"
-msgstr "Tanpa pencitraan merek pihak ketiga (berlabel putih sepenuhnya)"
+msgstr "サードパーティのブランディングなし（完全なホワイトラベル）"
 
 msgid "Longer & smoother meetings"
-msgstr "Rapat yang lebih lama & lancar"
+msgstr "より長く、スムーズなミーティング"
 
 msgid "Create & share meeting links from your SaaS dashboard"
-msgstr "Buat & bagikan tautan rapat dari dasbor SaaS Anda"
+msgstr "SaaSダッシュボードからミーティングリンクを作成して共有"
 
 msgid ""
 "New: Get your own %1$sbranded Jitsi meeting%2$s experience! %3$sSet Up "
 "Now%4$s →"
-msgstr ""
-"Baru: Dapatkan pengalaman %1$spertemuan Jitsi bermerek%2$s Anda sendiri! "
-"%3$sSiapkan Sekarang%4$s →"
+msgstr "新機能: あなた独自の %1$sブランド化された Jitsi ミーティング%2$s 体験を手に入れましょう! %3$s今すぐ設定%4$s →"

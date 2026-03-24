@@ -319,6 +319,10 @@ $darkBlack: rgb(28, 32, 37);
             }
         }
 
+        .jitsi-config-panel-branded .jitsi-main-config {
+            padding-top: 10px !important;
+        }
+
         .jitsi-form-field-row {
             display: flex;
             flex-direction: column;
@@ -396,6 +400,12 @@ $darkBlack: rgb(28, 32, 37);
             max-width: 720px;
             align-items: center;
 
+            input {
+                flex: 1 1 auto;
+                max-width: 480px;
+                margin: 0 !important;
+            }
+
             @media (max-width: 768px) {
                 flex-direction: column;
                 align-items: stretch;
@@ -404,11 +414,6 @@ $darkBlack: rgb(28, 32, 37);
                     max-width: 100% !important;
                     flex: 1 1 auto;
                 }
-            }
-
-            input {
-                flex: 0 0 480px;
-                margin: 0 !important;
             }
 
             .jitsi-btn-save-test {
@@ -1107,7 +1112,7 @@ $darkBlack: rgb(28, 32, 37);
                 display: flex;
                 align-items: center; // Align center for better one-line balance
                 gap: 12px;
-                margin-bottom: 20px;
+                margin-bottom: 5px;
 
                 &:last-child {
                     margin-bottom: 0;

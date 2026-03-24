@@ -746,7 +746,7 @@ class Mannage_Callback {
 		$this->jitsi_field_ui( $name, __( 'Hosted Server Domain:', 'webinar-and-video-conference-with-jitsi-meet' ), '', $input );
 
 		$this->render_guide([
-			__( '<strong>Request</strong> your branded setup first (<a href="https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/" target="_blank">request now →</a>)', 'webinar-and-video-conference-with-jitsi-meet' ),
+			sprintf( __( '<strong>Request</strong> your branded setup first (%s)', 'webinar-and-video-conference-with-jitsi-meet' ), '<a href="https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/" target="_blank">' . __( 'request now →', 'webinar-and-video-conference-with-jitsi-meet' ) . '</a>' ),
 			__( '<strong>We set it up</strong> and email your Hosted Server URL', 'webinar-and-video-conference-with-jitsi-meet' ),
 			__( '<strong>Paste the URL here</strong> → Test Connection → meetings start running on your hosted server', 'webinar-and-video-conference-with-jitsi-meet' )
 		], '<span class="emoji-wrapper">' . esc_html__( '🤩', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span> ' . __( 'That\'s it - no technical setup needed from you. Wahhhhhhhhhh!', 'webinar-and-video-conference-with-jitsi-meet' ) );
@@ -776,12 +776,14 @@ class Mannage_Callback {
 		echo '</div>'; // grid-left-col
 		
 		$this->render_benefits([
-			__('Branded meeting URL', 'webinar-and-video-conference-with-jitsi-meet'),
-			__('Branded logo and other customizations', 'webinar-and-video-conference-with-jitsi-meet'),
-			__('No server cost + maintenance', 'webinar-and-video-conference-with-jitsi-meet'),
-			__('Private hosting (no shared public server)', 'webinar-and-video-conference-with-jitsi-meet'),
-			__('White-labeled experience', 'webinar-and-video-conference-with-jitsi-meet'),
+			__('Branded meeting i.e link, logo, colors', 'webinar-and-video-conference-with-jitsi-meet'),
+			__('Meeting Moderator support', 'webinar-and-video-conference-with-jitsi-meet'),
+			__('No server cost or maintenance (we handle everything)', 'webinar-and-video-conference-with-jitsi-meet'),
+			__('Private hosting (not a shared public server)', 'webinar-and-video-conference-with-jitsi-meet'),
+			__('No third-party branding (fully white-labeled)', 'webinar-and-video-conference-with-jitsi-meet'),
+			__('Longer & smoother meetings', 'webinar-and-video-conference-with-jitsi-meet'),
 			__('Live streaming support', 'webinar-and-video-conference-with-jitsi-meet'),
+			__('Create & share meeting links from your SaaS dashboard', 'webinar-and-video-conference-with-jitsi-meet'),
 		], __('Request branded meeting server for FREE!', 'webinar-and-video-conference-with-jitsi-meet'), 'https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/');
 
 		echo '</div>'; // layout-grid
