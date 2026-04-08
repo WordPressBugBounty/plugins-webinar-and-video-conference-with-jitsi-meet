@@ -16,7 +16,7 @@ if ( ! defined( 'JITSI_SERVICE_API_TOKEN' ) ) {
 
 // Base URL for the hosted service API.
 if ( ! defined( 'JITSI_SERVICE_API_BASE_URL' ) ) {
-	define( 'JITSI_SERVICE_API_BASE_URL', 'http://46.62.254.115:8090' );
+	define( 'JITSI_SERVICE_API_BASE_URL', 'https://jitsihosted.app' );
 }
 
 /**

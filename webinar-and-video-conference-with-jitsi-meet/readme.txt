@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 5.4
-Stable tag: 2.8.1
+Stable tag: 2.8.2
 License: GPL-2.0+
 License URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -240,6 +240,10 @@ Yes. Live streaming to platforms like YouTube is supported when using the approp
 11. Self Hosted
 
 == Changelog ==
+
+= 2.8.2 – 08 Apr 2026 =
+* **New:** Seamless Integration with MarketKing Multivendor
+* **Improvement:** Enhanced the managed branded meeting connection flow
 
 = 2.8.1 – 24 Mar 2026 =
 * **Improvement:** Introduced multilingual support.
