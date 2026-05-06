@@ -6,7 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+	exit(); // phpcs:ignore
 }
 
 
@@ -194,8 +194,8 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 						}
 
 						$current_user_id = get_current_user_id();
-						$room_name = '*'; // Use wildcard for Gutenberg blocks
-						$is_moderator = current_user_can( 'edit_posts' );
+						$room_name       = '*'; // Use wildcard for Gutenberg blocks.
+						$is_moderator    = $current_user_id && user_can( $current_user_id, 'edit_others_posts' );
 
 						$jwt_token = Jitsi_JWT_Service::get_meeting_token(
 							$current_user_id,

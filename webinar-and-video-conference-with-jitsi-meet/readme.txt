@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 5.4
-Stable tag: 2.8.2
+Stable tag: 2.9.0
 License: GPL-2.0+
 License URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -240,6 +240,14 @@ Yes. Live streaming to platforms like YouTube is supported when using the approp
 11. Self Hosted
 
 == Changelog ==
+
+= 2.9.0 – 06 May 2026 =
+* **New:** Introduced automated email reminders for recurring meetings, sending notifications to registered participants before each occurrence via WP-Cron
+* **New:** Added a manual "Send Reminder Email" action, allowing hosts to send on-demand reminders to registered attendees from admin, frontend, and multivendor interfaces
+* **New:** Enabled multi-day weekday selection for weekly recurring meetings, allowing multiple days (e.g., Mon, Wed, Fri) within a single meeting
+* **New:** Added support for "Repeat every N weeks" intervals in weekly recurring meetings, including bi-weekly, tri-weekly, and custom schedules
+* **Improvement:** Enhanced email template design for better layout and readability
+* **Improvement:** Enhanced login and registration forms for "Should Register" flow, improving usability and user experience
 
 = 2.8.2 – 08 Apr 2026 =
 * **New:** Seamless Integration with MarketKing Multivendor

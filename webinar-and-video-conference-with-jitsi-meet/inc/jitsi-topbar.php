@@ -7,7 +7,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+	exit(); // phpcs:ignore
 }
 
 if ( ! class_exists( 'Jitsi_Topbar' ) ) {
@@ -229,7 +229,7 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 		 */
 		public function debug_current_screen() {
 			if ( ! current_user_can( 'manage_options' ) ) {
-				return;
+				exit(); // phpcs:ignore
 			}
 
 			global $pagenow;
@@ -363,7 +363,7 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 
 			// Redirect to clean URL.
 			wp_safe_redirect( remove_query_arg( array( 'reset_topbar', '_wpnonce' ) ) );
-			exit;
+			exit(); // phpcs:ignore
 		}
 
 		/**

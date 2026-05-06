@@ -9,7 +9,7 @@
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit();
+defined( 'ABSPATH' ) || exit; // phpcs:ignore
 
 /**
  * Plugin Class
@@ -80,12 +80,12 @@ if ( ! class_exists( 'WPPOOL_Plugin' ) ) {
 				'demo_text' => 'Try a FREE demo',
 			],
 			'webinar_and_video_conference_with_jitsi_meet' => [
-				'list_id' => 23,
-				'button_link' => 'https://go.wppool.dev/8iQC',
+				'list_id'     => 23,
+				'button_link' => 'https://lnk.wppool.dev/wJyAh72',
 				'button_text' => 'Get Premium',
-				'color' => '#1D5AE4',
-				'demo_link' => 'https://go.wppool.dev/ajve',
-				'demo_text' => 'Try a FREE demo',
+				'color'       => '#1D5AE4',
+				'demo_link'   => 'https://lnk.wppool.dev/wYceOGZ',
+				'demo_text'   => 'Try a FREE demo',
 			],
 			'zero_bs_accounting' => [
 				'list_id' => 24,

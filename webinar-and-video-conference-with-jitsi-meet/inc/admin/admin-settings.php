@@ -6,7 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+	exit(); // phpcs:ignore
 }
 if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 	/**

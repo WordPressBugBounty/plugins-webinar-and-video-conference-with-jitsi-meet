@@ -6,7 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+	exit(); // phpcs:ignore
 }
 
 // Make sure the same class is not loaded twice.
@@ -186,7 +186,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 		public function jitsi_meet_add_action_links( $actions ) {
 			$mylinks = array(
 				'<a href="' . esc_url( admin_url( 'admin.php?page=jitsi-meet' ) ) . '">' . esc_html__( 'Settings', 'webinar-and-video-conference-with-jitsi-meet' ) . '</a>',
-				'<a class="special-action-link" target="_blank" href="' . esc_url( 'https://go.wppool.dev/Gv5' ) . '">' . esc_html__( 'Upgrade to Ultimate', 'webinar-and-video-conference-with-jitsi-meet' ) . '</a>',
+				'<a class="special-action-link" target="_blank" href="' . esc_url( 'https://lnk.wppool.dev/f2owP6V' ) . '">' . esc_html__( 'Upgrade to Ultimate', 'webinar-and-video-conference-with-jitsi-meet' ) . '</a>',
 			);
 			$actions = array_merge( $actions, $mylinks );
 			return $actions;
@@ -230,7 +230,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 		 * @return string
 		 */
 		public function add_async_forscript( $url ) {
-			if ( strpos( $url, '#asyncload' ) === false ) {
+			if ( false === strpos( $url, '#asyncload' ) ) {
 				return $url;
 			} else {
 				return str_replace( '#asyncload', '', $url ) . "' async='async";

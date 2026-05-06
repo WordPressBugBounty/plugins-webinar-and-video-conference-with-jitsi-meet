@@ -184,7 +184,7 @@ if ( ! class_exists( '\Appsero\Client' ) ) {
 		 * @return void
 		 */
 		protected function set_basename_and_slug() {
-			if ( strpos( $this->file, WP_CONTENT_DIR . '/themes/' ) === false ) {
+			if ( false === strpos( $this->file, WP_CONTENT_DIR . '/themes/' ) ) {
 				$this->basename = plugin_basename( $this->file );
 
 				list( $this->slug, $mainfile ) = explode( '/', $this->basename ); // phpcs:ignore

@@ -16,7 +16,7 @@ use Elementor\Group_Control_Typography; // phpcs:ignore
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+	exit(); // phpcs:ignore
 }
 
 

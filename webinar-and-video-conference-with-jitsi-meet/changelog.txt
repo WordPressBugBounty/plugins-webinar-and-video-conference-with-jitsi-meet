@@ -6,6 +6,13 @@ This file contains older changelog entries, so we can keep the size of the stand
 For the latest changes, please see the "Changelog" section of the [Plugin](https://wordpress.org/plugins/webinar-and-video-conference-with-jitsi-meet/#developers).
 
 
+= 2.8.3 – 05 May 2026 =
+* **New:** Added automated email reminders for recurring meetings — sends notifications to registered participants before each occurrence via WP-Cron
+* **New:** Added manual "Send Reminder Email" button — lets hosts send on-demand reminders to registered attendees from admin, frontend, and multivendor interfaces
+* **New:** Added multi-day weekday selection for weekly recurring meetings — choose multiple days (e.g. Mon + Wed + Fri) in a single meeting
+* **New:** Added "Repeat every N weeks" interval for weekly recurring meetings — supports bi-weekly, tri-weekly, and custom intervals
+* **Improvement:** Updated pro upgrade links throughout the plugin with new short URLs
+
 = 2.7.3 – 17 Apr 2025 =
 * **Improvement:** Enhanced compatibility to support WordPress 6.8
 

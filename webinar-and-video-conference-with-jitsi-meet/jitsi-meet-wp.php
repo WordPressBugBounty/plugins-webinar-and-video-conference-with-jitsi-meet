@@ -3,7 +3,7 @@
  * Plugin Name:       FlexMeeting
  * Plugin URI:        https://jitsi-meet-wp.wppool.dev/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.8.2
+ * Version:           2.9.0
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
@@ -17,10 +17,10 @@
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+	exit(); // phpcs:ignore
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.8.2' );
+define( 'JITSI_MEET_WP_VERSION', '2.9.0' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
@@ -103,13 +103,7 @@ function jitsi_meet_plugin_activate() {
 
 register_activation_hook( __FILE__, 'jitsi_meet_plugin_activate' );
 
-/**
- * Load plugin textdomain.
- */
-function jitsi_meet_wp_load_textdomain() {
-	load_plugin_textdomain( 'webinar-and-video-conference-with-jitsi-meet', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-add_action( 'plugins_loaded', 'jitsi_meet_wp_load_textdomain' );
+// WordPress 4.6+ auto-loads translations from wordpress.org — no manual call needed.
 
 add_action( 'init', 'jitsi_meet_wp_begin', 20 );
 

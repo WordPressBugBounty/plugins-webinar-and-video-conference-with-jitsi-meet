@@ -5,7 +5,7 @@
  * @package JITSI_MEET_WP
  */
 
-defined( 'ABSPATH' ) || exit();
+defined( 'ABSPATH' ) || exit; // phpcs:ignore
 
 if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 	/**
@@ -139,7 +139,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 					update_option( 'jitsi_opt_select_api', 'free' );
 					update_option( 'jitsi_meet_welcome_redirect', 'occured' );
 					wp_safe_redirect( admin_url( 'admin.php?page=jitsi-pro-settings' ) );
-					die();
+					die; // phpcs:ignore
 				}
 			}
 
@@ -155,7 +155,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 				if ( ! isset( $current_page ) || ! ( 'jitsi-meet-welcome' === $current_page ) ) {
 
 					wp_safe_redirect( admin_url( 'admin.php?page=jitsi-meet-welcome' ) );
-					die();
+					die; // phpcs:ignore
 				}
 				update_option( 'jitsi_meet_welcome_redirect', 'occured' );
 			}
@@ -225,7 +225,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 				null,
 				__( 'Upgrade to Ultimate', 'webinar-and-video-conference-with-jitsi-meet' ),
 				'manage_options',
-				'https://go.wppool.dev/qc5'
+				'https://lnk.wppool.dev/f2owP6V'
 			);
 		}
 
@@ -661,7 +661,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 				];
 				foreach ( $options as $option ) {
 					if ( isset( $_POST[ $option ] ) ) {
-						$val = wp_unslash( $_POST[ $option ] );
+						$val = wp_unslash( $_POST[ $option ] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 						if ( 'jitsi_opt_private_key' === $option ) {
 							update_option( $option, sanitize_textarea_field( $val ) );
 						} else {

@@ -6,7 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+	exit(); // phpcs:ignore
 }
 
 // Service API token (hardcoded — never exposed to frontend).
@@ -41,16 +41,14 @@ class Jitsi_JWT_Service {
 	 * @return string|WP_Error JWT token string, empty string for guest, or WP_Error on API failure.
 	 */
 	public static function get_meeting_token( $wp_user_id, $full_domain, $room_name, $is_moderator = false ) {
-		// Guest users: no JWT needed.
+		// Guest users: no JWT — server allows anonymous join without token.
 		if ( empty( $wp_user_id ) || ! is_user_logged_in() ) {
-			return new WP_Error( 'not_logged_in', sprintf( 'Debug: Not logged in. wp_user_id=%s, logged_in=%d', $wp_user_id, is_user_logged_in() ) );
+			return '';
 		}
 
 		if ( empty( $full_domain ) ) {
 			return new WP_Error( 'empty_domain', __( 'Domain is required to generate a JWT token.', 'webinar-and-video-conference-with-jitsi-meet' ) );
 		}
-
-
 
 		// Get user info.
 		$user = get_userdata( $wp_user_id );
@@ -109,8 +107,8 @@ class Jitsi_JWT_Service {
 		if ( is_wp_error( $response ) ) {
 			self::debug( 'FAIL: API request failed. Error: ' . $response->get_error_message() );
 			// Usually due to firewall blocking outbound port 8090
-			return new WP_Error( 
-				'api_unreachable', 
+			return new WP_Error(
+				'api_unreachable',
 				__( 'Could not connect to the token server. Your hosting provider may be blocking outbound connections to port 8090. Please contact your host support.', 'webinar-and-video-conference-with-jitsi-meet' )
 			);
 		}
@@ -120,8 +118,8 @@ class Jitsi_JWT_Service {
 
 		if ( 200 !== $code ) {
 			self::debug( 'FAIL: API returned HTTP ' . $code . '. Body: ' . $body );
-			return new WP_Error( 
-				'api_error', 
+			return new WP_Error(
+				'api_error',
 				sprintf(
 					/* translators: 1: HTTP code, 2: API response body */
 					__( 'Token generation failed. The server returned HTTP %1$d: %2$s', 'webinar-and-video-conference-with-jitsi-meet' ),
@@ -137,8 +135,6 @@ class Jitsi_JWT_Service {
 		if ( isset( $data['token'] ) && ! empty( $data['token'] ) ) {
 			$token = sanitize_text_field( $data['token'] );
 			self::debug( 'SUCCESS: JWT token generated (first 40 chars): ' . substr( $token, 0, 40 ) . '...' );
-
-
 
 			return $token;
 		}
@@ -267,14 +263,14 @@ class Jitsi_JWT_Service {
 		if ( strpos( $input, 'http' ) !== 0 ) {
 			$input = 'https://' . $input;
 		}
-		
-		$host = parse_url( $input, PHP_URL_HOST );
+
+		$host = wp_parse_url( $input, PHP_URL_HOST );
 		if ( ! $host ) {
 			$host = $input;
 		}
 
 		$check_url = 'https://' . untrailingslashit( $host ) . '/config.js';
-		
+
 		$response = wp_remote_head( $check_url, array(
 			'timeout'    => 10,
 			'sslverify'  => false,
@@ -309,7 +305,7 @@ class Jitsi_JWT_Service {
 			$input = 'https://' . $input;
 		}
 
-		$host = parse_url( $input, PHP_URL_HOST );
+		$host = wp_parse_url( $input, PHP_URL_HOST );
 		if ( ! $host ) {
 			$host = $input;
 		}
@@ -332,7 +328,7 @@ class Jitsi_JWT_Service {
 	 * @return true|WP_Error True if valid and live, WP_Error with message otherwise.
 	 */
 	public static function validate_domain_reachable( $normalized_domain ) {
-		$host = parse_url( $normalized_domain, PHP_URL_HOST );
+		$host = wp_parse_url( $normalized_domain, PHP_URL_HOST );
 		if ( ! $host ) {
 			self::debug( 'validate_domain_reachable() ABORT: could not parse host from: ' . $normalized_domain );
 			return new WP_Error(
@@ -448,7 +444,7 @@ class Jitsi_JWT_Service {
 
 		if ( is_wp_error( $domain_check ) ) {
 			self::debug( 'Domain validation FAILED: ' . $domain_check->get_error_message() );
-			
+
 			// If validation fails, ensure we are disconnected.
 			update_option( 'jitsi_opt_subdomain_connected', '0' );
 
@@ -459,8 +455,6 @@ class Jitsi_JWT_Service {
 		}
 		self::debug( 'Domain validation PASSED -- proceeding to JWT generation.' );
 
-
-
 		// Reset connected state before attempting fresh token generation.
 		update_option( 'jitsi_opt_subdomain_connected', '0' );
 		self::debug( 'jitsi_opt_subdomain_connected reset to 0.' );
@@ -468,10 +462,10 @@ class Jitsi_JWT_Service {
 		// Step 3: Generate fresh JWT token.
 		self::debug( 'Calling get_meeting_token() for domain: ' . $domain );
 		$token_or_error = self::get_meeting_token( $wp_user_id, $domain, 'test-connection', true );
-		
+
 		$is_error = is_wp_error( $token_or_error );
 		$is_empty = empty( $token_or_error );
-		
+
 		self::debug( 'get_meeting_token() returned: ' . ( $is_error ? 'WP_Error (' . $token_or_error->get_error_message() . ')' : ( $is_empty ? '(empty -- FAILED)' : 'TOKEN OK (len=' . strlen( $token_or_error ) . ')' ) ) );
 
 		if ( ! $is_error && ! empty( $token_or_error ) ) {
@@ -486,7 +480,7 @@ class Jitsi_JWT_Service {
 
 		// JWT generation failed but domain was live -- unexpected.
 		self::debug( 'FAIL (server reachable but JWT generation failed). Sending error.' );
-		
+
 		// Ensure disconnection if token generation fails.
 		update_option( 'jitsi_opt_subdomain_connected', '0' );
 
