@@ -954,4 +954,64 @@ class Mannage_Callback {
 	public function jitsi_other_admin() {
 		printf( '<p class="other-admin-setting">%1$s <a href="%2$s" target="_blank">%3$s</a></p>', esc_html__( 'Some settings like Company Logo, Background etc are currently not available via api. You can set your company logo, background etc from the', 'webinar-and-video-conference-with-jitsi-meet' ), esc_url( 'https://jaas.8x8.vc/#/branding' ), esc_html__( 'jaas console', 'webinar-and-video-conference-with-jitsi-meet' ) );
 	}
+
+	/**
+	 * Render the Select2 multi-select for moderator-granting WP roles.
+	 *
+	 * Disabled in the free plugin (Premium upsell). The field is rendered with
+	 * the default role list pre-selected so the admin can see what the premium
+	 * upgrade unlocks. The `desc-pro` class adds the "Premium" badge via CSS.
+	 *
+	 * @param array $args Field args from add_settings_field().
+	 * @return void
+	 */
+	public function jitsi_moderator_roles( $args ) {
+		$name     = $args['label_for'];
+		$disabled = isset( $args['disabled'] ) && $args['disabled'] ? 'disabled' : '';
+		$roles    = $this->jitsi_get_assignable_roles();
+
+		printf(
+			'<div class="jitsi-moderator-roles-wrap %1$s">',
+			esc_attr( $disabled )
+		);
+
+		printf(
+			'<select class="jitsi-moderator-roles-select" name="%1$s" id="%1$s" %2$s>',
+			esc_attr( $name ),
+			esc_attr( $disabled )
+		);
+
+		printf( '<option value="">%s</option>', esc_html__( 'Select roles', 'webinar-and-video-conference-with-jitsi-meet' ) );
+
+		foreach ( $roles as $slug => $label ) {
+			printf(
+				'<option value="%1$s">%2$s</option>',
+				esc_attr( $slug ),
+				esc_html( $label )
+			);
+		}
+
+		echo '</select>';
+		echo '</div>';
+	}
+
+	/**
+	 * Roles that can be selected as moderator-granting in the admin UI.
+	 *
+	 * @return array role_slug => display name.
+	 */
+	public function jitsi_get_assignable_roles() {
+		$out = array();
+		if ( ! function_exists( 'wp_roles' ) ) {
+			return $out;
+		}
+		$roles = wp_roles();
+		if ( empty( $roles->roles ) ) {
+			return $out;
+		}
+		foreach ( $roles->roles as $slug => $details ) {
+			$out[ $slug ] = isset( $details['name'] ) ? translate_user_role( $details['name'] ) : $slug;
+		}
+		return $out;
+	}
 }

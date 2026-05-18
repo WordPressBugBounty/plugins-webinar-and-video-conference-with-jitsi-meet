@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 5.4
-Stable tag: 2.9.0
+Stable tag: 2.9.1
 License: GPL-2.0+
 License URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -240,6 +240,10 @@ Yes. Live streaming to platforms like YouTube is supported when using the approp
 11. Self Hosted
 
 == Changelog ==
+
+= 2.9.1 – 18 May 2026 =
+* **New:** Added "Moderator Access" configuration option to meeting settings, allowing choice between global inheritance, custom role lists, or restricting access to the host only
+* **Improvement:** Introduced global "Allow Moderator Access For" setting to define default user roles authorized to join meetings as moderators
 
 = 2.9.0 – 06 May 2026 =
 * **New:** Introduced automated email reminders for recurring meetings, sending notifications to registered participants before each occurrence via WP-Cron

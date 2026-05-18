@@ -8,6 +8,13 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit(); // phpcs:ignore
 }
+if ( ! function_exists( 'jitsi_free_is_moderator_api' ) ) {
+	function jitsi_free_is_moderator_api() {
+		$api = get_option( 'jitsi_opt_select_api', 'free' );
+		return in_array( $api, array( 'branded', 'jaas' ), true );
+	}
+}
+
 if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 	/**
 	 * The class creates admin settings
@@ -49,6 +56,60 @@ if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 			$this->set_settings();
 			$this->set_sections();
 			$this->set_fields();
+
+			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_moderator_roles_assets' ) );
+		}
+
+		/**
+		 * Enqueue styling for the "Allow Moderator Access For" upsell field.
+		 *
+		 * @param string $hook Current admin page hook.
+		 * @return void
+		 */
+		public function enqueue_moderator_roles_assets( $hook ) {
+			$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			if ( 'jitsi-pro-settings' !== $page && false === strpos( (string) $hook, 'jitsi-pro-settings' ) && false === strpos( (string) $hook, 'jitsi-pro-admin' ) ) {
+				return;
+			}
+
+			$inline_css = <<<CSS
+.jitsi-moderator-roles-wrap select.jitsi-moderator-roles-select {
+	min-width: 260px;
+	max-width: 520px;
+	width: 100%;
+	min-height: 40px;
+	padding: 8px 36px 8px 12px;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	background-color: #f9fafb;
+	font-size: 14px;
+	color: #1f2937;
+	line-height: 1.4;
+	box-shadow: 0 1px 2px rgba(0,0,0,.04);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%236b7280' d='M6 8L0 0h12z'/></svg>");
+	background-repeat: no-repeat;
+	background-position: right 12px center;
+	background-size: 10px 7px;
+}
+.jitsi-moderator-roles-wrap.disabled select.jitsi-moderator-roles-select {
+	background-color: #f3f4f6;
+	cursor: not-allowed;
+	opacity: .85;
+}
+.form-table tr:has(.jitsi-moderator-roles-wrap) > th,
+.form-table tr:has(.jitsi-moderator-roles-wrap) > td {
+	vertical-align: middle;
+}
+.form-table tr:has(.jitsi-moderator-roles-wrap) > th {
+	min-width: 280px;
+}
+CSS;
+			wp_register_style( 'jitsi-moderator-roles', false, array(), JITSI_MEET_WP_VERSION );
+			wp_enqueue_style( 'jitsi-moderator-roles' );
+			wp_add_inline_style( 'jitsi-moderator-roles', $inline_css );
 		}
 
 		/**
@@ -125,7 +186,7 @@ if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 
 			$args[] = [
 				'option_group' => 'jitsi-pro-admin',
-				'option_name'  => $this->prefix . 'user_is_moderator',
+				'option_name'  => $this->prefix . 'moderator_roles',
 			];
 
 			$args[] = [
@@ -361,18 +422,20 @@ if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 				],
 			];
 
-			$args[] = [
-				'id'       => $this->prefix . 'user_is_moderator',
-				'title'    => __( 'Enable Moderator Access', 'webinar-and-video-conference-with-jitsi-meet' ) . '<span class="description desc-pro">' . __( 'Allow this user to join as a moderator in Jass 8x8 meetings (only users with edit access)', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span>',
-				'callback' => [ $this->callbacks, 'jitsi_switch' ],
-				'page'     => 'jitsi-pro-admin',
-				'section'  => $this->prefix . 'admin_section',
-				'args'     => [
-					'label_for' => $this->prefix . 'user_is_moderator',
-					'default'   => 0,
-					'disabled'  => true,
-				],
-			];
+			if ( jitsi_free_is_moderator_api() ) {
+				$args[] = [
+					'id'       => $this->prefix . 'moderator_roles',
+					'title'    => __( 'Allow Moderator Access For', 'webinar-and-video-conference-with-jitsi-meet' ) . '<span class="description desc-pro">' . __( 'Decide who can join the meeting as a moderator. Other users will join as regular participants and cannot end the meeting for everyone.', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span>',
+					'callback' => [ $this->callbacks, 'jitsi_moderator_roles' ],
+					'page'     => 'jitsi-pro-admin',
+					'section'  => $this->prefix . 'admin_section',
+					'args'     => [
+						'label_for' => $this->prefix . 'moderator_roles',
+						'default'   => array(),
+						'disabled'  => true,
+					],
+				];
+			}
 
 			$args[] = [
 				'id'       => $this->prefix . 'other_admin_config',
