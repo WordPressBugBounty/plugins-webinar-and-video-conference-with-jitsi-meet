@@ -2,9 +2,9 @@
 Contributors: wppool, azizultex, shahreyar46, foysalremon
 Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 5.4
-Stable tag: 2.9.1
+Stable tag: 2.9.2
 License: GPL-2.0+
 License URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -240,6 +240,9 @@ Yes. Live streaming to platforms like YouTube is supported when using the approp
 11. Self Hosted
 
 == Changelog ==
+
+= 2.9.2 – 03 Jun 2026 =
+* **Improvement:** Enhanced compatibility to support WordPress 7.0
 
 = 2.9.1 – 18 May 2026 =
 * **New:** Added "Moderator Access" configuration option to meeting settings, allowing choice between global inheritance, custom role lists, or restricting access to the host only
