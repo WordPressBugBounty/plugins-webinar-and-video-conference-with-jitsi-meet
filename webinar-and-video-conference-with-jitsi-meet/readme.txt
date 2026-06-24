@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 5.4
-Stable tag: 2.9.2
+Stable tag: 2.9.3
 License: GPL-2.0+
 License URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -240,6 +240,9 @@ Yes. Live streaming to platforms like YouTube is supported when using the approp
 11. Self Hosted
 
 == Changelog ==
+
+= 2.9.3 – 24 Jun 2026 =
+* **Fix:** Minor bug fixes and enhancements
 
 = 2.9.2 – 03 Jun 2026 =
 * **Improvement:** Enhanced compatibility to support WordPress 7.0
