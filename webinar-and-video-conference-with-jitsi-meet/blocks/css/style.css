@@ -1,5 +1,27 @@
-.jitsi-wrapper {
+.jitsi-wrapper,
+.jitsi-wrapper-elementor {
   max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  /* Shortcode + Gutenberg block wrapper */
+  .jitsi-wrapper {
+    width: 100% !important;
+  }
+
+  /* Elementor widget wrapper */
+  .jitsi-wrapper-elementor {
+    width: 100% !important;
+  }
+
+  /* Jitsi API sets width:Xpx as inline style on iframe — !important required */
+  .jitsi-wrapper iframe,
+  .jitsi-wrapper-elementor iframe {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
 }
 
 #jitsi_opt_free_domain{
