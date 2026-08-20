@@ -72,41 +72,40 @@ if ( ! class_exists( 'Jitsi_Pro_Admin_Settings' ) ) {
 				return;
 			}
 
-			$inline_css = <<<CSS
-.jitsi-moderator-roles-wrap select.jitsi-moderator-roles-select {
-	min-width: 260px;
-	max-width: 520px;
-	width: 100%;
-	min-height: 40px;
-	padding: 8px 36px 8px 12px;
-	border: 1px solid #d1d5db;
-	border-radius: 8px;
-	background-color: #f9fafb;
-	font-size: 14px;
-	color: #1f2937;
-	line-height: 1.4;
-	box-shadow: 0 1px 2px rgba(0,0,0,.04);
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%236b7280' d='M6 8L0 0h12z'/></svg>");
-	background-repeat: no-repeat;
-	background-position: right 12px center;
-	background-size: 10px 7px;
-}
-.jitsi-moderator-roles-wrap.disabled select.jitsi-moderator-roles-select {
-	background-color: #f3f4f6;
-	cursor: not-allowed;
-	opacity: .85;
-}
-.form-table tr:has(.jitsi-moderator-roles-wrap) > th,
-.form-table tr:has(.jitsi-moderator-roles-wrap) > td {
-	vertical-align: middle;
-}
-.form-table tr:has(.jitsi-moderator-roles-wrap) > th {
-	min-width: 280px;
-}
-CSS;
+			$inline_css  = '.jitsi-moderator-roles-wrap select.jitsi-moderator-roles-select {';
+			$inline_css .= 'min-width: 260px;';
+			$inline_css .= 'max-width: 520px;';
+			$inline_css .= 'width: 100%;';
+			$inline_css .= 'min-height: 40px;';
+			$inline_css .= 'padding: 8px 36px 8px 12px;';
+			$inline_css .= 'border: 1px solid #d1d5db;';
+			$inline_css .= 'border-radius: 8px;';
+			$inline_css .= 'background-color: #f9fafb;';
+			$inline_css .= 'font-size: 14px;';
+			$inline_css .= 'color: #1f2937;';
+			$inline_css .= 'line-height: 1.4;';
+			$inline_css .= 'box-shadow: 0 1px 2px rgba(0,0,0,.04);';
+			$inline_css .= '-webkit-appearance: none;';
+			$inline_css .= '-moz-appearance: none;';
+			$inline_css .= 'appearance: none;';
+			$inline_css .= 'background-image: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%236b7280\' d=\'M6 8L0 0h12z\'/></svg>");';
+			$inline_css .= 'background-repeat: no-repeat;';
+			$inline_css .= 'background-position: right 12px center;';
+			$inline_css .= 'background-size: 10px 7px;';
+			$inline_css .= '}';
+			$inline_css .= '.jitsi-moderator-roles-wrap.disabled select.jitsi-moderator-roles-select {';
+			$inline_css .= 'background-color: #f3f4f6;';
+			$inline_css .= 'cursor: not-allowed;';
+			$inline_css .= 'opacity: .85;';
+			$inline_css .= '}';
+			$inline_css .= '.form-table tr:has(.jitsi-moderator-roles-wrap) > th,';
+			$inline_css .= '.form-table tr:has(.jitsi-moderator-roles-wrap) > td {';
+			$inline_css .= 'vertical-align: middle;';
+			$inline_css .= '}';
+			$inline_css .= '.form-table tr:has(.jitsi-moderator-roles-wrap) > th {';
+			$inline_css .= 'min-width: 280px;';
+			$inline_css .= '}';
+
 			wp_register_style( 'jitsi-moderator-roles', false, array(), JITSI_MEET_WP_VERSION );
 			wp_enqueue_style( 'jitsi-moderator-roles' );
 			wp_add_inline_style( 'jitsi-moderator-roles', $inline_css );
@@ -121,23 +120,27 @@ CSS;
 			return 'webinar-and-video-conference-with-jitsi-meet';
 		}
 
+
 		/**
-		 * Set Settings
+		 * Set settings
 		 *
 		 * @return  void
 		 */
 		public function set_settings() {
 			$args = [];
 
-			$args[] = [
-				'option_group' => 'jitsi-pro-api',
-				'option_name'  => $this->prefix . 'select_api',
-			];
+			$args[] = array(
+				'option_group'      => 'jitsi-pro-api',
+				'option_name'       => $this->prefix . 'select_api',
+				'sanitize_callback' => array( 'Jitsi_Meet_WP_Admin', 'jitsi_sanitize_select_api' ),
+			);
 
-			$args[] = [
-				'option_group' => 'jitsi-pro-api',
-				'option_name'  => $this->prefix . 'custom_domain',
-			];
+			// NOTE: jitsi_opt_custom_domain (Self-Hosted server domain) is intentionally
+			// NOT registered here. Self-Hosted is a locked, non-selectable
+			// Ultimate-only upsell card with no settings panel or input field in the
+			// free plugin -- do not add it back to this list. See
+			// mannage-callback.php::jitsi_hosting_cards() for the matching render-side
+			// note and inc/admin/class-admin.php for the removed manual $_POST save path.
 
 			$args[] = array(
 				'option_group' => 'jitsi-pro-api',
@@ -150,8 +153,9 @@ CSS;
 			);
 
 			$args[] = array(
-				'option_group' => 'jitsi-pro-api',
-				'option_name'  => $this->prefix . 'private_key',
+				'option_group'      => 'jitsi-pro-api',
+				'option_name'       => $this->prefix . 'private_key',
+				'sanitize_callback' => array( 'Jitsi_Meet_WP_Admin', 'jitsi_normalize_pem_key' ),
 			);
 
 			$args[] = [
@@ -169,84 +173,17 @@ CSS;
 				'option_name'  => $this->prefix . 'subdomain_connected',
 			);
 
-			$args[] = [
-				'option_group' => 'jitsi-pro-admin',
-				'option_name'  => $this->prefix . 'user_email',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-admin',
-				'option_name'  => $this->prefix . 'user_name',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-admin',
-				'option_name'  => $this->prefix . 'user_avatar',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-admin',
-				'option_name'  => $this->prefix . 'moderator_roles',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-admin',
-				'option_name'  => $this->prefix . 'other_admin_config',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-config',
-				'option_name'  => $this->prefix . 'enable_livestream',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-config',
-				'option_name'  => $this->prefix . 'enable_recording',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-audio',
-				'option_name'  => $this->prefix . 'start_audio_only',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-audio',
-				'option_name'  => $this->prefix . 'start_audio_muted',
-			];
+			// NOTE: user_email, user_name, user_avatar, moderator_roles, other_admin_config,
+			// enable_livestream, enable_recording, start_audio_only, start_audio_muted, start_silent,
+			// video_resolution, maxfullresolutionparticipant, hide_jitsi_sidebar, disableSimulcast,
+			// startVideoMuted are Ultimate-only fields. They are shown (greyed out) in the free
+			// plugin's UI to point users to the Ultimate upgrade, but intentionally have no
+			// register_setting() entry here -- the free plugin does not save or process their
+			// values at all.
 
 			$args[] = [
 				'option_group' => 'jitsi-pro-audio',
 				'option_name'  => $this->prefix . 'start_local_audio_muted',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-audio',
-				'option_name'  => $this->prefix . 'start_silent',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-video',
-				'option_name'  => $this->prefix . 'video_resolution',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-video',
-				'option_name'  => $this->prefix . 'maxfullresolutionparticipant',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-config',
-				'option_name'  => $this->prefix . 'hide_jitsi_sidebar',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-config',
-				'option_name'  => $this->prefix . 'disableSimulcast',
-			];
-
-			$args[] = [
-				'option_group' => 'jitsi-pro-video',
-				'option_name'  => $this->prefix . 'startVideoMuted',
 			];
 
 			$args[] = [
@@ -332,19 +269,19 @@ CSS;
 					'label_for' => $this->prefix . 'select_api',
 					'default'   => 'free',
 					'options'   => array(
-						'free'      => array(
+						'free'         => array(
 							'label' => __( 'Default (Public Hosting)', 'webinar-and-video-conference-with-jitsi-meet' ),
 							'desc'  => __( 'Use the default public Jitsi', 'webinar-and-video-conference-with-jitsi-meet' ),
 						),
-						'branded' => array(
+						'branded'      => array(
 							'label' => __( 'Managed Branded Meeting', 'webinar-and-video-conference-with-jitsi-meet' ),
 							'desc'  => __( 'We host and maintain your branded server', 'webinar-and-video-conference-with-jitsi-meet' ),
 						),
-						'jaas'      => array(
+						'jaas'         => array(
 							'label' => __( 'Jitsi as a Service (8x8 JaaS)', 'webinar-and-video-conference-with-jitsi-meet' ),
 							'desc'  => __( 'Use your JaaS credentials', 'webinar-and-video-conference-with-jitsi-meet' ),
 						),
-						'disable-self'      => array(
+						'disable-self' => array(
 							'label' => __( 'Self-Hosted', 'webinar-and-video-conference-with-jitsi-meet' ),
 							'desc'  => __( 'Connect your self-hosted server', 'webinar-and-video-conference-with-jitsi-meet' ),
 						),
@@ -376,13 +313,9 @@ CSS;
 				'section'  => $this->prefix . 'api_section',
 			);
 
-			$args[] = array(
-				'id'       => $this->prefix . 'panel_self',
-				'title'    => '',
-				'callback' => array( $this->callbacks, 'jitsi_api_panel_self' ),
-				'page'     => 'jitsi-pro-api',
-				'section'  => $this->prefix . 'api_section',
-			);
+			// No panel_self registration -- Self-Hosted is an Ultimate-only
+			// upsell card (see jitsi_hosting_cards() in mannage-callback.php),
+			// it has no settings panel of its own in the free plugin.
 
 			$args[] = [
 				'id'       => $this->prefix . 'user_email',

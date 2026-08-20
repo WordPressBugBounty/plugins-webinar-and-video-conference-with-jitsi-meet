@@ -11,8 +11,6 @@ jQuery(window).on('elementor/frontend/init', function () {
         }
       } else if (jitsi_free.api_select == 'branded') {
         initJitsiBranded('.jitsi-wrapper-elementor');
-      } else if (jitsi_free.api_select == 'self') {
-        initJitsiSelf('.jitsi-wrapper-elementor');
       } else {
         initJitsi('.jitsi-wrapper-elementor');
       }
@@ -42,8 +40,11 @@ function initJitsi(elem) {
       muted = jQuery(element).data('mute'),
       videoMuted = jQuery(element).data('videomute'),
       screenSharing = jQuery(element).data('screen'),
-      datadomain = jQuery(element).data('domain'),
-      domain     = datadomain;
+      // Free/default mode always uses the server-computed free domain, never the
+      // element's data-domain attribute -- that value can be stale or manually
+      // edited in saved block markup and must not be trusted for the domain the
+      // meeting iframe actually connects to.
+      domain = (typeof jitsi_free !== 'undefined' && jitsi_free.free_domain) || jQuery(element).data('domain');
 
     let toolbarButtons = [
       'camera',
@@ -119,6 +120,8 @@ function initJitsiJass(elem) {
   //Jitsi Call
   const domain = '8x8.vc';
   const api = [];
+
+  console.log('[Jitsi Debug] initJitsiJass called. appid=', jitsi_free.appid, 'jwt present=', !!jitsi_free.jwt, 'jwt length=', jitsi_free.jwt ? jitsi_free.jwt.length : 0);
 
   if (window.location.protocol == 'http:') {
     jQuery('.jitsi-wrapper').each(function (index, element) {
@@ -196,6 +199,11 @@ function initJitsiJass(elem) {
           SHOW_CHROME_EXTENSION_BANNER: false,
           SHOW_PROMOTIONAL_CLOSE_PAGE: false,
           SHOW_POWERED_BY: false,
+          DEFAULT_LOGO_URL: 'https://8x8.vc/current/images/watermark.svg',
+          JITSI_WATERMARK_LINK: 'https://www.8x8.com/',
+          SHOW_BRAND_WATERMARK: true,
+          SHOW_JITSI_WATERMARK: true,
+          BRAND_WATERMARK_LINK: 'https://www.8x8.com/',
         },
       };
 
@@ -207,6 +215,8 @@ function initJitsiJass(elem) {
           email: userInfo[1],
         };
       }
+
+      console.log('[Jitsi Debug] initJitsiJass creating JitsiMeetExternalAPI. domain=', domain, 'roomName=', roomName, 'jwt present in options=', !!options.jwt);
 
       api[index] = new JitsiMeetExternalAPI(domain, options);
       jQuery(element).addClass('jitsi-wrapper-rendered');
@@ -295,6 +305,11 @@ function initJitsiBranded(elem) {
           SHOW_CHROME_EXTENSION_BANNER: false,
           SHOW_PROMOTIONAL_CLOSE_PAGE: false,
           SHOW_POWERED_BY: false,
+          DEFAULT_LOGO_URL: 'https://8x8.vc/current/images/watermark.svg',
+          JITSI_WATERMARK_LINK: 'https://www.8x8.com/',
+          SHOW_BRAND_WATERMARK: true,
+          SHOW_JITSI_WATERMARK: true,
+          BRAND_WATERMARK_LINK: 'https://www.8x8.com/',
         },
       };
 
@@ -325,116 +340,6 @@ function initJitsiBranded(elem) {
   });
 }
 
-function initJitsiSelf(elem) {
-  const api = [];
-
-  jQuery(elem).each(function (index, element) {
-    if (!jQuery(element).hasClass('jitsi-wrapper-rendered')) {
-      if (window.location.protocol == 'http:') {
-        jQuery(element).html(
-          '<div class="device-status device-status-error" role="alert" tabindex="-1"><div class="jitsi-icon jitsi-icon-default device-icon device-icon--warning"><svg fill="none" height="16" width="16" viewBox="0 0 18 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.233 14.325L9.708.911a.817.817 0 00-1.417 0L.768 14.325a.78.78 0 00-.1.382.8.8 0 00.808.793h15.05a.82.82 0 00.39-.098.785.785 0 00.318-1.077zm-14.39-.41L9 2.937l6.158 10.978H2.842zm5.349-2.378c0-.438.355-.793.792-.793h.032a.793.793 0 110 1.586h-.032a.793.793 0 01-.792-.793zM9 6.781a.808.808 0 00-.808.809v1.554a.808.808 0 001.617 0V7.59A.808.808 0 009 6.782z" fill="#040404"></path></svg></div><span role="heading">For Jitsi Meet to work properly. You need SSL on your site.</span></div>'
-        );
-        return false;
-      }
-
-      let toolbarButtons = [
-        'camera',
-        'chat',
-        'closedcaptions',
-        'download',
-        'embedmeeting',
-        'etherpad',
-        'feedback',
-        'filmstrip',
-        'fullscreen',
-        'hangup',
-        'help',
-        'livestreaming',
-        'microphone',
-        'mute-everyone',
-        'mute-video-everyone',
-        'participants-pane',
-        'profile',
-        'raisehand',
-        'recording',
-        'security',
-        'select-background',
-        'settings',
-        'shareaudio',
-        'sharedvideo',
-        'shortcuts',
-        'stats',
-        'tileview',
-        'toggle-camera',
-        'videoquality',
-        '__end',
-      ];
-
-      Boolean(jQuery(element).data('invite')) && toolbarButtons.push('invite');
-      Boolean(jQuery(element).data('screen')) && toolbarButtons.push('desktop');
-
-      var datadomain = jQuery(element).data('domain');
-      var domain = datadomain;
-      
-      // Strip protocol and trailing slashes for Jitsi API compatibility
-      if (domain) {
-        domain = domain.replace(/^https?:\/\//, '').replace(/\/$/, '');
-      }
-
-      var roomName = jQuery(element).data('name'),
-        width = jQuery(element).data('width'),
-        height = jQuery(element).data('height'),
-        muted = jQuery(element).data('mute'),
-        videoMuted = jQuery(element).data('videomute'),
-        configOverwrite = {
-          startWithAudioMuted: muted,
-          startWithVideoMuted: videoMuted,
-          enableWelcomePage: false,
-          enableCLosePage: false,
-          toolbarButtons: toolbarButtons,
-          prejoinConfig: {
-            enabled: 0,
-          },
-        };
-
-      const options = {
-        roomName,
-        width,
-        height,
-        parentNode: element,
-        configOverwrite: configOverwrite,
-        interfaceConfigOverwrite: {
-          SHOW_CHROME_EXTENSION_BANNER: false,
-          SHOW_PROMOTIONAL_CLOSE_PAGE: false,
-          SHOW_POWERED_BY: false,
-        },
-      };
-
-      var userInfo = jQuery(element).data('userinfo');
-      if (userInfo && userInfo != '') {
-        userInfo = userInfo.split(',');
-        options.userInfo = {
-          displayName: userInfo[0],
-          email: userInfo[1],
-        };
-      }
-
-      // Add JWT token if available
-      var jwtToken = jQuery(element).data('jwt');
-      if (!jwtToken && typeof jitsi_free !== 'undefined' && jitsi_free.jwt) {
-        jwtToken = jitsi_free.jwt;
-      }
-
-      if (jwtToken && jwtToken != '') {
-        options.jwt = jwtToken;
-      }
-
-      api[index] = new JitsiMeetExternalAPI(domain, options);
-      jQuery(element).addClass('jitsi-wrapper-rendered');
-    }
-  });
-}
-
 jQuery(document).ready(function () {
   'use strict';
   
@@ -451,9 +356,6 @@ jQuery(document).ready(function () {
   } else if (jitsi_free.api_select == 'branded') {
     console.log('[Jitsi Free] Using Managed Branded Meeting mode');
     initJitsiBranded('.jitsi-wrapper');
-  } else if (jitsi_free.api_select == 'self') {
-    console.log('[Jitsi Free] Using Self-hosted mode');
-    initJitsiSelf('.jitsi-wrapper');
   } else {
     console.log('[Jitsi Free] Using Free mode (default)');
     initJitsi('.jitsi-wrapper');

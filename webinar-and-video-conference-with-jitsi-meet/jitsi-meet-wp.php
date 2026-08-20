@@ -1,15 +1,16 @@
 <?php //phpcs:ignore
 /**
- * Plugin Name:       FlexMeeting
- * Plugin URI:        https://jitsi-meet-wp.wppool.dev/
+ * Plugin Name:       FlexMeeting - Webinar & Meeting Plugin for Jitsi Meet
+ * Plugin URI:        https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.9.4
+ * Version:           2.9.6
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       webinar-and-video-conference-with-jitsi-meet
  * Requires at least: 5.2
+ * Requires PHP:      8.0
  * Tested up to:      7.0
  *
  *  @package JITSI_MEET_WP
@@ -20,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit(); // phpcs:ignore
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.9.4' );
+define( 'JITSI_MEET_WP_VERSION', '2.9.6' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
@@ -114,11 +115,11 @@ add_action( 'init', 'jitsi_meet_wp_begin', 20 );
  * @return mixed
  */
 function jitsi_meet_wp_appsero_init_tracker() {
-	if ( ! class_exists( 'Appsero\Client' ) ) {
-		require_once __DIR__ . '/inc/appsero/src/Client.php';
+	if ( ! class_exists( 'JitsiMeetWP\Appsero\Client' ) ) {
+		require_once __DIR__ . '/vendor/autoload.php';
 	}
 
-	$client = new Appsero\Client( '00788961-f5f7-4117-8a26-a99508aa506b', 'FlexMeeting', JITSI_MEET_WP__FILE__ );
+	$client = new \JitsiMeetWP\Appsero\Client( '00788961-f5f7-4117-8a26-a99508aa506b', 'FlexMeeting', JITSI_MEET_WP__FILE__ );
 
 	// Active insights.
 	$client->insights()->init();

@@ -117,6 +117,15 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 			$free_domain     = get_option( 'jitsi_opt_free_domain', 'jitsi-01.csn.tu-chemnitz.de' );
 			$custom_domain   = $free_domain;
 
+			// For the WordPress.org plugin review team: self-hosted Jitsi support lives
+			// entirely in FlexMeeting Ultimate, a separate plugin -- it is not a
+			// license-gated feature inside this free plugin. jitsi_opt_custom_domain
+			// has no register_setting() entry anywhere in this codebase, so there is
+			// intentionally no branch here for 'self' or the legacy 'disable-self'
+			// value. If either is ever found in the stored option (upgrade from an
+			// older version, leftover DB row, manual edit), it must fall through to
+			// the free public domain default above, not read jitsi_opt_custom_domain.
+			// Do not add that branch back.
 			if ( 'branded' === $selected_domain ) {
 				$subdomain_domain = get_option( 'jitsi_opt_subdomain_domain', '' );
 				if ( ! empty( $subdomain_domain ) ) {
@@ -125,10 +134,6 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 				}
 			} elseif ( 'jaas' === $selected_domain ) {
 				$custom_domain = '8x8.vc';
-			} elseif ( 'self' === $selected_domain ) {
-				$custom_domain = get_option( 'jitsi_opt_custom_domain', 'meet.jit.si' );
-				$custom_domain = preg_replace( '/^https?:\/\//i', '', $custom_domain );
-				$custom_domain = rtrim( $custom_domain, '/' );
 			}
 
 			wp_localize_script(
@@ -176,6 +181,13 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 				wp_enqueue_script( 'jitsi-script', plugins_url( '/blocks/dist/jitsi.js', __FILE__ ), array( 'jquery', 'wp-blocks' ), filemtime( plugin_dir_path( __FILE__ ) . '/blocks/dist/jitsi.js' ), '2.1.2' );
 
 				$api_select = get_option( 'jitsi_opt_select_api', 'free' );
+				// Self-hosted support lives in the separate Ultimate plugin, not here
+				// (see note in jitsi_meet_wp_gutenberg_blocks() above). Never forward
+				// 'self' or the legacy 'disable-self' value to the frontend script;
+				// treat as free mode.
+				if ( ! in_array( $api_select, array( 'jaas', 'branded' ), true ) ) {
+					$api_select = 'free';
+				}
 				$jwt_token = '';
 				$custom_domain = '';
 
@@ -216,8 +228,13 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 					array(
 						'appid'         => get_option( 'jitsi_opt_app_id', '' ),
 						'api_select'    => $api_select,
-						'jwt'           => $jwt_token,
+						'jwt'           => is_wp_error( $jwt_token ) ? '' : $jwt_token,
 						'custom_domain' => $custom_domain,
+						// Server-computed fresh on every page load. The free/default JS
+						// path must use this instead of any data-domain baked into saved
+						// block markup, so a stale or manually-edited attribute can never
+						// point the free plugin at an arbitrary domain.
+						'free_domain'   => get_option( 'jitsi_opt_free_domain', 'jitsi-01.csn.tu-chemnitz.de' ),
 						'ajaxurl'       => admin_url( 'admin-ajax.php' ),
 					)
 				);
@@ -225,11 +242,16 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 		}
 
 		public function jitsi_pro_generate_jwt() {
-			$prefix      = 'jitsi_opt_';
-			$token       = get_transient( 'jitsi_saved_jwt' );
-			$private_key = get_option( $prefix . 'private_key', '' );
-			$api_key     = get_option( $prefix . 'api_key', '' );
-			$app_id      = get_option( $prefix . 'app_id', '' );
+			$prefix  = 'jitsi_opt_';
+			$user_id = get_current_user_id();
+			// Per-user transient key: an unscoped key would let one visitor's
+			// cached token (with their moderator status, name, email) be served
+			// to a different visitor within the cache window.
+			$transient_key = $user_id ? 'jitsi_saved_jwt_' . $user_id : '';
+			$token         = $transient_key ? get_transient( $transient_key ) : false;
+			$private_key   = get_option( $prefix . 'private_key', '' );
+			$api_key       = get_option( $prefix . 'api_key', '' );
+			$app_id        = get_option( $prefix . 'app_id', '' );
 
 			if ( ! $private_key || ! $api_key || ! $app_id ) {
 				return '';
@@ -262,7 +284,25 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 				$exp_delay_sec            = 7200;
 				$nbf_delay_sec            = 10;
 
-				function create_jaas_token(
+				/**
+				 * Build and sign a JaaS JWT token.
+				 *
+				 * @param string $api_key                 JaaS API key.
+				 * @param string $app_id                  JaaS App ID.
+				 * @param string $user_email               Meeting user's email.
+				 * @param string $user_name                Meeting user's display name.
+				 * @param bool   $user_is_moderator         Whether the user is a moderator.
+				 * @param string $user_avatar_url           Meeting user's avatar URL.
+				 * @param bool   $live_streaming_enabled    Whether livestreaming is enabled.
+				 * @param bool   $recording_enabled         Whether recording is enabled.
+				 * @param bool   $outbound_enabled          Whether outbound calling is enabled.
+				 * @param bool   $transcription_enabled     Whether transcription is enabled.
+				 * @param int    $exp_delay                 Token expiry delay in seconds.
+				 * @param int    $nbf_delay                 Token not-before delay in seconds.
+				 * @param string $private_key               PEM-formatted private key.
+				 * @return string|null Signed JWT, or null on failure.
+				 */
+				function jitsi_meet_wp_create_jaas_token(
 					$api_key,
 					$app_id,
 					$user_email,
@@ -325,14 +365,16 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 							return null;
 						}
 
-						return JWT::encode( $payload, $private_key, 'RS256', $api_key );
+						$encoded = JWT::encode( $payload, $private_key, 'RS256', $api_key );
 
-					} catch ( Exception $e ) {
+						return $encoded;
+
+					} catch ( \Throwable $e ) {
 						return null;
 					}
 				}
 
-				$token = create_jaas_token(
+				$token = jitsi_meet_wp_create_jaas_token(
 					$api_key,
 					$app_id,
 					$user_email ? $user_email : $admin_email,
@@ -348,7 +390,9 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 					$private_key
 				);
 
-				set_transient( 'jitsi_saved_jwt', $token, 10 );
+				if ( $transient_key ) {
+					set_transient( $transient_key, $token, 10 );
+				}
 			}
 
 			return $token;

@@ -133,8 +133,8 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 			require_once JITSI_MEET_WP_FILE_PATH . 'inc/admin/admin-settings.php';
 			require_once JITSI_MEET_WP_FILE_PATH . 'inc/admin/class-jitsi-jwt-service.php';
 
-			// Handle Welcome Page Skip
-			if ( isset( $_GET['jitsi_skip_welcome'] ) && '1' === $_GET['jitsi_skip_welcome'] ) {
+			// Handle Welcome Page Skip. Read-only GET flag gating a redirect, not a data-changing form submission.
+			if ( isset( $_GET['jitsi_skip_welcome'] ) && '1' === $_GET['jitsi_skip_welcome'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 				if ( current_user_can( 'manage_options' ) ) {
 					update_option( 'jitsi_opt_select_api', 'free' );
 					update_option( 'jitsi_meet_welcome_redirect', 'occured' );
@@ -235,15 +235,6 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 		 * @return  void
 		 */
 		public function jitsi_meet_wp_manu_page_settings() {
-			$jitsi_pro_activate           = get_option( 'jitsi_pro_activate', 0 );
-			$jitsi_ultimate_activate      = get_option( 'jitsi_ultimate_activate', 0 );
-			$jitsi_pro_license_valid      = get_option( 'jitsi_pro_license_is_valid', 0 );
-			$jitsi_ultimate_license_valid = get_option( 'jitsi_ultimate_license_is_valid', 0 );
-
-			if ( ( '0' === $jitsi_pro_license_valid && '1' === $jitsi_pro_activate ) || ( '0' === $jitsi_ultimate_license_valid && '1' === $jitsi_ultimate_activate ) ) {
-				require_once JITSI_MEET_WP_FILE_PATH . 'inc/admin/licence-cta.php';
-			}
-
 			?>
 			<div class="wrapv jitsi-admin-wrap jitsi-wrap">
 				<?php settings_errors(); ?>
@@ -460,13 +451,6 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 					function regenJitsiPreview() {
 						if (document.querySelector('input[name="jitsi_opt_select_api"]') !== null && document.querySelector('input[name="jitsi_opt_select_api"]:checked').value == 'free') {
 							document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-success';
-						} else if (document.querySelector('input[name="jitsi_opt_select_api"]') !== null && document.querySelector('input[name="jitsi_opt_select_api"]:checked').value == 'self') {
-							if (document.getElementById("jitsi_opt_custom_domain") && document.getElementById("jitsi_opt_custom_domain").value) {
-								document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-success';
-							} else {
-								document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-error';
-								document.querySelector('.jitsi-preview-message').innerHTML = '<?php echo esc_js( __( 'Self hosted domain missing', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>';
-							}
 						} else if (document.getElementById("jitsi_opt_app_id") && !document.getElementById("jitsi_opt_app_id").value) {
 							document.getElementById('meeting-ui-preview').className = 'meeting-ui-preview preview-error';
 							document.querySelector('.jitsi-preview-message').innerHTML = '<?php echo esc_js( __( 'App id missing', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>';
@@ -643,42 +627,113 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 		}
 
 		/**
+		 * Whitelist-sanitize the hosting mode selection.
+		 *
+		 * For the WordPress.org plugin review team: this is a server-side backstop,
+		 * not the primary lock. The "Self-Hosted" card in the settings UI (see
+		 * `jitsi_hosting_cards()` in mannage-callback.php) is a disabled upsell
+		 * display for FlexMeeting Ultimate -- a completely separate, independently
+		 * installed plugin with its own codebase. This plugin does not contain
+		 * Ultimate's code, does not check a license key to unlock it, and cannot
+		 * execute self-hosted meeting functionality under any settings combination.
+		 *
+		 * This callback only ever accepts free/branded/jaas -- the three modes this
+		 * plugin actually implements end-to-end (settings UI, save path, and live
+		 * meeting rendering). Anything else reaching here (the disabled card's
+		 * `disable-self` value, a stale pre-upgrade value, or a manually edited
+		 * option) is rejected and replaced with 'free' before it can be persisted.
+		 *
+		 * @param string $value Raw submitted value.
+		 * @return string One of 'free', 'branded', 'jaas'.
+		 */
+		public static function jitsi_sanitize_select_api( $value ) {
+			$value = sanitize_text_field( (string) $value );
+			return in_array( $value, array( 'free', 'branded', 'jaas' ), true ) ? $value : 'free';
+		}
+
+		/**
+		 * Repair a PEM private key that was flattened to a single line.
+		 *
+		 * Pasting a key from a JSON credentials file (where line breaks are
+		 * literal "\n" escape sequences) or from certain UI elements that
+		 * collapse whitespace can strip the real newlines a PEM key needs,
+		 * turning "-----BEGIN PRIVATE KEY----- MIIEvQ... -----END PRIVATE KEY-----"
+		 * into something openssl_pkey_get_private() cannot parse. This
+		 * reconstructs a standard multi-line PEM from that flattened form.
+		 *
+		 * @param string $key Raw (already sanitized) key value.
+		 * @return string Normalized PEM key, or the original value if it
+		 *                already looks like valid multi-line PEM.
+		 */
+		public static function jitsi_normalize_pem_key( $key ) {
+			$key = trim( (string) $key );
+
+			if ( '' === $key ) {
+				return $key;
+			}
+
+			// Already has internal line breaks -- assume it's well-formed.
+			if ( substr_count( $key, "\n" ) > 1 ) {
+				return $key;
+			}
+
+			// Turn literal "\n" escape sequences into real newlines first.
+			$key = str_replace( array( '\\r\\n', '\\n' ), "\n", $key );
+
+			if ( substr_count( $key, "\n" ) > 1 ) {
+				return trim( $key );
+			}
+
+			// Still one line: split header / body / footer on whitespace and
+			// re-wrap the base64 body every 64 characters, as PEM requires.
+			if ( ! preg_match( '/-----BEGIN ([A-Z ]+)-----\s*(.*?)\s*-----END ([A-Z ]+)-----/s', $key, $matches ) ) {
+				return $key;
+			}
+
+			$label = trim( $matches[1] );
+			$body  = preg_replace( '/\s+/', '', $matches[2] );
+			$lines = trim( chunk_split( $body, 64, "\n" ) );
+
+			$result = "-----BEGIN {$label}-----\n{$lines}\n-----END {$label}-----";
+
+			return $result;
+		}
+
+		/**
 		 * Jitsi pro manu page apis output
 		 *
 		 * @return  void
 		 */
 		public function jitsi_pro_manu_page_apis_output() {
-			if ( isset( $_POST['jitsi_opt_select_api'] ) && isset( $_POST['jitsi_meet_admin_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['jitsi_meet_admin_nonce'] ) ), 'jitsi_meet_admin_nonce' ) ) {
-				$options = [
+			if ( isset( $_POST['jitsi_opt_select_api'] ) && current_user_can( 'manage_options' ) && isset( $_POST['jitsi_meet_admin_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['jitsi_meet_admin_nonce'] ) ), 'jitsi_meet_admin_nonce' ) ) {
+				// NOTE: jitsi_opt_custom_domain (self-hosted server domain) is intentionally
+				// excluded here. Self-Hosted is a locked, non-selectable Ultimate-only
+				// upsell card in this free plugin with no input field, panel, or backend
+				// wiring -- self-hosted functionality lives entirely in FlexMeeting
+				// Ultimate, a separate plugin, not a license-gated code path inside this
+				// one. Do not add this option back to this save list.
+				$options = array(
 					'jitsi_opt_select_api',
-					'jitsi_opt_custom_domain',
 					'jitsi_opt_api_key',
 					'jitsi_opt_app_id',
 					'jitsi_opt_private_key',
 					'jitsi_opt_free_domain',
 					'jitsi_opt_subdomain_domain',
 					'jitsi_opt_subdomain_connected',
-				];
+				);
 				foreach ( $options as $option ) {
 					if ( isset( $_POST[ $option ] ) ) {
 						$val = wp_unslash( $_POST[ $option ] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 						if ( 'jitsi_opt_private_key' === $option ) {
-							update_option( $option, sanitize_textarea_field( $val ) );
+							update_option( $option, self::jitsi_normalize_pem_key( sanitize_textarea_field( $val ) ) );
+						} elseif ( 'jitsi_opt_select_api' === $option ) {
+							update_option( $option, self::jitsi_sanitize_select_api( $val ) );
 						} else {
 							update_option( $option, sanitize_text_field( $val ) );
 						}
 					}
 				}
 				update_option( 'jitsi_meet_welcome_redirect', 'occured' );
-			}
-
-			$jitsi_pro_activate           = get_option( 'jitsi_pro_activate', 0 );
-			$jitsi_ultimate_activate      = get_option( 'jitsi_ultimate_activate', 0 );
-			$jitsi_pro_license_valid      = get_option( 'jitsi_pro_license_is_valid', 0 );
-			$jitsi_ultimate_license_valid = get_option( 'jitsi_ultimate_license_is_valid', 0 );
-
-			if ( ( '0' === $jitsi_pro_license_valid && '1' === $jitsi_pro_activate ) || ( '0' === $jitsi_ultimate_license_valid && '1' === $jitsi_ultimate_activate ) ) {
-				require_once JITSI_MEET_WP_FILE_PATH . 'inc/admin/licence-cta.php';
 			}
 
 			?>
@@ -788,8 +843,7 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 							<div class="addon-content">
 								<div class="bottom-top">
 									<div class="icon">
-										<?php //phpcs:ignore ?>
-										<img src="<?php echo JITSI_MEET_WP_URL . '/assets/img/vendor-icon.svg'; ?>" alt="" width="100px" height="66px" >
+										<img src="<?php echo esc_url( JITSI_MEET_WP_URL . '/assets/img/vendor-icon.svg' ); ?>" alt="" width="100px" height="66px" >
 									</div>
 									<a href="https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/#addon" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25" fill="#5e6d7ae3"><path d="M180-120q-24 0-42-18t-18-42v-600q0-24 18-42t42-18h279v60H180v600h600v-279h60v279q0 24-18 42t-42 18H180Zm202-219-42-43 398-398H519v-60h321v321h-60v-218L382-339Z"/></svg></a>
 								</div>

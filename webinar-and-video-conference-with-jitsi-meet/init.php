@@ -94,7 +94,6 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 		 */
 		public function __construct() {
 			add_action( 'admin_notices', array( $this, 'print_notices' ), 15 );
-			add_filter( 'clean_url', array( $this, 'add_async_forscript' ), 11, 1 );
 			add_action( 'admin_enqueue_scripts', array( $this, 'jitsi_meet_wp_editor_scripts' ) );
 			$this->jitsi_meet_wp_admin_files();
 			add_filter( 'plugin_action_links_' . plugin_basename( JITSI_MEET_WP__FILE__ ), array( $this, 'jitsi_meet_add_action_links' ) );
@@ -193,19 +192,6 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 		}
 
 		/**
-		 * Load Textdomain
-		 *
-		 * Load plugin localization files.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @access public
-		 */
-		public function i18n() {
-			load_plugin_textdomain( 'webinar-and-video-conference-with-jitsi-meet', false, plugin_basename( JITSI_MEET_WP_DIR_PATH ) . '/languages' );
-		}
-
-		/**
 		 * Editor Scripts
 		 */
 		public function jitsi_meet_wp_editor_scripts() {
@@ -220,21 +206,6 @@ if ( ! class_exists( 'Jitsi_Meet_WP' ) ) {
 					'nonce' => wp_create_nonce( 'jitsi_meet_admin_nonce' ),
 				)
 			);
-		}
-
-		/**
-		 * Add async forscript
-		 *
-		 * @param string $url  forscript url.
-		 *
-		 * @return string
-		 */
-		public function add_async_forscript( $url ) {
-			if ( false === strpos( $url, '#asyncload' ) ) {
-				return $url;
-			} else {
-				return str_replace( '#asyncload', '', $url ) . "' async='async";
-			}
 		}
 
 		/**

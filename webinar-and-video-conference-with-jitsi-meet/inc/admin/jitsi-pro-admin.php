@@ -86,7 +86,16 @@ class Jitsi_Settings {
 	public function register_custom_fields() {
 		// Register Settings.
 		foreach ( $this->settings as $setting ) {
-			register_setting( $setting['option_group'], $setting['option_name'], ( isset( $setting['callback'] ) ? $setting['callback'] : '' ) );
+			$register_args = array(
+				'type'              => isset( $setting['type'] ) ? $setting['type'] : 'string',
+				'sanitize_callback' => isset( $setting['sanitize_callback'] ) ? $setting['sanitize_callback'] : 'sanitize_text_field',
+			);
+
+			if ( isset( $setting['default'] ) ) {
+				$register_args['default'] = $setting['default'];
+			}
+
+			register_setting( $setting['option_group'], $setting['option_name'], $register_args );
 		}
 
 		// Register Setting Section.

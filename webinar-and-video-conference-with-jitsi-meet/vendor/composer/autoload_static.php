@@ -7,71 +7,32 @@ namespace Composer\Autoload;
 class ComposerStaticInitb21e0b47f2d09a12ad05c179484912f1
 {
     public static $prefixLengthsPsr4 = array (
-        'P' => 
+        'J' =>
         array (
-            'Psr\\Http\\Message\\' => 17,
-            'Psr\\Http\\Client\\' => 16,
+            'JitsiMeetWP\\Appsero\\' => 20,
         ),
-        'J' => 
-        array (
-            'Jose\\Component\\Signature\\Algorithm\\' => 35,
-            'Jose\\Component\\Signature\\' => 25,
-            'Jose\\Component\\KeyManagement\\' => 29,
-            'Jose\\Component\\Core\\' => 20,
-        ),
-        'F' => 
+        'F' =>
         array (
             'Firebase\\JWT\\' => 13,
-            'FG\\' => 3,
         ),
-        'B' => 
+        'A' =>
         array (
-            'Brick\\Math\\' => 11,
-            'Base64Url\\' => 10,
+            'Appsero\\' => 8,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Psr\\Http\\Message\\' => 
+        'JitsiMeetWP\\Appsero\\' =>
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/appsero/client/src',
         ),
-        'Psr\\Http\\Client\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-client/src',
-        ),
-        'Jose\\Component\\Signature\\Algorithm\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-signature-algorithm-rsa',
-        ),
-        'Jose\\Component\\Signature\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-signature',
-        ),
-        'Jose\\Component\\KeyManagement\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-key-mgmt',
-        ),
-        'Jose\\Component\\Core\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-core',
-        ),
-        'Firebase\\JWT\\' => 
+        'Firebase\\JWT\\' =>
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
-        'FG\\' => 
+        'Appsero\\' =>
         array (
-            0 => __DIR__ . '/..' . '/fgrosse/phpasn1/lib',
-        ),
-        'Brick\\Math\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/brick/math/src',
-        ),
-        'Base64Url\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/spomky-labs/base64url/src',
+            0 => __DIR__ . '/..' . '/appsero/client/src',
         ),
     );
 

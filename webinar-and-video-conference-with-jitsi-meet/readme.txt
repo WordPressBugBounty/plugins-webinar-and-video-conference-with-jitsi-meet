@@ -1,10 +1,10 @@
 === FlexMeeting - Webinar & Meeting Plugin for Jitsi Meet ===
 Contributors: wppool, azizultex, shahreyar46, foysalremon
 Tags: meeting, video conference, webinar, conference, video chat
-Requires at least: 5.0
+Requires at least: 5.2
 Tested up to: 7.0
-Requires PHP: 5.4
-Stable tag: 2.9.4
+Requires PHP: 8.0
+Stable tag: 2.9.6
 License: GPL-2.0+
 License URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -175,6 +175,35 @@ Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without
 Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
 
 
+== External services ==
+
+This plugin connects to the following third-party/external services to provide its core meeting functionality and, where noted, optional telemetry:
+
+**1. Jitsi Meet server (default: meet.jit.si)**
+This plugin embeds a Jitsi Meet video conferencing session in your site. By default it connects to the free public server `meet.jit.si`. If you select the Branded/JaaS mode, it connects to 8x8's JaaS service instead (see #3 below). Meeting participant names/emails (if logged in) and meeting metadata are sent to whichever Jitsi server is configured, every time a meeting is loaded.
+Terms of Service: https://jitsi.org/meet-jit-si-terms-of-service/
+Privacy Policy: https://jitsi.org/meet-jit-si-privacy/
+
+**2. Jitsi Hosted (jitsihosted.app) — used only in "Hosted Subdomain" API mode**
+When the plugin's "Hosted Subdomain" connection mode is selected, it sends requests to `jitsihosted.app` to generate and verify meeting JWT tokens and to check server status. Data sent includes the WordPress user's display name, email address, WordPress user ID, meeting room name, and moderator status, at the time a meeting is created or a connection test is run.
+Terms of Service: https://wppool.dev/flexmeeting-terms-of-service/
+Privacy Policy: https://wppool.dev/flexmeeting-privacy-policy/
+
+**3. 8x8 JaaS (8x8.vc) — used only in "Branded"/JaaS API mode**
+When the plugin's Branded/JaaS connection mode is selected, it loads the 8x8 JaaS external meeting API script (`https://8x8.vc/external_api.js`) to embed the meeting interface. Meeting participation data is exchanged directly between the visitor's browser and 8x8's service.
+Terms of Service: https://www.8x8.com/terms-and-conditions
+Privacy Policy: https://www.8x8.com/legal/privacy-policy
+
+**4. Appsero — optional, opt-in telemetry only**
+See the Privacy Policy section above. Only active if you explicitly opt in via the admin notice. When active, Appsero also uses `icanhazip.com` solely to determine the site's public IP address as part of the telemetry payload.
+Privacy Policy: https://appsero.com/privacy-policy/
+
+**5. WPPOOL (fluent.wppool.dev) — optional, opt-in only**
+If you opt in via the plugin's data-sharing admin notice, your name and email address are sent to WPPOOL's CRM system so we can follow up about your use of the plugin. Not active unless you submit this opt-in form.
+Terms of Service: https://wppool.dev/flexmeeting-terms-of-service/
+Privacy Policy: https://wppool.dev/flexmeeting-privacy-policy/
+
+
 == Frequently Asked Questions ==
 
 = How quickly can I get started? =
@@ -187,7 +216,7 @@ Yes, you can create meetings as Gutenberg blocks and Elementor widgets using the
 Yes. With the shortcode `[jitsi-meet-wp/]`, you can embed a meeting where Gutenberg is not available.
 
 = Can I create a custom domain? =
-You can create a branded meeting URL using the custom domain feature available through JaaS or a self-hosted Jitsi setup.
+You can create a branded meeting URL using the custom domain feature available through JaaS. Self-hosted Jitsi domain support is available in FlexMeeting Ultimate.
 
 = Is FlexMeeting safe? =
 The plugin uses Jitsi Meet which provides encrypted communication, and FlexMeeting works with those features to help maintain privacy while hosting online meetings.
@@ -202,10 +231,10 @@ It allows users to create and manage meetings directly from the front end—no a
 It enables visual collaboration by allowing participants to sketch, draw diagrams, and share ideas in real time during a meeting.
 
 = Can I use self-hosted Jitsi Meet with this plugin? =
-Yes. You can use Jitsi free at [https://meet.jit.si](https://meet.jit.si), JaaS at [https://jaas.8x8.vc](https://jaas.8x8.vc), or any self-hosted Jitsi Meet instance with the plugin, depending on your requirements.
+This plugin supports Jitsi free at [https://meet.jit.si](https://meet.jit.si) and JaaS at [https://jaas.8x8.vc](https://jaas.8x8.vc). Self-hosted Jitsi Meet support is available in FlexMeeting Ultimate, a separate plugin.
 
 = Can I use my branded logo and domain? =
-Yes. You can apply your own branding and domain when using JaaS or a self-hosted Jitsi setup.
+Yes. You can apply your own branding and domain when using JaaS. Self-hosted branding is available in FlexMeeting Ultimate.
 
 = Can I record the meeting? =
 Recording is available in the premium version of the plugin and also requires a JaaS 8×8 subscription.
@@ -240,6 +269,13 @@ Yes. Live streaming to platforms like YouTube is supported when using the approp
 11. Self Hosted
 
 == Changelog ==
+
+
+= 2.9.6 – 18 Aug 2026 =
+- **Improvement:** Maintenance and security update.
+
+= 2.9.5 – 09 Aug 2026 =
+- **Improvement:** Maintenance and security update.
 
 = 2.9.4 – 30 Jun 2026 =
 * **Fix:** Fixed meeting iframe responsiveness on mobile for the shortcode, Gutenberg block, and Elementor widget.

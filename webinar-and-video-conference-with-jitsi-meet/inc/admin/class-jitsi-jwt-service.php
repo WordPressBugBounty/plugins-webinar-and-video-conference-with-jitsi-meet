@@ -53,7 +53,7 @@ class Jitsi_JWT_Service {
 		// Get user info.
 		$user = get_userdata( $wp_user_id );
 		if ( ! $user ) {
-			return new WP_Error( 'no_user_found', 'Debug: get_userdata returned false for user ID: ' . $wp_user_id );
+			return new WP_Error( 'no_user_found', __( 'Could not load WordPress user data for the current user.', 'webinar-and-video-conference-with-jitsi-meet' ) );
 		}
 
 		// Check if user has a custom email set in admin settings.
@@ -95,9 +95,8 @@ class Jitsi_JWT_Service {
 		$response = wp_remote_post(
 			$api_url,
 			array(
-				'timeout'   => 20,
-				'sslverify' => false,
-				'headers'   => array(
+				'timeout' => 20,
+				'headers' => array(
 					'accept'        => 'application/json',
 					'Authorization' => 'Bearer ' . JITSI_SERVICE_API_TOKEN,
 				),
@@ -178,9 +177,8 @@ class Jitsi_JWT_Service {
 		$response = wp_remote_get(
 			$verify_url,
 			array(
-				'timeout'   => 15,
-				'sslverify' => false,
-				'headers'   => array(
+				'timeout' => 15,
+				'headers' => array(
 					'accept'        => 'application/json',
 					'Authorization' => 'Bearer ' . $token,
 				),
@@ -218,9 +216,8 @@ class Jitsi_JWT_Service {
 		$response = wp_remote_get(
 			$api_url,
 			array(
-				'timeout'   => 15,
-				'sslverify' => false,
-				'headers'   => array(
+				'timeout' => 15,
+				'headers' => array(
 					'accept'        => 'application/json',
 					'Authorization' => 'Bearer ' . JITSI_SERVICE_API_TOKEN,
 				),
@@ -272,8 +269,7 @@ class Jitsi_JWT_Service {
 		$check_url = 'https://' . untrailingslashit( $host ) . '/config.js';
 
 		$response = wp_remote_head( $check_url, array(
-			'timeout'    => 10,
-			'sslverify'  => false,
+			'timeout' => 10,
 		) );
 
 		return ! is_wp_error( $response ) && 200 === wp_remote_retrieve_response_code( $response );
@@ -365,8 +361,7 @@ class Jitsi_JWT_Service {
 		$response = wp_remote_head(
 			$check_url,
 			array(
-				'timeout'   => 15,
-				'sslverify' => false,
+				'timeout' => 15,
 			)
 		);
 

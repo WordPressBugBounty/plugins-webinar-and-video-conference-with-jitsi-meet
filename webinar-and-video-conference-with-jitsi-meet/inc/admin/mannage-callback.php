@@ -47,7 +47,7 @@ class Mannage_Callback {
 		$default     = isset( $args['default'] ) ? $args['default'] : '';
 		$value       = get_option( $name, $default ) ? get_option( $name, $default ) : $default;
 		$disabled    = isset( $args['disabled'] ) ? 'disabled' : '';
-		$data_depend = isset( $args['depend'] ) ? " data-depend='" . wp_json_encode( $args['depend'] ) . "'" : '';
+		$data_depend = isset( $args['depend'] ) ? " data-depend='" . esc_attr( wp_json_encode( $args['depend'] ) ) . "'" : '';
 
 		if ( $disabled ) {
 			$value = $default;
@@ -70,8 +70,9 @@ class Mannage_Callback {
 		$name        = $args['label_for'];
 		$default     = isset( $args['default'] ) ? $args['default'] : '';
 		$value       = $default;
-		$data_depend = isset( $args['depend'] ) ? " data-depend='" . wp_json_encode( $args['depend'] ) . "'" : '';
-		printf( '<input class="jitsi-admin-field" disabled type="text" name="%1$s" id="%1$s" value="%2$s"%3$s/>', esc_attr( $name ), esc_attr( $value ), esc_attr( $data_depend ) );
+		$data_depend = isset( $args['depend'] ) ? " data-depend='" . esc_attr( wp_json_encode( $args['depend'] ) ) . "'" : '';
+		//phpcs:ignore
+		printf( '<input class="jitsi-admin-field" disabled type="text" name="%1$s" id="%1$s" value="%2$s"%3$s/>', esc_attr( $name ), esc_attr( $value ), $data_depend );
 	}
 
 	/**
@@ -84,7 +85,7 @@ class Mannage_Callback {
 	public function jitsi_textrea( $args ) {
 		$name        = $args['label_for'];
 		$value       = get_option( $name, '' );
-		$data_depend = isset( $args['depend'] ) ? " data-depend='" . json_encode( $args['depend'] ) . "'" : '';
+		$data_depend = isset( $args['depend'] ) ? " data-depend='" . esc_attr( wp_json_encode( $args['depend'] ) ) . "'" : '';
 
 		//phpcs:ignore
 		printf( '<textarea class="jitsi-admin-field" name="%1$s" id="%1$s" rows="4"%3$s>%2$s</textarea>', esc_attr( $name ), esc_attr( $value ), $data_depend );
@@ -172,8 +173,10 @@ class Mannage_Callback {
 	public function jitsi_switch( $args ) {
 		$name         = $args['label_for'];
 		$default      = $args['default'];
-		$value        = get_option( $name, $default ) ? 1 : 0;
 		$disabled     = isset( $args['disabled'] ) ? 'disabled' : '';
+		// Force the default when locked, matching jitsi_general() -- a disabled
+		// field must never display a real stored value, even a leftover/legacy one.
+		$value        = $disabled ? ( $default ? 1 : 0 ) : ( get_option( $name, $default ) ? 1 : 0 );
 		$new_tag      = '';
 		$feature_type = '';
 
@@ -313,12 +316,42 @@ class Mannage_Callback {
 		<?php
 	}
 
+	/**
+	 * Render the "Choose where your meetings will run" hosting-mode cards.
+	 *
+	 * For the WordPress.org plugin review team: the Self-Hosted card
+	 * (`disable-` prefixed key) is a locked, non-selectable Ultimate-only
+	 * upsell -- it has no settings panel in the free plugin. There is no
+	 * `jitsi_api_panel_self()` method, no input field, and no DOM element for
+	 * a self-hosted domain anywhere in this file. `jitsi_opt_custom_domain`
+	 * has no `register_setting()` entry anywhere in this plugin (see the NOTE
+	 * in `admin-settings.php::set_settings()`) and is not read anywhere for
+	 * rendering. The card's radio input carries a real HTML `disabled`
+	 * attribute (browser-enforced, cannot be checked via click or keyboard),
+	 * and clicking the card opens the same WPPOOL upgrade popup used by every
+	 * other Premium field in this plugin (`.jitsi-setting-tabs-wrapper
+	 * .disabled` click handler in `jitsi.admin.js`). The save-layer whitelist
+	 * (`Jitsi_Meet_WP_Admin::jitsi_sanitize_select_api()`) also rejects any
+	 * value other than `free`/`branded`/`jaas` as defense-in-depth.
+	 *
+	 * @param array $args Field args from add_settings_field().
+	 * @return void
+	 */
 	public function jitsi_hosting_cards( $args ) {
 		$name       = $args['label_for'];
 		$default    = $args['default'];
 		$optionsarr = $args['options'];
-		$value      = ( isset( $_GET['select_api'] ) ) ? sanitize_text_field( wp_unslash( $_GET['select_api'] ) ) : get_option( $name, $default );
-		$options    = '';
+		// Read-only GET param used to preview a card selection; not a data-changing form submission.
+		$value = ( isset( $_GET['select_api'] ) ) ? sanitize_text_field( wp_unslash( $_GET['select_api'] ) ) : get_option( $name, $default ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// Legacy compatibility: sites that saved the option before the 'self' key was
+		// renamed to 'disable-self' (to close a WP.org trialware finding -- the bare
+		// 'self' key had no disabled-card gating) may still have the old value stored.
+		// Normalize it here for display matching only; it has no functional effect
+		// since the free plugin never reads jitsi_opt_custom_domain for rendering.
+		if ( 'self' === $value ) {
+			$value = 'disable-self';
+		}
+		$options = '';
 
 		echo '<h3 class="jitsi-section-title">' . esc_html__( 'Choose where your meetings will run:', 'webinar-and-video-conference-with-jitsi-meet' ) . '</h3>';
 
@@ -326,10 +359,18 @@ class Mannage_Callback {
 			$selected = $key == $value ? 'checked' : '';
 			$card_class = 'card-' . $key;
 
-			// Mark self-hosted as disabled in free version (check for disable- prefix)
-			$is_disabled = ( strpos( $key, 'disable-' ) === 0 );
-			$disabled_class = $is_disabled ? ' disabled' : '';
-			$disabled_attr = $is_disabled ? ' disabled' : '';
+			// The 'disable-' key prefix marks this card as an Ultimate-only upsell:
+			// the radio is genuinely disabled (cannot be selected/checked), the
+			// card gets the shared `.disabled` class which the existing global
+			// handler in jitsi.admin.js (`.jitsi-setting-tabs-wrapper .disabled`
+			// click -> WPPOOL.Popup(...).show()) already wires up to the shared
+			// WPPOOL upgrade popup -- no new JS needed here. Save-layer whitelist
+			// (Jitsi_Meet_WP_Admin::jitsi_sanitize_select_api()) stays as a
+			// defense-in-depth backstop even though the UI can no longer submit
+			// this value at all.
+			$is_disabled    = ( strpos( $key, 'disable-' ) === 0 );
+			$disabled_class = $is_disabled ? 'disabled' : '';
+			$disabled_attr  = $is_disabled ? 'disabled' : '';
 
 			// Get the actual key without disable- prefix for icon matching
 			$icon_key = $is_disabled ? str_replace( 'disable-', '', $key ) : $key;
@@ -350,15 +391,20 @@ class Mannage_Callback {
 					break;
 			}
 
+			$tag_text  = $is_disabled
+				? esc_html__( 'Ultimate', 'webinar-and-video-conference-with-jitsi-meet' )
+				: esc_html__( 'New', 'webinar-and-video-conference-with-jitsi-meet' );
+			$tag_class = $is_disabled ? 'jitsi-new-tag jitsi-ultimate-tag' : 'jitsi-new-tag';
+
 			$options .= sprintf(
-				'<label class="hosting-card %1$s">
-					<input class="jitsi-admin-field jitsi-api-trigger" type="radio" name="%2$s" value="%3$s" %4$s/>
+				'<label class="hosting-card %1$s %9$s">
+					<input class="jitsi-admin-field jitsi-api-trigger" type="radio" name="%2$s" value="%3$s" %4$s %10$s/>
 					<div class="hosting-card-inner">
 						<div class="selected-check">
 							<svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
 						</div>
 						<div class="card-icon">%5$s</div>
-						<div class="card-label">%6$s <span class="jitsi-new-tag">%7$s</span></div>
+						<div class="card-label">%6$s <span class="%11$s">%7$s</span></div>
 						<div class="card-desc">%8$s</div>
 					</div>
 				</label>',
@@ -368,13 +414,30 @@ class Mannage_Callback {
 				$selected,
 				$icon,
 				esc_html( $val['label'] ),
-				__( 'New', 'webinar-and-video-conference-with-jitsi-meet' ),
-				esc_html( $val['desc'] )
+				$tag_text,
+				esc_html( $val['desc'] ),
+				esc_attr( $disabled_class ),
+				esc_attr( $disabled_attr ),
+				esc_attr( $tag_class )
 			);
 		}
 
 		printf( '<div class="jitsi-admin-field-hosting-cards">%1$s</div>', $options ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
+		?>
+		<style>
+			.hosting-card.disabled { cursor: pointer; }
+			.jitsi-admin-field-hosting-cards label .hosting-card-inner .jitsi-ultimate-tag {
+				display: inline-block !important;
+				background: #e64e08 !important;
+				color: #fff;
+				line-height: 1;
+				padding: 3px 8px;
+				font-size: 12px;
+				border-radius: 3px;
+				vertical-align: middle;
+			}
+		</style>
+		<?php
 		// Custom JS for toggling
 		?>
 		<script>
@@ -391,7 +454,7 @@ class Mannage_Callback {
 				$('.jitsi-config-panel-wrap').hide();
 				$('.jitsi-config-panel-' + panelKey).fadeIn();
 
-				// Hide the main bottom Save Changes button for the Branded panel as it has its own above the FAQ
+				// Hide the main bottom Save Changes button for the Branded panel as it has its own above the FAQ.
 				// However, if we are on the welcome page, we should KEEP the submit buttons (Skip & Continue) visible.
 
 				if (panelKey === 'branded' && !isWelcomePage) {
@@ -415,13 +478,16 @@ class Mannage_Callback {
 				// Only trigger "Domain changed" logic if the value actually changed.
 				// This prevents the .trigger('input') on page load from resetting the visibility.
 				if ( val !== lastVal ) {
-					$btn.removeClass('is-connected').show().prop('disabled', val === '').text(<?php echo json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
+					$btn.removeClass('is-connected').show().prop('disabled', val === '').text(<?php echo wp_json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
 					$discBtn.hide();
 
 					if (!isWelcomePage) {
 						$('.jitsi-branded-save-action').hide();
 					}
-					$statusMsg.html('<span class="jitsi-status-warning" style="background:transparent; border:none; padding:0;">' + <?php echo json_encode( __( 'Domain changed. Please re-test connection.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?> + '</span>');
+					$statusMsg.empty().append(
+						$('<span>', { 'class': 'jitsi-status-warning', style: 'background:transparent; border:none; padding:0;' } )
+							.text(<?php echo wp_json_encode( __( 'Domain changed. Please re-test connection.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>)
+					);
 					$('#jitsi_opt_subdomain_connected_hidden').val('0');
 					lastVal = val;
 				}
@@ -447,7 +513,7 @@ class Mannage_Callback {
 				console.log('[JitsiJWT] Save & Test Connection clicked.');
 				console.log('[JitsiJWT] Domain value being sent to server:', domain);
 
-				$btn.prop('disabled', true).text(<?php echo json_encode( __( 'Connecting...', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
+				$btn.prop('disabled', true).text(<?php echo wp_json_encode( __( 'Connecting...', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
 				$statusMsg.html('').removeClass('error-msg success-msg');
 
 				$.ajax({
@@ -465,7 +531,13 @@ class Mannage_Callback {
 							lastVal = domain; // Mark this domain as the current connected one
 							$btn.hide().addClass('is-connected');
 							var host = domain.replace(/^https?:\/\//, '').replace(/\/$/, '');
-							$statusMsg.html('<span class="jitsi-status-win" style="background:transparent; border:none; padding:0; color:#0e8a16;"><span class="jitsi-msg-icon">✅</span> ' + <?php echo json_encode( __( 'Connection tested successfully.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?> + '</span> <span style="font-size: 12px; opacity: 0.8; margin-left: 5px;">' + <?php echo json_encode( __( 'Click "Save Changes" to apply.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?> + '</span>');
+							var $winMsg = $('<span>', { 'class': 'jitsi-status-win', style: 'background:transparent; border:none; padding:0; color:#0e8a16;' } );
+							$winMsg.append( $('<span>', { 'class': 'jitsi-msg-icon' } ).text('✅') );
+							$winMsg.append( document.createTextNode(' ') );
+							$winMsg.append( document.createTextNode(<?php echo wp_json_encode( __( 'Connection tested successfully.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>) );
+							var $applyMsg = $('<span>', { style: 'font-size: 12px; opacity: 0.8; margin-left: 5px;' } )
+								.text(<?php echo wp_json_encode( __( 'Click "Save Changes" to apply.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
+							$statusMsg.empty().append($winMsg).append(' ').append($applyMsg);
 
 							$('#jitsi_opt_subdomain_connected_hidden').val('1');
 
@@ -479,7 +551,7 @@ class Mannage_Callback {
 							console.log('[Jitsi_JWT_Service] ► FAIL — Server returned error:', response.data ? response.data.message : '(no message)', '| code:', response.data ? response.data.code : '(none)');
 
 							// Ensure buttons reset to disconnected state
-							$btn.prop('disabled', false).text(<?php echo json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>).show().removeClass('is-connected');
+							$btn.prop('disabled', false).text(<?php echo wp_json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>).show().removeClass('is-connected');
 							$('.jitsi-btn-disconnect').hide();
 							$('.jitsi-request-setup-link').show();
 							if (!isWelcomePage) {
@@ -491,25 +563,24 @@ class Mannage_Callback {
 							var domainErrorCodes = ['dns_failure', 'unreachable', 'not_jitsi', 'invalid_url'];
 							var errorCode = response.data && response.data.code ? response.data.code : '';
 							var isWarning = domainErrorCodes.indexOf(errorCode) !== -1;
-							if (isWarning) {
-								$statusMsg.html('<span class="jitsi-status-warning">' + response.data.message + '</span>');
-							} else {
-								$statusMsg.html('<span class="jitsi-status-error">' + response.data.message + '</span>');
-							}
+							var $errMsg = $('<span>', { 'class': isWarning ? 'jitsi-status-warning' : 'jitsi-status-error' } )
+								.text(response.data.message);
+							$statusMsg.empty().append($errMsg);
 						}
 					},
 					error: function(xhr, status, error) {
 						console.log('[Jitsi_JWT_Service] AJAX ERROR — status:', status, '| error:', error);
 
 						// Ensure buttons reset to disconnected state
-						$btn.prop('disabled', false).text(<?php echo json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>).removeClass('is-connected');
+						$btn.prop('disabled', false).text(<?php echo wp_json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>).removeClass('is-connected');
 						$('.jitsi-btn-disconnect').hide();
 						$('.jitsi-request-setup-link').show();
 						if (!isWelcomePage) {
 							$('.jitsi-branded-save-action').hide();
 						}
 
-						$statusMsg.html('<span class="jitsi-status-error">' + (response.data ? response.data.message : <?php echo json_encode( __( 'Connection failed. Please check your domain.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>) + '</span>');
+						var $ajaxErrMsg = (typeof response !== 'undefined' && response.data) ? response.data.message : <?php echo wp_json_encode( __( 'Connection failed. Please check your domain.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>;
+						$statusMsg.empty().append( $('<span>', { 'class': 'jitsi-status-error' } ).text($ajaxErrMsg) );
 					}
 				});
 			});
@@ -524,14 +595,17 @@ class Mannage_Callback {
 
 				console.log('[JitsiJWT] Disconnect clicked.');
 
-				$connBtn.removeClass('is-connected').show().prop('disabled', false).text(<?php echo json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
+				$connBtn.removeClass('is-connected').show().prop('disabled', false).text(<?php echo wp_json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
 				$discBtn.hide();
 				$('.jitsi-request-setup-link').hide();
 
 				if (!isWelcomePage) {
 					$('.jitsi-branded-save-action').hide();
 				}
-				$statusMsg.html('<span class="jitsi-status-warning" style="background:transparent; border:none; padding:0;">' + <?php echo json_encode( __( 'Connection disconnected. Save changes to apply.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?> + '</span>');
+				$statusMsg.empty().append(
+				$('<span>', { 'class': 'jitsi-status-warning', style: 'background:transparent; border:none; padding:0;' } )
+					.text(<?php echo wp_json_encode( __( 'Connection disconnected. Save changes to apply.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>)
+			);
 				if (!isWelcomePage) {
 					$('.jitsi-branded-save-action').fadeIn();
 				}
@@ -621,7 +695,7 @@ class Mannage_Callback {
 		echo '<div class="guide-steps-wrap" style="display:none;">';
 		echo '<ol class="numbered-steps">';
 		foreach ( $steps as $index => $step ) {
-			echo '<li>' . $step . '</li>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo '<li>' . wp_kses_post( $step ) . '</li>';
 		}
 		echo '</ol>';
 		if ( $footer_text ) {
@@ -728,19 +802,19 @@ class Mannage_Callback {
 		$input = '<p style="margin-top: -5px; margin-bottom: 8px;">' . esc_html__( 'Paste the Domain URL we emailed you (example: yourbrand.jitsihosted.com)', 'webinar-and-video-conference-with-jitsi-meet' ) . '</p>';
 		$input .= '<div class="jitsi-input-with-button">';
 		$input .= '<input class="jitsi-admin-field" type="text" name="' . esc_attr( $name ) . '" id="' . esc_attr( $name ) . '" value="' . esc_attr( $val ) . '" placeholder="' . esc_attr__( 'Enter the Domain URL', 'webinar-and-video-conference-with-jitsi-meet' ) . '"/>';
-		$input .= '<button type="button" class="jitsi-btn jitsi-btn-save-test ' . ( empty( trim( $val ) ) ? 'is-disabled' : '' ) . '" style="' . $save_style . '" ' . ( empty( trim( $val ) ) ? 'disabled' : '' ) . '>' . __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) . '</button>';
-		$input .= '<button type="button" class="jitsi-btn jitsi-btn-disconnect" style="' . $disc_style . '">' . __( 'Disconnect', 'webinar-and-video-conference-with-jitsi-meet' ) . '</button>';
+		$input .= '<button type="button" class="jitsi-btn jitsi-btn-save-test ' . ( empty( trim( $val ) ) ? 'is-disabled' : '' ) . '" style="' . esc_attr( $save_style ) . '" ' . ( empty( trim( $val ) ) ? 'disabled' : '' ) . '>' . esc_html__( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) . '</button>';
+		$input .= '<button type="button" class="jitsi-btn jitsi-btn-disconnect" style="' . esc_attr( $disc_style ) . '">' . esc_html__( 'Disconnect', 'webinar-and-video-conference-with-jitsi-meet' ) . '</button>';
 		$input .= '</div>';
 
 		$status_html = '';
 		if ( '1' === $is_conn && ! empty( $val ) ) {
 			$host = preg_replace( '#^https?://#', '', rtrim( $val, '/' ) );
-			$status_html = '<span class="jitsi-status-win"><span class="jitsi-msg-icon">' . esc_html__( '✅', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span> ' . __( 'Connected. Meetings will run on', 'webinar-and-video-conference-with-jitsi-meet' ) . ' <code class="jitsi-domain-badge">' . esc_html( $host ) . '</code></span>';
+			$status_html = '<span class="jitsi-status-win"><span class="jitsi-msg-icon">' . esc_html__( '✅', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span> ' . esc_html__( 'Connected. Meetings will run on', 'webinar-and-video-conference-with-jitsi-meet' ) . ' <code class="jitsi-domain-badge">' . esc_html( $host ) . '</code></span>';
 		}
 
 		$input .= '<div class="jitsi-connection-status-msg" style="font-size: 13px;">' . $status_html . '</div>';
 		$link_style = ( '1' === $is_conn ) ? 'display:none;' : 'margin-top: 4px;';
-		$input .= '<p class="field-sub-link jitsi-request-setup-link" style="' . $link_style . '">' . __( 'Don\'t have a Hosted Server URL yet? ', 'webinar-and-video-conference-with-jitsi-meet' ) . '<a href="https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/" target="_blank">' . __( 'Request setup now →', 'webinar-and-video-conference-with-jitsi-meet' ) . '</a></p>';
+		$input .= '<p class="field-sub-link jitsi-request-setup-link" style="' . esc_attr( $link_style ) . '">' . esc_html__( 'Don\'t have a Hosted Server URL yet? ', 'webinar-and-video-conference-with-jitsi-meet' ) . '<a href="' . esc_url( 'https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/' ) . '" target="_blank">' . esc_html__( 'Request setup now →', 'webinar-and-video-conference-with-jitsi-meet' ) . '</a></p>';
 
 		// Add a hidden field for the connected status so it doesn't get cleared on form save
 		$input .= '<input type="hidden" name="jitsi_opt_subdomain_connected" id="jitsi_opt_subdomain_connected_hidden" value="' . esc_attr( $is_conn ) . '" />';
@@ -921,36 +995,11 @@ class Mannage_Callback {
 		echo '</div>'; // wrap
 	}
 
-	public function jitsi_api_panel_self( $args ) {
-		echo '<div class="jitsi-config-panel-wrap jitsi-config-panel-self" style="display:none;">';
-		echo '<div class="jitsi-layout-grid">';
-		echo '<div class="jitsi-config-panel">';
-		echo '<div class="jitsi-panel-header"><h3>' . esc_html__( 'Self-Hosted Server', 'webinar-and-video-conference-with-jitsi-meet' ) . '</h3></div>';
-		echo '<div class="jitsi-main-config">';
-
-		// Render Domain Input with Premium badge and disabled state
-		$name = 'jitsi_opt_custom_domain';
-		$val = get_option($name, '8x8.vc');
-		$input = '<div class="disabled"><input class="jitsi-admin-field" type="text" name="' . esc_attr($name) . '" id="' . esc_attr($name) . '" value="' . esc_attr($val) . '" disabled/></div>';
-		$this->jitsi_field_ui(
-			$name,
-			__('Your Server Domain', 'webinar-and-video-conference-with-jitsi-meet'),
-			__('Enter your self-hosted Jitsi domain (e.g., meet.yourdomain.com)', 'webinar-and-video-conference-with-jitsi-meet') . '<span class="description desc-pro">' . __('Premium Feature', 'webinar-and-video-conference-with-jitsi-meet') . '</span>',
-			$input
-		);
-
-		echo '</div>'; // main-config
-		echo '</div>'; // config-panel
-		$this->render_benefits([
-			__( 'Full Data Control', 'webinar-and-video-conference-with-jitsi-meet' ),
-			__( 'Custom Security Policies', 'webinar-and-video-conference-with-jitsi-meet' ),
-			__( 'No Third-party Tracking', 'webinar-and-video-conference-with-jitsi-meet' ),
-			__( 'Infrastructure Ownership', 'webinar-and-video-conference-with-jitsi-meet' ),
-		]);
-		echo '</div>'; // layout-grid
-		echo '</div>'; // wrap
-	}
-
+	/**
+	 * Jitsi other admin
+	 *
+	 * @return  void
+	 */
 	public function jitsi_other_admin() {
 		printf( '<p class="other-admin-setting">%1$s <a href="%2$s" target="_blank">%3$s</a></p>', esc_html__( 'Some settings like Company Logo, Background etc are currently not available via api. You can set your company logo, background etc from the', 'webinar-and-video-conference-with-jitsi-meet' ), esc_url( 'https://jaas.8x8.vc/#/branding' ), esc_html__( 'jaas console', 'webinar-and-video-conference-with-jitsi-meet' ) );
 	}

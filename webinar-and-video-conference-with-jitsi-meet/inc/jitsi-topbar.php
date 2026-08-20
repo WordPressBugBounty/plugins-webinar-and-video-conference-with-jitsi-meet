@@ -161,9 +161,9 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 				return;
 			}
 
-			// Explicitly exclude Welcome page.
+			// Explicitly exclude Welcome page. Read-only GET param used to identify current admin screen, not a form submission.
 			$screen = get_current_screen();
-			$page   = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
+			$page   = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			if ( 'jitsi-meet-welcome' === $page || ( $screen && ( 'jitsi-meet-welcome' === $screen->id || false !== strpos( $screen->id, 'jitsi-meet-welcome' ) ) ) ) {
 				return;
 			}
@@ -219,48 +219,6 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 				</div>
 			</div>
 			<?php
-		}
-
-		/**
-		 * Debug current screen information
-		 * Remove this method in production
-		 *
-		 * @since 1.0.0
-		 */
-		public function debug_current_screen() {
-			if ( ! current_user_can( 'manage_options' ) ) {
-				exit(); // phpcs:ignore
-			}
-
-			global $pagenow;
-			$screen = get_current_screen();
-
-			// Safe way to get page parameter for debugging.
-			$get_page = '';
-			if ( 'admin.php' === $pagenow && $screen && isset( $screen->id ) ) {
-				$get_page = $screen->id;
-			}
-
-			// Safe way to get post_type for debugging.
-			$get_post_type = '';
-			if ( $screen && isset( $screen->post_type ) ) {
-				$get_post_type = $screen->post_type;
-			}
-
-			$debug_info = array(
-				'pagenow'            => $pagenow,
-				'screen'             => array(
-					'id'          => $screen ? $screen->id : 'null',
-					'base'        => $screen ? $screen->base : 'null',
-					'parent_base' => $screen ? $screen->parent_base : 'null',
-					'parent_file' => $screen ? $screen->parent_file : 'null',
-					'post_type'   => $screen && isset( $screen->post_type ) ? $screen->post_type : 'null',
-				),
-				'detected_page'      => $get_page,
-				'detected_post_type' => $get_post_type,
-				'plugin_pages'       => $this->plugin_pages,
-				'is_jitsi_page'      => $this->is_jitsi_page(),
-			);
 		}
 
 		/**
