@@ -396,6 +396,18 @@ class Mannage_Callback {
 				: esc_html__( 'New', 'webinar-and-video-conference-with-jitsi-meet' );
 			$tag_class = $is_disabled ? 'jitsi-new-tag jitsi-ultimate-tag' : 'jitsi-new-tag';
 
+			// BRANDED MEETING TEMPORARILY DISABLED - the branded service is paused, so the "New"
+			// badge is suppressed on that card. Remove this when the service is restored.
+			$tag_markup = sprintf(
+				'<span class="%1$s">%2$s</span>',
+				esc_attr( $tag_class ),
+				$tag_text
+			);
+
+			if ( 'branded' === $icon_key ) {
+				$tag_markup = '';
+			}
+
 			$options .= sprintf(
 				'<label class="hosting-card %1$s %9$s">
 					<input class="jitsi-admin-field jitsi-api-trigger" type="radio" name="%2$s" value="%3$s" %4$s %10$s/>
@@ -404,7 +416,7 @@ class Mannage_Callback {
 							<svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
 						</div>
 						<div class="card-icon">%5$s</div>
-						<div class="card-label">%6$s <span class="%11$s">%7$s</span></div>
+						<div class="card-label">%6$s %7$s</div>
 						<div class="card-desc">%8$s</div>
 					</div>
 				</label>',
@@ -414,11 +426,10 @@ class Mannage_Callback {
 				$selected,
 				$icon,
 				esc_html( $val['label'] ),
-				$tag_text,
+				$tag_markup,
 				esc_html( $val['desc'] ),
 				esc_attr( $disabled_class ),
-				esc_attr( $disabled_attr ),
-				esc_attr( $tag_class )
+				esc_attr( $disabled_attr )
 			);
 		}
 
@@ -454,167 +465,33 @@ class Mannage_Callback {
 				$('.jitsi-config-panel-wrap').hide();
 				$('.jitsi-config-panel-' + panelKey).fadeIn();
 
-				// Hide the main bottom Save Changes button for the Branded panel as it has its own above the FAQ.
-				// However, if we are on the welcome page, we should KEEP the submit buttons (Skip & Continue) visible.
+				// BRANDED MEETING TEMPORARILY DISABLED - the branded option cannot be saved while the
+				// service is stopped. On the settings page the Save Changes button is hidden; on the
+				// welcome page it stays visible (so Skip remains reachable) but Continue is disabled,
+				// so the branded option can be viewed but never saved.
+				var $apiSubmitWrap = $('#jaasOptionFormApi > .jitsi-setting-tab > p.submit');
 
-				if (panelKey === 'branded' && !isWelcomePage) {
-					$('#jaasOptionFormApi > .jitsi-setting-tab > p.submit').hide();
+				if (panelKey === 'branded') {
+					if (isWelcomePage) {
+						$apiSubmitWrap.show();
+						$apiSubmitWrap.find('input[type="submit"]')
+							.prop('disabled', true)
+							.addClass('disabled')
+							.attr('title', <?php echo wp_json_encode( __( 'Hosted Branded Meetings are temporarily unavailable. Please choose another hosting option.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
+					} else {
+						$apiSubmitWrap.hide();
+					}
 				} else {
-					$('#jaasOptionFormApi > .jitsi-setting-tab > p.submit').show();
+					$apiSubmitWrap.show();
+					$apiSubmitWrap.find('input[type="submit"]')
+						.prop('disabled', false)
+						.removeClass('disabled')
+						.removeAttr('title');
 				}
 			}
 			$('.jitsi-api-trigger').on('change', togglePanels);
 			togglePanels();
 
-			// Domain field validation — runs on every keystroke.
-			var lastVal = $('#jitsi_opt_subdomain_domain').val().trim();
-
-			$('#jitsi_opt_subdomain_domain').on('input', function() {
-				var val      = $(this).val().trim();
-				var $btn     = $('.jitsi-btn-save-test');
-				var $statusMsg = $('.jitsi-connection-status-msg');
-				var $discBtn = $('.jitsi-btn-disconnect');
-
-				// Only trigger "Domain changed" logic if the value actually changed.
-				// This prevents the .trigger('input') on page load from resetting the visibility.
-				if ( val !== lastVal ) {
-					$btn.removeClass('is-connected').show().prop('disabled', val === '').text(<?php echo wp_json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
-					$discBtn.hide();
-
-					if (!isWelcomePage) {
-						$('.jitsi-branded-save-action').hide();
-					}
-					$statusMsg.empty().append(
-						$('<span>', { 'class': 'jitsi-status-warning', style: 'background:transparent; border:none; padding:0;' } )
-							.text(<?php echo wp_json_encode( __( 'Domain changed. Please re-test connection.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>)
-					);
-					$('#jitsi_opt_subdomain_connected_hidden').val('0');
-					lastVal = val;
-				}
-
-				if ( '' === val ) {
-					$btn.prop('disabled', true).addClass('is-disabled');
-				} else {
-					$btn.prop('disabled', false).removeClass('is-disabled');
-				}
-			}).trigger('input');
-
-			// Save and Test Connection
-			$(document).on('click', '.jitsi-btn-save-test', function() {
-				var $btn = $(this);
-				if ($btn.hasClass('is-connected')) {
-					console.log('[JitsiJWT] Save & Test clicked but button already has is-connected class — skipping.');
-					return;
-				}
-
-				var domain = $('#jitsi_opt_subdomain_domain').val().trim();
-				var $statusMsg = $('.jitsi-connection-status-msg');
-
-				console.log('[JitsiJWT] Save & Test Connection clicked.');
-				console.log('[JitsiJWT] Domain value being sent to server:', domain);
-
-				$btn.prop('disabled', true).text(<?php echo wp_json_encode( __( 'Connecting...', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
-				$statusMsg.html('').removeClass('error-msg success-msg');
-
-				$.ajax({
-					url: ajaxurl,
-					type: 'POST',
-					data: {
-						action: 'jitsi_connect_server',
-						domain: domain,
-						nonce: '<?php echo esc_attr( wp_create_nonce( 'jitsi_jwt_service_nonce' ) ); ?>'
-					},
-					success: function(response) {
-						console.log('[JitsiJWT] AJAX response (raw):', response);
-						if (response.success) {
-							console.log('[Jitsi_JWT_Service] SUCCESS — Connected to:', domain);
-							lastVal = domain; // Mark this domain as the current connected one
-							$btn.hide().addClass('is-connected');
-							var host = domain.replace(/^https?:\/\//, '').replace(/\/$/, '');
-							var $winMsg = $('<span>', { 'class': 'jitsi-status-win', style: 'background:transparent; border:none; padding:0; color:#0e8a16;' } );
-							$winMsg.append( $('<span>', { 'class': 'jitsi-msg-icon' } ).text('✅') );
-							$winMsg.append( document.createTextNode(' ') );
-							$winMsg.append( document.createTextNode(<?php echo wp_json_encode( __( 'Connection tested successfully.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>) );
-							var $applyMsg = $('<span>', { style: 'font-size: 12px; opacity: 0.8; margin-left: 5px;' } )
-								.text(<?php echo wp_json_encode( __( 'Click "Save Changes" to apply.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
-							$statusMsg.empty().append($winMsg).append(' ').append($applyMsg);
-
-							$('#jitsi_opt_subdomain_connected_hidden').val('1');
-
-							$('.jitsi-btn-disconnect').hide();
-							$('.jitsi-request-setup-link').hide();
-
-							if (!isWelcomePage) {
-								$('.jitsi-branded-save-action').fadeIn();
-							}
-						} else {
-							console.log('[Jitsi_JWT_Service] ► FAIL — Server returned error:', response.data ? response.data.message : '(no message)', '| code:', response.data ? response.data.code : '(none)');
-
-							// Ensure buttons reset to disconnected state
-							$btn.prop('disabled', false).text(<?php echo wp_json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>).show().removeClass('is-connected');
-							$('.jitsi-btn-disconnect').hide();
-							$('.jitsi-request-setup-link').show();
-							if (!isWelcomePage) {
-								$('.jitsi-branded-save-action').hide();
-							}
-
-							// Domain validation errors (DNS/unreachable/not-Jitsi) get amber warning style.
-							// JWT/server errors get red error style.
-							var domainErrorCodes = ['dns_failure', 'unreachable', 'not_jitsi', 'invalid_url'];
-							var errorCode = response.data && response.data.code ? response.data.code : '';
-							var isWarning = domainErrorCodes.indexOf(errorCode) !== -1;
-							var $errMsg = $('<span>', { 'class': isWarning ? 'jitsi-status-warning' : 'jitsi-status-error' } )
-								.text(response.data.message);
-							$statusMsg.empty().append($errMsg);
-						}
-					},
-					error: function(xhr, status, error) {
-						console.log('[Jitsi_JWT_Service] AJAX ERROR — status:', status, '| error:', error);
-
-						// Ensure buttons reset to disconnected state
-						$btn.prop('disabled', false).text(<?php echo wp_json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>).removeClass('is-connected');
-						$('.jitsi-btn-disconnect').hide();
-						$('.jitsi-request-setup-link').show();
-						if (!isWelcomePage) {
-							$('.jitsi-branded-save-action').hide();
-						}
-
-						var $ajaxErrMsg = (typeof response !== 'undefined' && response.data) ? response.data.message : <?php echo wp_json_encode( __( 'Connection failed. Please check your domain.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>;
-						$statusMsg.empty().append( $('<span>', { 'class': 'jitsi-status-error' } ).text($ajaxErrMsg) );
-					}
-				});
-			});
-
-			// Disconnect
-			$(document).on('click', '.jitsi-btn-disconnect', function(e) {
-				e.preventDefault();
-
-				var $discBtn = $(this);
-				var $connBtn = $('.jitsi-btn-save-test');
-				var $statusMsg = $('.jitsi-connection-status-msg');
-
-				console.log('[JitsiJWT] Disconnect clicked.');
-
-				$connBtn.removeClass('is-connected').show().prop('disabled', false).text(<?php echo wp_json_encode( __( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>);
-				$discBtn.hide();
-				$('.jitsi-request-setup-link').hide();
-
-				if (!isWelcomePage) {
-					$('.jitsi-branded-save-action').hide();
-				}
-				$statusMsg.empty().append(
-				$('<span>', { 'class': 'jitsi-status-warning', style: 'background:transparent; border:none; padding:0;' } )
-					.text(<?php echo wp_json_encode( __( 'Connection disconnected. Save changes to apply.', 'webinar-and-video-conference-with-jitsi-meet' ) ); ?>)
-			);
-				if (!isWelcomePage) {
-					$('.jitsi-branded-save-action').fadeIn();
-				}
-
-				// Set hidden field to 0 so native form submit saves the disconnected state
-				$('#jitsi_opt_subdomain_connected_hidden').val('0');
-			});
-
-			// FAQ Accordion
 			$('.faq-toggle').on('click', function() {
 				const $item = $(this).closest('.faq-item');
 				const $content = $item.find('.faq-content');
@@ -776,102 +653,385 @@ class Mannage_Callback {
 		echo '</div>'; // wrap
 	}
 
+	/**
+	 * Renders the "Managed Branded Meeting" panel.
+	 *
+	 * BRANDED MEETING TEMPORARILY DISABLED
+	 * The managed branded meeting service has been stopped. The original configuration UI is
+	 * preserved as comments below and replaced by an "unavailable" notice card. To restore, set
+	 * JITSI_BRANDED_MEETING_ENABLED to true and uncomment the original method.
+	 *
+	 * @param array $args Field arguments from the settings API.
+	 * @return void
+	 */
 	public function jitsi_api_panel_branded( $args ) {
-		echo '<div class="jitsi-config-panel-wrap jitsi-config-panel-branded" style="display:none;">';
-		echo '<div class="jitsi-layout-grid">';
-		echo '<div class="jitsi-grid-left-col">';
-		echo '<div class="jitsi-config-panel">';
-		echo '<div class="jitsi-panel-header"><h3>' . esc_html__( 'Managed Branded Meeting', 'webinar-and-video-conference-with-jitsi-meet' ) . '</h3><span class="panel-badge-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>' . esc_html__( 'We\'ll handle hosting', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span></div>';
-		echo '<div class="jitsi-main-config">';
+		$this->render_branded_unavailable_notice();
+	}
 
-		echo '<p class="panel-desc">' . esc_html__( 'Get your own private branded meeting server (logo + brand name). We host and maintain it - just paste your Hosted Server Domain URL below and enjoy your branded meetings.', 'webinar-and-video-conference-with-jitsi-meet' ) . '</p>';
-
-		// Render Domain Input
-		$name      = 'jitsi_opt_subdomain_domain';
-		$is_conn   = get_option( 'jitsi_opt_subdomain_connected', '0' );
-		$val       = get_option( $name, '' );
-
-		$disabled  = empty( trim( $val ) ) ? 'disabled' : '';
-
-		// "Test Connection" button is hidden once fully connected
-		$save_style = ( '1' === $is_conn ) ? 'display:none;' : '';
-
-		// "Disconnect" button ONLY shows if verified in DB
-		$disc_style = ( '1' === $is_conn && ! empty( $val ) ) ? '' : 'display:none;';
-
-		$input = '<p style="margin-top: -5px; margin-bottom: 8px;">' . esc_html__( 'Paste the Domain URL we emailed you (example: yourbrand.jitsihosted.com)', 'webinar-and-video-conference-with-jitsi-meet' ) . '</p>';
-		$input .= '<div class="jitsi-input-with-button">';
-		$input .= '<input class="jitsi-admin-field" type="text" name="' . esc_attr( $name ) . '" id="' . esc_attr( $name ) . '" value="' . esc_attr( $val ) . '" placeholder="' . esc_attr__( 'Enter the Domain URL', 'webinar-and-video-conference-with-jitsi-meet' ) . '"/>';
-		$input .= '<button type="button" class="jitsi-btn jitsi-btn-save-test ' . ( empty( trim( $val ) ) ? 'is-disabled' : '' ) . '" style="' . esc_attr( $save_style ) . '" ' . ( empty( trim( $val ) ) ? 'disabled' : '' ) . '>' . esc_html__( 'Test Connection', 'webinar-and-video-conference-with-jitsi-meet' ) . '</button>';
-		$input .= '<button type="button" class="jitsi-btn jitsi-btn-disconnect" style="' . esc_attr( $disc_style ) . '">' . esc_html__( 'Disconnect', 'webinar-and-video-conference-with-jitsi-meet' ) . '</button>';
-		$input .= '</div>';
-
-		$status_html = '';
-		if ( '1' === $is_conn && ! empty( $val ) ) {
-			$host = preg_replace( '#^https?://#', '', rtrim( $val, '/' ) );
-			$status_html = '<span class="jitsi-status-win"><span class="jitsi-msg-icon">' . esc_html__( '✅', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span> ' . esc_html__( 'Connected. Meetings will run on', 'webinar-and-video-conference-with-jitsi-meet' ) . ' <code class="jitsi-domain-badge">' . esc_html( $host ) . '</code></span>';
-		}
-
-		$input .= '<div class="jitsi-connection-status-msg" style="font-size: 13px;">' . $status_html . '</div>';
-		$link_style = ( '1' === $is_conn ) ? 'display:none;' : 'margin-top: 4px;';
-		$input .= '<p class="field-sub-link jitsi-request-setup-link" style="' . esc_attr( $link_style ) . '">' . esc_html__( 'Don\'t have a Hosted Server URL yet? ', 'webinar-and-video-conference-with-jitsi-meet' ) . '<a href="' . esc_url( 'https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/' ) . '" target="_blank">' . esc_html__( 'Request setup now →', 'webinar-and-video-conference-with-jitsi-meet' ) . '</a></p>';
-
-		// Add a hidden field for the connected status so it doesn't get cleared on form save
-		$input .= '<input type="hidden" name="jitsi_opt_subdomain_connected" id="jitsi_opt_subdomain_connected_hidden" value="' . esc_attr( $is_conn ) . '" />';
-
-		$this->jitsi_field_ui( $name, __( 'Hosted Server Domain:', 'webinar-and-video-conference-with-jitsi-meet' ), '', $input );
-
-		$this->render_guide(
-			array(
-				/* translators: %s: link to request branded setup page */
-				sprintf( __( '<strong>Request</strong> your branded setup first (%s)', 'webinar-and-video-conference-with-jitsi-meet' ), '<a href="https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/" target="_blank">' . __( 'request now ->', 'webinar-and-video-conference-with-jitsi-meet' ) . '</a>' ),
-				__( '<strong>We set it up</strong> and email your Hosted Server URL', 'webinar-and-video-conference-with-jitsi-meet' ),
-				__( '<strong>Paste the URL here</strong> - Test Connection - meetings start running on your hosted server', 'webinar-and-video-conference-with-jitsi-meet' ),
+	/**
+	 * Renders the notice card shown in place of the branded meeting configuration UI.
+	 *
+	 * BRANDED MEETING TEMPORARILY DISABLED
+	 *
+	 * Output sits inside the same `.jitsi-config-panel-branded` wrapper that the panel toggling
+	 * script targets, so selecting the branded card reveals this notice instead of the form.
+	 *
+	 * @return void
+	 */
+	private function render_branded_unavailable_notice() {
+		$svg_allowed_html = array(
+			'svg'            => array(
+				'viewbox' => true,
+				'width' => true,
+				'height' => true,
+				'fill' => true,
+				'xmlns' => true,
 			),
-			'<span class="emoji-wrapper">' . esc_html__( '🤩', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span> ' . __( 'That\'s it - no technical setup needed from you. Wahhhhhhhhhh!', 'webinar-and-video-conference-with-jitsi-meet' )
+			'path'           => array(
+				'd' => true,
+				'fill' => true,
+				'stroke' => true,
+				'stroke-width' => true,
+				'stroke-linecap' => true,
+				'stroke-linejoin' => true,
+			),
+			'rect'           => array(
+				'x' => true,
+				'y' => true,
+				'width' => true,
+				'height' => true,
+				'rx' => true,
+				'fill' => true,
+				'stroke' => true,
+				'stroke-width' => true,
+			),
+			'circle'         => array(
+				'cx' => true,
+				'cy' => true,
+				'r' => true,
+				'fill' => true,
+				'stroke' => true,
+			),
+			'lineargradient' => array(
+				'id' => true,
+				'x1' => true,
+				'y1' => true,
+				'x2' => true,
+				'y2' => true,
+			),
+			'stop'           => array(
+				'offset' => true,
+				'stop-color' => true,
+			),
+			'defs'           => array(),
 		);
 
-		echo '</div>'; // main-config
-		echo '</div>'; // config-panel
+		$waitlist_url = 'https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/';
+		$docs_url     = 'https://wppool.dev/contact/';
 
-		// The "Save Changes" button is purely driven by JS interaction now.
-		// If page loads connected -> no need to save. If page loads disconnected -> no need to save yet.
-		// It only appears when they try a Test Connection or Disconnect action.
-		$branded_save_style = 'margin-top: 30px; margin-bottom: 30px;';
+		// Browser window with a pause badge: reads as "paused", not "broken".
+		$illustration = '<svg viewBox="0 0 200 160" width="180" height="144" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient id="jbuWin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef1f6"/></lineargradient><lineargradient id="jbuPause" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fb9268"/><stop offset="1" stop-color="#e8623a"/></lineargradient></defs><rect x="20" y="28" width="150" height="104" rx="10" fill="#dbe1ea"/><rect x="14" y="20" width="150" height="104" rx="10" fill="url(#jbuWin)"/><path d="M14 30a10 10 0 0 1 10-10h130a10 10 0 0 1 10 10v10H14V30z" fill="#e4e9f0"/><circle cx="30" cy="30" r="3.4" fill="#b9c2d0"/><circle cx="42" cy="30" r="3.4" fill="#b9c2d0"/><circle cx="54" cy="30" r="3.4" fill="#b9c2d0"/><circle cx="89" cy="86" r="30" fill="url(#jbuPause)"/><rect x="80" y="73" width="7" height="26" rx="3.5" fill="#ffffff"/><rect x="92" y="73" width="7" height="26" rx="3.5" fill="#ffffff"/></svg>';
 
-		if ( '1' !== $is_conn ) {
-			$branded_save_style .= ' display: none;';
-		}
+		$mail_icon = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#101a28" stroke-width="1.7"/><path d="m4 8 7.3 5.1a1.6 1.6 0 0 0 1.4 0L20 8" stroke="#101a28" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-		// Hide the inner Save Changes button specifically on the Welcome page
-		if ( isset( $_SERVER['QUERY_STRING'] ) && false !== strpos( sanitize_text_field( wp_unslash( $_SERVER['QUERY_STRING'] ) ), 'page=jitsi-meet-welcome' ) ) {
-			$branded_save_style .= ' display: none;';
-		}
+		$bulb_icon = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.2 17.5h5.6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .8 1.6h5.6c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z" stroke="#5b6b7d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-		echo '<div class="jitsi-branded-save-action" style="' . esc_attr( $branded_save_style ) . '">';
-		echo '<p class="submit" style="margin: 0; padding: 0;"><input type="submit" name="submit" id="submit-branded" class="button button-primary jitsi-btn-brand-save" value="' . esc_attr__( 'Save Changes', 'webinar-and-video-conference-with-jitsi-meet' ) . '"></p>';
+		$lock_icon = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2.4" stroke="#7b8798" stroke-width="1.7"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7" stroke="#7b8798" stroke-width="1.7" stroke-linecap="round"/></svg>';
+
+		$arrow_icon = '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h13m0 0-5.2-5.2M18 12l-5.2 5.2" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+		$external_icon = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" stroke="#1257c9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+		echo '<div class="jitsi-config-panel-wrap jitsi-config-panel-branded" style="display:none;">';
+		echo '<div class="jbu-shell">';
+		echo '<div class="jitsi-branded-unavailable-card" role="status">';
+
+		// Illustration.
+		echo '<div class="jbu-art" aria-hidden="true">' . wp_kses( $illustration, $svg_allowed_html ) . '</div>';
+
+		// Message column.
+		echo '<div class="jbu-main">';
+		echo '<span class="jbu-badge"><span class="jbu-badge-dot" aria-hidden="true"></span>' . esc_html__( 'Service update', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span>';
+		echo '<h3 class="jbu-title">' . esc_html__( 'Hosted branded meetings are temporarily unavailable', 'webinar-and-video-conference-with-jitsi-meet' ) . '</h3>';
+		echo '<p class="jbu-desc">' . esc_html__( 'This option uses our hosted branded meeting service. We\'re improving the infrastructure, so it isn\'t available right now.', 'webinar-and-video-conference-with-jitsi-meet' ) . '</p>';
+		echo '<div class="jbu-tip">';
+		echo '<span class="jbu-tip-icon" aria-hidden="true">' . wp_kses( $bulb_icon, $svg_allowed_html ) . '</span>';
+		echo '<span class="jbu-tip-text">' . esc_html__( 'To keep your meetings running, choose another hosting option above and save your changes.', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span>';
+		echo '</div>';
 		echo '</div>';
 
-		$this->render_faq();
-		echo '</div>'; // grid-left-col
+		// Waitlist column.
+		echo '<div class="jbu-aside">';
+		echo '<span class="jbu-aside-icon" aria-hidden="true">' . wp_kses( $mail_icon, $svg_allowed_html ) . '</span>';
+		echo '<h4 class="jbu-aside-title">' . esc_html__( 'Want it back?', 'webinar-and-video-conference-with-jitsi-meet' ) . '</h4>';
+		echo '<p class="jbu-aside-desc">' . esc_html__( 'Join the waitlist and we\'ll notify you when hosted branded meetings return.', 'webinar-and-video-conference-with-jitsi-meet' ) . '</p>';
+		echo '<a class="jbu-cta" href="' . esc_url( $waitlist_url ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Join Waitlist', 'webinar-and-video-conference-with-jitsi-meet' ) . '<span class="jbu-cta-arrow" aria-hidden="true">' . wp_kses( $arrow_icon, $svg_allowed_html ) . '</span></a>';
+		echo '<p class="jbu-aside-note"><span aria-hidden="true">' . wp_kses( $lock_icon, $svg_allowed_html ) . '</span>' . esc_html__( 'No spam. Just important updates.', 'webinar-and-video-conference-with-jitsi-meet' ) . '</p>';
+		echo '</div>';
 
-		$this->render_benefits(
-			array(
-				__( 'Branded meeting i.e link, logo, colors', 'webinar-and-video-conference-with-jitsi-meet' ),
-				__( 'Meeting Moderator support', 'webinar-and-video-conference-with-jitsi-meet' ),
-				__( 'No server cost or maintenance (we handle everything)', 'webinar-and-video-conference-with-jitsi-meet' ),
-				__( 'Private hosting (not a shared public server)', 'webinar-and-video-conference-with-jitsi-meet' ),
-				__( 'No third-party branding (fully white-labeled)', 'webinar-and-video-conference-with-jitsi-meet' ),
-				__( 'Longer & smoother meetings', 'webinar-and-video-conference-with-jitsi-meet' ),
-				__( 'Live streaming support', 'webinar-and-video-conference-with-jitsi-meet' ),
-				__( 'Create & share meeting links from your SaaS dashboard', 'webinar-and-video-conference-with-jitsi-meet' ),
-			),
-			__( 'Request branded meeting server for FREE!', 'webinar-and-video-conference-with-jitsi-meet' ),
-			'https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/service/'
-		);
+		echo '</div>';
 
-		echo '</div>'; // layout-grid
-		echo '</div>'; // wrap
+		// Footer tip bar.
+		echo '<div class="jbu-footbar">';
+		echo '<span class="jbu-footbar-left"><span class="jbu-footbar-icon" aria-hidden="true">' . wp_kses( $bulb_icon, $svg_allowed_html ) . '</span>' . esc_html__( 'Tip: You can change your hosting option at any time.', 'webinar-and-video-conference-with-jitsi-meet' ) . '</span>';
+		echo '<a class="jbu-footbar-link" href="' . esc_url( $docs_url ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Learn more about hosting options', 'webinar-and-video-conference-with-jitsi-meet' ) . '<span aria-hidden="true">' . wp_kses( $external_icon, $svg_allowed_html ) . '</span></a>';
+		echo '</div>';
+
+		echo '</div>'; // End of .jbu-shell.
+		echo '</div>'; // End of .jitsi-config-panel-wrap.
+		?>
+		<style>
+			.jbu-shell {
+				width: 100%;
+				margin: 28px 0 8px;
+			}
+			.jitsi-branded-unavailable-card {
+				display: flex;
+				align-items: stretch;
+				gap: 34px;
+				padding: 34px 38px;
+				background: #fff;
+				border: 1px solid #e7eaf0;
+				border-radius: 18px;
+				box-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 12px 34px rgba(16, 24, 40, .06);
+			}
+			.jitsi-branded-unavailable-card .jbu-art {
+				flex: 0 0 auto;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				line-height: 0;
+			}
+			.jitsi-branded-unavailable-card .jbu-art svg {
+				display: block;
+			}
+			.jitsi-branded-unavailable-card .jbu-main {
+				flex: 1 1 auto;
+				min-width: 0;
+				align-self: center;
+			}
+			.jitsi-branded-unavailable-card .jbu-badge {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				margin-bottom: 14px;
+				padding: 6px 14px;
+				border-radius: 999px;
+				background: #fff1e6;
+				color: #b8500e;
+				font-size: 13px;
+				font-weight: 600;
+				line-height: 1.2;
+			}
+			.jitsi-branded-unavailable-card .jbu-badge-dot {
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: #ef7233;
+			}
+			.jitsi-branded-unavailable-card .jbu-title {
+				margin: 0 0 10px;
+				padding: 0;
+				max-width: 22ch;
+				font-size: 26px;
+				font-weight: 700;
+				line-height: 1.28;
+				letter-spacing: -.01em;
+				color: #101a28;
+			}
+			.jitsi-branded-unavailable-card .jbu-desc {
+				margin: 0 0 18px;
+				max-width: 58ch;
+				font-size: 14.5px;
+				line-height: 1.65;
+				color: #4d5a6f;
+			}
+			.jitsi-branded-unavailable-card .jbu-tip {
+				display: flex;
+				align-items: flex-start;
+				gap: 12px;
+				max-width: 560px;
+				padding: 14px 16px;
+				border-radius: 12px;
+				background: #f5f7fa;
+				border: 1px solid #e9edf3;
+			}
+			.jitsi-branded-unavailable-card .jbu-tip-icon {
+				flex: 0 0 auto;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 26px;
+				height: 26px;
+				border-radius: 50%;
+				background: #fff;
+				border: 1px solid #e4e9f0;
+				line-height: 0;
+			}
+			.jitsi-branded-unavailable-card .jbu-tip-text {
+				font-size: 13.5px;
+				line-height: 1.6;
+				color: #4d5a6f;
+			}
+			.jitsi-branded-unavailable-card .jbu-aside {
+				flex: 0 0 268px;
+				padding-left: 34px;
+				border-left: 1px solid #e9edf3;
+				align-self: center;
+			}
+			.jitsi-branded-unavailable-card .jbu-aside-icon {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 44px;
+				height: 44px;
+				margin-bottom: 14px;
+				border-radius: 50%;
+				background: #f4f6f9;
+				border: 1px solid #e7ebf1;
+				line-height: 0;
+			}
+			.jitsi-branded-unavailable-card .jbu-aside-title {
+				margin: 0 0 8px;
+				padding: 0;
+				font-size: 17px;
+				font-weight: 700;
+				line-height: 1.3;
+				color: #101a28;
+			}
+			.jitsi-branded-unavailable-card .jbu-aside-desc {
+				margin: 0 0 18px;
+				font-size: 13.5px;
+				line-height: 1.6;
+				color: #5b6b7d;
+			}
+			.jitsi-branded-unavailable-card .jbu-cta {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				min-height: 46px;
+				padding: 12px 24px;
+				border-radius: 999px;
+				background: #101a28;
+				border: 1px solid #101a28;
+				color: #fff;
+				font-size: 14.5px;
+				font-weight: 600;
+				line-height: 1.2;
+				text-decoration: none;
+				cursor: pointer;
+				transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+			}
+			.jitsi-branded-unavailable-card .jbu-cta:hover {
+				background: #24334a;
+				border-color: #24334a;
+				color: #fff;
+				box-shadow: 0 6px 18px rgba(16, 26, 40, .22);
+			}
+			.jitsi-branded-unavailable-card .jbu-cta:focus,
+			.jitsi-branded-unavailable-card .jbu-cta:focus-visible {
+				outline: 2px solid #101a28;
+				outline-offset: 3px;
+				color: #fff;
+				box-shadow: none;
+			}
+			.jitsi-branded-unavailable-card .jbu-cta-arrow {
+				display: inline-flex;
+				line-height: 0;
+			}
+			.jitsi-branded-unavailable-card .jbu-aside-note {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				margin: 16px 0 0;
+				font-size: 12.5px;
+				line-height: 1.5;
+				color: #6b7787;
+			}
+			.jitsi-branded-unavailable-card .jbu-aside-note span {
+				display: inline-flex;
+				line-height: 0;
+			}
+			.jbu-footbar {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-between;
+				gap: 12px 20px;
+				margin-top: 14px;
+				padding: 16px 24px;
+				border-radius: 14px;
+				background: #f5f7fa;
+				border: 1px solid #e9edf3;
+			}
+			.jbu-footbar-left {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				font-size: 13.5px;
+				color: #4d5a6f;
+			}
+			.jbu-footbar-icon {
+				display: inline-flex;
+				line-height: 0;
+			}
+			.jbu-footbar-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				color: #1257c9;
+				font-size: 13.5px;
+				font-weight: 600;
+				text-decoration: none;
+			}
+			.jbu-footbar-link:hover,
+			.jbu-footbar-link:focus {
+				color: #1152bb;
+				text-decoration: underline;
+			}
+			@media screen and (max-width: 1100px) {
+				.jitsi-branded-unavailable-card {
+					flex-wrap: wrap;
+					gap: 24px;
+				}
+				.jitsi-branded-unavailable-card .jbu-aside {
+					flex: 1 1 100%;
+					padding-left: 0;
+					padding-top: 24px;
+					border-left: 0;
+					border-top: 1px solid #e9edf3;
+				}
+			}
+			@media screen and (max-width: 782px) {
+				.jitsi-branded-unavailable-card {
+					flex-direction: column;
+					align-items: flex-start;
+					padding: 24px 20px;
+				}
+				.jitsi-branded-unavailable-card .jbu-art svg {
+					width: 132px;
+					height: 106px;
+				}
+				.jitsi-branded-unavailable-card .jbu-title {
+					max-width: none;
+					font-size: 21px;
+				}
+				.jitsi-branded-unavailable-card .jbu-cta {
+					width: 100%;
+				}
+				.jbu-footbar {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+			}
+			@media (prefers-reduced-motion: reduce) {
+				.jitsi-branded-unavailable-card .jbu-cta {
+					transition: none;
+				}
+			}
+		</style>
+		<?php
 	}
 
 	public function render_faq() {

@@ -24,8 +24,8 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 		 */
 		public function __construct() {
 			add_action( 'admin_menu', [ $this, 'jitsi_meet_wp_admin_menu_page' ] );
-			add_action( 'wp_ajax_jitsi_connect_server', [ 'Jitsi_JWT_Service', 'ajax_connect_server' ] );
-			add_action( 'wp_ajax_jitsi_disconnect_server', [ 'Jitsi_JWT_Service', 'ajax_disconnect_server' ] );
+			// BRANDED MEETING TEMPORARILY DISABLED - the branded server connect/disconnect AJAX
+			// endpoints and their JWT service have been removed while the service is stopped.
 			//add_action( 'admin_init', [ $this, 'display_notices' ] );
 			//add_action( 'wp_ajax_jitsi_meet_wp_review_notice', [ $this, 'handle_review_notice' ] );
 			//add_action( 'wp_ajax_jitsi_meet_wp_affiliate_notice', [ $this, 'handle_affiliate_notice' ] );
@@ -131,7 +131,11 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 		 */
 		public function jitsi_meet_wp_settings_files() {
 			require_once JITSI_MEET_WP_FILE_PATH . 'inc/admin/admin-settings.php';
-			require_once JITSI_MEET_WP_FILE_PATH . 'inc/admin/class-jitsi-jwt-service.php';
+
+			// BRANDED MEETING TEMPORARILY DISABLED - warn sites still saved as `branded` that their
+			// meetings no longer run on their branded server. Remove when the service is restored.
+			require_once JITSI_MEET_WP_FILE_PATH . 'inc/admin/class-branded-deprecated-notice.php';
+			new Jitsi_Branded_Deprecated_Notice();
 
 			// Handle Welcome Page Skip. Read-only GET flag gating a redirect, not a data-changing form submission.
 			if ( isset( $_GET['jitsi_skip_welcome'] ) && '1' === $_GET['jitsi_skip_welcome'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
@@ -648,7 +652,12 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Admin' ) ) {
 		 */
 		public static function jitsi_sanitize_select_api( $value ) {
 			$value = sanitize_text_field( (string) $value );
-			return in_array( $value, array( 'free', 'branded', 'jaas' ), true ) ? $value : 'free';
+
+			// BRANDED MEETING TEMPORARILY DISABLED - 'branded' removed from the allowlist so the
+			// discontinued option can never be persisted, whichever form posts it. Any attempt
+			// falls back to the default public hosting.
+			// Original: return in_array( $value, array( 'free', 'branded', 'jaas' ), true ) ? $value : 'free';
+			return in_array( $value, array( 'free', 'jaas' ), true ) ? $value : 'free';
 		}
 
 		/**

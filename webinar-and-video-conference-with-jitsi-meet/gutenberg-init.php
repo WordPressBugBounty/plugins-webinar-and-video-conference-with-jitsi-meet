@@ -117,6 +117,13 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 			$free_domain     = get_option( 'jitsi_opt_free_domain', 'jitsi-01.csn.tu-chemnitz.de' );
 			$custom_domain   = $free_domain;
 
+			// BRANDED MEETING TEMPORARILY DISABLED - fall sites still saved as 'branded' back to the
+			// default public hosting so the block editor never previews the dead branded host.
+			// Remove this coercion when the branded service is restored.
+			if ( 'branded' === $selected_domain ) {
+				$selected_domain = 'free';
+			}
+
 			// For the WordPress.org plugin review team: self-hosted Jitsi support lives
 			// entirely in FlexMeeting Ultimate, a separate plugin -- it is not a
 			// license-gated feature inside this free plugin. jitsi_opt_custom_domain
@@ -185,7 +192,12 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 				// (see note in jitsi_meet_wp_gutenberg_blocks() above). Never forward
 				// 'self' or the legacy 'disable-self' value to the frontend script;
 				// treat as free mode.
-				if ( ! in_array( $api_select, array( 'jaas', 'branded' ), true ) ) {
+				// BRANDED MEETING TEMPORARILY DISABLED - 'branded' removed from this allowlist so
+				// sites still saved as branded fall through to free mode. The frontend script
+				// routes on this value: forwarding 'branded' without a domain would send
+				// initJitsiBranded() into the Jitsi API with an empty domain and break the meeting.
+				// Original allowlist also contained 'branded'.
+				if ( ! in_array( $api_select, array( 'jaas' ), true ) ) {
 					$api_select = 'free';
 				}
 				$jwt_token = '';
@@ -194,32 +206,6 @@ if ( ! class_exists( 'Jitsi_Meet_WP_Gutenberg' ) ) {
 				// Generate JWT for JaaS
 				if ( 'jaas' === $api_select ) {
 					$jwt_token = $this->jitsi_pro_generate_jwt();
-				}
-
-				// Generate JWT for Branded Meetings
-				if ( 'branded' === $api_select ) {
-					$subdomain_domain = get_option( 'jitsi_opt_subdomain_domain', '' );
-					if ( ! empty( $subdomain_domain ) ) {
-						// Include JWT Service class
-						if ( ! class_exists( 'Jitsi_JWT_Service' ) ) {
-							require_once JITSI_MEET_WP_FILE_PATH . 'inc/admin/class-jitsi-jwt-service.php';
-						}
-
-						$current_user_id = get_current_user_id();
-						$room_name       = '*'; // Use wildcard for Gutenberg blocks.
-						$is_moderator    = $current_user_id && user_can( $current_user_id, 'edit_others_posts' );
-
-						$jwt_token = Jitsi_JWT_Service::get_meeting_token(
-							$current_user_id,
-							$subdomain_domain,
-							$room_name,
-							$is_moderator
-						);
-
-						// Sanitize domain for Jitsi External API compatibility
-						$custom_domain = preg_replace( '/^https?:\/\//i', '', $subdomain_domain );
-						$custom_domain = rtrim( $custom_domain, '/' );
-					}
 				}
 
 				wp_localize_script(

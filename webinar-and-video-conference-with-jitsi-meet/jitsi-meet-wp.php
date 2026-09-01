@@ -3,7 +3,7 @@
  * Plugin Name:       FlexMeeting - Webinar & Meeting Plugin for Jitsi Meet
  * Plugin URI:        https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.9.6
+ * Version:           2.9.7
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
@@ -21,13 +21,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit(); // phpcs:ignore
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.9.6' );
+define( 'JITSI_MEET_WP_VERSION', '2.9.7' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
 define( 'JITSI_MEET_WP_URL', plugins_url( '', __FILE__ ) );
 define( 'JITSI_MEET_WP_TEMPLATES', JITSI_MEET_WP_DIR_PATH . '/templates' );
 define( 'JITSI_MEET_WP_ASSETS', JITSI_MEET_WP_URL . '/assets' );
+
+/**
+ * BRANDED MEETING TEMPORARILY DISABLED
+ *
+ * The managed Hosted Branded Meeting service has been stopped. The branded configuration UI is
+ * replaced by an "unavailable" notice card and all branded API/JWT code paths are neutralised.
+ * Set this to true and search the codebase for "BRANDED MEETING TEMPORARILY DISABLED" to restore.
+ */
+if ( ! defined( 'JITSI_BRANDED_MEETING_ENABLED' ) ) {
+	define( 'JITSI_BRANDED_MEETING_ENABLED', false );
+}
 
 
 /**

@@ -11,7 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'jitsi_free_is_moderator_api' ) ) {
 	function jitsi_free_is_moderator_api() {
 		$api = get_option( 'jitsi_opt_select_api', 'free' );
-		return in_array( $api, array( 'branded', 'jaas' ), true );
+
+		// BRANDED MEETING TEMPORARILY DISABLED - 'branded' removed from the moderator-capable list.
+		// A stale `select_api = branded` must not enable moderator behaviour against a dead server.
+		// Original: return in_array( $api, array( 'branded', 'jaas' ), true );
+		return in_array( $api, array( 'jaas' ), true );
 	}
 }
 

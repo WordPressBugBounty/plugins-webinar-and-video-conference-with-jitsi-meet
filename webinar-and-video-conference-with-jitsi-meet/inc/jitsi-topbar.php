@@ -151,6 +151,12 @@ if ( ! class_exists( 'Jitsi_Topbar' ) ) {
 		 * @since 1.0.0
 		 */
 		public function display_topbar() {
+			// BRANDED MEETING TEMPORARILY DISABLED - this promo bar advertises the Hosted Branded
+			// Meeting service, which is currently stopped. Suppress it until the service returns.
+			if ( ! defined( 'JITSI_BRANDED_MEETING_ENABLED' ) || ! JITSI_BRANDED_MEETING_ENABLED ) {
+				return;
+			}
+
 			// Only show in admin for admins.
 			if ( ! is_admin() || ! current_user_can( 'manage_options' ) ) {
 				return;
