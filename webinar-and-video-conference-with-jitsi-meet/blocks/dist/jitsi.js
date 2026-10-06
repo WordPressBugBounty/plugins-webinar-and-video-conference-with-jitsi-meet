@@ -174,6 +174,8 @@ function initJitsiJass(elem) {
         '__end',
       ];
 
+      Boolean(jQuery(element).data('screen')) && toolbarButtons.push('desktop');
+
       var roomName = jitsi_free.appid + '/' + jQuery(element).data('name'),
         width = jQuery(element).data('width'),
         height = jQuery(element).data('height'),

@@ -4,7 +4,7 @@ Tags: meeting, video conference, webinar, conference, video chat
 Requires at least: 5.2
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 2.9.8
+Stable tag: 2.9.9
 License: GPL-2.0+
 License URL: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -270,6 +270,8 @@ Yes. Live streaming to platforms like YouTube is supported when using the approp
 
 == Changelog ==
 
+= 2.9.9 – 06 Oct 2026 =
+* **Fix:** Restored the Screen Sharing button for JaaS 8x8 meetings when Screen Sharing is enabled.
 
 = 2.9.8 – 29 Sep 2026 =
 * **Improvement:** Compatibility with WordPress 7.1
