@@ -3,7 +3,7 @@
  * Plugin Name:       FlexMeeting - Webinar & Meeting Plugin for Jitsi Meet
  * Plugin URI:        https://wppool.dev/webinar-and-video-conference-with-jitsi-meet/
  * Description:       Host live webinars, conferences, online classes, video calls directly on your WordPress website with gutenberg block
- * Version:           2.9.9
+ * Version:           2.9.10
  * Author:            WPPOOL
  * Author URI:        https://wppool.dev
  * License:           GPL-2.0+
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit(); // phpcs:ignore
 }
 
-define( 'JITSI_MEET_WP_VERSION', '2.9.9' );
+define( 'JITSI_MEET_WP_VERSION', '2.9.10' );
 define( 'JITSI_MEET_WP__FILE__', __FILE__ );
 define( 'JITSI_MEET_WP_DIR_PATH', plugin_dir_path( JITSI_MEET_WP__FILE__ ) );
 define( 'JITSI_MEET_WP_FILE_PATH', plugin_dir_path( __FILE__ ) );
@@ -163,15 +163,47 @@ function jitsi_meet_wppool_sdk_campaign() {
 		$jitsi_meet_plugin = wppool_plugin_init( 'webinar_and_video_conference_with_jitsi_meet', plugin_dir_url( JITSI_MEET_WP__FILE__ ) . '/inc/wppool/background-image.png' );
 
 		if ( $jitsi_meet_plugin && is_object( $jitsi_meet_plugin ) && method_exists( $jitsi_meet_plugin, 'set_campaign' ) ) {
-			$to       = '2026-07-14 23:59:00';
-			$from     = '2026-06-24 17:00:00';
-			$cta_text = esc_html__( 'Save Now', 'webinar-and-video-conference-with-jitsi-meet' );
+			// BFCM 2026: 9 Nov 5 PM to 5 Dec 5 PM, Bangladesh Standard Time (UTC+6).
+			$from        = '2026-11-09T17:00:00+06:00';
+			$to          = '2026-12-05T17:00:00+06:00';
+			$cta_text    = esc_html__( 'Claim The Deal →', 'webinar-and-video-conference-with-jitsi-meet' );
+			$button_link = 'https://lnk.wppool.dev/kD6qsDm';
+			$repeat      = 3 * DAY_IN_SECONDS; // Timer shows 3 days and restarts every 3 days until $to.
 
-			$campain_image = plugin_dir_url( JITSI_MEET_WP__FILE__ ) . '/inc/wppool/summer.png';
-			$jitsi_meet_plugin->set_campaign( $campain_image, $to, $from, $cta_text );
+			$campain_image = plugin_dir_url( JITSI_MEET_WP__FILE__ ) . 'inc/wppool/bfcm-2026.jpg';
+			$jitsi_meet_plugin->set_campaign( $campain_image, $to, $from, $cta_text, $button_link, $repeat );
 
-			$button_link = 'https://lnk.wppool.dev/90kM5Tx';
-			$jitsi_meet_plugin->set_campaign( $campain_image, $to, $from, $cta_text, $button_link );
+			$now = time();
+
+			if ( $now < strtotime( $from ) || $now > strtotime( $to ) ) {
+				return;
+			}
+
+			$plugin_id = 'webinar_and_video_conference_with_jitsi_meet';
+
+			// CTA button background (#FFD23F). The SDK also uses this color for the close icon.
+			add_filter(
+				'wppool_plugins',
+				function ( $plugins ) use ( $plugin_id ) {
+					$plugins[ $plugin_id ]['color'] = '#FFD23F';
+					return $plugins;
+				},
+				20
+			);
+
+			// CTA text color (#111111); SDK hardcodes white.
+			add_action(
+				'admin_enqueue_scripts',
+				function () use ( $plugin_id ) {
+					if ( ! wp_script_is( 'wppool-plugins', 'enqueued' ) ) {
+						return;
+					}
+
+					$selector = '._wppool-popup[data-plugin="' . $plugin_id . '"] ._wppool-popup-button';
+					wp_add_inline_style( 'wppool-plugins', $selector . ', ' . $selector . ':hover { color: #111111; }' );
+				},
+				20
+			);
 		}
 	}
 }
